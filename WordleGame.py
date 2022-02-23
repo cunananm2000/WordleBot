@@ -10,13 +10,22 @@ class Color(Enum):
     GREEN = 2
 
 class WordleGame(object):
-    def __init__(self) -> None:
+    def __init__(self, manual = False) -> None:
         self.nLetters = 5
         self.validGuesses = guesses
         self.validAnswers = answers
         self.debug = False
+        self.manual = manual
 
-    def check(self, guess, answer):
+        self.previousResults = []
+
+        self.readableMap = {
+            'g': Color.GREY,
+            'G': Color.GREEN,
+            'Y': Color.YELLOW
+        }
+
+    def check(self, guess, answer, debug = False):
         res = [Color.GREY] * self.nLetters
         hit = [False] * self.nLetters
         for i in range(self.nLetters):
@@ -30,21 +39,37 @@ class WordleGame(object):
                         res[i] = Color.YELLOW
                         hit[j] = True
                         break
-        if self.debug: self.pprint(res)
+        if debug: self.pprint(res)
+        return res
+
+    def manualCheck(self):
+        res = list(input("Result from guess: "))
+        res = [self.readableMap[k] for k in res]
         return res
 
     def play(self, answer = None):
         self.resetPlayer()
+        self.previousResults = []
 
-        if answer is None:
+        if answer is None and not self.manual:
             answer = random.choice(self.validAnswers)
 
         nTurns = 0
         while True:
             guess = self.getNextGuess()
+            if self.debug: print("Guess: ", guess)
             nTurns += 1
-            res = self.check(guess, answer)
+
+            if self.manual:
+                res = self.manualCheck()
+            else:
+                res = self.check(guess, answer, self.debug)
+            
+            self.previousResults.append(res)
             if all(x == Color.GREEN for x in res):
+                break
+            elif nTurns == 100:
+                if self.debug: print("aight wtf, reached 100 guesses")
                 break
         return nTurns
 
