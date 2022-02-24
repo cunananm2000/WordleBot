@@ -10,7 +10,7 @@ class Color(Enum):
     GREEN = 2
 
 class WordleGame(object):
-    def __init__(self, manual = False) -> None:
+    def __init__(self, manual = False, forcedGuesses = []) -> None:
         self.nLetters = 5
         self.validGuesses = guesses
         self.validAnswers = answers
@@ -24,8 +24,18 @@ class WordleGame(object):
             'G': Color.GREEN,
             'Y': Color.YELLOW
         }
+        
+        self.forcedGuesses = forcedGuesses
+
+        self.computerMap = {}
+        for k,v in self.readableMap.items(): self.computerMap[v] = k
+
+        self.checkCache = {}
 
     def check(self, guess, answer, debug = False):
+        # key = guess + answer
+        # if key not in self.checkCache: key = answer + guess
+        # if key not in self.checkCache:
         res = [Color.GREY] * self.nLetters
         hit = [False] * self.nLetters
         for i in range(self.nLetters):
@@ -41,11 +51,20 @@ class WordleGame(object):
                         break
         if debug: self.pprint(res)
         return res
+        #     self.checkCache[key] = res
+        # return self.checkCache[key]
 
     def manualCheck(self):
-        res = list(input("Result from guess: "))
-        res = [self.readableMap[k] for k in res]
-        return res
+        res = input("Result from guess: ")
+        return self.toEnum(res)
+
+    def toEnum(self, res):
+        return [self.readableMap[k] for k in list(res)]
+
+    def fromEnum(self, res):
+        res = [self.computerMap[k] for k in res]
+        return ''.join(res)
+
 
     def play(self, answer = None):
         self.resetPlayer()
