@@ -2,7 +2,7 @@ from WordleGame import WordleGame
 from tqdm.auto import tqdm
 import gc
 
-class SmallestAverageStrategy(WordleGame):
+class SmallestMaximumStrategy(WordleGame):
     def __init__(self, debug = False, **kwargs) -> None:
         super().__init__(**kwargs)
         self.debug = debug
@@ -10,7 +10,7 @@ class SmallestAverageStrategy(WordleGame):
         self.originalAllPossible = self.allPossible.copy()
         self.forcedGuessIdx = 0
         self.lastGuess = None
-        self.forcedGuesses = ['tares']
+        self.forcedGuesses = ['serai']
         self.nGuesses = 0
 
         # Since first guess is gonna be the same no matter what, cache which result leads to which next guess
@@ -25,7 +25,7 @@ class SmallestAverageStrategy(WordleGame):
     def filterPossible(self, possibleGuess, possibleRes):
         return [x for x in self.allPossible if self.check(possibleGuess, x) == possibleRes]
 
-    def averageIfGuessed(self, possibleGuess):
+    def maximumIfGuessed(self, possibleGuess):
         results = {}
         for x in self.allPossible:
             res = self.fromEnum(self.check(possibleGuess,x))
@@ -33,7 +33,7 @@ class SmallestAverageStrategy(WordleGame):
             # self.pprint(self.toEnum(res))
             results[res] = results.get(res,0) + 1
         # print(results)
-        score = sum(results.values())/len(results)
+        score = max(results.values())
         del results
         return score
 
@@ -64,7 +64,7 @@ class SmallestAverageStrategy(WordleGame):
             lowestScore = 0
             # i = 0
             for x in tqdm(self.originalAllPossible, colour = 'blue'):
-                score = self.averageIfGuessed(x)
+                score = self.maximumIfGuessed(x)
                 # print(x,'-->',score)
                 if bestGuess is None or score <= lowestScore:
                     bestGuess = x

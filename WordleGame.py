@@ -109,9 +109,11 @@ class WordleGame(object):
         print('')
 
     def runAllPossibleAnswers(self):
-        # return np.array([self.play(answer) for answer in self.validAnswers])
+        tempDebug = self.debug
+        self.debug = False
         scores = []
         for answer in tqdm(self.validAnswers): scores.append(self.play(answer))
+        self.debug = True
         return scores
 
     
