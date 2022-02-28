@@ -10,12 +10,11 @@ class Color(Enum):
     GREEN = 2
 
 class WordleGame(object):
-    def __init__(self, manual = False, forcedGuesses = []) -> None:
+    def __init__(self, forcedGuesses = []) -> None:
         self.nLetters = 5
         self.validGuesses = guesses
         self.validAnswers = answers
         self.debug = False
-        self.manual = manual
 
         self.previousResults = []
 
@@ -66,11 +65,11 @@ class WordleGame(object):
         return ''.join(res)
 
 
-    def play(self, answer = None):
+    def play(self, answer = None, manual = False):
         self.resetPlayer()
         self.previousResults = []
 
-        if answer is None and not self.manual:
+        if answer is None and not manual:
             answer = random.choice(self.validAnswers)
 
         nTurns = 0
@@ -79,7 +78,7 @@ class WordleGame(object):
             if self.debug: print("Guess: ", guess)
             nTurns += 1
 
-            if self.manual:
+            if manual:
                 res = self.manualCheck()
             else:
                 res = self.check(guess, answer, self.debug)
