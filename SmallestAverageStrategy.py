@@ -3,21 +3,23 @@ from tqdm.auto import tqdm
 import gc
 
 class SmallestAverageStrategy(WordleGame):
-    def __init__(self, debug = False, **kwargs) -> None:
+    def __init__(self, debug = False, hardMode = False, **kwargs) -> None:
         super().__init__(**kwargs)
         self.debug = debug
         self.allPossible = (self.validAnswers + self.validGuesses).copy()
         self.originalAllPossible = self.allPossible.copy()
         self.forcedGuessIdx = 0
         self.lastGuess = None
-        self.forcedGuesses = ['tares']
+        self.forcedGuesses = []
         self.nGuesses = 0
+        self.hardMode = hardMode
 
         # Since first guess is gonna be the same no matter what, cache which result leads to which next guess
         self.secondTurnGuesses = {}
 
     def resetPlayer(self):
         self.allPossible = self.originalAllPossible.copy()
+        self.forcedGuesses = []
         self.forcedGuessIdx = 0
         self.lastGuess = None
         self.nGuesses = 0
@@ -46,7 +48,10 @@ class SmallestAverageStrategy(WordleGame):
 
             self.allPossible = self.filterPossible(self.lastGuess, lastRes)
 
-        if self.debug: print("Possible set:", len(self.allPossible))
+        if self.debug: 
+            print("Possible set:", len(self.allPossible))
+            if len(self.allPossible) < 10:
+                print(self.allPossible)
 
         bestGuess = None
         if self.forcedGuessIdx < len(self.forcedGuesses):
@@ -63,9 +68,11 @@ class SmallestAverageStrategy(WordleGame):
         else:
             lowestScore = 0
             # i = 0
-            for x in tqdm(self.originalAllPossible, colour = 'blue'):
+            wordSet = self.allPossible if self.hardMode else self.originalAllPossible
+            for x in tqdm(wordSet, colour = 'blue'):
                 score = self.averageIfGuessed(x)
-                # print(x,'-->',score)
+                if self.debug:
+                    if len(self.allPossible) < 10 and x in self.allPossible: print(x,'-->',score)
                 if bestGuess is None or score <= lowestScore:
                     bestGuess = x
                     lowestScore = score

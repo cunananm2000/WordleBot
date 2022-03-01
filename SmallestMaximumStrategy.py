@@ -1,3 +1,4 @@
+from xml.etree.ElementPath import xpath_tokenizer_re
 from WordleGame import WordleGame
 from tqdm.auto import tqdm
 import gc
@@ -22,19 +23,47 @@ class SmallestMaximumStrategy(WordleGame):
         self.lastGuess = None
         self.nGuesses = 0
 
-    def filterPossible(self, possibleGuess, possibleRes):
-        return [x for x in self.allPossible if self.check(possibleGuess, x) == possibleRes]
+    def filterPossible(self, possibleGuess, possibleRes, possibleSet = None):
+        if possibleSet is None: possibleSet = self.allPossible
+        return [x for x in possibleSet if self.check(possibleGuess, x) == possibleRes]
 
-    def maximumIfGuessed(self, possibleGuess):
+    def maximumIfGuessed(self, possibleGuess, possibleSet = None):
+        if possibleSet is None: possibleSet = self.allPossible
+        # print(possibleGuess,len(possibleSet))
         results = {}
-        for x in self.allPossible:
+        for x in possibleSet:
             res = self.fromEnum(self.check(possibleGuess,x))
+
+            # print(len(self.filterPossible(
+            #                 possibleGuess=possibleGuess,
+            #                 possibleRes=res,
+            #                 possibleSet=possibleSet
+            #             )))
             # print(x,'-->')
             # self.pprint(self.toEnum(res))
+            # if res in results:
+            #     results[res] = max(results[res],v)
+            # else:
+
             results[res] = results.get(res,0) + 1
+            # if level == 0:
+            #     results[res] = results.get(res,0) + 1
+            # else:
+            #     results[res] = max(
+            #         results.get(res,0), 
+            #         self.maximumIfGuessed(
+            #             x, 
+            #             possibleSet = self.filterPossible(
+            #                 possibleGuess=possibleGuess,
+            #                 possibleRes=self.toEnum(res),
+            #                 possibleSet=possibleSet
+            #             ), 
+            #             level = level - 1
+            #         )
+            #     )
         # print(results)
         score = max(results.values())
-        del results
+        # del results
         return score
 
     def getNextGuess(self):

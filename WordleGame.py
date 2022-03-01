@@ -65,9 +65,10 @@ class WordleGame(object):
         return ''.join(res)
 
 
-    def play(self, answer = None, manual = False):
+    def play(self, answer = None, manual = False, forcedGuesses = []):
         self.resetPlayer()
         self.previousResults = []
+        self.forcedGuesses = forcedGuesses
 
         if answer is None and not manual:
             answer = random.choice(self.validAnswers)
@@ -107,11 +108,11 @@ class WordleGame(object):
                 print("\u2B1B", end='')
         print('')
 
-    def runAllPossibleAnswers(self):
+    def runAllPossibleAnswers(self, forcedGuesses = []):
         tempDebug = self.debug
         self.debug = False
         scores = []
-        for answer in tqdm(self.validAnswers): scores.append(self.play(answer))
+        for answer in tqdm(self.validAnswers): scores.append(self.play(answer, forcedGuesses = forcedGuesses))
         self.debug = True
         return scores
 
