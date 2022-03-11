@@ -113,7 +113,7 @@ class WordleGame(object):
         self.debug = False
         scores = []
         for answer in tqdm(self.validAnswers): scores.append(self.play(answer, forcedGuesses = forcedGuesses))
-        self.debug = True
+        self.debug = tempDebug
         return scores
 
     
