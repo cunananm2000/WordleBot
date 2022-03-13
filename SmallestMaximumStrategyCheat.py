@@ -3,15 +3,16 @@ from WordleGame import WordleGame
 from tqdm.auto import tqdm
 import gc
 
+
 class SmallestMaximumStrategyCheat(WordleGame):
-    def __init__(self, debug = False, **kwargs) -> None:
+    def __init__(self, debug=False, **kwargs) -> None:
         super().__init__(**kwargs)
         self.debug = debug
         self.allPossible = self.validAnswers.copy()
         self.originalAllPossible = (self.validAnswers + self.validGuesses).copy()
         self.forcedGuessIdx = 0
         self.lastGuess = None
-        self.forcedGuesses = ['serai']
+        self.forcedGuesses = ["serai"]
         self.nGuesses = 0
 
         # Since first guess is gonna be the same no matter what, cache which result leads to which next guess
@@ -23,16 +24,18 @@ class SmallestMaximumStrategyCheat(WordleGame):
         self.lastGuess = None
         self.nGuesses = 0
 
-    def filterPossible(self, possibleGuess, possibleRes, possibleSet = None):
-        if possibleSet is None: possibleSet = self.allPossible
+    def filterPossible(self, possibleGuess, possibleRes, possibleSet=None):
+        if possibleSet is None:
+            possibleSet = self.allPossible
         return [x for x in possibleSet if self.check(possibleGuess, x) == possibleRes]
 
-    def maximumIfGuessed(self, possibleGuess, possibleSet = None):
-        if possibleSet is None: possibleSet = self.allPossible
+    def maximumIfGuessed(self, possibleGuess, possibleSet=None):
+        if possibleSet is None:
+            possibleSet = self.allPossible
         # print(possibleGuess,len(possibleSet))
         results = {}
         for x in possibleSet:
-            res = self.fromEnum(self.check(possibleGuess,x))
+            res = self.fromEnum(self.check(possibleGuess, x))
 
             # print(len(self.filterPossible(
             #                 possibleGuess=possibleGuess,
@@ -45,19 +48,19 @@ class SmallestMaximumStrategyCheat(WordleGame):
             #     results[res] = max(results[res],v)
             # else:
 
-            results[res] = results.get(res,0) + 1
+            results[res] = results.get(res, 0) + 1
             # if level == 0:
             #     results[res] = results.get(res,0) + 1
             # else:
             #     results[res] = max(
-            #         results.get(res,0), 
+            #         results.get(res,0),
             #         self.maximumIfGuessed(
-            #             x, 
+            #             x,
             #             possibleSet = self.filterPossible(
             #                 possibleGuess=possibleGuess,
             #                 possibleRes=self.toEnum(res),
             #                 possibleSet=possibleSet
-            #             ), 
+            #             ),
             #             level = level - 1
             #         )
             #     )
@@ -75,7 +78,8 @@ class SmallestMaximumStrategyCheat(WordleGame):
 
             self.allPossible = self.filterPossible(self.lastGuess, lastRes)
 
-        if self.debug: print("Possible set:", len(self.allPossible))
+        if self.debug:
+            print("Possible set:", len(self.allPossible))
 
         bestGuess = None
         if self.forcedGuessIdx < len(self.forcedGuesses):
@@ -88,11 +92,11 @@ class SmallestMaximumStrategyCheat(WordleGame):
             bestGuess = self.allPossible[0]
         elif len(self.allPossible) == 0:
             print("Uhhh somehow nothing possible left?????")
-            assert(False)
+            assert False
         else:
             lowestScore = 0
             # i = 0
-            for x in tqdm(self.originalAllPossible, colour = 'blue'):
+            for x in tqdm(self.originalAllPossible, colour="blue"):
                 score = self.maximumIfGuessed(x)
                 # print(x,'-->',score)
                 if bestGuess is None or score <= lowestScore:
@@ -104,8 +108,9 @@ class SmallestMaximumStrategyCheat(WordleGame):
             if self.nGuesses == 2:
                 self.secondTurnGuesses[resKey] = bestGuess
 
-            if self.debug: print("Best score:", lowestScore)
-        
-        print(self.nGuesses,':',resKey,'--->',bestGuess)
+            if self.debug:
+                print("Best score:", lowestScore)
+
+        print(self.nGuesses, ":", resKey, "--->", bestGuess)
         self.lastGuess = bestGuess
         return bestGuess

@@ -1,7 +1,8 @@
 from WordleGame import WordleGame
 
+
 class NextValidStrategy(WordleGame):
-    def __init__(self, debug = False, **kwargs) -> None:
+    def __init__(self, debug=False, **kwargs) -> None:
         super().__init__(**kwargs)
         self.debug = debug
         self.allPossible = (self.validAnswers + self.validGuesses).copy()
@@ -12,7 +13,9 @@ class NextValidStrategy(WordleGame):
         self.lastGuess = None
 
     def filterPossible(self, possibleGuess, possibleRes):
-        return [x for x in self.allPossible if self.check(possibleGuess, x) == possibleRes]
+        return [
+            x for x in self.allPossible if self.check(possibleGuess, x) == possibleRes
+        ]
 
     def getNextGuess(self):
         if self.lastGuess is not None:
@@ -20,6 +23,6 @@ class NextValidStrategy(WordleGame):
             self.allPossible = self.filterPossible(self.lastGuess, lastRes)
 
         guess = self.allPossible[0]
-        
+
         self.lastGuess = guess
         return guess

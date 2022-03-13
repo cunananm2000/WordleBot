@@ -1,5 +1,6 @@
 from WordleGame import WordleGame
 
+
 class HumanStrategy(WordleGame):
     def __init__(self) -> None:
         super().__init__()
