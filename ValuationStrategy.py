@@ -10,7 +10,6 @@ class ValuationStrategy(WordleGame):
         super().__init__(**kwargs)
         self.debug = debug
 
-        self.previousGuesses = []
         self.allPossible = (self.validAnswers + self.validGuesses).copy()
         self.consistentGuesses = (self.validAnswers + self.validGuesses).copy()
 
@@ -41,7 +40,6 @@ class ValuationStrategy(WordleGame):
 
     def resetPlayer(self):
         self.forcedGuessIdx = 0
-        self.previousGuesses = []
         self.consistentGuesses = self.allPossible.copy()
 
     def filterPossible(self, possibleGuess, possibleRes):
@@ -98,7 +96,6 @@ class ValuationStrategy(WordleGame):
                 for *info, g in [x for x in scores if x[-1] in self.consistentGuesses][:5]:
                     print(*info,'-->',g)
 
-        self.previousGuesses.append(guess)
         return guess
 
     # def valuation(self, guess):

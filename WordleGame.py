@@ -43,8 +43,9 @@ class WordleGame(object):
     def manualCheck(self):
         return input("Result from guess: ")
 
-    def play(self, answer=None, manual=False, forcedGuesses=[]):
+    def play(self, answer=None, manual=False, forcedGuesses=[], overrideSuggestion = False):
         self.resetPlayer()
+        self.previousGuesses = []
         self.previousResults = []
         self.forcedGuesses = forcedGuesses
 
@@ -54,8 +55,13 @@ class WordleGame(object):
         nTurns = 0
         while True:
             guess = self.getNextGuess()
+            if overrideSuggestion:
+                print("Suggested guess:",guess)
+                manualGuess = input("Actual guess: ")
+                if len(manualGuess) == self.nLetters and manualGuess.isalpha():
+                    guess = manualGuess
             if self.debug:
-                print("Guess: ", guess)
+                print("Guessing: ", guess)
             nTurns += 1
 
             if manual:
@@ -64,7 +70,9 @@ class WordleGame(object):
             else:
                 res = self.check(guess, answer, self.debug)
 
+            self.previousGuesses.append(guess)
             self.previousResults.append(res)
+
             if all(x == "2" for x in res):
                 break
             elif nTurns == 100:
