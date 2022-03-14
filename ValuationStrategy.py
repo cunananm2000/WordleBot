@@ -1,7 +1,7 @@
 from WordleGame import WordleGame
 from tqdm.auto import tqdm
-from utils import getWordFreqDict
-
+# from utils import getWordFreqDict
+from wordfreq import zipf_frequency
 
 class ValuationStrategy(WordleGame):
     def __init__(
@@ -36,7 +36,9 @@ class ValuationStrategy(WordleGame):
 
         self.valuation = valuation
 
-        self.wordFreqs = getWordFreqDict()
+        self.wordFreqs = {}
+        for word in self.allPossible:
+            self.wordFreqs[word] = zipf_frequency(word, 'en')
 
     def resetPlayer(self):
         self.forcedGuessIdx = 0

@@ -43,14 +43,14 @@ class WordleGame(object):
     def manualCheck(self):
         return input("Result from guess: ")
 
-    def play(self, answer=None, manual=False, forcedGuesses=[], overrideSuggestion = False):
+    def play(self, answer = None, forcedGuesses=[], overrideSuggestion = False):
         self.resetPlayer()
         self.previousGuesses = []
         self.previousResults = []
         self.forcedGuesses = forcedGuesses
 
-        if answer is None and not manual:
-            answer = random.choice(self.validAnswers)
+        # if answer is None and not manual:
+        #     answer = random.choice(self.validAnswers)
 
         nTurns = 0
         while True:
@@ -64,7 +64,7 @@ class WordleGame(object):
                 print("Guessing: ", guess)
             nTurns += 1
 
-            if manual:
+            if answer is None:
                 res = self.manualCheck()
                 self.pprint(res)
             else:
