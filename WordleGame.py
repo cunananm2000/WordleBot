@@ -3,6 +3,7 @@ import random
 from wordLists import answers, guesses
 from tqdm.auto import tqdm
 import numpy as np
+from utils import check, pprint
 
 
 class WordleGame(object):
@@ -17,28 +18,6 @@ class WordleGame(object):
         self.forcedGuesses = forcedGuesses
 
         self.checkCache = {}
-
-    def check(self, guess, answer, debug=False):
-        # key = guess + answer
-        # if key not in self.checkCache: key = answer + guess
-        # if key not in self.checkCache:
-        res = ["0"] * self.nLetters
-        hit = [False] * self.nLetters
-        for i in range(self.nLetters):
-            if guess[i] == answer[i]:
-                res[i] = "2"
-                hit[i] = True
-        for i in range(self.nLetters):
-            if res[i] == "0":
-                for j in range(self.nLetters):
-                    if guess[i] == answer[j] and not hit[j]:
-                        res[i] = "1"
-                        hit[j] = True
-                        break
-        if debug:
-            self.pprint(res)
-
-        return "".join(res)
 
     def manualCheck(self):
         return input("Result from guess: ")
@@ -66,9 +45,9 @@ class WordleGame(object):
 
             if answer is None:
                 res = self.manualCheck()
-                self.pprint(res)
+                pprint(res)
             else:
-                res = self.check(guess, answer, self.debug)
+                res = check(guess, answer, debug = self.debug, nLetters= self.nLetters)
 
             self.previousGuesses.append(guess)
             self.previousResults.append(res)
@@ -86,16 +65,6 @@ class WordleGame(object):
 
     def getNextGuess(self):
         raise NotImplementedError("Please Implement this method")
-
-    def pprint(self, res):
-        for x in res:
-            if x == "1":
-                print("\U0001f7e8", end="")
-            elif x == "2":
-                print("\U0001f7e9", end="")
-            else:
-                print("\u2B1B", end="")
-        print("")
 
     def runAllPossibleAnswers(self, forcedGuesses=[], overrideDebug=False):
         tempDebug = self.debug

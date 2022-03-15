@@ -1,6 +1,6 @@
 from WordleGame import WordleGame
 from tqdm.auto import tqdm
-from utils import getWordFreq
+from utils import getWordFreq, filterPossible
 import pandas as pd
 
 class ValuationStrategy(WordleGame):
@@ -11,7 +11,7 @@ class ValuationStrategy(WordleGame):
         self.debug = debug
 
         self.allPossible = (self.validAnswers + self.validGuesses).copy()
-        self.consistentGuesses = (self.validAnswers + self.validGuesses).copy()
+        self.candidates = (self.validAnswers + self.validGuesses).copy()
 
         self.forcedGuessIdx = 0
         self.forcedGuesses = forcedGuesses
@@ -42,25 +42,18 @@ class ValuationStrategy(WordleGame):
 
     def resetPlayer(self):
         self.forcedGuessIdx = 0
-        self.consistentGuesses = self.allPossible.copy()
-
-    def filterPossible(self, possibleGuess, possibleRes):
-        return [
-            x
-            for x in self.consistentGuesses
-            if self.check(possibleGuess, x) == possibleRes
-        ]
+        self.candidates = self.allPossible.copy()
 
     def getNextGuess(self):
         if len(self.previousResults) > 0:
-            self.consistentGuesses = self.filterPossible(
-                self.previousGuesses[-1], self.previousResults[-1]
+            self.candidates = filterPossible(
+                self.previousGuesses[-1], self.previousResults[-1], self.candidates
             )
 
-        assert len(self.consistentGuesses) != 0
+        assert len(self.candidates) != 0
 
         if self.debug:
-            print(f"# Remaining: {len(self.consistentGuesses)}")
+            print(f"# Remaining: {len(self.candidates)}")
 
         guess = self.allPossible[0]
         if self.forcedGuessIdx < len(self.forcedGuesses):
@@ -80,7 +73,7 @@ class ValuationStrategy(WordleGame):
 
             scores = [
                 (
-                    self.valuation(g, self.consistentGuesses, self.check),
+                    self.valuation(g, self.candidates),
                     -self.wordFreqs.get(g, 0),
                     g
                 )
@@ -102,7 +95,7 @@ class ValuationStrategy(WordleGame):
                 # for *info, g in [x for x in scores if x[-1] in self.consistentGuesses][:5]:
                 #     print(*info,'-->',g)
 
-                df = pd.DataFrame(columns = ['val','freq','guess'], data = [x for x in scores if x[-1] in self.consistentGuesses][:5])
+                df = pd.DataFrame(columns = ['val','freq','guess'], data = [x for x in scores if x[-1] in self.candidates][:5])
                 df = df[['guess','val','freq']]
                 print(df)
 
