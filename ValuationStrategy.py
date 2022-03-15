@@ -1,7 +1,7 @@
 from WordleGame import WordleGame
 from tqdm.auto import tqdm
-# from utils import getWordFreqDict
-from wordfreq import zipf_frequency
+from utils import getWordFreq
+import pandas as pd
 
 class ValuationStrategy(WordleGame):
     def __init__(
@@ -37,8 +37,8 @@ class ValuationStrategy(WordleGame):
         self.valuation = valuation
 
         self.wordFreqs = {}
-        for word in self.allPossible:
-            self.wordFreqs[word] = zipf_frequency(word, 'en')
+        for word in tqdm(self.allPossible):
+            self.wordFreqs[word] = getWordFreq(word)
 
     def resetPlayer(self):
         self.forcedGuessIdx = 0
@@ -91,12 +91,21 @@ class ValuationStrategy(WordleGame):
 
             if self.debug:
                 print("*** Top possible ***")
-                for *info, g in scores[:5]:
-                    print(*info,'-->',g)
+                df = pd.DataFrame(columns = ['val','freq','guess'], data = scores[:5])
+                df = df[['guess','val','freq']]
+                print(df)
+
+                # for *info, g in scores[:5]:
+                #     print(*info,'-->',g)
 
                 print("*** Top valid ***")
-                for *info, g in [x for x in scores if x[-1] in self.consistentGuesses][:5]:
-                    print(*info,'-->',g)
+                # for *info, g in [x for x in scores if x[-1] in self.consistentGuesses][:5]:
+                #     print(*info,'-->',g)
+
+                df = pd.DataFrame(columns = ['val','freq','guess'], data = [x for x in scores if x[-1] in self.consistentGuesses][:5])
+                df = df[['guess','val','freq']]
+                print(df)
+
 
         return guess
 
