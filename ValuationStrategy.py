@@ -3,6 +3,7 @@ from tqdm.auto import tqdm
 from utils import getWordFreq, filterPossible
 import pandas as pd
 
+
 class ValuationStrategy(WordleGame):
     def __init__(
         self, debug=False, forcedGuesses=[], valuation=lambda g: 1, **kwargs
@@ -46,11 +47,7 @@ class ValuationStrategy(WordleGame):
         else:
 
             scores = [
-                (
-                    self.valuation(g, self.candidates),
-                    -self.wordFreqs.get(g, 0),
-                    g
-                )
+                (self.valuation(g, self.candidates), -self.wordFreqs.get(g, 0), g)
                 for g in tqdm(self.allPossible)
             ]
             scores.sort()
@@ -58,8 +55,8 @@ class ValuationStrategy(WordleGame):
 
             if self.debug:
                 print("*** Top possible ***")
-                df = pd.DataFrame(columns = ['val','freq','guess'], data = scores[:5])
-                df = df[['guess','val','freq']]
+                df = pd.DataFrame(columns=["val", "freq", "guess"], data=scores[:5])
+                df = df[["guess", "val", "freq"]]
                 print(df)
 
                 # for *info, g in scores[:5]:
@@ -69,9 +66,11 @@ class ValuationStrategy(WordleGame):
                 # for *info, g in [x for x in scores if x[-1] in self.consistentGuesses][:5]:
                 #     print(*info,'-->',g)
 
-                df = pd.DataFrame(columns = ['val','freq','guess'], data = [x for x in scores if x[-1] in self.candidates][:5])
-                df = df[['guess','val','freq']]
+                df = pd.DataFrame(
+                    columns=["val", "freq", "guess"],
+                    data=[x for x in scores if x[-1] in self.candidates][:5],
+                )
+                df = df[["guess", "val", "freq"]]
                 print(df)
-
 
         return guess

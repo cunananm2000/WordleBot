@@ -23,7 +23,7 @@ class WordleGame(object):
     def manualCheck(self):
         return input("Result from guess: ")
 
-    def play(self, answer = None, forcedGuesses=[], overrideSuggestion = False):
+    def play(self, answer=None, forcedGuesses=[], overrideSuggestion=False):
         self.resetPlayer()
         self.previousGuesses = []
         self.previousResults = []
@@ -36,7 +36,7 @@ class WordleGame(object):
         while True:
             guess = self.getNextGuess()
             if overrideSuggestion:
-                print("Suggested guess:",guess)
+                print("Suggested guess:", guess)
                 manualGuess = input("Actual guess: ")
                 if len(manualGuess) == self.nLetters and manualGuess.isalpha():
                     guess = manualGuess
@@ -48,7 +48,7 @@ class WordleGame(object):
                 res = self.manualCheck()
                 pprint(res)
             else:
-                res = check(guess, answer, debug = self.debug, nLetters= self.nLetters)
+                res = check(guess, answer, debug=self.debug, nLetters=self.nLetters)
 
             self.previousGuesses.append(guess)
             self.previousResults.append(res)
