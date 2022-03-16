@@ -13,6 +13,7 @@ class WordleGame(object):
         self.validAnswers = answers
         self.debug = debug
 
+        self.previousGuesses = []
         self.previousResults = []
 
         self.forcedGuesses = forcedGuesses
