@@ -16,24 +16,6 @@ class ValuationStrategy(WordleGame):
         self.forcedGuessIdx = 0
         self.forcedGuesses = forcedGuesses
 
-        self.strategy = {
-            # 'guess': 'tares',
-            # 'responses': {
-            #     'YYYYY': {
-            #         'guess': 'sepia',
-            #         'responses': {
-            #         }
-            #     },
-            #     'YYYYg': {
-            #         'guess': 'sepia',
-            #         'responses': {
-            #         }
-            #     }
-            # }
-        }
-        # nextGuess
-        # splits
-
         self.valuation = valuation
 
         self.wordFreqs = {}
@@ -62,14 +44,6 @@ class ValuationStrategy(WordleGame):
         elif len(self.allPossible) == 1:
             guess = self.allPossible[0]
         else:
-            # bestScore = self.valuation(guess, self.consistentGuesses, self.check)
-            # # print(guess, bestScore)
-            # for g in tqdm(self.allPossible[1:]):
-            #     score = self.valuation(g, self.consistentGuesses, self.check)
-            #     # print(g, score)
-            #     if score < bestScore:
-            #         bestScore = score
-            #         guess = g
 
             scores = [
                 (
@@ -101,6 +75,3 @@ class ValuationStrategy(WordleGame):
 
 
         return guess
-
-    # def valuation(self, guess):
-    #     return 1
