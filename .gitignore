@@ -4,3 +4,4 @@ __pycache__/*
 Example.ipynb
 ExampleWordle.ipynb
 sandbox.ipynb
+.vscode/settings.json

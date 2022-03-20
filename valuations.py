@@ -14,7 +14,7 @@ def maxSizeSplit(g, G):
 
 def avgSizeSplit(g, G):
     splits = getSplits(g, G)
-    return np.mean(splits.values()) - (g in G)
+    return np.mean(list(splits.values())) - (g in G)
 
 
 def expAsymptote(g, G):

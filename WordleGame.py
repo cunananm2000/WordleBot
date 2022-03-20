@@ -7,18 +7,16 @@ from utils import check, pprint
 
 
 class WordleGame(object):
-    def __init__(self, debug=False, forcedGuesses=[]) -> None:
+    def __init__(self, debug=False, forcedGuesses=[], validGuesses = None, validAnswers = None) -> None:
         self.nLetters = 5
-        self.validGuesses = guesses
-        self.validAnswers = answers
+        self.validGuesses = guesses if validGuesses is None else validGuesses
+        self.validAnswers = answers if validAnswers is None else validAnswers
         self.debug = debug
 
         self.previousGuesses = []
         self.previousResults = []
 
         self.forcedGuesses = forcedGuesses
-
-        self.checkCache = {}
 
     def manualCheck(self):
         return input("Result from guess: ")
