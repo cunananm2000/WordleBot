@@ -17,11 +17,11 @@ class ValuationStrategyCached(WordleGame):
 
         self.strategy = {}
 
-        try:
-            f = open(f"{folder}/{valuation.__name__}.json")
-        except FileNotFoundError:
-            print("Need to write file")
-            writeStrategyTree(valuation, onlyCommon)
+        # try:
+        #     f = open(f"{folder}/{valuation.__name__}3.json")
+        # except FileNotFoundError:
+        #     print("Need to write file")
+        #     writeStrategyTree(valuation, onlyCommon)
 
         with open(f"{folder}/{valuation.__name__}2.json") as f:
             self.strategy = json.load(f)

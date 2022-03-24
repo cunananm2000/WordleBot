@@ -65,11 +65,12 @@ class WordleGame(object):
     def getNextGuess(self):
         raise NotImplementedError("Please Implement this method")
 
-    def runAllPossibleAnswers(self, forcedGuesses=[], overrideDebug=False):
+    def runAllPossibleAnswers(self, answers = None,forcedGuesses=[], overrideDebug=False):
         tempDebug = self.debug
         self.debug = False or overrideDebug
+        if answers is None: answers = self.validAnswers
         scores = []
-        for answer in tqdm(self.validAnswers):
+        for answer in tqdm(answers):
             scores.append(self.play(answer, forcedGuesses=forcedGuesses))
         self.debug = tempDebug
         return scores
