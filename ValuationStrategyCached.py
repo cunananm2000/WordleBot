@@ -23,7 +23,7 @@ class ValuationStrategyCached(WordleGame):
         #     print("Need to write file")
         #     writeStrategyTree(valuation, onlyCommon)
 
-        with open(f"{folder}/{valuation.__name__}2.json") as f:
+        with open(f"{folder}/{valuation.__name__}.json") as f:
             self.strategy = json.load(f)
 
         self.valuation = valuation

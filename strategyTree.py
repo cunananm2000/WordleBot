@@ -9,7 +9,7 @@ def getBestGuess(candidates, validGuesses, valuation, depth, searchDepth = 0):
 
     scores = [
             (valuation(g, candidates), -getWordFreq(g), g)
-            for g in tqdm(validGuesses, desc=f'{"  "*depth}Depth: {depth}', disable = (searchDepth != 1))
+            for g in tqdm(validGuesses, desc=f'{"  "*depth}Depth: {depth}', disable = (searchDepth != 0))
     ]
     scores.sort()
     
@@ -64,4 +64,4 @@ def writeStrategyTree(v, common, searchDepth = 0):
         json.dump(tree, f, sort_keys=True, indent=4)
 
 if __name__ == "__main__":
-    writeStrategyTree(information, False, searchDepth = 1)
+    writeStrategyTree(probsGreen, False, searchDepth = 0)
