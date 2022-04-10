@@ -7,7 +7,9 @@ from utils import check, pprint
 
 
 class WordleGame(object):
-    def __init__(self, debug=False, forcedGuesses=[], validGuesses = None, validAnswers = None) -> None:
+    def __init__(
+        self, debug=False, forcedGuesses=[], validGuesses=None, validAnswers=None
+    ) -> None:
         self.nLetters = 5
         self.validGuesses = guesses if validGuesses is None else validGuesses
         self.validAnswers = answers if validAnswers is None else validAnswers
@@ -65,10 +67,13 @@ class WordleGame(object):
     def getNextGuess(self):
         raise NotImplementedError("Please Implement this method")
 
-    def runAllPossibleAnswers(self, answers = None,forcedGuesses=[], overrideDebug=False):
+    def runAllPossibleAnswers(
+        self, answers=None, forcedGuesses=[], overrideDebug=False
+    ):
         tempDebug = self.debug
         self.debug = False or overrideDebug
-        if answers is None: answers = self.validAnswers
+        if answers is None:
+            answers = self.validAnswers
         scores = []
         for answer in tqdm(answers):
             scores.append(self.play(answer, forcedGuesses=forcedGuesses))

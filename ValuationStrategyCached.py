@@ -8,25 +8,25 @@ import json
 
 class ValuationStrategyCached(WordleGame):
     def __init__(
-        self, debug=False, onlyCommon = False, forcedGuesses=[], valuation=lambda g: 1, **kwargs
+        self,
+        debug=False,
+        # onlyCommon=False,
+        # forcedGuesses=[],
+        # valuation=lambda g: 1,
+        strategyFile="",
+        **kwargs,
     ) -> None:
         super().__init__(**kwargs)
         self.debug = debug
 
-        folder = 'commonTrees' if onlyCommon else 'trees'
+        # folder = "commonTrees" if onlyCommon else "trees"
+        # self.strategy = {}
+        # with open(f"{folder}/{valuation.__name__}.json") as f:
+        #     self.strategy = json.load(f)
 
-        self.strategy = {}
-
-        # try:
-        #     f = open(f"{folder}/{valuation.__name__}3.json")
-        # except FileNotFoundError:
-        #     print("Need to write file")
-        #     writeStrategyTree(valuation, onlyCommon)
-
-        with open(f"{folder}/{valuation.__name__}.json") as f:
+        # self.valuation = valuation
+        with open(strategyFile) as f:
             self.strategy = json.load(f)
-
-        self.valuation = valuation
 
     def resetPlayer(self):
         pass
