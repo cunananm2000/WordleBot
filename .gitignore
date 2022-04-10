@@ -1,7 +1,5 @@
 .ipynb_checkpoints/*
 
 __pycache__/*
-Example.ipynb
-ExampleWordle.ipynb
-sandbox.ipynb
+*.ipynb
 .vscode/settings.json
