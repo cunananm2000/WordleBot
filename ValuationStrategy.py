@@ -6,13 +6,13 @@ import pandas as pd
 
 class ValuationStrategy(WordleGame):
     def __init__(
-        self, debug=False, forcedGuesses=[], valuation=lambda g: 1, **kwargs
+        self, debug=False, forcedGuesses=[], valuation=lambda g: 1, hardMode=False, **kwargs
     ) -> None:
         super().__init__(**kwargs)
         self.debug = debug
 
         self.allPossible = (self.validAnswers + self.validGuesses).copy()
-        self.candidates = (self.validAnswers + self.validGuesses).copy()
+        self.candidates = (self.validAnswers).copy()
 
         self.forcedGuessIdx = 0
         self.forcedGuesses = forcedGuesses
@@ -23,9 +23,11 @@ class ValuationStrategy(WordleGame):
         for word in tqdm(self.allPossible):
             self.wordFreqs[word] = getWordFreq(word)
 
+        self.hardMode = hardMode
+
     def resetPlayer(self):
         self.forcedGuessIdx = 0
-        self.candidates = self.allPossible.copy()
+        self.candidates = self.validAnswers.copy()
 
     def getNextGuess(self):
         if len(self.previousResults) > 0:
@@ -42,25 +44,31 @@ class ValuationStrategy(WordleGame):
         if self.forcedGuessIdx < len(self.forcedGuesses):
             guess = self.forcedGuesses[self.forcedGuessIdx]
             self.forcedGuessIdx += 1
-        elif len(self.allPossible) == 1:
-            guess = self.allPossible[0]
+        elif len(self.candidates) == 1:
+            guess = self.candidates[0]
         else:
+
+            validGuesses = self.candidates if self.hardMode else self.allPossible
 
             scores = [
                 (self.valuation(g, self.candidates), -self.wordFreqs.get(g, 0), g)
-                for g in tqdm(self.allPossible)
+                for g in tqdm(validGuesses)
             ]
             scores.sort()
             guess = scores[0][-1]
 
-            if self.debug:
-                print("*** Top possible ***")
-                df = pd.DataFrame(columns=["val", "freq", "guess"], data=scores[:5])
-                df = df[["guess", "val", "freq"]]
-                print(df)
+            # if self.hardMode:
+            #     guess = [x for x in scores if x[-1] in self.candidates][0][-1]
 
-                # for *info, g in scores[:5]:
-                #     print(*info,'-->',g)
+            if self.debug:
+                if not self.hardMode:
+                    print("*** Top possible ***")
+                    df = pd.DataFrame(columns=["val", "freq", "guess"], data=scores[:5])
+                    df = df[["guess", "val", "freq"]]
+                    print(df)
+
+                    # for *info, g in scores[:5]:
+                    #     print(*info,'-->',g)
 
                 print("*** Top valid ***")
                 # for *info, g in [x for x in scores if x[-1] in self.consistentGuesses][:5]:
@@ -74,3 +82,6 @@ class ValuationStrategy(WordleGame):
                 print(df)
 
         return guess
+
+    def getPlayerName(self):
+        return self.valuation.__name__

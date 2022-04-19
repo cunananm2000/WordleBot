@@ -4,6 +4,7 @@ from wordLists import answers, guesses
 from tqdm.auto import tqdm
 import numpy as np
 from utils import check, pprint
+import pandas as pd
 
 
 class WordleGame(object):
@@ -67,6 +68,9 @@ class WordleGame(object):
     def getNextGuess(self):
         raise NotImplementedError("Please Implement this method")
 
+    def getPlayerName(self):
+        raise NotImplementedError("Please Implement this method")
+
     def runAllPossibleAnswers(
         self, answers=None, forcedGuesses=[], overrideDebug=False
     ):
@@ -79,3 +83,12 @@ class WordleGame(object):
             scores.append(self.play(answer, forcedGuesses=forcedGuesses))
         self.debug = tempDebug
         return scores
+
+    def getScores(self, answers=None, forcedGuesses=[],overrideDebug=False):
+        scores = pd.DataFrame()
+        scores['answer'] = self.validAnswers
+        scores['score'] = self.runAllPossibleAnswers(answers=answers, forcedGuesses=forcedGuesses,overrideDebug=overrideDebug)
+
+        return scores
+
+

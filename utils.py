@@ -72,5 +72,5 @@ def check(guess, answer, debug=False, nLetters=5):
     return "".join(res)
 
 
-def filterPossible(possibleGuess, possibleRes, candidates):
-    return [x for x in candidates if check(possibleGuess, x) == possibleRes]
+def filterPossible(guess, res, candidates):
+    return [x for x in candidates if check(guess, x) == res]

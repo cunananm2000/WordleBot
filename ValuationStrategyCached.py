@@ -9,11 +9,11 @@ import json
 class ValuationStrategyCached(WordleGame):
     def __init__(
         self,
+        strategyFile,
         debug=False,
         # onlyCommon=False,
         # forcedGuesses=[],
         # valuation=lambda g: 1,
-        strategyFile="",
         **kwargs,
     ) -> None:
         super().__init__(**kwargs)
@@ -23,6 +23,8 @@ class ValuationStrategyCached(WordleGame):
         # self.strategy = {}
         # with open(f"{folder}/{valuation.__name__}.json") as f:
         #     self.strategy = json.load(f)
+
+        self.fileName = strategyFile
 
         # self.valuation = valuation
         with open(strategyFile) as f:
@@ -44,3 +46,6 @@ class ValuationStrategyCached(WordleGame):
             print(f"Remaining:", curr["nRemaining"])
 
         return curr["guess"]
+
+    def getPlayerName(self):
+        return self.strategy.get('name',self.fileName)
