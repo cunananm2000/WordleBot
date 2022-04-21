@@ -1,3 +1,5 @@
+from audioop import avg
+from cmath import exp
 from utils import getWordFreq, check, getSplits, filterPossible
 from wordLists import guesses, answers, commonWords
 from tqdm.auto import tqdm
@@ -14,7 +16,7 @@ def getBestGuess(candidates, validGuesses, valuation, depth, searchDepth=0, hard
     scores = [
         (valuation(g, candidates), -getWordFreq(g), g)
         for g in tqdm(
-            validGuesses, desc=f'{"  "*depth}Depth: {depth}', disable=(searchDepth != 0)
+            validGuesses, desc=f'{"  "*depth}Depth: {depth}',# disable=(searchDepth != 2)
         )
     ]
     scores.sort()
@@ -27,12 +29,7 @@ def getBestGuess(candidates, validGuesses, valuation, depth, searchDepth=0, hard
     data = []
     for g in tqdm(topGuesses, desc=f"Going deeper, searchDepth = {searchDepth}"):
         scores = []
-        for _, split in getSplits(g, candidates, useWords=True).items():
-            score, _ = getBestGuess(
-                split, validGuesses, valuation, depth, searchDepth - 1
-            )
-            scores.append(score)
-        data.append((max(scores), -getWordFreq(g), g))
+        for _, s++++++++++++++++++++-getWordFreq(g), g))
 
     data.sort()
     score, _, guess = data[0]
@@ -103,4 +100,10 @@ def writeStrategyTree(v, candidates, validGuesses, searchDepth=0, hardMode=False
 
 if __name__ == "__main__":
     # writeStrategyTree(v=maxSize, common=True, searchDepth=0, hardMode=True)
-    writeStrategyTree(v=maxSizeSplit, candidates = answers, validGuesses = answers + guesses)
+    writeStrategyTree(
+        v=maxSizeSplit, 
+        candidates = answers, 
+        validGuesses = answers + guesses, 
+        searchDepth=2, 
+        # hardMode=True
+    )
