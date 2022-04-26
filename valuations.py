@@ -3,35 +3,45 @@ from utils import getSplits, check
 
 # aback
 def firstValid(g, G):
-    return 1 - (g in G)
+    return 0 if g in G else 1
 
 
 # tares
 def maxSizeSplit(g, G):
     splits = getSplits(g, G)
-    return max(splits.values()) - (g in G)
+    return max(splits.values())
 
 
 def avgSizeSplit(g, G):
     splits = getSplits(g, G)
-    return np.mean(list(splits.values())) - (g in G)
+    return np.mean(list(splits.values()))
+
+def expSizeSplit(g, G):
+    splits = getSplits(g, G)
+    return sum(t/len(G) * t for t in splits.values())
 
 
 def expAsymptote(g, G):
     splits = getSplits(g, G)
-    return sum(t * (1 - np.exp(-t)) for t in splits.values()) - (g in G) * (
-        1 - np.exp(-1)
-    )
+    return sum(t * (1 - np.exp(-t)) for t in splits.values())
 
 
 def maxSumReciprocals(g, G):
     splits = getSplits(g, G)
     return 1 / sum(1 / t for t in splits.values())
 
+def harmonicMean(g, G):
+    splits = getSplits(g, G)
+    return len(splits.values()) / sum((1/t) for t in splits.values())
+
+def mostParts(g, G):
+    splits = getSplits(g, G)
+    return -len(splits.values())
+
 
 def information(g, G):
     splits = getSplits(g, G)
-    return sum(t * np.log(t) for t in splits.values()) - (g in G) * (2 * np.log(2))
+    return sum(t * np.log(t) for t in splits.values())
 
 
 def probsGreen(g, G):

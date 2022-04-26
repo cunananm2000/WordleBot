@@ -20,7 +20,7 @@ def getWordFreqDict():
 def getWordFreq(word):
     # response = requests.get(f"https://api.datamuse.com/words?sp={word}&md=f&max=1")
     # return response.json()[0]['score']
-
+    # return 0
     return zipf_frequency(word, "en")
 
 
