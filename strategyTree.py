@@ -12,7 +12,7 @@ def getBestGuess(candidates, validGuesses, valuation, depth, searchDepth=0, hard
     #     nextGuesses = filterPossible()
     
     scores = [
-        (valuation(g, candidates), -getWordFreq(g), g)
+        (valuation(g, candidates), 1-(g in candidates) ,-getWordFreq(g), g)
         for g in tqdm(
             validGuesses, desc=f'{"  "*depth}Depth: {depth}', disable=(searchDepth != 0)
         )
@@ -20,10 +20,10 @@ def getBestGuess(candidates, validGuesses, valuation, depth, searchDepth=0, hard
     scores.sort()
 
     if searchDepth == 0:
-        score, _, guess = scores[0]
+        score, _, _, guess = scores[0]
         return score, guess
 
-    topGuesses = [guess for _, _, guess in scores][:5]
+    topGuesses = [score[-1] for score in scores][:5]
     data = []
     for g in tqdm(topGuesses, desc=f"Going deeper, searchDepth = {searchDepth}"):
         scores = []
@@ -32,10 +32,10 @@ def getBestGuess(candidates, validGuesses, valuation, depth, searchDepth=0, hard
                 split, validGuesses, valuation, depth, searchDepth - 1
             )
             scores.append(score)
-        data.append((max(scores), -getWordFreq(g), g))
+        data.append((max(scores), 1-(g in candidates), -getWordFreq(g), g))
 
     data.sort()
-    score, _, guess = data[0]
+    score, _,_,guess = data[0]
 
     return score, guess
 
@@ -103,4 +103,4 @@ def writeStrategyTree(v, candidates, validGuesses, searchDepth=0, hardMode=False
 
 if __name__ == "__main__":
     # writeStrategyTree(v=maxSize, common=True, searchDepth=0, hardMode=True)
-    writeStrategyTree(v=maxSizeSplit, candidates = answers, validGuesses = answers + guesses)
+    writeStrategyTree(v=information, candidates = answers, validGuesses = answers + guesses)
