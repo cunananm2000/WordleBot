@@ -20,7 +20,6 @@ def expSizeSplit(g, G):
     splits = getSplits(g, G)
     return sum(t/len(G) * t for t in splits.values())
 
-
 def expAsymptote(g, G):
     splits = getSplits(g, G)
     return sum(t * (1 - np.exp(-t)) for t in splits.values())

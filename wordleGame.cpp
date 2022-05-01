@@ -141,15 +141,18 @@ int main(){
 	// testCheck("other","blood");
 	// testCheck("blood","other");
 
-    cout << "Number of possible guesses " << guesses.size() << endl;
-	int score = play("epoxy");
-    cout << "Got it in " << score << " guesses" << endl;
+    // cout << "Number of possible guesses " << guesses.size() << endl;
+	// int score = play("epoxy");
+    // cout << "Got it in " << score << " guesses" << endl;
+
+
 
 	// for (int i = 0; i < guesses.size(); i++) {
 	// 	cout << guesses[i] << "\n";
 	// }
 
-
+	string g = getBestGuess(answers);
+	cout << "Best guess is " << g << "\n";
 
 	// map<vector<int>,vector<string> > splits = getSplits("epoxy",guesses);
 	
@@ -163,3 +166,5 @@ int main(){
  
     return 0;
 }
+
+// g++ -std=c++11 wordleGame.cpp -o wordleGame
