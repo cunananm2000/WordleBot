@@ -55,11 +55,16 @@ if __name__ == '__main__':
     C = S
     # C = filterPossible('reais', '01110', C)
     # C = filterPossible('aizle', '21012', C)
-    play = [ 
-        # ('reais','00100'),
-        # ('canty','02002'),
-        # ('algid','10000'),
-        # ('abamp','10001')
+    # play = [ 
+    #     # ('reais','00100'),
+    #     # ('canty','02002'),
+    #     # ('algid','10000'),
+    #     # ('abamp','10001')
+    # ]
+
+    play = [
+        ('aesir','00001'),
+        ('choon','00110')
     ]
 
     for g,r in play:

@@ -7,108 +7,86 @@ from valuations import *
 import json
 
 
-def getBestGuess(candidates, validGuesses, valuation, depth, searchDepth=0, hardMode = False):
+G = sorted(guesses + answers)
+S = sorted(answers)
 
-    # nextGuesses = validGuesses
-    # if hardMode:
-    #     nextGuesses = filterPossible()
+def v(g, C):
+    return (information(g, C), 1-(g in C))
+
+def agg(a):
+    return sum([x[0] for x in a])
+
+
+def sigma(L, C):
+    print(f"{'   ' * L} Called with {len(C)} candidates")
+    if len(C) == 1:
+        print(f"Only one candidate {C[0]}")
+        return C[0]
+
+    sortedG = sorted([(v(g, C), g) for g in tqdm(G)])
+    print(sortedG[:5])
+    if L == 1:
+        guess = sortedG[0][-1]
+        print(f"Submitting {guess}")
+        return guess
     
-    scores = [
-        (valuation(g, candidates), 1-(g in candidates) ,-getWordFreq(g), g)
-        for g in tqdm(
-            validGuesses, desc=f'{"  "*depth}Depth: {depth}',# disable=(searchDepth != 2)
-        )
-    ]
-    scores.sort()
-
-    if searchDepth == 0:
-        score, _, _, guess = scores[0]
-        return score, guess
-
-    topGuesses = [score[-1] for score in scores][:5]
-    data = []
-    for g in tqdm(topGuesses, desc=f"Going deeper, searchDepth = {searchDepth}"):
+    futures = []
+    for _,g in tqdm(sortedG[:5]):
+        print(f"Investigating {g} further")
+        splits = getSplits(g, C, useWords = True)
         scores = []
-        for _, split in getSplits(g, candidates, useWords=True).items():
-            score, _ = getBestGuess(
-                split, validGuesses, valuation, depth, searchDepth - 1
-            )
+        for res,cands in tqdm(splits.items()):
+            # Can use a bound here since we can keep track of the largest future split here
+            followUpGuess = sigma(L-1, cands)
+            score = v(followUpGuess, cands)
+            print(f" After getting g={g}, res=({res},{len(cands)}), follow with {followUpGuess} -> {score}")
+
             scores.append(score)
-        data.append((max(scores), 1-(g in candidates), -getWordFreq(g), g))
 
-    data.sort()
-    score, _,_,guess = data[0]
+        futures.append(((agg(scores), 1 - (g in C)), g))
 
-    return score, guess
+        print(f"{'  ' * L} --> {g}: {agg(scores)}")
 
+    futures.sort()
+    for s,g in futures:
+        print(f"{'   ' * L} Future {g} --> {s}")
+    guess = futures[0][-1]
+    print(f"{'   ' * L} Submitting {guess}")
+    return guess
 
-def genStrategyTree(candidates, validGuesses, valuation, depth=0, searchDepth=0, hardMode = False):
-    if len(candidates) == 1:
-        print(f'{"  "*depth}Leaf: {candidates[0]}, depth = {depth}')
-        return {"guess": candidates[0]}
+def genStrategyTree(L, C):
+    tree = {}
+    g = sigma(L, C)
+    tree['guess'] = g 
+    if len(C) != 1:
+        splits = getSplits(g, C, useWords=True)
+        tree['splits'] = {}
 
-    _, guess = getBestGuess(
-        candidates, validGuesses, valuation, depth, searchDepth=searchDepth, hardMode=hardMode
-    )
+        for k, v in splits.items():
+            if k == '22222': continue
+            tree['splits'][k] = genStrategyTree(L, v)
+        
+    return tree
 
-    res = {"guess": guess, "nRemaining": len(candidates), "splits": {}}
+def writeStrategyTree(L):
+    # tree = {}
 
-    print(f'{"  "*depth}Guess: {guess}, Remaining: {len(candidates)}')
+    # forcing a guess
+    # g = 'raise' # L = 1
+    # g = 'reais' # L = 2
+    # g = 'aesir' # L = 3
+    # tree['guess'] = g
 
+    # splits = getSplits(g, S, useWords=True)
+    # tree['splits'] = {}
 
-    for response, split in getSplits(guess, candidates, useWords=True).items():
-        if response == "22222":
-            continue
+    # for k, v in splits.items():
+    #     tree['splits'][k] = genStrategyTree(L, v)
 
-        nextGuesses = validGuesses
-        if hardMode:
-            nextGuesses = filterPossible(guess, response, validGuesses)
+    tree = genStrategyTree(L, S)
 
-        res["splits"][response] = genStrategyTree(
-            split, nextGuesses, valuation, depth=depth + 1, searchDepth=searchDepth, hardMode=hardMode
-        )
-
-    return res
-
-
-# def writeStrategyTree(v, common, searchDepth=0, hardMode = False):
-#     if common:
-#         tree = genStrategyTree(
-#             commonWords, guesses + answers, v, searchDepth=searchDepth, hardMode=hardMode
-#         )
-#     else:
-#         tree = genStrategyTree(
-#             guesses + answers, guesses + answers, v, searchDepth=searchDepth, hardMode=hardMode
-#         )
-
-#     tree['name'] = v.__name__
-
-#     with open(
-#         f"{'commonTrees' if common else 'trees'}/{v.__name__}{searchDepth + 1}{'hard' if hardMode else ''}.json",
-#         "w",
-#     ) as f:
-#         json.dump(tree, f, sort_keys=True, indent=4)
-
-def writeStrategyTree(v, candidates, validGuesses, searchDepth=0, hardMode=False):
-    tree = genStrategyTree(
-        candidates, validGuesses, v, searchDepth=searchDepth, hardMode=hardMode
-    )
-
-    tree['name'] = v.__name__
-
-    with open(
-        f"cheatTrees/{v.__name__}{searchDepth + 1}{'hard' if hardMode else ''}.json",
-        "w",
-    ) as f:
-        json.dump(tree, f, sort_keys=True, indent=4)
-
+    with open(f'lookAheadTrees/information{L}.json', 'w') as f:
+        json.dump(tree, f, sort_keys=True, indent = 4)
 
 if __name__ == "__main__":
-    # writeStrategyTree(v=maxSize, common=True, searchDepth=0, hardMode=True)
-    writeStrategyTree(
-        v=maxSizeSplit, 
-        candidates = answers, 
-        validGuesses = answers + guesses, 
-        searchDepth=2, 
-        # hardMode=True
-    )
+    writeStrategyTree(3)
