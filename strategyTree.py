@@ -89,4 +89,4 @@ def writeStrategyTree(L):
         json.dump(tree, f, sort_keys=True, indent = 4)
 
 if __name__ == "__main__":
-    writeStrategyTree(3)
+    writeStrategyTree(4)
