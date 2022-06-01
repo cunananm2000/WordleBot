@@ -16,9 +16,11 @@ def avgSizeSplit(g, G):
     splits = getSplits(g, G)
     return np.mean(list(splits.values()))
 
+
 def expSizeSplit(g, G):
     splits = getSplits(g, G)
-    return sum(t/len(G) * t for t in splits.values())
+    return sum(t / len(G) * t for t in splits.values())
+
 
 def expAsymptote(g, G):
     splits = getSplits(g, G)
@@ -29,9 +31,11 @@ def maxSumReciprocals(g, G):
     splits = getSplits(g, G)
     return 1 / sum(1 / t for t in splits.values())
 
+
 def harmonicMean(g, G):
     splits = getSplits(g, G)
-    return len(splits.values()) / sum((1/t) for t in splits.values())
+    return len(splits.values()) / sum((1 / t) for t in splits.values())
+
 
 def mostParts(g, G):
     splits = getSplits(g, G)

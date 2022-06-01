@@ -48,4 +48,4 @@ class ValuationStrategyCached(WordleGame):
         return curr["guess"]
 
     def getPlayerName(self):
-        return self.strategy.get('name',self.fileName)
+        return self.strategy.get("name", self.fileName)

@@ -84,11 +84,11 @@ class WordleGame(object):
         self.debug = tempDebug
         return scores
 
-    def getScores(self, answers=None, forcedGuesses=[],overrideDebug=False):
+    def getScores(self, answers=None, forcedGuesses=[], overrideDebug=False):
         scores = pd.DataFrame()
-        scores['answer'] = self.validAnswers
-        scores['score'] = self.runAllPossibleAnswers(answers=answers, forcedGuesses=forcedGuesses,overrideDebug=overrideDebug)
+        scores["answer"] = self.validAnswers
+        scores["score"] = self.runAllPossibleAnswers(
+            answers=answers, forcedGuesses=forcedGuesses, overrideDebug=overrideDebug
+        )
 
         return scores
-
-

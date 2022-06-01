@@ -6,7 +6,12 @@ import pandas as pd
 
 class ValuationStrategy(WordleGame):
     def __init__(
-        self, debug=False, forcedGuesses=[], valuation=lambda g: 1, hardMode=False, **kwargs
+        self,
+        debug=False,
+        forcedGuesses=[],
+        valuation=lambda g: 1,
+        hardMode=False,
+        **kwargs,
     ) -> None:
         super().__init__(**kwargs)
         self.debug = debug
