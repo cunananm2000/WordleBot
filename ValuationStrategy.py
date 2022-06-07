@@ -9,7 +9,7 @@ class ValuationStrategy(WordleGame):
         self,
         debug=False,
         forcedGuesses=[],
-        valuation=lambda g: 1,
+        valuations=[lambda g: 1],
         hardMode=False,
         **kwargs,
     ) -> None:
@@ -22,7 +22,7 @@ class ValuationStrategy(WordleGame):
         self.forcedGuessIdx = 0
         self.forcedGuesses = forcedGuesses
 
-        self.valuation = valuation
+        self.valuations = valuations
 
         self.wordFreqs = {}
         for word in tqdm(self.allPossible):
@@ -49,14 +49,14 @@ class ValuationStrategy(WordleGame):
         if self.forcedGuessIdx < len(self.forcedGuesses):
             guess = self.forcedGuesses[self.forcedGuessIdx]
             self.forcedGuessIdx += 1
-        elif len(self.candidates) == 1:
+        elif len(self.candidates) <= 2:
             guess = self.candidates[0]
         else:
 
             validGuesses = self.candidates if self.hardMode else self.allPossible
 
             scores = [
-                (self.valuation(g, self.candidates), -self.wordFreqs.get(g, 0), g)
+                ([v(g, self.candidates) for v in self.valuations], -self.wordFreqs.get(g, 0), g)
                 for g in tqdm(validGuesses)
             ]
             scores.sort()
@@ -89,4 +89,4 @@ class ValuationStrategy(WordleGame):
         return guess
 
     def getPlayerName(self):
-        return self.valuation.__name__
+        return ','.join([v.__name__ for v in self.valuations])
