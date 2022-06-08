@@ -1,10 +1,10 @@
-from smtplib import LMTP
-from textwrap import wrap
-from wordLists import *
-from utils import check, getWordFreq
-from tqdm.auto import tqdm
 from itertools import combinations
+
 from IPython.lib.pretty import pprint
+from tqdm.auto import tqdm
+
+from utils import check, getWordFreq
+from wordLists import *
 
 
 class StaticWordle(object):
@@ -35,7 +35,7 @@ class StaticWordle(object):
             its = list(classes.items())
             its.sort(key=lambda x: -len(x[1]))
             for k, v in its[:5]:
-                print(*[k[i : i + 5] for i in range(0, len(k), 5)], "-->", len(v))
+                print(*[k[i:i+5] for i in range(0, len(k), 5)], "-->", len(v))
                 # from IPython.lib.pretty import pprint
                 print("    ", end="")
                 v.sort(key=lambda x: -getWordFreq(x))

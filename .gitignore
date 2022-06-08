@@ -1,5 +1,5 @@
 .ipynb_checkpoints/*
-
+.DS_Store
 __pycache__/*
 WordAnalysis.ipynb
 ExampleWordle.ipynb

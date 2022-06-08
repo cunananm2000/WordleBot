@@ -1,14 +1,14 @@
-from WordleGame import WordleGame
-from tqdm.auto import tqdm
-from utils import getWordFreq, filterPossible
 import pandas as pd
+from tqdm.auto import tqdm
+
+from utils import filterPossible, getWordFreq
+from WordleGame import WordleGame
 
 
 class ValuationStrategy(WordleGame):
     def __init__(
         self,
         debug=False,
-        forcedGuesses=[],
         valuations=[lambda g: 1],
         hardMode=False,
         **kwargs,
@@ -20,7 +20,6 @@ class ValuationStrategy(WordleGame):
         self.candidates = (self.validAnswers).copy()
 
         self.forcedGuessIdx = 0
-        self.forcedGuesses = forcedGuesses
 
         self.valuations = valuations
 
@@ -56,7 +55,11 @@ class ValuationStrategy(WordleGame):
             validGuesses = self.candidates if self.hardMode else self.allPossible
 
             scores = [
-                ([v(g, self.candidates) for v in self.valuations], -self.wordFreqs.get(g, 0), g)
+                (
+                    [v(g, self.candidates) for v in self.valuations],
+                    -self.wordFreqs.get(g, 0),
+                    g,
+                )
                 for g in tqdm(validGuesses)
             ]
             scores.sort()
@@ -89,4 +92,4 @@ class ValuationStrategy(WordleGame):
         return guess
 
     def getPlayerName(self):
-        return ','.join([v.__name__ for v in self.valuations])
+        return ",".join([v.__name__ for v in self.valuations])
