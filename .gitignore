@@ -7,3 +7,4 @@ WordAnalysis.ipynb
 StaticWordle.ipynb
 LookAhead.ipynb
 .vscode/settings.json
+initialSplits/*
