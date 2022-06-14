@@ -24,14 +24,14 @@ def getWordFreq(word):
     return zipf_frequency(word, "en")
 
 
-def getSplits(g, G, useWords=False):
+def getSplits(g, C, useWords=False):
     splits = {}
-    for g0 in G:
-        res = check(g, g0)
+    for c in C:
+        res = check(g, c)
         if useWords:
             if res not in splits:
                 splits[res] = []
-            splits[res].append(g0)
+            splits[res].append(c)
         else:
             splits[res] = splits.get(res, 0) + 1
 

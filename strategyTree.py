@@ -21,6 +21,9 @@ class TreeGenerator(object):
         self.vs = vs
         self.aggFn = aggFn
 
+        self.stratName = ','.join([val.__name__ for val in self.vs])
+        self.tree = None
+
     def v(self, g, C):
 
         # return (maxSizeSplit(g, C), firstValid(g, C), mostParts(g, C))
@@ -95,7 +98,28 @@ class TreeGenerator(object):
                     continue
                 tree["splits"][k] = self.genStrategyTree(L, v)
 
+        self.tree = tree
         return tree
+
+    def scoreTree(self, words):
+        if self.tree is None: assert(False)
+        #     r = [1]
+        #     if 'splits' in T:
+        #         for k in T['splits']:
+        #             r += [1 + x for x in g(T['splits'][k])]
+        #     return r
+        r = []
+        for w in words:
+            s = 1
+            curr = self.tree
+            res = check(curr['guess'],w)
+            while res != '22222':
+                s += 1
+                curr = curr['splits'][res]
+                res = check(curr['guess'],w)
+                
+            r.append(s)
+        return r
 
 
     def writeStrategyTree(self, L):
@@ -113,7 +137,7 @@ class TreeGenerator(object):
         # for k, v in splits.items():
         #     tree['splits'][k] = genStrategyTree(L, v)
 
-        fname = f"standardTrees/{','.join([val.__name__ for val in self.vs])}{L}.json"
+        fname = f"standardTrees/{self.stratName}{L}.json"
         
         
         if exists(fname): 
@@ -140,10 +164,11 @@ if __name__ == "__main__":
         # mostParts, 
         # information,
         # probsGreen,
-        minRange,
-        expSizeSplit,
-        harmonicMean,
-        minStdDev
+        # minRange,
+        # expSizeSplit,
+        # harmonicMean,
+        # minStdDev,
+        charFreqs,
     ]
 
     # for f in fns:
