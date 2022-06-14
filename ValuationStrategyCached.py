@@ -1,5 +1,8 @@
-from WordleGame import WordleGame
 import json
+
+import numpy as np
+
+from WordleGame import WordleGame
 
 
 class ValuationStrategyCached(WordleGame):
@@ -39,9 +42,17 @@ class ValuationStrategyCached(WordleGame):
             curr = curr["splits"][r]
 
         if self.debug and "nRemaining" in curr:
-            print(f"Remaining:", curr["nRemaining"])
+            print(f"Remaining: {curr['nRemaining']}")
 
         return curr["guess"]
 
     def getPlayerName(self):
         return self.strategy.get("name", self.fileName)
+
+    def getAvg(self):
+        scores = self.runAllPossibleAnswers()
+        return np.mean(scores)
+
+    def getWorst(self):
+        scores = self.runAllPossibleAnswers()
+        return np.max(scores)

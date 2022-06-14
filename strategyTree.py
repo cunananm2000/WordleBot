@@ -1,23 +1,19 @@
-from audioop import avg
-from cmath import exp
-from utils import getWordFreq, check, getSplits, filterPossible
-from wordLists import guesses, answers, commonWords
-from tqdm.auto import tqdm
-from valuations import *
 import json
 from itertools import permutations
-
 from os.path import exists
 
+from tqdm.auto import tqdm
+
+from utils import getSplits
+from valuations import *
+from wordLists import answers, guesses
 
 G = sorted(guesses + answers)
 S = sorted(answers)
 
+
 class TreeGenerator(object):
-    def __init__(self,
-        vs=[firstValid],
-        aggFn=max
-    ):
+    def __init__(self, vs=[firstValid], aggFn=max):
         self.vs = vs
         self.aggFn = aggFn
 
@@ -27,12 +23,10 @@ class TreeGenerator(object):
     def v(self, g, C):
 
         # return (maxSizeSplit(g, C), firstValid(g, C), mostParts(g, C))
-        return tuple(val(g,C) for val in self.vs)
-
+        return tuple(val(g, C) for val in self.vs)
 
     def agg(self, a):
         return self.aggFn([x[0] for x in a])
-
 
     def sigma(self, L, C):
         print(f"{'   ' * L} Called with {len(C)} candidates")
@@ -54,8 +48,8 @@ class TreeGenerator(object):
                 print(self.v(guess, C))
             print(f"Submitting {guess}")
             return guess
-        
-        assert(False)
+
+        assert False
 
         futures = []
         for _, g in tqdm(sortedG[:5]):
@@ -82,7 +76,6 @@ class TreeGenerator(object):
         guess = futures[0][-1]
         print(f"{'   ' * L} Submitting {guess}")
         return guess
-
 
     def genStrategyTree(self, L, C):
         tree = {}
@@ -146,8 +139,6 @@ class TreeGenerator(object):
 
         tree = self.genStrategyTree(L, S)
 
-        
-
         with open(fname, "w") as f:
             json.dump(tree, f, sort_keys=True, indent=4)
 
@@ -160,8 +151,8 @@ if __name__ == "__main__":
     # ], [])
 
     fns = [
-        # maxSizeSplit, 
-        # mostParts, 
+        # maxSizeSplit,
+        # mostParts,
         # information,
         # probsGreen,
         # minRange,
@@ -176,8 +167,5 @@ if __name__ == "__main__":
     # print(len(fns))
     # assert(False)
     for f in fns:
-        treeGen = TreeGenerator(
-            vs=[f, firstValid],
-            aggFn=None
-        )
+        treeGen = TreeGenerator(vs=[f, firstValid], aggFn=None)
         treeGen.writeStrategyTree(1)

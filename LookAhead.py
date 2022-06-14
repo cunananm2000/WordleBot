@@ -1,8 +1,8 @@
-from sys import maxsize
-from wordLists import guesses, answers
+from tqdm.auto import tqdm
+
 from utils import *
 from valuations import *
-from tqdm.auto import tqdm
+from wordLists import answers, guesses
 
 G = sorted(guesses + answers)
 S = sorted(answers)

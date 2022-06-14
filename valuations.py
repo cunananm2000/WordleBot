@@ -1,5 +1,7 @@
 import numpy as np
+
 from utils import getSplits
+
 
 # aback
 def firstValid(g, C):
@@ -12,6 +14,7 @@ def maxSizeSplit(g, C):
     splits = getSplits(g, C)
     return max(splits.values()) - 1
 
+
 # The best case would have all the splits be size 1
 def avgSizeSplit(g, C):
     splits = getSplits(g, C)
@@ -22,6 +25,7 @@ def expSizeSplit(g, C):
     splits = getSplits(g, C)
     return sum(t / len(C) * t for t in splits.values()) - 1
 
+
 def maxSumReciprocals(g, C):
     splits = getSplits(g, C)
     return 1 / sum(1 / t for t in splits.values())
@@ -31,10 +35,12 @@ def harmonicMean(g, C):
     splits = getSplits(g, C)
     return len(splits.values()) / sum((1 / t) for t in splits.values()) - 1
 
+
 # Best case would have everything in its own part
 def mostParts(g, C):
     splits = getSplits(g, C)
     return -len(splits) + len(C)
+
 
 # In best case, they would all be size 1, and log(1) = 0
 def information(g, C):
@@ -44,7 +50,6 @@ def information(g, C):
 
 def probsGreen(g, C):
     splits = getSplits(g, C)
-
     t = 0
     for k, v in splits.items():
         s = k.count("1") + 2 * k.count("2")
@@ -52,10 +57,13 @@ def probsGreen(g, C):
 
     return -t + 10  # 2 * 5
 
+
 def minRange(g, C):
     splits = getSplits(g, C)
-    if len(splits) == 1: return np.inf
+    if len(splits) == 1:
+        return np.inf
     return max(splits.values()) - min(splits.values())
+
 
 def minStdDev(g, C):
     splits = getSplits(g, C)

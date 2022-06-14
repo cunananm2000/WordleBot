@@ -1,8 +1,10 @@
-from numba import jit
 import random
+
 import numpy as np
-from wordLists import answers
+from numba import jit
+
 from utils import check
+from wordLists import answers
 
 N_LETTERS = 5
 
@@ -89,8 +91,8 @@ def test_check_numpy():
 
 
 @jit(nopython=True)
-def test_check_numba(l):
-    for a in l:
+def test_check_numba(words):
+    for a in words:
         check_numba(a, "other")
 
 

@@ -1,10 +1,8 @@
-from enum import Enum
-import random
-from wordLists import answers, guesses
-from tqdm.auto import tqdm
-import numpy as np
-from utils import check, pprint
 import pandas as pd
+from tqdm.auto import tqdm
+
+from utils import check, pprint
+from wordLists import answers, guesses
 
 
 class WordleGame(object):
