@@ -41,14 +41,14 @@ class Solver(object):
         elif len(sub) == 2:
             self.best[c] = sub[0]
             ans = 1.5
-        elif depth >= 5:
+        elif depth >= 6:
             self.best[c] = sub[0]
             ans = 1000
             # print("Gone too far")
         else:
             bestScore = -1
             bestGuess = ""
-            for g in tqdm(G, disable = not (depth < 2)):
+            for g in tqdm(sorted(G, key=lambda x: mostParts(x, sub))[:10], disable = not (depth < 3)):
                 t = 1
                 splits = getSplits(g, sub, useWords = True)
                 if len(splits) == 1: continue
