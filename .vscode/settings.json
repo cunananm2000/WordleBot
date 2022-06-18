@@ -1,5 +1,5 @@
 {
-    "jupyter.jupyterServerType": "remote",
+    "jupyter.jupyterServerType": "local",
     "python.linting.flake8Enabled": false,
     "python.linting.enabled": true,
     "python.linting.pylintEnabled": true,
