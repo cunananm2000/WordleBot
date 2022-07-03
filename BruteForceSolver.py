@@ -1,10 +1,8 @@
 import json
-from utils import filterPossible, getSplits, check
+from utils import getSplits
 from originalWordLists import guesses, answers
 from tqdm.auto import tqdm
 from valuations import *
-import numpy as np
-from pprint import pprint
 
 G = sorted(guesses + answers)
 S = sorted(answers)
@@ -48,7 +46,7 @@ class Solver(object):
         else:
             bestScore = -1
             bestGuess = ""
-            for g in tqdm(sorted(G, key=lambda x: (mostParts(x, sub),1 - (x in sub)) )[:30], disable = not (depth < 3)):
+            for g in tqdm(sorted(sub, key=lambda x: (mostParts(x, sub),1 - (x in sub)) )[:50], disable = not (depth < 3)):
                 t = 1
                 splits = getSplits(g, sub, useWords = True)
                 if len(splits) == 1: continue
@@ -88,132 +86,6 @@ class Solver(object):
         
 
 if __name__ == "__main__":
-#     s = Solver(words = ['abyss',
-#  'admin',
-#  'affix',
-#  'afoul',
-#  'aging',
-#  'aglow',
-#  'agony',
-#  'album',
-#  'alibi',
-#  'align',
-#  'allay',
-#  'allow',
-#  'alloy',
-#  'along',
-#  'aloof',
-#  'aloud',
-#  'alpha',
-#  'amiss',
-#  'among',
-#  'amply',
-#  'annoy',
-#  'annul',
-#  'anvil',
-#  'aphid',
-#  'aping',
-#  'apply',
-#  'assay',
-#  'audio',
-#  'avian',
-#  'avoid',
-#  'awful',
-#  'axial',
-#  'axiom',
-#  'axion',
-#  'badly',
-#  'baggy',
-#  'balmy',
-#  'banal',
-#  'banjo',
-#  'basal',
-#  'basil',
-#  'basin',
-#  'basis',
-#  'bawdy',
-#  'bayou',
-#  'bylaw',
-#  'daddy',
-#  'daily',
-#  'daisy',
-#  'dally',
-#  'dandy',
-#  'dogma',
-#  'fanny',
-#  'fauna',
-#  'final',
-#  'gaily',
-#  'gamma',
-#  'gassy',
-#  'gaudy',
-#  'gawky',
-#  'gayly',
-#  'gonad',
-#  'handy',
-#  'happy',
-#  'human',
-#  'inlay',
-#  'jazzy',
-#  'kappa',
-#  'kayak',
-#  'lanky',
-#  'lasso',
-#  'laugh',
-#  'loyal',
-#  'madam',
-#  'madly',
-#  'mafia',
-#  'magma',
-#  'mambo',
-#  'mamma',
-#  'mammy',
-#  'manga',
-#  'mango',
-#  'mangy',
-#  'mania',
-#  'manly',
-#  'mason',
-#  'maxim',
-#  'modal',
-#  'nanny',
-#  'nasal',
-#  'naval',
-#  'ninja',
-#  'nomad',
-#  'offal',
-#  'paddy',
-#  'pagan',
-#  'palsy',
-#  'pansy',
-#  'papal',
-#  'pizza',
-#  'polka',
-#  'sadly',
-#  'salad',
-#  'sally',
-#  'salon',
-#  'salsa',
-#  'salvo',
-#  'sandy',
-#  'sappy',
-#  'sassy',
-#  'sauna',
-#  'savoy',
-#  'savvy',
-#  'shoal',
-#  'sigma',
-#  'squad',
-#  'usual',
-#  'valid',
-#  'vapid',
-#  'villa',
-#  'viola',
-#  'vodka',
-#  'voila',
-#  'wagon',
-#  'woman',
-#  'zonal'])
     s = Solver(words = S)
     # s = Solver(words = ['spasm', 'swami','soapy','swamp'])
     # s = Solver(words = ['boxer', 'homer', 'hover', 'joker', 'mover', 'roger', 'rover'])
@@ -221,7 +93,7 @@ if __name__ == "__main__":
     s.solve()
     # pprint(s.genTree())
     tree = s.genTree()
-    with open("originalBestTree.json", "w") as f:
+    with open("originalBestTreeHardMode.json", "w") as f:
         json.dump(tree, f, sort_keys=True, indent=4)
     # print(json.dumps(tree, indent=4, sort_keys=True))
     print(s.memo[s.encode(s.words)])
