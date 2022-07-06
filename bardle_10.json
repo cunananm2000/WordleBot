@@ -1,0 +1,955 @@
+{
+    "avg": 2.598870056497172,
+    "guess": "caret",
+    "nRemaining": 177,
+    "splits": {
+        "00000": {
+            "avg": 1.9999999999999991,
+            "guess": "snowy",
+            "nRemaining": 12,
+            "splits": {
+                "00000": {
+                    "avg": 1,
+                    "guess": "quill",
+                    "nRemaining": 1
+                },
+                "00100": {
+                    "avg": 1,
+                    "guess": "folio",
+                    "nRemaining": 1
+                },
+                "00110": {
+                    "avg": 1,
+                    "guess": "widow",
+                    "nRemaining": 1
+                },
+                "00200": {
+                    "avg": 1,
+                    "guess": "blood",
+                    "nRemaining": 1
+                },
+                "01100": {
+                    "avg": 1,
+                    "guess": "pound",
+                    "nRemaining": 1
+                },
+                "01102": {
+                    "avg": 1,
+                    "guess": "nonny",
+                    "nRemaining": 1
+                },
+                "01110": {
+                    "avg": 1,
+                    "guess": "wound",
+                    "nRemaining": 1
+                },
+                "10002": {
+                    "avg": 1,
+                    "guess": "bushy",
+                    "nRemaining": 1
+                },
+                "10200": {
+                    "avg": 1,
+                    "guess": "fools",
+                    "nRemaining": 1
+                },
+                "10210": {
+                    "avg": 1,
+                    "guess": "woods",
+                    "nRemaining": 1
+                },
+                "20000": {
+                    "avg": 1,
+                    "guess": "skull",
+                    "nRemaining": 1
+                },
+                "21100": {
+                    "avg": 1,
+                    "guess": "sound",
+                    "nRemaining": 1
+                }
+            }
+        },
+        "00001": {
+            "avg": 1.8888888888888893,
+            "guess": "sixth",
+            "nRemaining": 9,
+            "splits": {
+                "00011": {
+                    "avg": 1,
+                    "guess": "thumb",
+                    "nRemaining": 1
+                },
+                "00022": {
+                    "avg": 1,
+                    "guess": "quoth",
+                    "nRemaining": 1
+                },
+                "02010": {
+                    "avg": 1,
+                    "guess": "timon",
+                    "nRemaining": 1
+                },
+                "02022": {
+                    "avg": 1,
+                    "guess": "fifth",
+                    "nRemaining": 1
+                },
+                "11010": {
+                    "avg": 1,
+                    "guess": "twins",
+                    "nRemaining": 1
+                },
+                "12010": {
+                    "avg": 1,
+                    "guess": "titus",
+                    "nRemaining": 1
+                },
+                "20010": {
+                    "avg": 1,
+                    "guess": "stuff",
+                    "nRemaining": 1
+                },
+                "20022": {
+                    "avg": 1,
+                    "guess": "sooth",
+                    "nRemaining": 1
+                }
+            }
+        },
+        "00002": {
+            "avg": 1.8571428571428568,
+            "guess": "blunt",
+            "nRemaining": 7,
+            "splits": {
+                "00002": {
+                    "avg": 1,
+                    "guess": "ghost",
+                    "nRemaining": 1
+                },
+                "00012": {
+                    "avg": 1,
+                    "guess": "night",
+                    "nRemaining": 1
+                },
+                "00112": {
+                    "avg": 1,
+                    "guess": "snout",
+                    "nRemaining": 1
+                },
+                "01102": {
+                    "avg": 1,
+                    "guess": "guilt",
+                    "nRemaining": 1
+                },
+                "10202": {
+                    "avg": 1,
+                    "guess": "doubt",
+                    "nRemaining": 1
+                },
+                "21202": {
+                    "avg": 1,
+                    "guess": "boult",
+                    "nRemaining": 1
+                }
+            }
+        },
+        "00010": {
+            "avg": 1.9000000000000008,
+            "guess": "elbow",
+            "nRemaining": 10,
+            "splits": {
+                "10000": {
+                    "avg": 1,
+                    "guess": "seems",
+                    "nRemaining": 1
+                },
+                "10100": {
+                    "avg": 1,
+                    "guess": "phebe",
+                    "nRemaining": 1
+                },
+                "11000": {
+                    "avg": 1,
+                    "guess": "smile",
+                    "nRemaining": 1
+                },
+                "11001": {
+                    "avg": 1,
+                    "guess": "lewis",
+                    "nRemaining": 1
+                },
+                "12000": {
+                    "avg": 1,
+                    "guess": "flesh",
+                    "nRemaining": 1
+                },
+                "12010": {
+                    "avg": 1,
+                    "guess": "glove",
+                    "nRemaining": 1
+                },
+                "12110": {
+                    "avg": 1,
+                    "guess": "globe",
+                    "nRemaining": 1
+                },
+                "20000": {
+                    "avg": 1,
+                    "guess": "egeus",
+                    "nRemaining": 1
+                },
+                "21000": {
+                    "avg": 1,
+                    "guess": "exile",
+                    "nRemaining": 1
+                }
+            }
+        },
+        "00011": {
+            "avg": 1.7999999999999998,
+            "guess": "feste",
+            "nRemaining": 5,
+            "splits": {
+                "00022": {
+                    "avg": 1,
+                    "guess": "quote",
+                    "nRemaining": 1
+                },
+                "00122": {
+                    "avg": 1,
+                    "guess": "spite",
+                    "nRemaining": 1
+                },
+                "01120": {
+                    "avg": 1,
+                    "guess": "exits",
+                    "nRemaining": 1
+                },
+                "20022": {
+                    "avg": 1,
+                    "guess": "flute",
+                    "nRemaining": 1
+                }
+            }
+        },
+        "00020": {
+            "avg": 1.8571428571428568,
+            "guess": "sleep",
+            "nRemaining": 7,
+            "splits": {
+                "00020": {
+                    "avg": 1,
+                    "guess": "hymen",
+                    "nRemaining": 1
+                },
+                "00220": {
+                    "avg": 1,
+                    "guess": "queen",
+                    "nRemaining": 1
+                },
+                "01120": {
+                    "avg": 1,
+                    "guess": "helen",
+                    "nRemaining": 1
+                },
+                "10020": {
+                    "avg": 1,
+                    "guess": "unsex",
+                    "nRemaining": 1
+                },
+                "10120": {
+                    "avg": 1,
+                    "guess": "essex",
+                    "nRemaining": 1
+                },
+                "20221": {
+                    "avg": 1,
+                    "guess": "speed",
+                    "nRemaining": 1
+                }
+            }
+        },
+        "00021": {
+            "avg": 1,
+            "guess": "thief",
+            "nRemaining": 1
+        },
+        "00022": {
+            "avg": 1.5,
+            "guess": "boyet",
+            "nRemaining": 2,
+            "splits": {
+                "00022": {
+                    "avg": 1,
+                    "guess": "sweet",
+                    "nRemaining": 1
+                }
+            }
+        },
+        "00100": {
+            "avg": 1.7999999999999998,
+            "guess": "drown",
+            "nRemaining": 5,
+            "splits": {
+                "01000": {
+                    "avg": 1,
+                    "guess": "rugby",
+                    "nRemaining": 1
+                },
+                "01102": {
+                    "avg": 1,
+                    "guess": "robin",
+                    "nRemaining": 1
+                },
+                "02200": {
+                    "avg": 1,
+                    "guess": "groom",
+                    "nRemaining": 1
+                },
+                "11210": {
+                    "avg": 1,
+                    "guess": "sword",
+                    "nRemaining": 1
+                }
+            }
+        },
+        "00101": {
+            "avg": 1.5,
+            "guess": "storm",
+            "nRemaining": 2,
+            "splits": {
+                "01020": {
+                    "avg": 1,
+                    "guess": "third",
+                    "nRemaining": 1
+                }
+            }
+        },
+        "00110": {
+            "avg": 1.5,
+            "guess": "henry",
+            "nRemaining": 2,
+            "splits": {
+                "02020": {
+                    "avg": 1,
+                    "guess": "pedro",
+                    "nRemaining": 1
+                }
+            }
+        },
+        "00111": {
+            "avg": 1,
+            "guess": "brute",
+            "nRemaining": 1
+        },
+        "00120": {
+            "avg": 2.0000000000000004,
+            "guess": "clogs",
+            "nRemaining": 6,
+            "splits": {
+                "00000": {
+                    "avg": 1,
+                    "guess": "never",
+                    "nRemaining": 1
+                },
+                "00010": {
+                    "avg": 1,
+                    "guess": "green",
+                    "nRemaining": 1
+                },
+                "00100": {
+                    "avg": 1,
+                    "guess": "romeo",
+                    "nRemaining": 1
+                },
+                "00102": {
+                    "avg": 1,
+                    "guess": "roses",
+                    "nRemaining": 1
+                },
+                "00110": {
+                    "avg": 1,
+                    "guess": "gower",
+                    "nRemaining": 1
+                },
+                "01100": {
+                    "avg": 1,
+                    "guess": "lover",
+                    "nRemaining": 1
+                }
+            }
+        },
+        "00121": {
+            "avg": 1.5,
+            "guess": "peter",
+            "nRemaining": 2,
+            "splits": {
+                "01121": {
+                    "avg": 1,
+                    "guess": "trees",
+                    "nRemaining": 1
+                }
+            }
+        },
+        "00200": {
+            "avg": 1.75,
+            "guess": "words",
+            "nRemaining": 4,
+            "splits": {
+                "01200": {
+                    "avg": 1,
+                    "guess": "biron",
+                    "nRemaining": 1
+                },
+                "22202": {
+                    "avg": 1,
+                    "guess": "worms",
+                    "nRemaining": 1
+                },
+                "22210": {
+                    "avg": 1,
+                    "guess": "world",
+                    "nRemaining": 1
+                }
+            }
+        },
+        "00201": {
+            "avg": 1.5,
+            "guess": "mirth",
+            "nRemaining": 2,
+            "splits": {}
+        },
+        "00210": {
+            "avg": 1.75,
+            "guess": "borne",
+            "nRemaining": 4,
+            "splits": {
+                "00202": {
+                    "avg": 1,
+                    "guess": "verse",
+                    "nRemaining": 1
+                },
+                "00212": {
+                    "avg": 1,
+                    "guess": "nurse",
+                    "nRemaining": 1
+                },
+                "02202": {
+                    "avg": 1,
+                    "guess": "horse",
+                    "nRemaining": 1
+                }
+            }
+        },
+        "00220": {
+            "avg": 1,
+            "guess": "shrew",
+            "nRemaining": 1
+        },
+        "01000": {
+            "avg": 1.8333333333333337,
+            "guess": "diana",
+            "nRemaining": 6,
+            "splits": {
+                "00110": {
+                    "avg": 1,
+                    "guess": "angus",
+                    "nRemaining": 1
+                },
+                "00200": {
+                    "avg": 1,
+                    "guess": "plays",
+                    "nRemaining": 1
+                },
+                "00220": {
+                    "avg": 1,
+                    "guess": "blank",
+                    "nRemaining": 1
+                },
+                "01002": {
+                    "avg": 1,
+                    "guess": "julia",
+                    "nRemaining": 1
+                },
+                "02002": {
+                    "avg": 1,
+                    "guess": "viola",
+                    "nRemaining": 1
+                }
+            }
+        },
+        "01001": {
+            "avg": 1,
+            "guess": "tubal",
+            "nRemaining": 1
+        },
+        "01002": {
+            "avg": 1,
+            "guess": "abbot",
+            "nRemaining": 1
+        },
+        "01010": {
+            "avg": 1.7999999999999998,
+            "guess": "lease",
+            "nRemaining": 5,
+            "splits": {
+                "00112": {
+                    "avg": 1,
+                    "guess": "aside",
+                    "nRemaining": 1
+                },
+                "01110": {
+                    "avg": 1,
+                    "guess": "speak",
+                    "nRemaining": 1
+                },
+                "02110": {
+                    "avg": 1,
+                    "guess": "menas",
+                    "nRemaining": 1
+                },
+                "02210": {
+                    "avg": 1,
+                    "guess": "beams",
+                    "nRemaining": 1
+                }
+            }
+        },
+        "01011": {
+            "avg": 1.75,
+            "guess": "death",
+            "nRemaining": 4,
+            "splits": {
+                "01210": {
+                    "avg": 1,
+                    "guess": "stage",
+                    "nRemaining": 1
+                },
+                "01211": {
+                    "avg": 1,
+                    "guess": "thane",
+                    "nRemaining": 1
+                },
+                "02222": {
+                    "avg": 1,
+                    "guess": "heath",
+                    "nRemaining": 1
+                }
+            }
+        },
+        "01012": {
+            "avg": 1,
+            "guess": "feast",
+            "nRemaining": 1
+        },
+        "01020": {
+            "avg": 1.5,
+            "guess": "adieu",
+            "nRemaining": 2,
+            "splits": {
+                "20020": {
+                    "avg": 1,
+                    "guess": "angel",
+                    "nRemaining": 1
+                }
+            }
+        },
+        "01100": {
+            "avg": 1.8571428571428568,
+            "guess": "alarm",
+            "nRemaining": 7,
+            "splits": {
+                "00210": {
+                    "avg": 1,
+                    "guess": "drawn",
+                    "nRemaining": 1
+                },
+                "00220": {
+                    "avg": 1,
+                    "guess": "guard",
+                    "nRemaining": 1
+                },
+                "10010": {
+                    "avg": 1,
+                    "guess": "friar",
+                    "nRemaining": 1
+                },
+                "10011": {
+                    "avg": 1,
+                    "guess": "roman",
+                    "nRemaining": 1
+                },
+                "10012": {
+                    "avg": 1,
+                    "guess": "priam",
+                    "nRemaining": 1
+                },
+                "10211": {
+                    "avg": 1,
+                    "guess": "drama",
+                    "nRemaining": 1
+                }
+            }
+        },
+        "01101": {
+            "avg": 1,
+            "guess": "stars",
+            "nRemaining": 1
+        },
+        "01102": {
+            "avg": 1,
+            "guess": "groat",
+            "nRemaining": 1
+        },
+        "01110": {
+            "avg": 1.7999999999999998,
+            "guess": "dream",
+            "nRemaining": 5,
+            "splits": {
+                "01110": {
+                    "avg": 1,
+                    "guess": "snare",
+                    "nRemaining": 1
+                },
+                "01120": {
+                    "avg": 1,
+                    "guess": "regan",
+                    "nRemaining": 1
+                },
+                "02110": {
+                    "avg": 1,
+                    "guess": "grave",
+                    "nRemaining": 1
+                },
+                "11120": {
+                    "avg": 1,
+                    "guess": "edgar",
+                    "nRemaining": 1
+                }
+            }
+        },
+        "01112": {
+            "avg": 1,
+            "guess": "great",
+            "nRemaining": 1
+        },
+        "01120": {
+            "avg": 1.5,
+            "guess": "arden",
+            "nRemaining": 2,
+            "splits": {
+                "22020": {
+                    "avg": 1,
+                    "guess": "ariel",
+                    "nRemaining": 1
+                }
+            }
+        },
+        "01200": {
+            "avg": 1,
+            "guess": "arras",
+            "nRemaining": 1
+        },
+        "02000": {
+            "avg": 1,
+            "guess": "padua",
+            "nRemaining": 1
+        },
+        "02001": {
+            "avg": 1,
+            "guess": "fatal",
+            "nRemaining": 1
+        },
+        "02002": {
+            "avg": 1,
+            "guess": "fault",
+            "nRemaining": 1
+        },
+        "02011": {
+            "avg": 1,
+            "guess": "waste",
+            "nRemaining": 1
+        },
+        "02020": {
+            "avg": 1.5,
+            "guess": "james",
+            "nRemaining": 2,
+            "splits": {
+                "02020": {
+                    "avg": 1,
+                    "guess": "lafeu",
+                    "nRemaining": 1
+                }
+            }
+        },
+        "02021": {
+            "avg": 1,
+            "guess": "fates",
+            "nRemaining": 1
+        },
+        "02100": {
+            "avg": 1,
+            "guess": "fairy",
+            "nRemaining": 1
+        },
+        "02200": {
+            "avg": 1.7999999999999998,
+            "guess": "maria",
+            "nRemaining": 5,
+            "splits": {
+                "02200": {
+                    "avg": 1,
+                    "guess": "varro",
+                    "nRemaining": 1
+                },
+                "02201": {
+                    "avg": 1,
+                    "guess": "aaron",
+                    "nRemaining": 1
+                },
+                "02220": {
+                    "avg": 1,
+                    "guess": "paris",
+                    "nRemaining": 1
+                },
+                "22200": {
+                    "avg": 1,
+                    "guess": "marry",
+                    "nRemaining": 1
+                }
+            }
+        },
+        "02201": {
+            "avg": 1,
+            "guess": "parts",
+            "nRemaining": 1
+        },
+        "02210": {
+            "avg": 1,
+            "guess": "barge",
+            "nRemaining": 1
+        },
+        "10000": {
+            "avg": 1.5,
+            "guess": "knock",
+            "nRemaining": 4,
+            "splits": {
+                "00010": {
+                    "avg": 1,
+                    "guess": "music",
+                    "nRemaining": 1
+                },
+                "00110": {
+                    "avg": 1,
+                    "guess": "lucio",
+                    "nRemaining": 1
+                }
+            }
+        },
+        "10001": {
+            "avg": 1,
+            "guess": "witch",
+            "nRemaining": 1
+        },
+        "10002": {
+            "avg": 1,
+            "guess": "scout",
+            "nRemaining": 1
+        },
+        "10010": {
+            "avg": 1.5,
+            "guess": "scene",
+            "nRemaining": 2,
+            "splits": {
+                "01012": {
+                    "avg": 1,
+                    "guess": "uncle",
+                    "nRemaining": 1
+                }
+            }
+        },
+        "10100": {
+            "avg": 1,
+            "guess": "prick",
+            "nRemaining": 1
+        },
+        "10200": {
+            "avg": 1,
+            "guess": "osric",
+            "nRemaining": 1
+        },
+        "10210": {
+            "avg": 1.5,
+            "guess": "mercy",
+            "nRemaining": 2,
+            "splits": {
+                "02222": {
+                    "avg": 1,
+                    "guess": "percy",
+                    "nRemaining": 1
+                }
+            }
+        },
+        "11000": {
+            "avg": 1,
+            "guess": "alack",
+            "nRemaining": 1
+        },
+        "11002": {
+            "avg": 1,
+            "guess": "ducat",
+            "nRemaining": 1
+        },
+        "11010": {
+            "avg": 1.5,
+            "guess": "alice",
+            "nRemaining": 2,
+            "splits": {
+                "10022": {
+                    "avg": 1,
+                    "guess": "peace",
+                    "nRemaining": 1
+                }
+            }
+        },
+        "11100": {
+            "avg": 1,
+            "guess": "scars",
+            "nRemaining": 1
+        },
+        "11101": {
+            "avg": 1,
+            "guess": "actor",
+            "nRemaining": 1
+        },
+        "12000": {
+            "avg": 1,
+            "guess": "magic",
+            "nRemaining": 1
+        },
+        "12010": {
+            "avg": 1,
+            "guess": "lance",
+            "nRemaining": 1
+        },
+        "12200": {
+            "avg": 1,
+            "guess": "march",
+            "nRemaining": 1
+        },
+        "20000": {
+            "avg": 1.6666666666666665,
+            "guess": "civil",
+            "nRemaining": 3,
+            "splits": {
+                "20001": {
+                    "avg": 1,
+                    "guess": "clown",
+                    "nRemaining": 1
+                },
+                "20020": {
+                    "avg": 1,
+                    "guess": "cupid",
+                    "nRemaining": 1
+                }
+            }
+        },
+        "20010": {
+            "avg": 1,
+            "guess": "cleon",
+            "nRemaining": 1
+        },
+        "20020": {
+            "avg": 1,
+            "guess": "cheek",
+            "nRemaining": 1
+        },
+        "20100": {
+            "avg": 1,
+            "guess": "crown",
+            "nRemaining": 1
+        },
+        "20102": {
+            "avg": 1,
+            "guess": "court",
+            "nRemaining": 1
+        },
+        "20110": {
+            "avg": 1,
+            "guess": "clerk",
+            "nRemaining": 1
+        },
+        "20120": {
+            "avg": 1.5,
+            "guess": "cheer",
+            "nRemaining": 2,
+            "splits": {
+                "20022": {
+                    "avg": 1,
+                    "guess": "crier",
+                    "nRemaining": 1
+                }
+            }
+        },
+        "20200": {
+            "avg": 1.5,
+            "guess": "corin",
+            "nRemaining": 2,
+            "splits": {
+                "21220": {
+                    "avg": 1,
+                    "guess": "curio",
+                    "nRemaining": 1
+                }
+            }
+        },
+        "20210": {
+            "avg": 1,
+            "guess": "curse",
+            "nRemaining": 1
+        },
+        "20220": {
+            "avg": 1,
+            "guess": "ceres",
+            "nRemaining": 1
+        },
+        "21000": {
+            "avg": 1,
+            "guess": "cinna",
+            "nRemaining": 1
+        },
+        "21010": {
+            "avg": 1,
+            "guess": "celia",
+            "nRemaining": 1
+        },
+        "21100": {
+            "avg": 1,
+            "guess": "charm",
+            "nRemaining": 1
+        },
+        "21200": {
+            "avg": 1,
+            "guess": "curan",
+            "nRemaining": 1
+        },
+        "22000": {
+            "avg": 1.6666666666666665,
+            "guess": "caius",
+            "nRemaining": 3,
+            "splits": {
+                "22000": {
+                    "avg": 1,
+                    "guess": "capon",
+                    "nRemaining": 1
+                },
+                "22001": {
+                    "avg": 1,
+                    "guess": "casca",
+                    "nRemaining": 1
+                }
+            }
+        }
+    }
+}

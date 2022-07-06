@@ -33,7 +33,7 @@ class AverageOptimizer(object):
         self.bestGuess = {}
         self.bestScore = {}
 
-
+        self.fname = f"{self.game}_{self.MAX_BREADTH}{'_hard' if self.hardMode else ''}"
 
         self.tree = None
 
@@ -102,17 +102,9 @@ class AverageOptimizer(object):
                         depth = depth + 1,
                     )
 
-                # if (depth <= 3):
-                #     print('    '*(depth-1),g,'-->',t)
-                
                 if self.bestScore.get(code, 9999999) > t:
                     self.bestScore[code] = t
                     self.bestGuess[code] = g
-
-        
-        # if code not in self.bestScore:
-        #     print(possibleAnswers, possibleGuesses)
-        #     assert(False)
 
         return self.bestScore[code]
 
@@ -130,9 +122,9 @@ class AverageOptimizer(object):
             )
         
         guess = self.bestGuess[code]
-        avg = self.bestScore[code]
+        score = self.bestScore[code]
 
-        tree = {'guess': guess, 'avg': avg, 'nRemaining': len(possibleAnswers)}
+        tree = {'guess': guess, 'score': score, 'nRemaining': len(possibleAnswers)}
         if len(possibleAnswers) != 1:
             tree['splits'] = {}
             splits = getSplits(guess, possibleAnswers, useWords=True)
@@ -157,7 +149,7 @@ class AverageOptimizer(object):
     def writeJson(self):
         print("Writing JSON...")
         tree = self.getTree()
-        with open(f"{self.game}_{self.MAX_BREADTH}{'_hard' if self.hardMode else ''}.json", "w") as f:
+        with open(f"{self.fname}.json", "w") as f:
             json.dump(tree, f, sort_keys=True, indent=4)
         print("Wrote JSON!")
         
@@ -165,7 +157,7 @@ class AverageOptimizer(object):
         print("Writing word list...")
         saveAsWordList(
             tree = self.getTree(),
-            fname = f"{self.game}_{self.MAX_BREADTH}{'_hard' if self.hardMode else ''}.txt",
+            fname = f"{self.fname}.txt",
             answers = self.S
         )
         print("Wrote word list!")

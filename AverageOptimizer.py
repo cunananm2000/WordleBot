@@ -1,6 +1,6 @@
 import json
 from utils import filterPossible, getSplits, saveAsWordList, sortWords, filterMultiple, softFilterPossible, softFilterMultiple, noFilterPossible
-from mathlerLists import guesses, answers, rStar
+from bardleLists import guesses, answers, rStar
 from tqdm.auto import tqdm
 from valuations import *
 
@@ -30,6 +30,7 @@ class AverageOptimizer(object):
 
         self.BREACHES = 0
         self.HITS = 0
+        self.CALLS = 0
         
         self.bestGuess = {}
         self.bestScore = {}
@@ -68,6 +69,8 @@ class AverageOptimizer(object):
             self.bestScore[code] = 1000000
             self.BREACHES += 1
         else:
+            self.CALLS += 1
+
             # Shortcut since this always the best choice
             # if (depth == 1): 
             #     options = ['salet']
@@ -177,6 +180,7 @@ class AverageOptimizer(object):
         print("TOTAL:",avg * len(self.S))
         print("HITS:", self.HITS)
         print("BREACHES:", self.BREACHES)
+        print("CALLS:",self.CALLS)
 
 
 if __name__ == "__main__":
@@ -203,7 +207,7 @@ if __name__ == "__main__":
         possibleAnswers=S,
         hardMode = False,
         MAX_BREADTH = 10,
-        game = 'mathler',
+        game = 'bardle',
         DEBUG_LEVEL = 1
     )
 

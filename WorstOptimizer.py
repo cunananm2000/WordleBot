@@ -1,6 +1,6 @@
 import json
 from utils import filterPossible, getSplits, saveAsWordList, sortWords, filterMultiple, softFilterPossible, softFilterMultiple, noFilterPossible
-from mininerdleLists import guesses, answers, rStar
+from originalWordLists import guesses, answers, rStar
 from tqdm.auto import tqdm
 from valuations import *
 
@@ -30,6 +30,7 @@ class WorstOptimizer(object):
 
         self.BREACHES = 0
         self.HITS = 0
+        self.CALLS = 0
         
         self.bestGuess = {}
         self.bestScore = {}
@@ -68,20 +69,22 @@ class WorstOptimizer(object):
             self.bestScore[code] = (2*MAX_DEPTH, 1)
             self.BREACHES += 1
         else:
+            self.CALLS += 1
+
             # Shortcut since this always the best choice
-            # if (depth == 1): 
-            #     options = ['salet']
-            # else:
+            if (depth == 1): 
+                options = ['salet']
+            else:
 
-            # print('here again',len(possibleAnswers))
+                # print('here again',len(possibleAnswers))
 
-            options = sortWords(
-                C = possibleGuesses,
-                S = possibleAnswers,
-                vals = self.vals,
-                n = self.MAX_BREADTH,
-                showProg = (depth <= self.DEBUG_LEVEL),
-            )
+                options = sortWords(
+                    C = possibleGuesses,
+                    S = possibleAnswers,
+                    vals = self.vals,
+                    n = self.MAX_BREADTH,
+                    showProg = (depth <= self.DEBUG_LEVEL),
+                )
 
             # print(options)
 
@@ -181,6 +184,7 @@ class WorstOptimizer(object):
         print("WORST:", worst)
         print("HITS:", self.HITS)
         print("BREACHES:", self.BREACHES)
+        print("CALLS:",self.CALLS)
 
 
 if __name__ == "__main__":
@@ -206,11 +210,11 @@ if __name__ == "__main__":
         possibleGuesses=G,
         possibleAnswers=S,
         hardMode = False,
-        MAX_BREADTH = 10,
-        game = 'mininerdle',
+        MAX_BREADTH = 20,
+        game = 'originalWordle',
         DEBUG_LEVEL = 1
     )
 
     s.writeJson()
-    # s.writeWordList()
+    s.writeWordList()
     s.showStats()
