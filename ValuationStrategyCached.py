@@ -37,9 +37,17 @@ class ValuationStrategyCached(WordleGame):
         for g, r in zip(self.previousGuesses, self.previousResults):
             assert curr["guess"] == g
             if r not in curr["splits"]:
+                print("Got res", r)
                 print("Possible splits are", *curr["splits"].keys())
                 assert False
             curr = curr["splits"][r]
+
+        if self.debug and "avg" in curr:
+            print(f"Average: {curr['avg']}")
+
+        if self.debug and "worst" in curr:
+            print(f"Worst: {curr['worst']}")
+
 
         if self.debug and "nRemaining" in curr:
             print(f"Remaining: {curr['nRemaining']}")

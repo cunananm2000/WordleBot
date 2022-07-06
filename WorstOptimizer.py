@@ -1,12 +1,12 @@
 import json
 from utils import filterPossible, getSplits, saveAsWordList, sortWords, filterMultiple, softFilterPossible, softFilterMultiple, noFilterPossible
-from mathlerLists import guesses, answers, rStar
+from mininerdleLists import guesses, answers, rStar
 from tqdm.auto import tqdm
 from valuations import *
 
 
 
-class Solver(object):
+class WorstOptimizer(object):
     def __init__(
         self, 
         possibleGuesses, 
@@ -59,13 +59,13 @@ class Solver(object):
         # Special cases first 
         if len(possibleAnswers) == 1:
             self.bestGuess[code] = possibleAnswers[0]
-            self.bestScore[code] = 1
+            self.bestScore[code] = (1,1)
         elif len(possibleAnswers) == 2:
             self.bestGuess[code] = possibleAnswers[0]
-            self.bestScore[code] = 1.5
+            self.bestScore[code] = (2,1)
         elif depth >= self.MAX_DEPTH:
             self.bestGuess[code] = possibleAnswers[0]
-            self.bestScore[code] = 1000000
+            self.bestScore[code] = (2*MAX_DEPTH, 1)
             self.BREACHES += 1
         else:
             # Shortcut since this always the best choice
@@ -92,21 +92,26 @@ class Solver(object):
                 splits = getSplits(g, possibleAnswers, useWords=True)
                 if len(splits) == 1: continue 
                 # if (depth == 1): print(splits)
-                t = 1
+                t = [1,1]
                 for res, split in tqdm(splits.items(), disable = not(depth <= self.DEBUG_LEVEL), colour='yellow'):
                     if res == rStar: continue 
                     # if (depth <= 2):
                     #     print('    '*(depth-1),g,'-->',res)
-                    t += len(split)/len(possibleAnswers) * self.explore(
+                    d,n = self.explore(
                         possibleAnswers = split, 
                         possibleGuesses = self.guessFilter(g, res, possibleGuesses),
                         depth = depth + 1,
                     )
+                    d += 1
+                    if d > t[0]: t = [d,0]
+                    if d == t[0]: t[1] += n
+
+                t = tuple(t)
 
                 # if (depth <= 3):
                 #     print('    '*(depth-1),g,'-->',t)
                 
-                if self.bestScore.get(code, 9999999) > t:
+                if self.bestScore.get(code, (9999999,1)) > t:
                     self.bestScore[code] = t
                     self.bestGuess[code] = g
 
@@ -133,7 +138,7 @@ class Solver(object):
         guess = self.bestGuess[code]
         avg = self.bestScore[code]
 
-        tree = {'guess': guess, 'avg': avg, 'nRemaining': len(possibleAnswers)}
+        tree = {'guess': guess, 'worst': avg, 'nRemaining': len(possibleAnswers)}
         if len(possibleAnswers) != 1:
             tree['splits'] = {}
             splits = getSplits(guess, possibleAnswers, useWords=True)
@@ -158,7 +163,7 @@ class Solver(object):
     def writeJson(self):
         print("Writing JSON...")
         tree = self.getTree()
-        with open(f"{self.game}_{self.MAX_BREADTH}{'_hard' if self.hardMode else ''}.json", "w") as f:
+        with open(f"{self.game}_worst_{self.MAX_BREADTH}{'_hard' if self.hardMode else ''}.json", "w") as f:
             json.dump(tree, f, sort_keys=True, indent=4)
         print("Wrote JSON!")
         
@@ -166,15 +171,14 @@ class Solver(object):
         print("Writing word list...")
         saveAsWordList(
             tree = self.getTree(),
-            fname = f"{self.game}_{self.MAX_BREADTH}{'_hard' if self.hardMode else ''}.txt",
+            fname = f"{self.game}_worst_{self.MAX_BREADTH}{'_hard' if self.hardMode else ''}.txt",
             answers = self.S
         )
         print("Wrote word list!")
 
     def showStats(self):
-        avg = self.bestScore[(self.encode(self.S,self.S), self.encode(self.G,self.G))]
-        print("AVERAGE:", avg)
-        print("TOTAL:",avg * len(self.S))
+        worst = self.bestScore[(self.encode(self.S,self.S), self.encode(self.G,self.G))]
+        print("WORST:", worst)
         print("HITS:", self.HITS)
         print("BREACHES:", self.BREACHES)
 
@@ -198,15 +202,15 @@ if __name__ == "__main__":
 
     print(len(G), len(S))
   
-    s = Solver(
+    s = WorstOptimizer(
         possibleGuesses=G,
         possibleAnswers=S,
         hardMode = False,
         MAX_BREADTH = 10,
-        game = 'mathler',
+        game = 'mininerdle',
         DEBUG_LEVEL = 1
     )
 
     s.writeJson()
-    s.writeWordList()
+    # s.writeWordList()
     s.showStats()
