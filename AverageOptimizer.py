@@ -1,4 +1,5 @@
 import json
+from BaseOptimizer import BaseOptimizer
 from utils import filterPossible, getSplits, saveAsWordList, sortWords, filterMultiple, softFilterPossible, softFilterMultiple, noFilterPossible
 from bardleLists import guesses, answers, rStar
 from tqdm.auto import tqdm
@@ -6,46 +7,13 @@ from valuations import *
 
 
 
-class AverageOptimizer(object):
+class AverageOptimizer(BaseOptimizer):
     def __init__(
         self, 
-        possibleGuesses, 
-        possibleAnswers,
-        MAX_DEPTH = 10,
-        MAX_BREADTH = 20,
-        hardMode = False,
-        game = 'temp',
-        DEBUG_LEVEL = 2,
+        *args,
+        **kwargs,
     ):
-        self.G = possibleGuesses
-        self.S = possibleAnswers
-        self.MAX_DEPTH = MAX_DEPTH
-        self.vals = [mostParts, firstValid, maxSizeSplit]
-        self.MAX_BREADTH = MAX_BREADTH
-        self.hardMode = hardMode
-        self.game = game
-        self.DEBUG_LEVEL = DEBUG_LEVEL
-
-        self.guessFilter = softFilterPossible if hardMode else noFilterPossible
-
-        self.BREACHES = 0
-        self.HITS = 0
-        self.CALLS = 0
-        
-        self.bestGuess = {}
-        self.bestScore = {}
-
-
-
-        self.tree = None
-
-    def encode(self, subset, superset):
-        if len(subset) == len(superset):
-            return 0
-        t = 0
-        for c in subset:
-            t |= 1 << (len(superset) - superset.index(c) - 1)
-        return t
+        super(AverageOptimizer, self).__init__(*args, **kwargs)
 
     def explore(self, possibleGuesses, possibleAnswers, depth = 1):
         code = (
@@ -120,73 +88,11 @@ class AverageOptimizer(object):
 
         return self.bestScore[code]
 
-    def genTree(self, possibleGuesses, possibleAnswers, depth = 1):
-        code = (
-            self.encode(possibleAnswers, self.S), 
-            self.encode(possibleGuesses, self.G)
-        )
-
-        if code not in self.bestGuess:
-            self.explore(
-                possibleGuesses = possibleGuesses, 
-                possibleAnswers = possibleAnswers,
-                depth = depth
-            )
-        
-        guess = self.bestGuess[code]
-        avg = self.bestScore[code]
-
-        tree = {'guess': guess, 'avg': avg, 'nRemaining': len(possibleAnswers)}
-        if len(possibleAnswers) != 1:
-            tree['splits'] = {}
-            splits = getSplits(guess, possibleAnswers, useWords=True)
-            for res, split in splits.items():
-                if res == rStar: continue 
-                tree['splits'][res] = self.genTree(
-                    possibleGuesses = self.guessFilter(guess, res, possibleGuesses),
-                    possibleAnswers = split,
-                    depth = depth + 1
-                )
-        
-        return tree
-
-    def getTree(self):
-        if self.tree is None:
-            self.tree = self.genTree(
-                possibleGuesses=self.G,
-                possibleAnswers=self.S
-            )
-        return self.tree
-
-    def writeJson(self):
-        print("Writing JSON...")
-        tree = self.getTree()
-        with open(f"{self.game}_{self.MAX_BREADTH}{'_hard' if self.hardMode else ''}.json", "w") as f:
-            json.dump(tree, f, sort_keys=True, indent=4)
-        print("Wrote JSON!")
-        
-    def writeWordList(self):
-        print("Writing word list...")
-        saveAsWordList(
-            tree = self.getTree(),
-            fname = f"{self.game}_{self.MAX_BREADTH}{'_hard' if self.hardMode else ''}.txt",
-            answers = self.S
-        )
-        print("Wrote word list!")
-
-    def showStats(self):
-        avg = self.bestScore[(self.encode(self.S,self.S), self.encode(self.G,self.G))]
-        print("AVERAGE:", avg)
-        print("TOTAL:",avg * len(self.S))
-        print("HITS:", self.HITS)
-        print("BREACHES:", self.BREACHES)
-        print("CALLS:",self.CALLS)
-
 
 if __name__ == "__main__":
-    G = sorted(guesses + answers)
+    # G = sorted(guesses + answers)
     # G = sorted(guesses)
-    S = sorted(answers)
+    # S = sorted(answers)
 
     # Temporrary
     # history = [('12+35=47','21000111')]
@@ -200,14 +106,12 @@ if __name__ == "__main__":
     #     candidates = S
     # )
 
-    print(len(G), len(S))
+    # print(len(G), len(S))
   
     s = AverageOptimizer(
-        possibleGuesses=G,
-        possibleAnswers=S,
         hardMode = False,
-        MAX_BREADTH = 10,
-        game = 'bardle',
+        MAX_BREADTH = 5,
+        game = 'mininerdle',
         DEBUG_LEVEL = 1
     )
 

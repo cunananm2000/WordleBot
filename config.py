@@ -2,14 +2,14 @@ class Config(object):
     def __init__(self, game):
 
         configs = {
-            'wordle' : {
-                'guessFile' : 'wordLists/wordleGuesses.txt',
-                'answerFile' : 'wordLists/wordleAnswers.txt',
+            'newWordle' : {
+                'guessFile' : 'wordLists/newWordleGuesses.txt',
+                'answerFile' : 'wordLists/newWordleAnswers.txt',
                 'rStar' : '22222'
             },
-            'originalWordle': {
-                'guessFile' : 'wordLists/originalWordleGuesses.txt',
-                'answerFile' : 'wordLists/originalWordleAnswers.txt',
+            'oldWordle': {
+                'guessFile' : 'wordLists/oldWordleGuesses.txt',
+                'answerFile' : 'wordLists/oldWordleAnswers.txt',
                 'rStar' : '22222'
             },
             'primel': {
@@ -31,6 +31,6 @@ class Config(object):
         self.answers = self.readFromFile(config['answerFile'])
         self.rStar = config['rStar']
 
-    def readFromFile(fname):
+    def readFromFile(self, fname):
         with open(fname,'r') as f:
             return [s.strip() for s in f]

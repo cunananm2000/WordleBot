@@ -1,51 +1,18 @@
 import json
 from utils import filterPossible, getSplits, saveAsWordList, sortWords, filterMultiple, softFilterPossible, softFilterMultiple, noFilterPossible
-from originalWordLists import guesses, answers, rStar
+from bardleLists import guesses, answers, rStar
 from tqdm.auto import tqdm
 from valuations import *
 
+from BaseOptimizer import BaseOptimizer
 
-
-class WorstOptimizer(object):
+class WorstOptimizer(BaseOptimizer):
     def __init__(
         self, 
-        possibleGuesses, 
-        possibleAnswers,
-        MAX_DEPTH = 10,
-        MAX_BREADTH = 20,
-        hardMode = False,
-        game = 'temp',
-        DEBUG_LEVEL = 2,
+        *args,
+        **kwargs,
     ):
-        self.G = possibleGuesses
-        self.S = possibleAnswers
-        self.MAX_DEPTH = MAX_DEPTH
-        self.vals = [mostParts, firstValid, maxSizeSplit]
-        self.MAX_BREADTH = MAX_BREADTH
-        self.hardMode = hardMode
-        self.game = game
-        self.DEBUG_LEVEL = DEBUG_LEVEL
-
-        self.guessFilter = softFilterPossible if hardMode else noFilterPossible
-
-        self.BREACHES = 0
-        self.HITS = 0
-        self.CALLS = 0
-        
-        self.bestGuess = {}
-        self.bestScore = {}
-
-
-
-        self.tree = None
-
-    def encode(self, subset, superset):
-        if len(subset) == len(superset):
-            return 0
-        t = 0
-        for c in subset:
-            t |= 1 << (len(superset) - superset.index(c) - 1)
-        return t
+        super(WorstOptimizer, self).__init__(*args, **kwargs)
 
     def explore(self, possibleGuesses, possibleAnswers, depth = 1):
         code = (
@@ -66,25 +33,25 @@ class WorstOptimizer(object):
             self.bestScore[code] = (2,1)
         elif depth >= self.MAX_DEPTH:
             self.bestGuess[code] = possibleAnswers[0]
-            self.bestScore[code] = (2*MAX_DEPTH, 1)
+            self.bestScore[code] = (2*self.MAX_DEPTH, 1)
             self.BREACHES += 1
         else:
             self.CALLS += 1
 
             # Shortcut since this always the best choice
-            if (depth == 1): 
-                options = ['salet']
-            else:
+            # if (depth == 1): 
+            #     options = ['salet']
+            # else:
 
                 # print('here again',len(possibleAnswers))
 
-                options = sortWords(
-                    C = possibleGuesses,
-                    S = possibleAnswers,
-                    vals = self.vals,
-                    n = self.MAX_BREADTH,
-                    showProg = (depth <= self.DEBUG_LEVEL),
-                )
+            options = sortWords(
+                C = possibleGuesses,
+                S = possibleAnswers,
+                vals = self.vals,
+                n = self.MAX_BREADTH,
+                showProg = (depth <= self.DEBUG_LEVEL),
+            )
 
             # print(options)
 
@@ -125,68 +92,6 @@ class WorstOptimizer(object):
 
         return self.bestScore[code]
 
-    def genTree(self, possibleGuesses, possibleAnswers, depth = 1):
-        code = (
-            self.encode(possibleAnswers, self.S), 
-            self.encode(possibleGuesses, self.G)
-        )
-
-        if code not in self.bestGuess:
-            self.explore(
-                possibleGuesses = possibleGuesses, 
-                possibleAnswers = possibleAnswers,
-                depth = depth
-            )
-        
-        guess = self.bestGuess[code]
-        avg = self.bestScore[code]
-
-        tree = {'guess': guess, 'worst': avg, 'nRemaining': len(possibleAnswers)}
-        if len(possibleAnswers) != 1:
-            tree['splits'] = {}
-            splits = getSplits(guess, possibleAnswers, useWords=True)
-            for res, split in splits.items():
-                if res == rStar: continue 
-                tree['splits'][res] = self.genTree(
-                    possibleGuesses = self.guessFilter(guess, res, possibleGuesses),
-                    possibleAnswers = split,
-                    depth = depth + 1
-                )
-        
-        return tree
-
-    def getTree(self):
-        if self.tree is None:
-            self.tree = self.genTree(
-                possibleGuesses=self.G,
-                possibleAnswers=self.S
-            )
-        return self.tree
-
-    def writeJson(self):
-        print("Writing JSON...")
-        tree = self.getTree()
-        with open(f"{self.game}_worst_{self.MAX_BREADTH}{'_hard' if self.hardMode else ''}.json", "w") as f:
-            json.dump(tree, f, sort_keys=True, indent=4)
-        print("Wrote JSON!")
-        
-    def writeWordList(self):
-        print("Writing word list...")
-        saveAsWordList(
-            tree = self.getTree(),
-            fname = f"{self.game}_worst_{self.MAX_BREADTH}{'_hard' if self.hardMode else ''}.txt",
-            answers = self.S
-        )
-        print("Wrote word list!")
-
-    def showStats(self):
-        worst = self.bestScore[(self.encode(self.S,self.S), self.encode(self.G,self.G))]
-        print("WORST:", worst)
-        print("HITS:", self.HITS)
-        print("BREACHES:", self.BREACHES)
-        print("CALLS:",self.CALLS)
-
-
 if __name__ == "__main__":
     G = sorted(guesses + answers)
     # G = sorted(guesses)
@@ -211,7 +116,7 @@ if __name__ == "__main__":
         possibleAnswers=S,
         hardMode = False,
         MAX_BREADTH = 20,
-        game = 'originalWordle',
+        game = 'bardle',
         DEBUG_LEVEL = 1
     )
 
