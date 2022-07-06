@@ -7,9 +7,9 @@ from wordLists import answers, guesses
 
 class WordleGame(object):
     def __init__(
-        self, debug=False, forcedGuesses=[], validGuesses=None, validAnswers=None
+        self, debug=False, forcedGuesses=[], validGuesses=None, validAnswers=None, nLetters = 5
     ) -> None:
-        self.nLetters = 5
+        self.nLetters = nLetters
         self.validGuesses = guesses if validGuesses is None else validGuesses
         self.validAnswers = answers if validAnswers is None else validAnswers
         self.debug = debug
@@ -47,7 +47,7 @@ class WordleGame(object):
                 res = self.manualCheck()
                 pprint(res)
             else:
-                res = check(guess, answer, debug=self.debug, nLetters=self.nLetters)
+                res = check(guess, answer, debug=self.debug)
 
             self.previousGuesses.append(guess)
             self.previousResults.append(res)

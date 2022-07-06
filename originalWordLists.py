@@ -1,3 +1,5 @@
+rStar = "22222"
+
 guesses = [
  "aahed",
  "aalii",

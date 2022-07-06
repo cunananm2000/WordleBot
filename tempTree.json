@@ -1,0 +1,213 @@
+{
+    "avg": 2.5405405405405417,
+    "guess": "orbit",
+    "nRemaining": 37,
+    "splits": {
+        "00002": {
+            "avg": 1,
+            "guess": "uncut",
+            "nRemaining": 1
+        },
+        "00012": {
+            "avg": 2.428571428571428,
+            "guess": "snift",
+            "nRemaining": 7,
+            "splits": {
+                "00102": {
+                    "avg": 1.9999999999999998,
+                    "guess": "twixt",
+                    "nRemaining": 3,
+                    "splits": {
+                        "00102": {
+                            "avg": 1,
+                            "guess": "might",
+                            "nRemaining": 1
+                        },
+                        "01102": {
+                            "avg": 1,
+                            "guess": "wight",
+                            "nRemaining": 1
+                        },
+                        "20102": {
+                            "avg": 1,
+                            "guess": "tight",
+                            "nRemaining": 1
+                        }
+                    }
+                },
+                "00112": {
+                    "avg": 1,
+                    "guess": "fight",
+                    "nRemaining": 1
+                },
+                "00202": {
+                    "avg": 1,
+                    "guess": "twixt",
+                    "nRemaining": 1
+                },
+                "01102": {
+                    "avg": 1,
+                    "guess": "night",
+                    "nRemaining": 1
+                },
+                "02102": {
+                    "avg": 1,
+                    "guess": "input",
+                    "nRemaining": 1
+                }
+            }
+        },
+        "00022": {
+            "avg": 1.5,
+            "guess": "digit",
+            "nRemaining": 2,
+            "splits": {
+                "00022": {
+                    "avg": 1,
+                    "guess": "unfit",
+                    "nRemaining": 1
+                }
+            }
+        },
+        "01012": {
+            "avg": 1,
+            "guess": "right",
+            "nRemaining": 1
+        },
+        "01102": {
+            "avg": 1,
+            "guess": "burnt",
+            "nRemaining": 1
+        },
+        "02002": {
+            "avg": 1.5,
+            "guess": "crypt",
+            "nRemaining": 2,
+            "splits": {
+                "02002": {
+                    "avg": 1,
+                    "guess": "grunt",
+                    "nRemaining": 1
+                }
+            }
+        },
+        "02012": {
+            "avg": 1.5,
+            "guess": "drift",
+            "nRemaining": 2,
+            "splits": {
+                "02202": {
+                    "avg": 1,
+                    "guess": "print",
+                    "nRemaining": 1
+                }
+            }
+        },
+        "02022": {
+            "avg": 1,
+            "guess": "fruit",
+            "nRemaining": 1
+        },
+        "02102": {
+            "avg": 1,
+            "guess": "brunt",
+            "nRemaining": 1
+        },
+        "10002": {
+            "avg": 1.6666666666666665,
+            "guess": "count",
+            "nRemaining": 3,
+            "splits": {
+                "02112": {
+                    "avg": 1,
+                    "guess": "donut",
+                    "nRemaining": 1
+                },
+                "02222": {
+                    "avg": 1,
+                    "guess": "mount",
+                    "nRemaining": 1
+                }
+            }
+        },
+        "10012": {
+            "avg": 1.7999999999999998,
+            "guess": "point",
+            "nRemaining": 5,
+            "splits": {
+                "01112": {
+                    "avg": 1,
+                    "guess": "ingot",
+                    "nRemaining": 1
+                },
+                "01202": {
+                    "avg": 1,
+                    "guess": "idiot",
+                    "nRemaining": 1
+                },
+                "02222": {
+                    "avg": 1,
+                    "guess": "joint",
+                    "nRemaining": 1
+                },
+                "21102": {
+                    "avg": 1,
+                    "guess": "pivot",
+                    "nRemaining": 1
+                }
+            }
+        },
+        "10022": {
+            "avg": 1,
+            "guess": "vomit",
+            "nRemaining": 1
+        },
+        "10102": {
+            "avg": 1,
+            "guess": "doubt",
+            "nRemaining": 1
+        },
+        "10112": {
+            "avg": 1,
+            "guess": "bigot",
+            "nRemaining": 1
+        },
+        "11002": {
+            "avg": 1,
+            "guess": "court",
+            "nRemaining": 1
+        },
+        "11202": {
+            "avg": 1,
+            "guess": "robot",
+            "nRemaining": 1
+        },
+        "12002": {
+            "avg": 1.6666666666666665,
+            "guess": "grout",
+            "nRemaining": 3,
+            "splits": {
+                "02202": {
+                    "avg": 1,
+                    "guess": "front",
+                    "nRemaining": 1
+                },
+                "02222": {
+                    "avg": 1,
+                    "guess": "trout",
+                    "nRemaining": 1
+                }
+            }
+        },
+        "12022": {
+            "avg": 1,
+            "guess": "droit",
+            "nRemaining": 1
+        },
+        "20002": {
+            "avg": 1,
+            "guess": "ought",
+            "nRemaining": 1
+        }
+    }
+}

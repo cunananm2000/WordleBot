@@ -1,5 +1,5 @@
 import math
-from re import L
+from tqdm.auto import tqdm
 
 from wordfreq import zipf_frequency
 
@@ -47,12 +47,20 @@ def pprint(res):
     print("")
 
 
-def check(guess, answer, debug=False, nLetters=5):
+def check(guess, answer, debug=False):
+    # print(guess, answer)
     # key = guess + answer
     # if key not in self.checkCache: key = answer + guess
     # if key not in self.checkCache:
+    nLetters = len(guess)
+    # print(guess, answer)
     res = ["0"] * nLetters
     hit = [False] * nLetters
+
+    # if len(guess) != len(answer):
+    #     print(len(guess), len(answer), guess, answer)
+    #     assert(False)
+
     for i in range(nLetters):
         if guess[i] == answer[i]:
             res[i] = "2"
@@ -92,12 +100,17 @@ def saveAsWordList(tree, fname, answers):
             g.write(','.join(ans) + '\n')
 
     
-def sortWords(C, S, vals, n = 5):
-    C.sort(key=lambda c: tuple((v(c, S) for v in vals)))
-    return C[:n]
+def sortWords(C, S, vals, n, showProg = False):
+    # C.sort(key=lambda c: tuple((v(c, S) for v in vals)))
+    # print('sorting words')
+    if n >= len(C): return C
+    scores = [(tuple((v(c, S) for v in vals)) , c) for c in tqdm(C, disable = not(showProg), colour='red')]
+    scores.sort()
+    # print('finished sorting')
+    return [c for _,c in scores[:n]]
 
-def softMatch(guess, res, cand, nLetters = 5):
-    used = [False]*nLetters
+def softMatch(guess, res, cand):
+    used = [False]*len(guess)
     for i,(g,r,c) in enumerate(zip(guess, res, cand)):
         if r == '2':
             if g != c: return False 
@@ -117,6 +130,9 @@ def softMatch(guess, res, cand, nLetters = 5):
         # print(used)
 
     return True 
+
+def noFilterPossible(guess, res, candidates):
+    return candidates
         
 
 def softFilterPossible(guess, res, candidates):

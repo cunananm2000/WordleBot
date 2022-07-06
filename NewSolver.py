@@ -1,22 +1,46 @@
 import json
-from utils import filterPossible, getSplits, saveAsWordList, sortWords, filterMultiple, softFilterPossible, softFilterMultiple
-from originalWordLists import guesses, answers
+from utils import filterPossible, getSplits, saveAsWordList, sortWords, filterMultiple, softFilterPossible, softFilterMultiple, noFilterPossible
+from mathlerLists import guesses, answers, rStar
 from tqdm.auto import tqdm
 from valuations import *
 
-MAX_DEPTH = 10
-BREACHES = 0
-HITS = 0
+
 
 class Solver(object):
-    def __init__(self, possibleGuesses, possibleAnswers):
+    def __init__(
+        self, 
+        possibleGuesses, 
+        possibleAnswers,
+        MAX_DEPTH = 10,
+        MAX_BREADTH = 20,
+        hardMode = False,
+        game = 'temp',
+        DEBUG_LEVEL = 2,
+    ):
         self.G = possibleGuesses
         self.S = possibleAnswers
+        self.MAX_DEPTH = MAX_DEPTH
+        self.vals = [mostParts, firstValid, maxSizeSplit]
+        self.MAX_BREADTH = MAX_BREADTH
+        self.hardMode = hardMode
+        self.game = game
+        self.DEBUG_LEVEL = DEBUG_LEVEL
+
+        self.guessFilter = softFilterPossible if hardMode else noFilterPossible
+
+        self.BREACHES = 0
+        self.HITS = 0
         
         self.bestGuess = {}
         self.bestScore = {}
 
+
+
+        self.tree = None
+
     def encode(self, subset, superset):
+        if len(subset) == len(superset):
+            return 0
         t = 0
         for c in subset:
             t |= 1 << (len(superset) - superset.index(c) - 1)
@@ -27,73 +51,69 @@ class Solver(object):
             self.encode(possibleAnswers, self.S), 
             self.encode(possibleGuesses, self.G)
         )
+
         if code in self.bestScore:
-            global HITS
-            HITS += 1
+            self.HITS += 1
             return self.bestScore[code]
 
-        # isSet = 0
         # Special cases first 
         if len(possibleAnswers) == 1:
             self.bestGuess[code] = possibleAnswers[0]
             self.bestScore[code] = 1
-            # isSet = 1
         elif len(possibleAnswers) == 2:
             self.bestGuess[code] = possibleAnswers[0]
             self.bestScore[code] = 1.5
-            # isSet = 2
-        elif depth >= MAX_DEPTH:
-            # print("Went too far")
+        elif depth >= self.MAX_DEPTH:
             self.bestGuess[code] = possibleAnswers[0]
             self.bestScore[code] = 1000000
-            # isSet = 3
-            global BREACHES
-            BREACHES += 1
+            self.BREACHES += 1
         else:
-            if (depth == 1): 
-                options = ['salet']
-            else:
-                options = sortWords(
-                    C = possibleGuesses,
-                    S = possibleAnswers,
-                    vals = [mostParts, firstValid, maxSizeSplit],
-                    n = 20
-                )
+            # Shortcut since this always the best choice
+            # if (depth == 1): 
+            #     options = ['salet']
+            # else:
 
-            # if (depth <= 2): 
-            #     print('   '*(depth-1), options)
+            # print('here again',len(possibleAnswers))
 
-            for g in tqdm(options, disable = not(depth <= 2)):
+            options = sortWords(
+                C = possibleGuesses,
+                S = possibleAnswers,
+                vals = self.vals,
+                n = self.MAX_BREADTH,
+                showProg = (depth <= self.DEBUG_LEVEL),
+            )
+
+            # print(options)
+
+            # print('also here', len(possibleAnswers))
+
+
+            for g in tqdm(options, disable = not(depth <= self.DEBUG_LEVEL), colour = ['green','blue'][depth%2]):
                 splits = getSplits(g, possibleAnswers, useWords=True)
                 if len(splits) == 1: continue 
-                
+                # if (depth == 1): print(splits)
                 t = 1
-                for res, split in splits.items():
-                    if res == '22222': continue 
+                for res, split in tqdm(splits.items(), disable = not(depth <= self.DEBUG_LEVEL), colour='yellow'):
+                    if res == rStar: continue 
                     # if (depth <= 2):
                     #     print('    '*(depth-1),g,'-->',res)
                     t += len(split)/len(possibleAnswers) * self.explore(
                         possibleAnswers = split, 
-                        possibleGuesses = softFilterPossible(g, res, possibleGuesses),
+                        possibleGuesses = self.guessFilter(g, res, possibleGuesses),
                         depth = depth + 1,
                     )
 
-                # if (depth <= 2):
+                # if (depth <= 3):
                 #     print('    '*(depth-1),g,'-->',t)
                 
                 if self.bestScore.get(code, 9999999) > t:
                     self.bestScore[code] = t
                     self.bestGuess[code] = g
-                    # isSet = 4
 
-                
-
-            # assert(isSet != 0)
         
-        if code not in self.bestScore:
-            print(possibleAnswers, possibleGuesses)
-            assert(False)
-
+        # if code not in self.bestScore:
+        #     print(possibleAnswers, possibleGuesses)
+        #     assert(False)
 
         return self.bestScore[code]
 
@@ -102,40 +122,70 @@ class Solver(object):
             self.encode(possibleAnswers, self.S), 
             self.encode(possibleGuesses, self.G)
         )
+
         if code not in self.bestGuess:
             self.explore(
                 possibleGuesses = possibleGuesses, 
                 possibleAnswers = possibleAnswers,
                 depth = depth
             )
+        
         guess = self.bestGuess[code]
         avg = self.bestScore[code]
-    
-        # if guess == 'howff':
-        #     print('OI HOW', possibleGuesses)
 
-
-        tree = {'guess': guess, 'avg': avg}
+        tree = {'guess': guess, 'avg': avg, 'nRemaining': len(possibleAnswers)}
         if len(possibleAnswers) != 1:
             tree['splits'] = {}
             splits = getSplits(guess, possibleAnswers, useWords=True)
             for res, split in splits.items():
-                if res == '22222': continue 
+                if res == rStar: continue 
                 tree['splits'][res] = self.genTree(
-                    possibleGuesses=softFilterPossible(guess, res, possibleGuesses),
-                    possibleAnswers=split,
+                    possibleGuesses = self.guessFilter(guess, res, possibleGuesses),
+                    possibleAnswers = split,
                     depth = depth + 1
                 )
         
         return tree
 
+    def getTree(self):
+        if self.tree is None:
+            self.tree = self.genTree(
+                possibleGuesses=self.G,
+                possibleAnswers=self.S
+            )
+        return self.tree
+
+    def writeJson(self):
+        print("Writing JSON...")
+        tree = self.getTree()
+        with open(f"{self.game}_{self.MAX_BREADTH}{'_hard' if self.hardMode else ''}.json", "w") as f:
+            json.dump(tree, f, sort_keys=True, indent=4)
+        print("Wrote JSON!")
+        
+    def writeWordList(self):
+        print("Writing word list...")
+        saveAsWordList(
+            tree = self.getTree(),
+            fname = f"{self.game}_{self.MAX_BREADTH}{'_hard' if self.hardMode else ''}.txt",
+            answers = self.S
+        )
+        print("Wrote word list!")
+
+    def showStats(self):
+        avg = self.bestScore[(self.encode(self.S,self.S), self.encode(self.G,self.G))]
+        print("AVERAGE:", avg)
+        print("TOTAL:",avg * len(self.S))
+        print("HITS:", self.HITS)
+        print("BREACHES:", self.BREACHES)
+
 
 if __name__ == "__main__":
     G = sorted(guesses + answers)
+    # G = sorted(guesses)
     S = sorted(answers)
 
-    # # Temporrary
-    # history = [('salet','00000')]
+    # Temporrary
+    # history = [('12+35=47','21000111')]
     # G = softFilterMultiple(
     #     history = history,
     #     candidates = G
@@ -147,28 +197,16 @@ if __name__ == "__main__":
     # )
 
     print(len(G), len(S))
-    # print(G, S)
-
-
+  
     s = Solver(
         possibleGuesses=G,
-        possibleAnswers=S
+        possibleAnswers=S,
+        hardMode = False,
+        MAX_BREADTH = 10,
+        game = 'mathler',
+        DEBUG_LEVEL = 1
     )
 
-    tree = s.genTree(
-        possibleGuesses=G,
-        possibleAnswers=S
-    )
-
-    with open("originalBestTree.json", "w") as f:
-        json.dump(tree, f, sort_keys=True, indent=4)
-
-    saveAsWordList(
-        tree = tree,
-        fname = "originalBestTree.txt",
-        answers = S
-    )
-    
-    print(s.bestScore[(s.encode(s.S,s.S), s.encode(s.G,s.G))])
-    print("HITS:", HITS)
-    print("BREACHES:", BREACHES)
+    s.writeJson()
+    s.writeWordList()
+    s.showStats()

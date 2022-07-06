@@ -1,0 +1,1307 @@
+{
+    "avg": 2.454166666666673,
+    "guess": "2*54+8",
+    "nRemaining": 240,
+    "splits": {
+        "000011": {
+            "avg": 1.5,
+            "guess": "8+9+99",
+            "nRemaining": 2,
+            "splits": {
+                "121222": {
+                    "avg": 1,
+                    "guess": "9+8+99",
+                    "nRemaining": 1
+                }
+            }
+        },
+        "000012": {
+            "avg": 1,
+            "guess": "9+9+98",
+            "nRemaining": 1
+        },
+        "000021": {
+            "avg": 1.75,
+            "guess": "8+99+9",
+            "nRemaining": 4,
+            "splits": {
+                "111122": {
+                    "avg": 1,
+                    "guess": "99+8+9",
+                    "nRemaining": 1
+                },
+                "111222": {
+                    "avg": 1,
+                    "guess": "98+9+9",
+                    "nRemaining": 1
+                },
+                "122122": {
+                    "avg": 1,
+                    "guess": "9+98+9",
+                    "nRemaining": 1
+                }
+            }
+        },
+        "000022": {
+            "avg": 1.5,
+            "guess": "9+99+8",
+            "nRemaining": 2,
+            "splits": {
+                "211222": {
+                    "avg": 1,
+                    "guess": "99+9+8",
+                    "nRemaining": 1
+                }
+            }
+        },
+        "010000": {
+            "avg": 1.6666666666666665,
+            "guess": "13*9-1",
+            "nRemaining": 3,
+            "splits": {
+                "012122": {
+                    "avg": 1,
+                    "guess": "39*3-1",
+                    "nRemaining": 1
+                },
+                "212020": {
+                    "avg": 1,
+                    "guess": "17*7-3",
+                    "nRemaining": 1
+                }
+            }
+        },
+        "010001": {
+            "avg": 1.5,
+            "guess": "8/6*87",
+            "nRemaining": 2,
+            "splits": {
+                "211111": {
+                    "avg": 1,
+                    "guess": "87*8/6",
+                    "nRemaining": 1
+                }
+            }
+        },
+        "010002": {
+            "avg": 1,
+            "guess": "87/6*8",
+            "nRemaining": 1
+        },
+        "010010": {
+            "avg": 1,
+            "guess": "67+7*7",
+            "nRemaining": 1
+        },
+        "010011": {
+            "avg": 1.9000000000000008,
+            "guess": "98+3*6",
+            "nRemaining": 10,
+            "splits": {
+                "011022": {
+                    "avg": 1,
+                    "guess": "8+18*6",
+                    "nRemaining": 1
+                },
+                "011112": {
+                    "avg": 1,
+                    "guess": "8+3*36",
+                    "nRemaining": 1
+                },
+                "011121": {
+                    "avg": 1,
+                    "guess": "8+36*3",
+                    "nRemaining": 1
+                },
+                "012021": {
+                    "avg": 1,
+                    "guess": "60+8*7",
+                    "nRemaining": 1
+                },
+                "012022": {
+                    "avg": 1,
+                    "guess": "80+6*6",
+                    "nRemaining": 1
+                },
+                "022022": {
+                    "avg": 1,
+                    "guess": "68+8*6",
+                    "nRemaining": 1
+                },
+                "112120": {
+                    "avg": 1,
+                    "guess": "89+9*3",
+                    "nRemaining": 1
+                },
+                "112220": {
+                    "avg": 1,
+                    "guess": "89+3*9",
+                    "nRemaining": 1
+                },
+                "222121": {
+                    "avg": 1,
+                    "guess": "98+6*3",
+                    "nRemaining": 1
+                }
+            }
+        },
+        "010012": {
+            "avg": 1.6666666666666665,
+            "guess": "60+7*8",
+            "nRemaining": 3,
+            "splits": {
+                "101012": {
+                    "avg": 1,
+                    "guess": "8+6*18",
+                    "nRemaining": 1
+                },
+                "202022": {
+                    "avg": 1,
+                    "guess": "68+6*8",
+                    "nRemaining": 1
+                }
+            }
+        },
+        "010022": {
+            "avg": 1.5,
+            "guess": "18*6+8",
+            "nRemaining": 2,
+            "splits": {
+                "002122": {
+                    "avg": 1,
+                    "guess": "36*3+8",
+                    "nRemaining": 1
+                }
+            }
+        },
+        "010100": {
+            "avg": 1.5,
+            "guess": "40*3-4",
+            "nRemaining": 2,
+            "splits": {
+                "202220": {
+                    "avg": 1,
+                    "guess": "41*3-7",
+                    "nRemaining": 1
+                }
+            }
+        },
+        "010101": {
+            "avg": 1.5,
+            "guess": "4/3*87",
+            "nRemaining": 2,
+            "splits": {
+                "111111": {
+                    "avg": 1,
+                    "guess": "87/3*4",
+                    "nRemaining": 1
+                }
+            }
+        },
+        "010110": {
+            "avg": 1.75,
+            "guess": "4+16*7",
+            "nRemaining": 4,
+            "splits": {
+                "110121": {
+                    "avg": 1,
+                    "guess": "74+7*6",
+                    "nRemaining": 1
+                },
+                "110222": {
+                    "avg": 1,
+                    "guess": "74+6*7",
+                    "nRemaining": 1
+                },
+                "221111": {
+                    "avg": 1,
+                    "guess": "4+7*16",
+                    "nRemaining": 1
+                }
+            }
+        },
+        "010111": {
+            "avg": 1.7999999999999998,
+            "guess": "44+8*9",
+            "nRemaining": 5,
+            "splits": {
+                "102120": {
+                    "avg": 1,
+                    "guess": "88+7*4",
+                    "nRemaining": 1
+                },
+                "102121": {
+                    "avg": 1,
+                    "guess": "80+9*4",
+                    "nRemaining": 1
+                },
+                "122220": {
+                    "avg": 1,
+                    "guess": "84+8*4",
+                    "nRemaining": 1
+                },
+                "211110": {
+                    "avg": 1,
+                    "guess": "4+8*14",
+                    "nRemaining": 1
+                }
+            }
+        },
+        "010112": {
+            "avg": 1,
+            "guess": "44+9*8",
+            "nRemaining": 1
+        },
+        "010120": {
+            "avg": 1,
+            "guess": "16*7+4",
+            "nRemaining": 1
+        },
+        "010121": {
+            "avg": 1,
+            "guess": "14*8+4",
+            "nRemaining": 1
+        },
+        "010200": {
+            "avg": 1,
+            "guess": "30*4-4",
+            "nRemaining": 1
+        },
+        "010201": {
+            "avg": 1,
+            "guess": "87*4/3",
+            "nRemaining": 1
+        },
+        "010202": {
+            "avg": 1,
+            "guess": "31*4-8",
+            "nRemaining": 1
+        },
+        "010211": {
+            "avg": 1.5,
+            "guess": "80+4*9",
+            "nRemaining": 2,
+            "splits": {
+                "202220": {
+                    "avg": 1,
+                    "guess": "88+4*7",
+                    "nRemaining": 1
+                }
+            }
+        },
+        "010212": {
+            "avg": 1.5,
+            "guess": "4+14*8",
+            "nRemaining": 2,
+            "splits": {
+                "110222": {
+                    "avg": 1,
+                    "guess": "84+4*8",
+                    "nRemaining": 1
+                }
+            }
+        },
+        "011001": {
+            "avg": 1.5,
+            "guess": "58*6/3",
+            "nRemaining": 2,
+            "splits": {
+                "221111": {
+                    "avg": 1,
+                    "guess": "58/3*6",
+                    "nRemaining": 1
+                }
+            }
+        },
+        "011002": {
+            "avg": 1,
+            "guess": "6/3*58",
+            "nRemaining": 1
+        },
+        "011010": {
+            "avg": 1.9000000000000008,
+            "guess": "53+7*9",
+            "nRemaining": 10,
+            "splits": {
+                "102021": {
+                    "avg": 1,
+                    "guess": "91+5*5",
+                    "nRemaining": 1
+                },
+                "102121": {
+                    "avg": 1,
+                    "guess": "71+9*5",
+                    "nRemaining": 1
+                },
+                "102122": {
+                    "avg": 1,
+                    "guess": "71+5*9",
+                    "nRemaining": 1
+                },
+                "112022": {
+                    "avg": 1,
+                    "guess": "35+9*9",
+                    "nRemaining": 1
+                },
+                "112121": {
+                    "avg": 1,
+                    "guess": "95+3*7",
+                    "nRemaining": 1
+                },
+                "112221": {
+                    "avg": 1,
+                    "guess": "95+7*3",
+                    "nRemaining": 1
+                },
+                "211110": {
+                    "avg": 1,
+                    "guess": "5+3*37",
+                    "nRemaining": 1
+                },
+                "211220": {
+                    "avg": 1,
+                    "guess": "5+37*3",
+                    "nRemaining": 1
+                },
+                "222121": {
+                    "avg": 1,
+                    "guess": "53+9*7",
+                    "nRemaining": 1
+                }
+            }
+        },
+        "011011": {
+            "avg": 1.7999999999999998,
+            "guess": "76+8*5",
+            "nRemaining": 5,
+            "splits": {
+                "022121": {
+                    "avg": 1,
+                    "guess": "86+5*6",
+                    "nRemaining": 1
+                },
+                "022122": {
+                    "avg": 1,
+                    "guess": "86+6*5",
+                    "nRemaining": 1
+                },
+                "102121": {
+                    "avg": 1,
+                    "guess": "81+5*7",
+                    "nRemaining": 1
+                },
+                "102122": {
+                    "avg": 1,
+                    "guess": "81+7*5",
+                    "nRemaining": 1
+                }
+            }
+        },
+        "011012": {
+            "avg": 1,
+            "guess": "76+5*8",
+            "nRemaining": 1
+        },
+        "011020": {
+            "avg": 1,
+            "guess": "37*3+5",
+            "nRemaining": 1
+        },
+        "011101": {
+            "avg": 1.5,
+            "guess": "15*8-4",
+            "nRemaining": 2,
+            "splits": {
+                "012202": {
+                    "avg": 1,
+                    "guess": "58*8/4",
+                    "nRemaining": 1
+                }
+            }
+        },
+        "011102": {
+            "avg": 1,
+            "guess": "8/4*58",
+            "nRemaining": 1
+        },
+        "011110": {
+            "avg": 1,
+            "guess": "96+5*4",
+            "nRemaining": 1
+        },
+        "011202": {
+            "avg": 1,
+            "guess": "58/4*8",
+            "nRemaining": 1
+        },
+        "011210": {
+            "avg": 1,
+            "guess": "96+4*5",
+            "nRemaining": 1
+        },
+        "020000": {
+            "avg": 1.6666666666666665,
+            "guess": "3*39-1",
+            "nRemaining": 3,
+            "splits": {
+                "120021": {
+                    "avg": 1,
+                    "guess": "7*17-3",
+                    "nRemaining": 1
+                },
+                "120122": {
+                    "avg": 1,
+                    "guess": "9*13-1",
+                    "nRemaining": 1
+                }
+            }
+        },
+        "020001": {
+            "avg": 1,
+            "guess": "8*87/6",
+            "nRemaining": 1
+        },
+        "020010": {
+            "avg": 1,
+            "guess": "7*7+67",
+            "nRemaining": 1
+        },
+        "020011": {
+            "avg": 1.9999999999999998,
+            "guess": "3*7+95",
+            "nRemaining": 5,
+            "splits": {
+                "020200": {
+                    "avg": 1,
+                    "guess": "6*6+80",
+                    "nRemaining": 1
+                },
+                "021200": {
+                    "avg": 1,
+                    "guess": "7*8+60",
+                    "nRemaining": 1
+                },
+                "022200": {
+                    "avg": 1,
+                    "guess": "8*7+60",
+                    "nRemaining": 1
+                },
+                "120210": {
+                    "avg": 1,
+                    "guess": "9*3+89",
+                    "nRemaining": 1
+                },
+                "220210": {
+                    "avg": 1,
+                    "guess": "3*9+89",
+                    "nRemaining": 1
+                }
+            }
+        },
+        "020012": {
+            "avg": 1.75,
+            "guess": "3*6+98",
+            "nRemaining": 4,
+            "splits": {
+                "021202": {
+                    "avg": 1,
+                    "guess": "6*8+68",
+                    "nRemaining": 1
+                },
+                "022202": {
+                    "avg": 1,
+                    "guess": "8*6+68",
+                    "nRemaining": 1
+                },
+                "121222": {
+                    "avg": 1,
+                    "guess": "6*3+98",
+                    "nRemaining": 1
+                }
+            }
+        },
+        "020022": {
+            "avg": 1.5,
+            "guess": "3*36+8",
+            "nRemaining": 2,
+            "splits": {
+                "020122": {
+                    "avg": 1,
+                    "guess": "6*18+8",
+                    "nRemaining": 1
+                }
+            }
+        },
+        "020100": {
+            "avg": 1.6666666666666665,
+            "guess": "3*40-4",
+            "nRemaining": 3,
+            "splits": {
+                "121222": {
+                    "avg": 1,
+                    "guess": "4*30-4",
+                    "nRemaining": 1
+                },
+                "222020": {
+                    "avg": 1,
+                    "guess": "3*41-7",
+                    "nRemaining": 1
+                }
+            }
+        },
+        "020101": {
+            "avg": 1,
+            "guess": "4*87/3",
+            "nRemaining": 1
+        },
+        "020102": {
+            "avg": 1,
+            "guess": "4*31-8",
+            "nRemaining": 1
+        },
+        "020110": {
+            "avg": 1.5,
+            "guess": "6*7+74",
+            "nRemaining": 2,
+            "splits": {
+                "121222": {
+                    "avg": 1,
+                    "guess": "7*6+74",
+                    "nRemaining": 1
+                }
+            }
+        },
+        "020111": {
+            "avg": 1.8333333333333337,
+            "guess": "4*8+84",
+            "nRemaining": 6,
+            "splits": {
+                "120220": {
+                    "avg": 1,
+                    "guess": "9*4+80",
+                    "nRemaining": 1
+                },
+                "121202": {
+                    "avg": 1,
+                    "guess": "8*9+44",
+                    "nRemaining": 1
+                },
+                "121222": {
+                    "avg": 1,
+                    "guess": "8*4+84",
+                    "nRemaining": 1
+                },
+                "122202": {
+                    "avg": 1,
+                    "guess": "9*8+44",
+                    "nRemaining": 1
+                },
+                "220220": {
+                    "avg": 1,
+                    "guess": "4*9+80",
+                    "nRemaining": 1
+                }
+            }
+        },
+        "020112": {
+            "avg": 1.5,
+            "guess": "4*7+88",
+            "nRemaining": 2,
+            "splits": {
+                "121222": {
+                    "avg": 1,
+                    "guess": "7*4+88",
+                    "nRemaining": 1
+                }
+            }
+        },
+        "020120": {
+            "avg": 1,
+            "guess": "7*16+4",
+            "nRemaining": 1
+        },
+        "020221": {
+            "avg": 1,
+            "guess": "8*14+4",
+            "nRemaining": 1
+        },
+        "021010": {
+            "avg": 1.8333333333333337,
+            "guess": "3*7+95",
+            "nRemaining": 6,
+            "splits": {
+                "021211": {
+                    "avg": 1,
+                    "guess": "5*9+71",
+                    "nRemaining": 1
+                },
+                "120212": {
+                    "avg": 1,
+                    "guess": "9*9+35",
+                    "nRemaining": 1
+                },
+                "121211": {
+                    "avg": 1,
+                    "guess": "7*9+53",
+                    "nRemaining": 1
+                },
+                "121222": {
+                    "avg": 1,
+                    "guess": "7*3+95",
+                    "nRemaining": 1
+                },
+                "122211": {
+                    "avg": 1,
+                    "guess": "9*7+53",
+                    "nRemaining": 1
+                }
+            }
+        },
+        "021011": {
+            "avg": 1.6666666666666665,
+            "guess": "5*6+86",
+            "nRemaining": 3,
+            "splits": {
+                "220212": {
+                    "avg": 1,
+                    "guess": "5*8+76",
+                    "nRemaining": 1
+                },
+                "220220": {
+                    "avg": 1,
+                    "guess": "5*7+81",
+                    "nRemaining": 1
+                }
+            }
+        },
+        "021020": {
+            "avg": 1,
+            "guess": "3*37+5",
+            "nRemaining": 1
+        },
+        "021101": {
+            "avg": 1,
+            "guess": "8*15-4",
+            "nRemaining": 1
+        },
+        "021110": {
+            "avg": 1,
+            "guess": "5*4+96",
+            "nRemaining": 1
+        },
+        "022001": {
+            "avg": 1,
+            "guess": "6*58/3",
+            "nRemaining": 1
+        },
+        "022010": {
+            "avg": 1.5,
+            "guess": "5*5+91",
+            "nRemaining": 2,
+            "splits": {
+                "022212": {
+                    "avg": 1,
+                    "guess": "9*5+71",
+                    "nRemaining": 1
+                }
+            }
+        },
+        "022011": {
+            "avg": 1.6666666666666665,
+            "guess": "6*5+86",
+            "nRemaining": 3,
+            "splits": {
+                "022212": {
+                    "avg": 1,
+                    "guess": "8*5+76",
+                    "nRemaining": 1
+                },
+                "022220": {
+                    "avg": 1,
+                    "guess": "7*5+81",
+                    "nRemaining": 1
+                }
+            }
+        },
+        "022101": {
+            "avg": 1,
+            "guess": "8*58/4",
+            "nRemaining": 1
+        },
+        "022110": {
+            "avg": 1,
+            "guess": "4*5+96",
+            "nRemaining": 1
+        },
+        "110000": {
+            "avg": 1,
+            "guess": "61*2-6",
+            "nRemaining": 1
+        },
+        "110001": {
+            "avg": 1,
+            "guess": "8/2*29",
+            "nRemaining": 1
+        },
+        "110002": {
+            "avg": 1,
+            "guess": "62*2-8",
+            "nRemaining": 1
+        },
+        "110010": {
+            "avg": 1.5,
+            "guess": "62+6*9",
+            "nRemaining": 2,
+            "splits": {
+                "222121": {
+                    "avg": 1,
+                    "guess": "62+9*6",
+                    "nRemaining": 1
+                }
+            }
+        },
+        "110011": {
+            "avg": 1.7999999999999998,
+            "guess": "98+2*9",
+            "nRemaining": 5,
+            "splits": {
+                "011222": {
+                    "avg": 1,
+                    "guess": "8+12*9",
+                    "nRemaining": 1
+                },
+                "111110": {
+                    "avg": 1,
+                    "guess": "8+9*12",
+                    "nRemaining": 1
+                },
+                "212120": {
+                    "avg": 1,
+                    "guess": "92+8*3",
+                    "nRemaining": 1
+                },
+                "222121": {
+                    "avg": 1,
+                    "guess": "98+9*2",
+                    "nRemaining": 1
+                }
+            }
+        },
+        "110012": {
+            "avg": 1,
+            "guess": "92+3*8",
+            "nRemaining": 1
+        },
+        "110020": {
+            "avg": 1,
+            "guess": "19*6+2",
+            "nRemaining": 1
+        },
+        "110021": {
+            "avg": 1,
+            "guess": "38*3+2",
+            "nRemaining": 1
+        },
+        "110022": {
+            "avg": 1,
+            "guess": "12*9+8",
+            "nRemaining": 1
+        },
+        "110100": {
+            "avg": 1.5,
+            "guess": "4/1*29",
+            "nRemaining": 2,
+            "splits": {
+                "100110": {
+                    "avg": 1,
+                    "guess": "60*2-4",
+                    "nRemaining": 1
+                }
+            }
+        },
+        "110110": {
+            "avg": 1,
+            "guess": "92+6*4",
+            "nRemaining": 1
+        },
+        "110111": {
+            "avg": 1.6666666666666665,
+            "guess": "4+28*4",
+            "nRemaining": 3,
+            "splits": {
+                "022122": {
+                    "avg": 1,
+                    "guess": "8+27*4",
+                    "nRemaining": 1
+                },
+                "121110": {
+                    "avg": 1,
+                    "guess": "8+4*27",
+                    "nRemaining": 1
+                }
+            }
+        },
+        "110112": {
+            "avg": 1,
+            "guess": "4+4*28",
+            "nRemaining": 1
+        },
+        "110210": {
+            "avg": 1,
+            "guess": "92+4*6",
+            "nRemaining": 1
+        },
+        "111000": {
+            "avg": 1,
+            "guess": "59*2-2",
+            "nRemaining": 1
+        },
+        "111001": {
+            "avg": 1.75,
+            "guess": "58*1*2",
+            "nRemaining": 4,
+            "splits": {
+                "220222": {
+                    "avg": 1,
+                    "guess": "58/1*2",
+                    "nRemaining": 1
+                },
+                "222101": {
+                    "avg": 1,
+                    "guess": "58*2/1",
+                    "nRemaining": 1
+                },
+                "222121": {
+                    "avg": 1,
+                    "guess": "58*2*1",
+                    "nRemaining": 1
+                }
+            }
+        },
+        "111010": {
+            "avg": 1.6666666666666665,
+            "guess": "1+23*5",
+            "nRemaining": 3,
+            "splits": {
+                "022012": {
+                    "avg": 1,
+                    "guess": "6+2*55",
+                    "nRemaining": 1
+                },
+                "022022": {
+                    "avg": 1,
+                    "guess": "6+22*5",
+                    "nRemaining": 1
+                }
+            }
+        },
+        "111012": {
+            "avg": 1,
+            "guess": "52+8*8",
+            "nRemaining": 1
+        },
+        "111020": {
+            "avg": 1.5,
+            "guess": "55*2+6",
+            "nRemaining": 2,
+            "splits": {
+                "202220": {
+                    "avg": 1,
+                    "guess": "57*2+2",
+                    "nRemaining": 1
+                }
+            }
+        },
+        "111101": {
+            "avg": 1,
+            "guess": "58/2*4",
+            "nRemaining": 1
+        },
+        "111102": {
+            "avg": 1,
+            "guess": "4/2*58",
+            "nRemaining": 1
+        },
+        "111110": {
+            "avg": 1,
+            "guess": "4+2*56",
+            "nRemaining": 1
+        },
+        "111111": {
+            "avg": 1,
+            "guess": "8+2*54",
+            "nRemaining": 1
+        },
+        "111120": {
+            "avg": 1,
+            "guess": "56*2+4",
+            "nRemaining": 1
+        },
+        "111122": {
+            "avg": 1,
+            "guess": "54*2+8",
+            "nRemaining": 1
+        },
+        "111201": {
+            "avg": 1,
+            "guess": "58*4/2",
+            "nRemaining": 1
+        },
+        "112010": {
+            "avg": 1.6666666666666665,
+            "guess": "1+5*23",
+            "nRemaining": 3,
+            "splits": {
+                "022110": {
+                    "avg": 1,
+                    "guess": "6+55*2",
+                    "nRemaining": 1
+                },
+                "022220": {
+                    "avg": 1,
+                    "guess": "6+5*22",
+                    "nRemaining": 1
+                }
+            }
+        },
+        "112110": {
+            "avg": 1,
+            "guess": "4+56*2",
+            "nRemaining": 1
+        },
+        "112211": {
+            "avg": 1,
+            "guess": "8+54*2",
+            "nRemaining": 1
+        },
+        "120001": {
+            "avg": 1,
+            "guess": "8*29/2",
+            "nRemaining": 1
+        },
+        "120010": {
+            "avg": 1.5,
+            "guess": "6*9+62",
+            "nRemaining": 2,
+            "splits": {
+                "121222": {
+                    "avg": 1,
+                    "guess": "9*6+62",
+                    "nRemaining": 1
+                }
+            }
+        },
+        "120011": {
+            "avg": 1.5,
+            "guess": "3*8+92",
+            "nRemaining": 2,
+            "splits": {
+                "121222": {
+                    "avg": 1,
+                    "guess": "8*3+92",
+                    "nRemaining": 1
+                }
+            }
+        },
+        "120012": {
+            "avg": 1,
+            "guess": "9*2+98",
+            "nRemaining": 1
+        },
+        "120020": {
+            "avg": 1,
+            "guess": "6*19+2",
+            "nRemaining": 1
+        },
+        "120021": {
+            "avg": 1,
+            "guess": "3*38+2",
+            "nRemaining": 1
+        },
+        "120022": {
+            "avg": 1,
+            "guess": "9*12+8",
+            "nRemaining": 1
+        },
+        "120100": {
+            "avg": 1.8333333333333337,
+            "guess": "1*29*4",
+            "nRemaining": 6,
+            "splits": {
+                "022002": {
+                    "avg": 1,
+                    "guess": "6*20-4",
+                    "nRemaining": 1
+                },
+                "121111": {
+                    "avg": 1,
+                    "guess": "4*1*29",
+                    "nRemaining": 1
+                },
+                "122201": {
+                    "avg": 1,
+                    "guess": "4*29/1",
+                    "nRemaining": 1
+                },
+                "122221": {
+                    "avg": 1,
+                    "guess": "4*29*1",
+                    "nRemaining": 1
+                },
+                "221111": {
+                    "avg": 1,
+                    "guess": "1*4*29",
+                    "nRemaining": 1
+                }
+            }
+        },
+        "120110": {
+            "avg": 1.5,
+            "guess": "4*6+92",
+            "nRemaining": 2,
+            "splits": {
+                "121222": {
+                    "avg": 1,
+                    "guess": "6*4+92",
+                    "nRemaining": 1
+                }
+            }
+        },
+        "120121": {
+            "avg": 1,
+            "guess": "4*28+4",
+            "nRemaining": 1
+        },
+        "120122": {
+            "avg": 1,
+            "guess": "4*27+8",
+            "nRemaining": 1
+        },
+        "121000": {
+            "avg": 1,
+            "guess": "5*25-9",
+            "nRemaining": 1
+        },
+        "121002": {
+            "avg": 1,
+            "guess": "1*2*58",
+            "nRemaining": 1
+        },
+        "121011": {
+            "avg": 1,
+            "guess": "8*8+52",
+            "nRemaining": 1
+        },
+        "121020": {
+            "avg": 1.5,
+            "guess": "5*22+6",
+            "nRemaining": 2,
+            "splits": {
+                "222020": {
+                    "avg": 1,
+                    "guess": "5*23+1",
+                    "nRemaining": 1
+                }
+            }
+        },
+        "121200": {
+            "avg": 1,
+            "guess": "5*24-4",
+            "nRemaining": 1
+        },
+        "122001": {
+            "avg": 1,
+            "guess": "1*58*2",
+            "nRemaining": 1
+        },
+        "122101": {
+            "avg": 1,
+            "guess": "4*58/2",
+            "nRemaining": 1
+        },
+        "210000": {
+            "avg": 1,
+            "guess": "29*2*2",
+            "nRemaining": 1
+        },
+        "210001": {
+            "avg": 1,
+            "guess": "29*8/2",
+            "nRemaining": 1
+        },
+        "210002": {
+            "avg": 1,
+            "guess": "29/2*8",
+            "nRemaining": 1
+        },
+        "210010": {
+            "avg": 1.5,
+            "guess": "2+19*6",
+            "nRemaining": 2,
+            "splits": {
+                "221111": {
+                    "avg": 1,
+                    "guess": "2+6*19",
+                    "nRemaining": 1
+                }
+            }
+        },
+        "210011": {
+            "avg": 1,
+            "guess": "2+38*3",
+            "nRemaining": 1
+        },
+        "210012": {
+            "avg": 1,
+            "guess": "2+3*38",
+            "nRemaining": 1
+        },
+        "210100": {
+            "avg": 1.6666666666666665,
+            "guess": "20*6-4",
+            "nRemaining": 3,
+            "splits": {
+                "201002": {
+                    "avg": 1,
+                    "guess": "29/1*4",
+                    "nRemaining": 1
+                },
+                "202002": {
+                    "avg": 1,
+                    "guess": "29*1*4",
+                    "nRemaining": 1
+                }
+            }
+        },
+        "210200": {
+            "avg": 1.5,
+            "guess": "29*4*1",
+            "nRemaining": 2,
+            "splits": {
+                "222202": {
+                    "avg": 1,
+                    "guess": "29*4/1",
+                    "nRemaining": 1
+                }
+            }
+        },
+        "210221": {
+            "avg": 1,
+            "guess": "28*4+4",
+            "nRemaining": 1
+        },
+        "210222": {
+            "avg": 1,
+            "guess": "27*4+8",
+            "nRemaining": 1
+        },
+        "211000": {
+            "avg": 1,
+            "guess": "25*5-9",
+            "nRemaining": 1
+        },
+        "211002": {
+            "avg": 1,
+            "guess": "2/1*58",
+            "nRemaining": 1
+        },
+        "211010": {
+            "avg": 1,
+            "guess": "2+2*57",
+            "nRemaining": 1
+        },
+        "211020": {
+            "avg": 1.5,
+            "guess": "22*5+6",
+            "nRemaining": 2,
+            "splits": {
+                "202220": {
+                    "avg": 1,
+                    "guess": "23*5+1",
+                    "nRemaining": 1
+                }
+            }
+        },
+        "211100": {
+            "avg": 1,
+            "guess": "24*5-4",
+            "nRemaining": 1
+        },
+        "212010": {
+            "avg": 1,
+            "guess": "2+57*2",
+            "nRemaining": 1
+        },
+        "220000": {
+            "avg": 1.6666666666666665,
+            "guess": "2*2*29",
+            "nRemaining": 3,
+            "splits": {
+                "220000": {
+                    "avg": 1,
+                    "guess": "2*61-6",
+                    "nRemaining": 1
+                },
+                "222111": {
+                    "avg": 1,
+                    "guess": "2*29*2",
+                    "nRemaining": 1
+                }
+            }
+        },
+        "220002": {
+            "avg": 1,
+            "guess": "2*62-8",
+            "nRemaining": 1
+        },
+        "220012": {
+            "avg": 1,
+            "guess": "2*9+98",
+            "nRemaining": 1
+        },
+        "220100": {
+            "avg": 1,
+            "guess": "2*60-4",
+            "nRemaining": 1
+        },
+        "221002": {
+            "avg": 1,
+            "guess": "2*1*58",
+            "nRemaining": 1
+        },
+        "222000": {
+            "avg": 1,
+            "guess": "2*59-2",
+            "nRemaining": 1
+        },
+        "222001": {
+            "avg": 1.5,
+            "guess": "2*58*1",
+            "nRemaining": 2,
+            "splits": {
+                "222202": {
+                    "avg": 1,
+                    "guess": "2*58/1",
+                    "nRemaining": 1
+                }
+            }
+        },
+        "222020": {
+            "avg": 1.5,
+            "guess": "2*55+6",
+            "nRemaining": 2,
+            "splits": {
+                "222020": {
+                    "avg": 1,
+                    "guess": "2*57+2",
+                    "nRemaining": 1
+                }
+            }
+        },
+        "222120": {
+            "avg": 1,
+            "guess": "2*56+4",
+            "nRemaining": 1
+        }
+    }
+}
