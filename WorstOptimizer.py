@@ -1,9 +1,5 @@
-import json
-from utils import filterPossible, getSplits, saveAsWordList, sortWords, filterMultiple, softFilterPossible, softFilterMultiple, noFilterPossible
-from bardleLists import guesses, answers, rStar
+from utils import getSplits, sortWords
 from tqdm.auto import tqdm
-from valuations import *
-
 from BaseOptimizer import BaseOptimizer
 
 class WorstOptimizer(BaseOptimizer):
@@ -15,6 +11,7 @@ class WorstOptimizer(BaseOptimizer):
         super(WorstOptimizer, self).__init__(*args, **kwargs)
 
     def explore(self, possibleGuesses, possibleAnswers, depth = 1):
+        self.CALLS += 1
         code = (
             self.encode(possibleAnswers, self.S), 
             self.encode(possibleGuesses, self.G)
@@ -36,7 +33,7 @@ class WorstOptimizer(BaseOptimizer):
             self.bestScore[code] = (2*self.MAX_DEPTH, 1)
             self.BREACHES += 1
         else:
-            self.CALLS += 1
+            
 
             # Shortcut since this always the best choice
             # if (depth == 1): 
@@ -64,7 +61,7 @@ class WorstOptimizer(BaseOptimizer):
                 # if (depth == 1): print(splits)
                 t = [1,1]
                 for res, split in tqdm(splits.items(), disable = not(depth <= self.DEBUG_LEVEL), colour='yellow'):
-                    if res == rStar: continue 
+                    if res == self.rStar: continue 
                     # if (depth <= 2):
                     #     print('    '*(depth-1),g,'-->',res)
                     d,n = self.explore(
@@ -93,31 +90,11 @@ class WorstOptimizer(BaseOptimizer):
         return self.bestScore[code]
 
 if __name__ == "__main__":
-    G = sorted(guesses + answers)
-    # G = sorted(guesses)
-    S = sorted(answers)
-
-    # Temporrary
-    # history = [('12+35=47','21000111')]
-    # G = softFilterMultiple(
-    #     history = history,
-    #     candidates = G
-    # )
-
-    # S = filterMultiple(
-    #     history = history,
-    #     candidates = S
-    # )
-
-    print(len(G), len(S))
-  
     s = WorstOptimizer(
-        possibleGuesses=G,
-        possibleAnswers=S,
         hardMode = False,
-        MAX_BREADTH = 20,
-        game = 'bardle',
-        DEBUG_LEVEL = 1
+        MAX_BREADTH = 30,
+        game = 'oldWordle',
+        DEBUG_LEVEL = 2
     )
 
     s.writeJson()

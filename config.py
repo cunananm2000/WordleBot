@@ -21,7 +21,17 @@ class Config(object):
                 'guessFile': 'wordLists/mininerdleWords.txt',
                 'answerFile': 'wordLists/mininerdleWords.txt',
                 'rStar': '222222'
-            }
+            },
+            'bardle': {
+                'guessFile': 'wordLists/bardleGuesses.txt',
+                'answerFile': 'wordLists/bardleAnswers.txt',
+                'rStar': '22222'
+            },
+            'mathler': {
+                'guessFile': 'wordLists/mathlerWords.txt',
+                'answerFile': 'wordLists/mathlerWords.txt',
+                'rStar': '222222'
+            },
         }
 
         config = configs[game]

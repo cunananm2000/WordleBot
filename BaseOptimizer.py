@@ -94,7 +94,7 @@ class BaseOptimizer(object):
     def writeJson(self):
         print("Writing JSON...")
         tree = self.getTree()
-        with open(f"{self.fname}.json", "w") as f:
+        with open(f"optimizedTrees/{self.fname}.json", "w") as f:
             json.dump(tree, f, sort_keys=True, indent=4)
         print("Wrote JSON!")
         
@@ -102,15 +102,20 @@ class BaseOptimizer(object):
         print("Writing word list...")
         saveAsWordList(
             tree = self.getTree(),
-            fname = f"{self.fname}.txt",
+            fname = f"optimizedTrees/{self.fname}.txt",
             answers = self.S
         )
         print("Wrote word list!")
 
     def showStats(self):
+        print("----- GAME:",self.game.capitalize(),"-----")
+        print("HARD MODE ON?:", self.hardMode)
+        print("# POSSIBLE SECRETS:", len(self.S))
+        print("# POSSIBLE GUESSES:", len(self.G))
+        print("MAX BREADTH:", self.MAX_BREADTH)
+        print("MAX_DEPTH:",self.MAX_DEPTH)
         score = self.bestScore[(self.encode(self.S,self.S), self.encode(self.G,self.G))]
         print("BEST SCORE:", score)
-        print("# POSSIBLE GUESSES:", len(self.G))
-        print("# POSSIBLE SECRETS:", len(self.S))
         print("HITS:", self.HITS)
         print("BREACHES:", self.BREACHES)
+        print("CALLS: ", self.CALLS)

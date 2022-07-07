@@ -1,9 +1,6 @@
-import json
 from BaseOptimizer import BaseOptimizer
-from utils import filterPossible, getSplits, saveAsWordList, sortWords, filterMultiple, softFilterPossible, softFilterMultiple, noFilterPossible
-from bardleLists import guesses, answers, rStar
+from utils import getSplits, sortWords
 from tqdm.auto import tqdm
-from valuations import *
 
 
 
@@ -16,6 +13,7 @@ class AverageOptimizer(BaseOptimizer):
         super(AverageOptimizer, self).__init__(*args, **kwargs)
 
     def explore(self, possibleGuesses, possibleAnswers, depth = 1):
+        self.CALLS += 1
         code = (
             self.encode(possibleAnswers, self.S), 
             self.encode(possibleGuesses, self.G)
@@ -37,7 +35,7 @@ class AverageOptimizer(BaseOptimizer):
             self.bestScore[code] = 1000000
             self.BREACHES += 1
         else:
-            self.CALLS += 1
+            
 
             # Shortcut since this always the best choice
             # if (depth == 1): 
@@ -65,7 +63,7 @@ class AverageOptimizer(BaseOptimizer):
                 # if (depth == 1): print(splits)
                 t = 1
                 for res, split in tqdm(splits.items(), disable = not(depth <= self.DEBUG_LEVEL), colour='yellow'):
-                    if res == rStar: continue 
+                    if res == self.rStar: continue 
                     # if (depth <= 2):
                     #     print('    '*(depth-1),g,'-->',res)
                     t += len(split)/len(possibleAnswers) * self.explore(
@@ -81,6 +79,16 @@ class AverageOptimizer(BaseOptimizer):
                     self.bestScore[code] = t
                     self.bestGuess[code] = g
 
+                n = len(possibleAnswers)
+                if g in possibleAnswers:
+                    if abs(t - (1 + 2*(n-1))/n) < 0.001:
+                        # print("Exit early! Reason 1")
+                        break
+                else:
+                    if abs(t - 2) < 0.001:
+                        # print("Exit early! Reason 2")
+                        break
+
         
         # if code not in self.bestScore:
         #     print(possibleAnswers, possibleGuesses)
@@ -90,30 +98,14 @@ class AverageOptimizer(BaseOptimizer):
 
 
 if __name__ == "__main__":
-    # G = sorted(guesses + answers)
-    # G = sorted(guesses)
-    # S = sorted(answers)
-
-    # Temporrary
-    # history = [('12+35=47','21000111')]
-    # G = softFilterMultiple(
-    #     history = history,
-    #     candidates = G
-    # )
-
-    # S = filterMultiple(
-    #     history = history,
-    #     candidates = S
-    # )
-
-    # print(len(G), len(S))
-  
-    s = AverageOptimizer(
-        hardMode = False,
-        MAX_BREADTH = 5,
-        game = 'mininerdle',
-        DEBUG_LEVEL = 1
-    )
+    games = ['mininerdle','bardle','mathler']
+    for game in games:
+        s = AverageOptimizer(
+            hardMode = False,
+            MAX_BREADTH = 1,
+            game = game,
+            DEBUG_LEVEL = 1
+        )
 
     s.writeJson()
     s.writeWordList()
