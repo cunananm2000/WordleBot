@@ -32,6 +32,11 @@ class Config(object):
                 'answerFile': 'wordLists/mathlerWords.txt',
                 'rStar': '222222'
             },
+            'nerdle': {
+                'guessFile': 'wordLists/nerdleWords.txt',
+                'answerFile': 'wordLists/nerdleWords.txt',
+                'rStar': '22222222'
+            }
         }
 
         config = configs[game]

@@ -119,3 +119,4 @@ class BaseOptimizer(object):
         print("HITS:", self.HITS)
         print("BREACHES:", self.BREACHES)
         print("CALLS: ", self.CALLS)
+        print("--------------------------")

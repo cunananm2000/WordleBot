@@ -1,153 +1,131 @@
 {
-    "guess": "3*8=24",
+    "guess": "4*7=28",
     "nRemaining": 206,
-    "score": 2.762135922330099,
+    "score": 2.6407766990291304,
     "splits": {
         "000100": {
-            "guess": "15-6=9",
-            "nRemaining": 9,
-            "score": 2.0000000000000004,
+            "guess": "45/5=9",
+            "nRemaining": 12,
+            "score": 1.9999999999999991,
             "splits": {
-                "202021": {
+                "000021": {
                     "guess": "10-9=1",
                     "nRemaining": 1,
                     "score": 1
                 },
-                "202022": {
+                "000022": {
                     "guess": "10-1=9",
                     "nRemaining": 1,
                     "score": 1
                 },
-                "202121": {
-                    "guess": "16-9=7",
-                    "nRemaining": 1,
-                    "score": 1
-                },
-                "202122": {
-                    "guess": "16-7=9",
-                    "nRemaining": 1,
-                    "score": 1
-                },
-                "212020": {
-                    "guess": "10-5=5",
-                    "nRemaining": 1,
-                    "score": 1
-                },
-                "212120": {
+                "000220": {
                     "guess": "11-5=6",
                     "nRemaining": 1,
                     "score": 1
                 },
-                "212220": {
+                "002020": {
+                    "guess": "36/6=6",
+                    "nRemaining": 1,
+                    "score": 1
+                },
+                "002220": {
+                    "guess": "30/5=6",
+                    "nRemaining": 1,
+                    "score": 1
+                },
+                "010020": {
                     "guess": "11-6=5",
                     "nRemaining": 1,
                     "score": 1
                 },
-                "222121": {
+                "010220": {
+                    "guess": "10-5=5",
+                    "nRemaining": 1,
+                    "score": 1
+                },
+                "012020": {
+                    "guess": "30/6=5",
+                    "nRemaining": 1,
+                    "score": 1
+                },
+                "020021": {
                     "guess": "15-9=6",
+                    "nRemaining": 1,
+                    "score": 1
+                },
+                "020022": {
+                    "guess": "15-6=9",
+                    "nRemaining": 1,
+                    "score": 1
+                },
+                "022120": {
+                    "guess": "15/3=5",
+                    "nRemaining": 1,
+                    "score": 1
+                },
+                "022220": {
+                    "guess": "15/5=3",
                     "nRemaining": 1,
                     "score": 1
                 }
             }
         },
         "000101": {
-            "guess": "54/6=9",
-            "nRemaining": 10,
-            "score": 2.000000000000001,
+            "guess": "11-8=3",
+            "nRemaining": 6,
+            "score": 1.8333333333333337,
             "splits": {
-                "010020": {
-                    "guess": "11-4=7",
+                "020120": {
+                    "guess": "81/9=9",
                     "nRemaining": 1,
                     "score": 1
                 },
-                "010120": {
-                    "guess": "10-4=6",
+                "200121": {
+                    "guess": "18/3=6",
                     "nRemaining": 1,
                     "score": 1
                 },
-                "012021": {
-                    "guess": "49/7=7",
+                "200122": {
+                    "guess": "18/6=3",
                     "nRemaining": 1,
                     "score": 1
                 },
-                "020020": {
-                    "guess": "14-7=7",
+                "202120": {
+                    "guess": "18-9=9",
                     "nRemaining": 1,
                     "score": 1
                 },
-                "112021": {
-                    "guess": "45/9=5",
-                    "nRemaining": 1,
-                    "score": 1
-                },
-                "112022": {
-                    "guess": "45/5=9",
-                    "nRemaining": 1,
-                    "score": 1
-                },
-                "120021": {
-                    "guess": "14-9=5",
-                    "nRemaining": 1,
-                    "score": 1
-                },
-                "120022": {
-                    "guess": "14-5=9",
-                    "nRemaining": 1,
-                    "score": 1
-                },
-                "222121": {
-                    "guess": "54/9=6",
+                "202221": {
+                    "guess": "13-8=5",
                     "nRemaining": 1,
                     "score": 1
                 }
             }
         },
         "000102": {
-            "guess": "10-6=4",
+            "guess": "11-3=8",
             "nRemaining": 3,
-            "score": 1.9999999999999998,
+            "score": 1.6666666666666665,
             "splits": {
-                "200122": {
-                    "guess": "16/4=4",
+                "202022": {
+                    "guess": "16-8=8",
                     "nRemaining": 1,
                     "score": 1
                 },
-                "202022": {
-                    "guess": "11-7=4",
+                "202122": {
+                    "guess": "13-5=8",
                     "nRemaining": 1,
                     "score": 1
                 }
             }
         },
         "000110": {
-            "guess": "10/2=5",
+            "guess": "12/2=6",
             "nRemaining": 10,
-            "score": 2.1000000000000005,
+            "score": 2.0000000000000004,
             "splits": {
-                "002122": {
+                "012020": {
                     "guess": "25/5=5",
-                    "nRemaining": 1,
-                    "score": 1
-                },
-                "200120": {
-                    "guess": "11-9=2",
-                    "nRemaining": 2,
-                    "score": 1.5,
-                    "splits": {
-                        "202021": {
-                            "guess": "12-6=6",
-                            "nRemaining": 1,
-                            "score": 1
-                        }
-                    }
-                },
-                "200121": {
-                    "guess": "12-5=7",
-                    "nRemaining": 1,
-                    "score": 1
-                },
-                "200122": {
-                    "guess": "12-7=5",
                     "nRemaining": 1,
                     "score": 1
                 },
@@ -156,62 +134,74 @@
                     "nRemaining": 1,
                     "score": 1
                 },
-                "202120": {
-                    "guess": "12/6=2",
+                "202220": {
+                    "guess": "10/2=5",
                     "nRemaining": 1,
                     "score": 1
                 },
-                "202220": {
-                    "guess": "12/2=6",
+                "210020": {
+                    "guess": "11-9=2",
+                    "nRemaining": 1,
+                    "score": 1
+                },
+                "212020": {
+                    "guess": "10/5=2",
+                    "nRemaining": 1,
+                    "score": 1
+                },
+                "220020": {
+                    "guess": "12-3=9",
+                    "nRemaining": 2,
+                    "score": 1.5,
+                    "splits": {
+                        "222121": {
+                            "guess": "12-9=3",
+                            "nRemaining": 1,
+                            "score": 1
+                        }
+                    }
+                },
+                "220022": {
+                    "guess": "12-6=6",
                     "nRemaining": 1,
                     "score": 1
                 },
                 "222121": {
-                    "guess": "10/5=2",
+                    "guess": "12/6=2",
                     "nRemaining": 1,
                     "score": 1
                 }
             }
         },
         "000111": {
-            "guess": "14/2=7",
-            "nRemaining": 6,
-            "score": 2.0000000000000004,
+            "guess": "10-8=2",
+            "nRemaining": 4,
+            "score": 1.75,
             "splits": {
-                "012120": {
-                    "guess": "20/4=5",
+                "200121": {
+                    "guess": "18/2=9",
                     "nRemaining": 1,
                     "score": 1
                 },
-                "012121": {
-                    "guess": "42/7=6",
+                "200122": {
+                    "guess": "18/9=2",
                     "nRemaining": 1,
                     "score": 1
                 },
-                "012122": {
-                    "guess": "42/6=7",
-                    "nRemaining": 1,
-                    "score": 1
-                },
-                "022120": {
-                    "guess": "24/4=6",
-                    "nRemaining": 1,
-                    "score": 1
-                },
-                "222121": {
-                    "guess": "14/7=2",
+                "200222": {
+                    "guess": "16/8=2",
                     "nRemaining": 1,
                     "score": 1
                 }
             }
         },
         "000112": {
-            "guess": "20/5=4",
+            "guess": "10-2=8",
             "nRemaining": 2,
             "score": 1.5,
             "splits": {
-                "202022": {
-                    "guess": "24/6=4",
+                "200222": {
+                    "guess": "16/2=8",
                     "nRemaining": 1,
                     "score": 1
                 }
@@ -219,8 +209,8 @@
         },
         "000200": {
             "guess": "6+9=15",
-            "nRemaining": 9,
-            "score": 2.0000000000000004,
+            "nRemaining": 7,
+            "score": 1.8571428571428568,
             "splits": {
                 "020221": {
                     "guess": "5+5=10",
@@ -242,18 +232,8 @@
                     "nRemaining": 1,
                     "score": 1
                 },
-                "121220": {
-                    "guess": "9+7=16",
-                    "nRemaining": 1,
-                    "score": 1
-                },
                 "121222": {
                     "guess": "9+6=15",
-                    "nRemaining": 1,
-                    "score": 1
-                },
-                "122220": {
-                    "guess": "7+9=16",
                     "nRemaining": 1,
                     "score": 1
                 },
@@ -265,108 +245,152 @@
             }
         },
         "000201": {
-            "guess": "4+6=10",
-            "nRemaining": 4,
-            "score": 2.0,
+            "guess": "3+8=11",
+            "nRemaining": 5,
+            "score": 1.7999999999999998,
             "splits": {
-                "120220": {
-                    "guess": "7+4=11",
+                "022220": {
+                    "guess": "8+8=16",
+                    "nRemaining": 1,
+                    "score": 1
+                },
+                "121220": {
+                    "guess": "8+5=13",
                     "nRemaining": 1,
                     "score": 1
                 },
                 "121222": {
-                    "guess": "6+4=10",
+                    "guess": "8+3=11",
                     "nRemaining": 1,
                     "score": 1
                 },
-                "220220": {
-                    "guess": "4+7=11",
+                "122220": {
+                    "guess": "5+8=13",
                     "nRemaining": 1,
                     "score": 1
                 }
             }
         },
         "000202": {
-            "guess": "5+9=14",
-            "nRemaining": 3,
-            "score": 1.9999999999999998,
+            "guess": "9+9=18",
+            "nRemaining": 1,
+            "score": 1
+        },
+        "000210": {
+            "guess": "2+9=11",
+            "nRemaining": 5,
+            "score": 1.7999999999999998,
             "splits": {
-                "020222": {
-                    "guess": "7+7=14",
+                "120220": {
+                    "guess": "6+6=12",
+                    "nRemaining": 1,
+                    "score": 1
+                },
+                "121220": {
+                    "guess": "9+3=12",
                     "nRemaining": 1,
                     "score": 1
                 },
                 "121222": {
-                    "guess": "9+5=14",
+                    "guess": "9+2=11",
+                    "nRemaining": 1,
+                    "score": 1
+                },
+                "122220": {
+                    "guess": "3+9=12",
                     "nRemaining": 1,
                     "score": 1
                 }
             }
         },
-        "000210": {
-            "guess": "5*9=45",
-            "nRemaining": 5,
-            "score": 1.9999999999999998,
+        "000211": {
+            "guess": "2+8=10",
+            "nRemaining": 2,
+            "score": 1.5,
             "splits": {
-                "000200": {
-                    "guess": "6+6=12",
-                    "nRemaining": 1,
-                    "score": 1
-                },
-                "001200": {
-                    "guess": "9+2=11",
-                    "nRemaining": 1,
-                    "score": 1
-                },
-                "002200": {
-                    "guess": "2+9=11",
-                    "nRemaining": 1,
-                    "score": 1
-                },
-                "100200": {
-                    "guess": "7+5=12",
-                    "nRemaining": 1,
-                    "score": 1
-                },
-                "200200": {
-                    "guess": "5+7=12",
+                "121222": {
+                    "guess": "8+2=10",
                     "nRemaining": 1,
                     "score": 1
                 }
             }
         },
         "001100": {
-            "guess": "15-7=8",
-            "nRemaining": 9,
-            "score": 2.0000000000000004,
+            "guess": "13-6=7",
+            "nRemaining": 10,
+            "score": 1.9000000000000008,
             "splits": {
-                "010121": {
-                    "guess": "56/8=7",
+                "010021": {
+                    "guess": "35/7=5",
                     "nRemaining": 1,
                     "score": 1
                 },
-                "010222": {
-                    "guess": "56/7=8",
+                "010022": {
+                    "guess": "35/5=7",
                     "nRemaining": 1,
                     "score": 1
                 },
-                "100021": {
-                    "guess": "81/9=9",
+                "020121": {
+                    "guess": "63/7=9",
                     "nRemaining": 1,
                     "score": 1
                 },
-                "202021": {
-                    "guess": "18-9=9",
-                    "nRemaining": 1,
-                    "score": 1
-                },
-                "202022": {
-                    "guess": "16-8=8",
+                "020122": {
+                    "guess": "63/9=7",
                     "nRemaining": 1,
                     "score": 1
                 },
                 "202121": {
+                    "guess": "16-7=9",
+                    "nRemaining": 1,
+                    "score": 1
+                },
+                "202122": {
+                    "guess": "16-9=7",
+                    "nRemaining": 1,
+                    "score": 1
+                },
+                "212021": {
+                    "guess": "10-7=3",
+                    "nRemaining": 1,
+                    "score": 1
+                },
+                "212022": {
+                    "guess": "10-3=7",
+                    "nRemaining": 1,
+                    "score": 1
+                },
+                "222121": {
+                    "guess": "13-7=6",
+                    "nRemaining": 1,
+                    "score": 1
+                }
+            }
+        },
+        "001101": {
+            "guess": "15-8=7",
+            "nRemaining": 3,
+            "score": 1.6666666666666665,
+            "splits": {
+                "010222": {
+                    "guess": "56/8=7",
+                    "nRemaining": 1,
+                    "score": 1
+                },
+                "202221": {
                     "guess": "17-8=9",
+                    "nRemaining": 1,
+                    "score": 1
+                }
+            }
+        },
+        "001102": {
+            "guess": "15-7=8",
+            "nRemaining": 3,
+            "score": 1.6666666666666665,
+            "splits": {
+                "010222": {
+                    "guess": "56/7=8",
                     "nRemaining": 1,
                     "score": 1
                 },
@@ -374,156 +398,75 @@
                     "guess": "17-9=8",
                     "nRemaining": 1,
                     "score": 1
-                },
-                "222121": {
-                    "guess": "15-8=7",
-                    "nRemaining": 1,
-                    "score": 1
-                }
-            }
-        },
-        "001101": {
-            "guess": "14-6=8",
-            "nRemaining": 7,
-            "score": 1.9999999999999996,
-            "splits": {
-                "010021": {
-                    "guess": "40/8=5",
-                    "nRemaining": 1,
-                    "score": 1
-                },
-                "010022": {
-                    "guess": "40/5=8",
-                    "nRemaining": 1,
-                    "score": 1
-                },
-                "010121": {
-                    "guess": "48/8=6",
-                    "nRemaining": 1,
-                    "score": 1
-                },
-                "010222": {
-                    "guess": "48/6=8",
-                    "nRemaining": 1,
-                    "score": 1
-                },
-                "020122": {
-                    "guess": "64/8=8",
-                    "nRemaining": 1,
-                    "score": 1
-                },
-                "222121": {
-                    "guess": "14-8=6",
-                    "nRemaining": 1,
-                    "score": 1
                 }
             }
         },
         "001110": {
-            "guess": "16/2=8",
-            "nRemaining": 8,
-            "score": 2.0,
+            "guess": "21/3=7",
+            "nRemaining": 6,
+            "score": 1.8333333333333337,
             "splits": {
-                "002121": {
-                    "guess": "72/8=9",
+                "110021": {
+                    "guess": "12-7=5",
                     "nRemaining": 1,
                     "score": 1
                 },
-                "002122": {
-                    "guess": "72/9=8",
-                    "nRemaining": 1,
-                    "score": 1
-                },
-                "200121": {
-                    "guess": "10-8=2",
-                    "nRemaining": 1,
-                    "score": 1
-                },
-                "200222": {
-                    "guess": "10-2=8",
+                "110022": {
+                    "guess": "12-5=7",
                     "nRemaining": 1,
                     "score": 1
                 },
                 "202121": {
-                    "guess": "18/9=2",
+                    "guess": "27/9=3",
                     "nRemaining": 1,
                     "score": 1
                 },
                 "202221": {
-                    "guess": "18/2=9",
+                    "guess": "27/3=9",
                     "nRemaining": 1,
                     "score": 1
                 },
                 "222121": {
-                    "guess": "16/8=2",
+                    "guess": "21/7=3",
                     "nRemaining": 1,
                     "score": 1
                 }
             }
         },
         "001111": {
-            "guess": "12-4=8",
-            "nRemaining": 2,
-            "score": 1.5,
-            "splits": {
-                "010221": {
-                    "guess": "28/4=7",
-                    "nRemaining": 1,
-                    "score": 1
-                }
-            }
+            "guess": "72/8=9",
+            "nRemaining": 1,
+            "score": 1
         },
         "001112": {
-            "guess": "12-8=4",
-            "nRemaining": 2,
-            "score": 1.5,
-            "splits": {
-                "010122": {
-                    "guess": "28/7=4",
-                    "nRemaining": 1,
-                    "score": 1
-                }
-            }
+            "guess": "72/9=8",
+            "nRemaining": 1,
+            "score": 1
         },
         "001200": {
-            "guess": "8+7=15",
+            "guess": "7+3=10",
             "nRemaining": 3,
-            "score": 1.9999999999999998,
+            "score": 1.6666666666666665,
             "splits": {
-                "120220": {
-                    "guess": "9+9=18",
+                "220220": {
+                    "guess": "7+9=16",
                     "nRemaining": 1,
                     "score": 1
                 },
                 "221220": {
-                    "guess": "8+9=17",
+                    "guess": "7+6=13",
                     "nRemaining": 1,
                     "score": 1
                 }
             }
         },
-        "001202": {
-            "guess": "8+6=14",
-            "nRemaining": 1,
-            "score": 1
-        },
-        "001210": {
-            "guess": "8+2=10",
-            "nRemaining": 1,
-            "score": 1
-        },
-        "001211": {
-            "guess": "8+4=12",
-            "nRemaining": 1,
-            "score": 1
-        },
-        "002200": {
+        "001201": {
             "guess": "7+8=15",
             "nRemaining": 3,
-            "score": 1.9999999999999998,
+            "score": 1.6666666666666665,
             "splits": {
-                "022220": {
-                    "guess": "8+8=16",
+                "121220": {
+                    "guess": "8+9=17",
                     "nRemaining": 1,
                     "score": 1
                 },
@@ -534,50 +477,77 @@
                 }
             }
         },
-        "002202": {
-            "guess": "6+8=14",
+        "001210": {
+            "guess": "7+5=12",
             "nRemaining": 1,
             "score": 1
         },
-        "002210": {
-            "guess": "2+8=10",
-            "nRemaining": 1,
-            "score": 1
-        },
-        "002211": {
-            "guess": "4+8=12",
-            "nRemaining": 1,
-            "score": 1
-        },
-        "020201": {
-            "guess": "5*9=45",
-            "nRemaining": 4,
-            "score": 2.0,
+        "002200": {
+            "guess": "3+7=10",
+            "nRemaining": 3,
+            "score": 1.6666666666666665,
             "splits": {
-                "020210": {
-                    "guess": "4*4=16",
+                "022220": {
+                    "guess": "9+7=16",
                     "nRemaining": 1,
                     "score": 1
                 },
-                "021220": {
-                    "guess": "7*7=49",
-                    "nRemaining": 1,
-                    "score": 1
-                },
-                "121222": {
-                    "guess": "9*5=45",
+                "122220": {
+                    "guess": "6+7=13",
                     "nRemaining": 1,
                     "score": 1
                 }
             }
         },
+        "002201": {
+            "guess": "8+7=15",
+            "nRemaining": 1,
+            "score": 1
+        },
+        "002210": {
+            "guess": "5+7=12",
+            "nRemaining": 1,
+            "score": 1
+        },
+        "020200": {
+            "guess": "3*5=15",
+            "nRemaining": 5,
+            "score": 1.7999999999999998,
+            "splits": {
+                "120200": {
+                    "guess": "6*6=36",
+                    "nRemaining": 1,
+                    "score": 1
+                },
+                "121200": {
+                    "guess": "5*6=30",
+                    "nRemaining": 1,
+                    "score": 1
+                },
+                "121222": {
+                    "guess": "5*3=15",
+                    "nRemaining": 1,
+                    "score": 1
+                },
+                "122200": {
+                    "guess": "6*5=30",
+                    "nRemaining": 1,
+                    "score": 1
+                }
+            }
+        },
+        "020201": {
+            "guess": "9*9=81",
+            "nRemaining": 1,
+            "score": 1
+        },
         "020202": {
-            "guess": "6*9=54",
+            "guess": "3*6=18",
             "nRemaining": 2,
             "score": 1.5,
             "splits": {
                 "121222": {
-                    "guess": "9*6=54",
+                    "guess": "6*3=18",
                     "nRemaining": 1,
                     "score": 1
                 }
@@ -586,7 +556,7 @@
         "020210": {
             "guess": "2*5=10",
             "nRemaining": 4,
-            "score": 2.0,
+            "score": 1.75,
             "splits": {
                 "120220": {
                     "guess": "6*2=12",
@@ -606,24 +576,24 @@
             }
         },
         "020211": {
-            "guess": "6*7=42",
+            "guess": "2*8=16",
             "nRemaining": 2,
             "score": 1.5,
             "splits": {
                 "121222": {
-                    "guess": "7*6=42",
+                    "guess": "8*2=16",
                     "nRemaining": 1,
                     "score": 1
                 }
             }
         },
         "020212": {
-            "guess": "2*7=14",
+            "guess": "2*9=18",
             "nRemaining": 2,
             "score": 1.5,
             "splits": {
                 "121222": {
-                    "guess": "7*2=14",
+                    "guess": "9*2=18",
                     "nRemaining": 1,
                     "score": 1
                 }
@@ -634,490 +604,536 @@
             "nRemaining": 1,
             "score": 1
         },
-        "020221": {
-            "guess": "4*5=20",
-            "nRemaining": 2,
-            "score": 1.5,
-            "splits": {
-                "121222": {
-                    "guess": "5*4=20",
-                    "nRemaining": 1,
-                    "score": 1
-                }
-            }
-        },
-        "020222": {
-            "guess": "4*6=24",
-            "nRemaining": 2,
-            "score": 1.5,
-            "splits": {
-                "121222": {
-                    "guess": "6*4=24",
-                    "nRemaining": 1,
-                    "score": 1
-                }
-            }
-        },
         "021200": {
-            "guess": "8*7=56",
+            "guess": "7*5=35",
             "nRemaining": 2,
             "score": 1.5,
             "splits": {
-                "120200": {
-                    "guess": "9*9=81",
+                "220210": {
+                    "guess": "7*9=63",
                     "nRemaining": 1,
                     "score": 1
                 }
             }
         },
         "021201": {
-            "guess": "8*5=40",
-            "nRemaining": 2,
-            "score": 1.5,
-            "splits": {
-                "220220": {
-                    "guess": "8*6=48",
-                    "nRemaining": 1,
-                    "score": 1
-                }
-            }
-        },
-        "021210": {
-            "guess": "2*9=18",
-            "nRemaining": 4,
-            "score": 2.0,
-            "splits": {
-                "120221": {
-                    "guess": "8*2=16",
-                    "nRemaining": 1,
-                    "score": 1
-                },
-                "121222": {
-                    "guess": "9*2=18",
-                    "nRemaining": 1,
-                    "score": 1
-                },
-                "122201": {
-                    "guess": "8*9=72",
-                    "nRemaining": 1,
-                    "score": 1
-                }
-            }
-        },
-        "021221": {
-            "guess": "4*7=28",
-            "nRemaining": 2,
-            "score": 1.5,
-            "splits": {
-                "121222": {
-                    "guess": "7*4=28",
-                    "nRemaining": 1,
-                    "score": 1
-                }
-            }
-        },
-        "022200": {
             "guess": "7*8=56",
             "nRemaining": 1,
             "score": 1
         },
-        "022201": {
-            "guess": "5*8=40",
+        "021211": {
+            "guess": "8*9=72",
             "nRemaining": 2,
             "score": 1.5,
             "splits": {
-                "022220": {
-                    "guess": "6*8=48",
-                    "nRemaining": 1,
-                    "score": 1
-                }
-            }
-        },
-        "022202": {
-            "guess": "8*8=64",
-            "nRemaining": 1,
-            "score": 1
-        },
-        "022210": {
-            "guess": "2*8=16",
-            "nRemaining": 2,
-            "score": 1.5,
-            "splits": {
-                "122200": {
+                "121222": {
                     "guess": "9*8=72",
                     "nRemaining": 1,
                     "score": 1
                 }
             }
         },
-        "100100": {
-            "guess": "10-3=7",
-            "nRemaining": 8,
-            "score": 2.0,
-            "splits": {
-                "000121": {
-                    "guess": "63/7=9",
-                    "nRemaining": 1,
-                    "score": 1
-                },
-                "000122": {
-                    "guess": "63/9=7",
-                    "nRemaining": 1,
-                    "score": 1
-                },
-                "200120": {
-                    "guess": "15/5=3",
-                    "nRemaining": 1,
-                    "score": 1
-                },
-                "200220": {
-                    "guess": "15/3=5",
-                    "nRemaining": 1,
-                    "score": 1
-                },
-                "202121": {
-                    "guess": "13-7=6",
-                    "nRemaining": 1,
-                    "score": 1
-                },
-                "202122": {
-                    "guess": "13-6=7",
-                    "nRemaining": 1,
-                    "score": 1
-                },
-                "222121": {
-                    "guess": "10-7=3",
-                    "nRemaining": 1,
-                    "score": 1
-                }
-            }
-        },
-        "100101": {
-            "guess": "13-4=9",
-            "nRemaining": 1,
-            "score": 1
-        },
-        "100102": {
-            "guess": "13-9=4",
-            "nRemaining": 1,
-            "score": 1
-        },
-        "100110": {
-            "guess": "12-3=9",
-            "nRemaining": 6,
-            "score": 2.0000000000000004,
-            "splits": {
-                "010121": {
-                    "guess": "27/9=3",
-                    "nRemaining": 1,
-                    "score": 1
-                },
-                "010222": {
-                    "guess": "27/3=9",
-                    "nRemaining": 1,
-                    "score": 1
-                },
-                "110120": {
-                    "guess": "21/7=3",
-                    "nRemaining": 1,
-                    "score": 1
-                },
-                "110220": {
-                    "guess": "21/3=7",
-                    "nRemaining": 1,
-                    "score": 1
-                },
-                "222121": {
-                    "guess": "12-9=3",
-                    "nRemaining": 1,
-                    "score": 1
-                }
-            }
-        },
-        "100111": {
-            "guess": "12/4=3",
-            "nRemaining": 1,
-            "score": 1
-        },
-        "100112": {
-            "guess": "12/3=4",
-            "nRemaining": 1,
-            "score": 1
-        },
-        "100200": {
-            "guess": "6+7=13",
+        "021220": {
+            "guess": "3*9=27",
             "nRemaining": 3,
-            "score": 1.9999999999999998,
+            "score": 1.6666666666666665,
             "splits": {
-                "021221": {
-                    "guess": "7+3=10",
+                "120221": {
+                    "guess": "7*3=21",
                     "nRemaining": 1,
                     "score": 1
                 },
                 "121222": {
-                    "guess": "7+6=13",
-                    "nRemaining": 1,
-                    "score": 1
-                }
-            }
-        },
-        "100201": {
-            "guess": "4+9=13",
-            "nRemaining": 2,
-            "score": 1.5,
-            "splits": {
-                "121222": {
-                    "guess": "9+4=13",
-                    "nRemaining": 1,
-                    "score": 1
-                }
-            }
-        },
-        "100210": {
-            "guess": "9+3=12",
-            "nRemaining": 1,
-            "score": 1
-        },
-        "101100": {
-            "guess": "11-3=8",
-            "nRemaining": 6,
-            "score": 2.0000000000000004,
-            "splits": {
-                "200121": {
-                    "guess": "18/6=3",
-                    "nRemaining": 1,
-                    "score": 1
-                },
-                "200221": {
-                    "guess": "18/3=6",
-                    "nRemaining": 1,
-                    "score": 1
-                },
-                "202121": {
-                    "guess": "13-8=5",
-                    "nRemaining": 1,
-                    "score": 1
-                },
-                "202122": {
-                    "guess": "13-5=8",
-                    "nRemaining": 1,
-                    "score": 1
-                },
-                "222121": {
-                    "guess": "11-8=3",
-                    "nRemaining": 1,
-                    "score": 1
-                }
-            }
-        },
-        "101111": {
-            "guess": "24/3=8",
-            "nRemaining": 2,
-            "score": 1.5,
-            "splits": {
-                "222121": {
-                    "guess": "24/8=3",
-                    "nRemaining": 1,
-                    "score": 1
-                }
-            }
-        },
-        "101200": {
-            "guess": "8+3=11",
-            "nRemaining": 2,
-            "score": 1.5,
-            "splits": {
-                "221220": {
-                    "guess": "8+5=13",
-                    "nRemaining": 1,
-                    "score": 1
-                }
-            }
-        },
-        "102200": {
-            "guess": "5+8=13",
-            "nRemaining": 1,
-            "score": 1
-        },
-        "120200": {
-            "guess": "5*7=35",
-            "nRemaining": 8,
-            "score": 2.0,
-            "splits": {
-                "020220": {
-                    "guess": "6*6=36",
-                    "nRemaining": 1,
-                    "score": 1
-                },
-                "021210": {
-                    "guess": "7*9=63",
-                    "nRemaining": 1,
-                    "score": 1
-                },
-                "022210": {
-                    "guess": "9*7=63",
-                    "nRemaining": 1,
-                    "score": 1
-                },
-                "120220": {
-                    "guess": "6*5=30",
-                    "nRemaining": 1,
-                    "score": 1
-                },
-                "121222": {
-                    "guess": "7*5=35",
-                    "nRemaining": 1,
-                    "score": 1
-                },
-                "220212": {
-                    "guess": "5*3=15",
-                    "nRemaining": 1,
-                    "score": 1
-                },
-                "220220": {
-                    "guess": "5*6=30",
-                    "nRemaining": 1,
-                    "score": 1
-                }
-            }
-        },
-        "120201": {
-            "guess": "4*9=36",
-            "nRemaining": 2,
-            "score": 1.5,
-            "splits": {
-                "121222": {
-                    "guess": "9*4=36",
-                    "nRemaining": 1,
-                    "score": 1
-                }
-            }
-        },
-        "120211": {
-            "guess": "4*3=12",
-            "nRemaining": 1,
-            "score": 1
-        },
-        "120220": {
-            "guess": "7*3=21",
-            "nRemaining": 2,
-            "score": 1.5,
-            "splits": {
-                "122220": {
                     "guess": "9*3=27",
                     "nRemaining": 1,
                     "score": 1
                 }
             }
         },
-        "121200": {
-            "guess": "6*3=18",
-            "nRemaining": 1,
-            "score": 1
-        },
-        "121211": {
-            "guess": "8*4=32",
-            "nRemaining": 1,
-            "score": 1
-        },
-        "121222": {
-            "guess": "8*3=24",
-            "nRemaining": 1,
-            "score": 1
-        },
-        "122211": {
-            "guess": "4*8=32",
-            "nRemaining": 1,
-            "score": 1
-        },
-        "200100": {
-            "guess": "30/5=6",
-            "nRemaining": 5,
-            "score": 1.9999999999999998,
+        "022200": {
+            "guess": "5*7=35",
+            "nRemaining": 2,
+            "score": 1.5,
             "splits": {
-                "202022": {
-                    "guess": "36/6=6",
+                "022210": {
+                    "guess": "9*7=63",
+                    "nRemaining": 1,
+                    "score": 1
+                }
+            }
+        },
+        "022201": {
+            "guess": "8*7=56",
+            "nRemaining": 1,
+            "score": 1
+        },
+        "022220": {
+            "guess": "3*7=21",
+            "nRemaining": 1,
+            "score": 1
+        },
+        "100100": {
+            "guess": "13-4=9",
+            "nRemaining": 11,
+            "score": 1.9090909090909083,
+            "splits": {
+                "000121": {
+                    "guess": "54/9=6",
+                    "nRemaining": 1,
+                    "score": 1
+                },
+                "000122": {
+                    "guess": "54/6=9",
+                    "nRemaining": 1,
+                    "score": 1
+                },
+                "010121": {
+                    "guess": "36/9=4",
+                    "nRemaining": 1,
+                    "score": 1
+                },
+                "010222": {
+                    "guess": "36/4=9",
+                    "nRemaining": 1,
+                    "score": 1
+                },
+                "200220": {
+                    "guess": "16/4=4",
                     "nRemaining": 1,
                     "score": 1
                 },
                 "202120": {
-                    "guess": "35/7=5",
+                    "guess": "10-6=4",
+                    "nRemaining": 1,
+                    "score": 1
+                },
+                "202121": {
+                    "guess": "14-9=5",
+                    "nRemaining": 1,
+                    "score": 1
+                },
+                "202122": {
+                    "guess": "14-5=9",
                     "nRemaining": 1,
                     "score": 1
                 },
                 "202220": {
-                    "guess": "35/5=7",
+                    "guess": "10-4=6",
                     "nRemaining": 1,
                     "score": 1
                 },
                 "222121": {
-                    "guess": "30/6=5",
+                    "guess": "13-9=4",
+                    "nRemaining": 1,
+                    "score": 1
+                }
+            }
+        },
+        "100101": {
+            "guess": "14-8=6",
+            "nRemaining": 1,
+            "score": 1
+        },
+        "100102": {
+            "guess": "14-6=8",
+            "nRemaining": 2,
+            "score": 1.5,
+            "splits": {
+                "020122": {
+                    "guess": "64/8=8",
+                    "nRemaining": 1,
+                    "score": 1
+                }
+            }
+        },
+        "100110": {
+            "guess": "20/4=5",
+            "nRemaining": 6,
+            "score": 1.8333333333333337,
+            "splits": {
+                "102120": {
+                    "guess": "12/3=4",
+                    "nRemaining": 1,
+                    "score": 1
+                },
+                "102220": {
+                    "guess": "12/4=3",
+                    "nRemaining": 1,
+                    "score": 1
+                },
+                "202120": {
+                    "guess": "24/6=4",
+                    "nRemaining": 1,
+                    "score": 1
+                },
+                "202220": {
+                    "guess": "24/4=6",
+                    "nRemaining": 1,
+                    "score": 1
+                },
+                "222121": {
+                    "guess": "20/5=4",
+                    "nRemaining": 1,
+                    "score": 1
+                }
+            }
+        },
+        "100111": {
+            "guess": "12-8=4",
+            "nRemaining": 3,
+            "score": 1.6666666666666665,
+            "splits": {
+                "010221": {
+                    "guess": "24/8=3",
+                    "nRemaining": 1,
+                    "score": 1
+                },
+                "020222": {
+                    "guess": "32/8=4",
+                    "nRemaining": 1,
+                    "score": 1
+                }
+            }
+        },
+        "100112": {
+            "guess": "12-4=8",
+            "nRemaining": 3,
+            "score": 1.6666666666666665,
+            "splits": {
+                "010122": {
+                    "guess": "24/3=8",
+                    "nRemaining": 1,
+                    "score": 1
+                },
+                "020222": {
+                    "guess": "32/4=8",
+                    "nRemaining": 1,
+                    "score": 1
+                }
+            }
+        },
+        "100200": {
+            "guess": "5+9=14",
+            "nRemaining": 4,
+            "score": 1.75,
+            "splits": {
+                "020221": {
+                    "guess": "6+4=10",
+                    "nRemaining": 1,
+                    "score": 1
+                },
+                "021221": {
+                    "guess": "9+4=13",
+                    "nRemaining": 1,
+                    "score": 1
+                },
+                "121222": {
+                    "guess": "9+5=14",
+                    "nRemaining": 1,
+                    "score": 1
+                }
+            }
+        },
+        "100201": {
+            "guess": "6+8=14",
+            "nRemaining": 2,
+            "score": 1.5,
+            "splits": {
+                "121222": {
+                    "guess": "8+6=14",
+                    "nRemaining": 1,
+                    "score": 1
+                }
+            }
+        },
+        "100211": {
+            "guess": "8+4=12",
+            "nRemaining": 1,
+            "score": 1
+        },
+        "101100": {
+            "guess": "11-4=7",
+            "nRemaining": 3,
+            "score": 1.6666666666666665,
+            "splits": {
+                "202122": {
+                    "guess": "14-7=7",
+                    "nRemaining": 1,
+                    "score": 1
+                },
+                "222121": {
+                    "guess": "11-7=4",
+                    "nRemaining": 1,
+                    "score": 1
+                }
+            }
+        },
+        "101110": {
+            "guess": "14/2=7",
+            "nRemaining": 2,
+            "score": 1.5,
+            "splits": {
+                "222121": {
+                    "guess": "14/7=2",
+                    "nRemaining": 1,
+                    "score": 1
+                }
+            }
+        },
+        "101111": {
+            "guess": "28/4=7",
+            "nRemaining": 2,
+            "score": 1.5,
+            "splits": {
+                "222121": {
+                    "guess": "28/7=4",
+                    "nRemaining": 1,
+                    "score": 1
+                }
+            }
+        },
+        "101200": {
+            "guess": "7+4=11",
+            "nRemaining": 1,
+            "score": 1
+        },
+        "102200": {
+            "guess": "7+7=14",
+            "nRemaining": 1,
+            "score": 1
+        },
+        "120200": {
+            "guess": "5*9=45",
+            "nRemaining": 5,
+            "score": 1.7999999999999998,
+            "splits": {
+                "021210": {
+                    "guess": "9*4=36",
+                    "nRemaining": 1,
+                    "score": 1
+                },
+                "121210": {
+                    "guess": "9*6=54",
+                    "nRemaining": 1,
+                    "score": 1
+                },
+                "121222": {
+                    "guess": "9*5=45",
+                    "nRemaining": 1,
+                    "score": 1
+                },
+                "122210": {
+                    "guess": "6*9=54",
+                    "nRemaining": 1,
+                    "score": 1
+                }
+            }
+        },
+        "120201": {
+            "guess": "5*8=40",
+            "nRemaining": 3,
+            "score": 1.6666666666666665,
+            "splits": {
+                "022210": {
+                    "guess": "8*8=64",
+                    "nRemaining": 1,
+                    "score": 1
+                },
+                "121222": {
+                    "guess": "8*5=40",
+                    "nRemaining": 1,
+                    "score": 1
+                }
+            }
+        },
+        "120202": {
+            "guess": "6*8=48",
+            "nRemaining": 2,
+            "score": 1.5,
+            "splits": {
+                "121222": {
+                    "guess": "8*6=48",
+                    "nRemaining": 1,
+                    "score": 1
+                }
+            }
+        },
+        "120210": {
+            "guess": "3*4=12",
+            "nRemaining": 1,
+            "score": 1
+        },
+        "120211": {
+            "guess": "8*4=32",
+            "nRemaining": 1,
+            "score": 1
+        },
+        "120220": {
+            "guess": "5*4=20",
+            "nRemaining": 2,
+            "score": 1.5,
+            "splits": {
+                "022220": {
+                    "guess": "6*4=24",
+                    "nRemaining": 1,
+                    "score": 1
+                }
+            }
+        },
+        "120221": {
+            "guess": "3*8=24",
+            "nRemaining": 2,
+            "score": 1.5,
+            "splits": {
+                "121222": {
+                    "guess": "8*3=24",
+                    "nRemaining": 1,
+                    "score": 1
+                }
+            }
+        },
+        "121210": {
+            "guess": "7*2=14",
+            "nRemaining": 2,
+            "score": 1.5,
+            "splits": {
+                "221201": {
+                    "guess": "7*6=42",
+                    "nRemaining": 1,
+                    "score": 1
+                }
+            }
+        },
+        "121222": {
+            "guess": "7*4=28",
+            "nRemaining": 1,
+            "score": 1
+        },
+        "122200": {
+            "guess": "7*7=49",
+            "nRemaining": 1,
+            "score": 1
+        },
+        "122210": {
+            "guess": "2*7=14",
+            "nRemaining": 2,
+            "score": 1.5,
+            "splits": {
+                "122201": {
+                    "guess": "6*7=42",
+                    "nRemaining": 1,
+                    "score": 1
+                }
+            }
+        },
+        "200100": {
+            "guess": "45/5=9",
+            "nRemaining": 2,
+            "score": 1.5,
+            "splits": {
+                "222121": {
+                    "guess": "45/9=5",
                     "nRemaining": 1,
                     "score": 1
                 }
             }
         },
         "200101": {
-            "guess": "36/4=9",
-            "nRemaining": 1,
-            "score": 1
-        },
-        "200102": {
-            "guess": "36/9=4",
-            "nRemaining": 1,
-            "score": 1
-        },
-        "200200": {
-            "guess": "3+7=10",
-            "nRemaining": 1,
-            "score": 1
-        },
-        "200210": {
-            "guess": "3+9=12",
-            "nRemaining": 1,
-            "score": 1
-        },
-        "201111": {
-            "guess": "32/4=8",
-            "nRemaining": 1,
-            "score": 1
-        },
-        "201112": {
-            "guess": "32/8=4",
-            "nRemaining": 1,
-            "score": 1
-        },
-        "202200": {
-            "guess": "3+8=11",
-            "nRemaining": 1,
-            "score": 1
-        },
-        "220200": {
-            "guess": "3*5=15",
-            "nRemaining": 1,
-            "score": 1
-        },
-        "220211": {
-            "guess": "3*4=12",
-            "nRemaining": 1,
-            "score": 1
-        },
-        "220220": {
-            "guess": "3*7=21",
+            "guess": "40/8=5",
             "nRemaining": 2,
             "score": 1.5,
             "splits": {
-                "221220": {
-                    "guess": "3*9=27",
+                "202220": {
+                    "guess": "48/8=6",
                     "nRemaining": 1,
                     "score": 1
                 }
             }
         },
-        "221200": {
-            "guess": "3*6=18",
+        "200102": {
+            "guess": "40/5=8",
+            "nRemaining": 2,
+            "score": 1.5,
+            "splits": {
+                "202022": {
+                    "guess": "48/6=8",
+                    "nRemaining": 1,
+                    "score": 1
+                }
+            }
+        },
+        "200200": {
+            "guess": "4+6=10",
+            "nRemaining": 2,
+            "score": 1.5,
+            "splits": {
+                "220220": {
+                    "guess": "4+9=13",
+                    "nRemaining": 1,
+                    "score": 1
+                }
+            }
+        },
+        "200211": {
+            "guess": "4+8=12",
             "nRemaining": 1,
             "score": 1
+        },
+        "201100": {
+            "guess": "49/7=7",
+            "nRemaining": 1,
+            "score": 1
+        },
+        "201110": {
+            "guess": "42/6=7",
+            "nRemaining": 2,
+            "score": 1.5,
+            "splits": {
+                "222121": {
+                    "guess": "42/7=6",
+                    "nRemaining": 1,
+                    "score": 1
+                }
+            }
+        },
+        "202200": {
+            "guess": "4+7=11",
+            "nRemaining": 1,
+            "score": 1
+        },
+        "220200": {
+            "guess": "4*4=16",
+            "nRemaining": 2,
+            "score": 1.5,
+            "splits": {
+                "220202": {
+                    "guess": "4*9=36",
+                    "nRemaining": 1,
+                    "score": 1
+                }
+            }
+        },
+        "220210": {
+            "guess": "4*3=12",
+            "nRemaining": 1,
+            "score": 1
+        },
+        "220211": {
+            "guess": "4*8=32",
+            "nRemaining": 1,
+            "score": 1
+        },
+        "220220": {
+            "guess": "4*5=20",
+            "nRemaining": 2,
+            "score": 1.5,
+            "splits": {
+                "220220": {
+                    "guess": "4*6=24",
+                    "nRemaining": 1,
+                    "score": 1
+                }
+            }
         }
     }
 }

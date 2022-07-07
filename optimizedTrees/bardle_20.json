@@ -1,1718 +1,952 @@
 {
     "guess": "caret",
     "nRemaining": 175,
-    "score": [
-        3,
-        105
-    ],
+    "score": 2.6000000000000045,
     "splits": {
         "00000": {
             "guess": "snowy",
             "nRemaining": 12,
-            "score": [
-                2,
-                12
-            ],
+            "score": 1.9999999999999991,
             "splits": {
                 "00000": {
                     "guess": "quill",
                     "nRemaining": 1,
-                    "score": [
-                        1,
-                        1
-                    ]
+                    "score": 1
                 },
                 "00100": {
                     "guess": "folio",
                     "nRemaining": 1,
-                    "score": [
-                        1,
-                        1
-                    ]
+                    "score": 1
                 },
                 "00110": {
                     "guess": "widow",
                     "nRemaining": 1,
-                    "score": [
-                        1,
-                        1
-                    ]
+                    "score": 1
                 },
                 "00200": {
                     "guess": "blood",
                     "nRemaining": 1,
-                    "score": [
-                        1,
-                        1
-                    ]
+                    "score": 1
                 },
                 "01100": {
                     "guess": "pound",
                     "nRemaining": 1,
-                    "score": [
-                        1,
-                        1
-                    ]
+                    "score": 1
                 },
                 "01102": {
                     "guess": "nonny",
                     "nRemaining": 1,
-                    "score": [
-                        1,
-                        1
-                    ]
+                    "score": 1
                 },
                 "01110": {
                     "guess": "wound",
                     "nRemaining": 1,
-                    "score": [
-                        1,
-                        1
-                    ]
+                    "score": 1
                 },
                 "10002": {
                     "guess": "bushy",
                     "nRemaining": 1,
-                    "score": [
-                        1,
-                        1
-                    ]
+                    "score": 1
                 },
                 "10200": {
                     "guess": "fools",
                     "nRemaining": 1,
-                    "score": [
-                        1,
-                        1
-                    ]
+                    "score": 1
                 },
                 "10210": {
                     "guess": "woods",
                     "nRemaining": 1,
-                    "score": [
-                        1,
-                        1
-                    ]
+                    "score": 1
                 },
                 "20000": {
                     "guess": "skull",
                     "nRemaining": 1,
-                    "score": [
-                        1,
-                        1
-                    ]
+                    "score": 1
                 },
                 "21100": {
                     "guess": "sound",
                     "nRemaining": 1,
-                    "score": [
-                        1,
-                        1
-                    ]
+                    "score": 1
                 }
             }
         },
         "00001": {
             "guess": "sixth",
             "nRemaining": 9,
-            "score": [
-                2,
-                8
-            ],
+            "score": 1.8888888888888893,
             "splits": {
                 "00011": {
                     "guess": "thumb",
                     "nRemaining": 1,
-                    "score": [
-                        1,
-                        1
-                    ]
+                    "score": 1
                 },
                 "00022": {
                     "guess": "quoth",
                     "nRemaining": 1,
-                    "score": [
-                        1,
-                        1
-                    ]
+                    "score": 1
                 },
                 "02010": {
                     "guess": "timon",
                     "nRemaining": 1,
-                    "score": [
-                        1,
-                        1
-                    ]
+                    "score": 1
                 },
                 "02022": {
                     "guess": "fifth",
                     "nRemaining": 1,
-                    "score": [
-                        1,
-                        1
-                    ]
+                    "score": 1
                 },
                 "11010": {
                     "guess": "twins",
                     "nRemaining": 1,
-                    "score": [
-                        1,
-                        1
-                    ]
+                    "score": 1
                 },
                 "12010": {
                     "guess": "titus",
                     "nRemaining": 1,
-                    "score": [
-                        1,
-                        1
-                    ]
+                    "score": 1
                 },
                 "20010": {
                     "guess": "stuff",
                     "nRemaining": 1,
-                    "score": [
-                        1,
-                        1
-                    ]
+                    "score": 1
                 },
                 "20022": {
                     "guess": "sooth",
                     "nRemaining": 1,
-                    "score": [
-                        1,
-                        1
-                    ]
-                },
-                "22222": {
-                    "guess": "sixth",
-                    "nRemaining": 1,
-                    "score": [
-                        1,
-                        1
-                    ]
+                    "score": 1
                 }
             }
         },
         "00002": {
             "guess": "blunt",
             "nRemaining": 7,
-            "score": [
-                2,
-                6
-            ],
+            "score": 1.8571428571428568,
             "splits": {
                 "00002": {
                     "guess": "ghost",
                     "nRemaining": 1,
-                    "score": [
-                        1,
-                        1
-                    ]
+                    "score": 1
                 },
                 "00012": {
                     "guess": "night",
                     "nRemaining": 1,
-                    "score": [
-                        1,
-                        1
-                    ]
+                    "score": 1
                 },
                 "00112": {
                     "guess": "snout",
                     "nRemaining": 1,
-                    "score": [
-                        1,
-                        1
-                    ]
+                    "score": 1
                 },
                 "01102": {
                     "guess": "guilt",
                     "nRemaining": 1,
-                    "score": [
-                        1,
-                        1
-                    ]
+                    "score": 1
                 },
                 "10202": {
                     "guess": "doubt",
                     "nRemaining": 1,
-                    "score": [
-                        1,
-                        1
-                    ]
+                    "score": 1
                 },
                 "21202": {
                     "guess": "boult",
                     "nRemaining": 1,
-                    "score": [
-                        1,
-                        1
-                    ]
-                },
-                "22222": {
-                    "guess": "blunt",
-                    "nRemaining": 1,
-                    "score": [
-                        1,
-                        1
-                    ]
+                    "score": 1
                 }
             }
         },
         "00010": {
             "guess": "elbow",
             "nRemaining": 10,
-            "score": [
-                2,
-                9
-            ],
+            "score": 1.9000000000000008,
             "splits": {
                 "10000": {
                     "guess": "seems",
                     "nRemaining": 1,
-                    "score": [
-                        1,
-                        1
-                    ]
+                    "score": 1
                 },
                 "10100": {
                     "guess": "phebe",
                     "nRemaining": 1,
-                    "score": [
-                        1,
-                        1
-                    ]
+                    "score": 1
                 },
                 "11000": {
                     "guess": "smile",
                     "nRemaining": 1,
-                    "score": [
-                        1,
-                        1
-                    ]
+                    "score": 1
                 },
                 "11001": {
                     "guess": "lewis",
                     "nRemaining": 1,
-                    "score": [
-                        1,
-                        1
-                    ]
+                    "score": 1
                 },
                 "12000": {
                     "guess": "flesh",
                     "nRemaining": 1,
-                    "score": [
-                        1,
-                        1
-                    ]
+                    "score": 1
                 },
                 "12010": {
                     "guess": "glove",
                     "nRemaining": 1,
-                    "score": [
-                        1,
-                        1
-                    ]
+                    "score": 1
                 },
                 "12110": {
                     "guess": "globe",
                     "nRemaining": 1,
-                    "score": [
-                        1,
-                        1
-                    ]
+                    "score": 1
                 },
                 "20000": {
                     "guess": "egeus",
                     "nRemaining": 1,
-                    "score": [
-                        1,
-                        1
-                    ]
+                    "score": 1
                 },
                 "21000": {
                     "guess": "exile",
                     "nRemaining": 1,
-                    "score": [
-                        1,
-                        1
-                    ]
-                },
-                "22222": {
-                    "guess": "elbow",
-                    "nRemaining": 1,
-                    "score": [
-                        1,
-                        1
-                    ]
+                    "score": 1
                 }
             }
         },
         "00011": {
             "guess": "feste",
             "nRemaining": 5,
-            "score": [
-                2,
-                4
-            ],
+            "score": 1.7999999999999998,
             "splits": {
                 "00022": {
                     "guess": "quote",
                     "nRemaining": 1,
-                    "score": [
-                        1,
-                        1
-                    ]
+                    "score": 1
                 },
                 "00122": {
                     "guess": "spite",
                     "nRemaining": 1,
-                    "score": [
-                        1,
-                        1
-                    ]
+                    "score": 1
                 },
                 "01120": {
                     "guess": "exits",
                     "nRemaining": 1,
-                    "score": [
-                        1,
-                        1
-                    ]
+                    "score": 1
                 },
                 "20022": {
                     "guess": "flute",
                     "nRemaining": 1,
-                    "score": [
-                        1,
-                        1
-                    ]
-                },
-                "22222": {
-                    "guess": "feste",
-                    "nRemaining": 1,
-                    "score": [
-                        1,
-                        1
-                    ]
+                    "score": 1
                 }
             }
         },
         "00020": {
             "guess": "sleep",
             "nRemaining": 7,
-            "score": [
-                2,
-                6
-            ],
+            "score": 1.8571428571428568,
             "splits": {
                 "00020": {
                     "guess": "hymen",
                     "nRemaining": 1,
-                    "score": [
-                        1,
-                        1
-                    ]
+                    "score": 1
                 },
                 "00220": {
                     "guess": "queen",
                     "nRemaining": 1,
-                    "score": [
-                        1,
-                        1
-                    ]
+                    "score": 1
                 },
                 "01120": {
                     "guess": "helen",
                     "nRemaining": 1,
-                    "score": [
-                        1,
-                        1
-                    ]
+                    "score": 1
                 },
                 "10020": {
                     "guess": "unsex",
                     "nRemaining": 1,
-                    "score": [
-                        1,
-                        1
-                    ]
+                    "score": 1
                 },
                 "10120": {
                     "guess": "essex",
                     "nRemaining": 1,
-                    "score": [
-                        1,
-                        1
-                    ]
+                    "score": 1
                 },
                 "20221": {
                     "guess": "speed",
                     "nRemaining": 1,
-                    "score": [
-                        1,
-                        1
-                    ]
-                },
-                "22222": {
-                    "guess": "sleep",
-                    "nRemaining": 1,
-                    "score": [
-                        1,
-                        1
-                    ]
+                    "score": 1
                 }
             }
         },
         "00021": {
             "guess": "thief",
             "nRemaining": 1,
-            "score": [
-                1,
-                1
-            ]
+            "score": 1
         },
         "00022": {
             "guess": "boyet",
             "nRemaining": 2,
-            "score": [
-                2,
-                1
-            ],
+            "score": 1.5,
             "splits": {
                 "00022": {
                     "guess": "sweet",
                     "nRemaining": 1,
-                    "score": [
-                        1,
-                        1
-                    ]
-                },
-                "22222": {
-                    "guess": "boyet",
-                    "nRemaining": 1,
-                    "score": [
-                        1,
-                        1
-                    ]
+                    "score": 1
                 }
             }
         },
         "00100": {
             "guess": "drown",
             "nRemaining": 5,
-            "score": [
-                2,
-                4
-            ],
+            "score": 1.7999999999999998,
             "splits": {
                 "01000": {
                     "guess": "rugby",
                     "nRemaining": 1,
-                    "score": [
-                        1,
-                        1
-                    ]
+                    "score": 1
                 },
                 "01102": {
                     "guess": "robin",
                     "nRemaining": 1,
-                    "score": [
-                        1,
-                        1
-                    ]
+                    "score": 1
                 },
                 "02200": {
                     "guess": "groom",
                     "nRemaining": 1,
-                    "score": [
-                        1,
-                        1
-                    ]
+                    "score": 1
                 },
                 "11210": {
                     "guess": "sword",
                     "nRemaining": 1,
-                    "score": [
-                        1,
-                        1
-                    ]
-                },
-                "22222": {
-                    "guess": "drown",
-                    "nRemaining": 1,
-                    "score": [
-                        1,
-                        1
-                    ]
+                    "score": 1
                 }
             }
         },
         "00101": {
             "guess": "storm",
             "nRemaining": 2,
-            "score": [
-                2,
-                1
-            ],
+            "score": 1.5,
             "splits": {
                 "01020": {
                     "guess": "third",
                     "nRemaining": 1,
-                    "score": [
-                        1,
-                        1
-                    ]
-                },
-                "22222": {
-                    "guess": "storm",
-                    "nRemaining": 1,
-                    "score": [
-                        1,
-                        1
-                    ]
+                    "score": 1
                 }
             }
         },
         "00110": {
-            "guess": "henry",
+            "guess": "pedro",
             "nRemaining": 2,
-            "score": [
-                2,
-                1
-            ],
+            "score": 1.5,
             "splits": {
                 "02020": {
-                    "guess": "pedro",
-                    "nRemaining": 1,
-                    "score": [
-                        1,
-                        1
-                    ]
-                },
-                "22222": {
                     "guess": "henry",
                     "nRemaining": 1,
-                    "score": [
-                        1,
-                        1
-                    ]
+                    "score": 1
                 }
             }
         },
         "00111": {
             "guess": "brute",
             "nRemaining": 1,
-            "score": [
-                1,
-                1
-            ]
+            "score": 1
         },
         "00120": {
             "guess": "clogs",
             "nRemaining": 6,
-            "score": [
-                2,
-                6
-            ],
+            "score": 2.0000000000000004,
             "splits": {
                 "00000": {
                     "guess": "never",
                     "nRemaining": 1,
-                    "score": [
-                        1,
-                        1
-                    ]
+                    "score": 1
                 },
                 "00010": {
                     "guess": "green",
                     "nRemaining": 1,
-                    "score": [
-                        1,
-                        1
-                    ]
+                    "score": 1
                 },
                 "00100": {
                     "guess": "romeo",
                     "nRemaining": 1,
-                    "score": [
-                        1,
-                        1
-                    ]
+                    "score": 1
                 },
                 "00102": {
                     "guess": "roses",
                     "nRemaining": 1,
-                    "score": [
-                        1,
-                        1
-                    ]
+                    "score": 1
                 },
                 "00110": {
                     "guess": "gower",
                     "nRemaining": 1,
-                    "score": [
-                        1,
-                        1
-                    ]
+                    "score": 1
                 },
                 "01100": {
                     "guess": "lover",
                     "nRemaining": 1,
-                    "score": [
-                        1,
-                        1
-                    ]
+                    "score": 1
                 }
             }
         },
         "00121": {
             "guess": "peter",
             "nRemaining": 2,
-            "score": [
-                2,
-                1
-            ],
+            "score": 1.5,
             "splits": {
                 "01121": {
                     "guess": "trees",
                     "nRemaining": 1,
-                    "score": [
-                        1,
-                        1
-                    ]
-                },
-                "22222": {
-                    "guess": "peter",
-                    "nRemaining": 1,
-                    "score": [
-                        1,
-                        1
-                    ]
+                    "score": 1
                 }
             }
         },
         "00200": {
             "guess": "words",
             "nRemaining": 4,
-            "score": [
-                2,
-                3
-            ],
+            "score": 1.75,
             "splits": {
                 "01200": {
                     "guess": "biron",
                     "nRemaining": 1,
-                    "score": [
-                        1,
-                        1
-                    ]
+                    "score": 1
                 },
                 "22202": {
                     "guess": "worms",
                     "nRemaining": 1,
-                    "score": [
-                        1,
-                        1
-                    ]
+                    "score": 1
                 },
                 "22210": {
                     "guess": "world",
                     "nRemaining": 1,
-                    "score": [
-                        1,
-                        1
-                    ]
-                },
-                "22222": {
-                    "guess": "words",
-                    "nRemaining": 1,
-                    "score": [
-                        1,
-                        1
-                    ]
+                    "score": 1
                 }
             }
         },
         "00201": {
             "guess": "mirth",
             "nRemaining": 1,
-            "score": [
-                1,
-                1
-            ]
+            "score": 1
         },
         "00210": {
             "guess": "borne",
             "nRemaining": 4,
-            "score": [
-                2,
-                3
-            ],
+            "score": 1.75,
             "splits": {
                 "00202": {
                     "guess": "verse",
                     "nRemaining": 1,
-                    "score": [
-                        1,
-                        1
-                    ]
+                    "score": 1
                 },
                 "00212": {
                     "guess": "nurse",
                     "nRemaining": 1,
-                    "score": [
-                        1,
-                        1
-                    ]
+                    "score": 1
                 },
                 "02202": {
                     "guess": "horse",
                     "nRemaining": 1,
-                    "score": [
-                        1,
-                        1
-                    ]
-                },
-                "22222": {
-                    "guess": "borne",
-                    "nRemaining": 1,
-                    "score": [
-                        1,
-                        1
-                    ]
+                    "score": 1
                 }
             }
         },
         "00220": {
             "guess": "shrew",
             "nRemaining": 1,
-            "score": [
-                1,
-                1
-            ]
+            "score": 1
         },
         "01000": {
             "guess": "diana",
             "nRemaining": 6,
-            "score": [
-                2,
-                5
-            ],
+            "score": 1.8333333333333337,
             "splits": {
                 "00110": {
                     "guess": "angus",
                     "nRemaining": 1,
-                    "score": [
-                        1,
-                        1
-                    ]
+                    "score": 1
                 },
                 "00200": {
                     "guess": "plays",
                     "nRemaining": 1,
-                    "score": [
-                        1,
-                        1
-                    ]
+                    "score": 1
                 },
                 "00220": {
                     "guess": "blank",
                     "nRemaining": 1,
-                    "score": [
-                        1,
-                        1
-                    ]
+                    "score": 1
                 },
                 "01002": {
                     "guess": "julia",
                     "nRemaining": 1,
-                    "score": [
-                        1,
-                        1
-                    ]
+                    "score": 1
                 },
                 "02002": {
                     "guess": "viola",
                     "nRemaining": 1,
-                    "score": [
-                        1,
-                        1
-                    ]
-                },
-                "22222": {
-                    "guess": "diana",
-                    "nRemaining": 1,
-                    "score": [
-                        1,
-                        1
-                    ]
+                    "score": 1
                 }
             }
         },
         "01001": {
             "guess": "tubal",
             "nRemaining": 1,
-            "score": [
-                1,
-                1
-            ]
+            "score": 1
         },
         "01002": {
             "guess": "abbot",
             "nRemaining": 1,
-            "score": [
-                1,
-                1
-            ]
+            "score": 1
         },
         "01010": {
             "guess": "lease",
             "nRemaining": 5,
-            "score": [
-                2,
-                4
-            ],
+            "score": 1.7999999999999998,
             "splits": {
                 "00112": {
                     "guess": "aside",
                     "nRemaining": 1,
-                    "score": [
-                        1,
-                        1
-                    ]
+                    "score": 1
                 },
                 "01110": {
                     "guess": "speak",
                     "nRemaining": 1,
-                    "score": [
-                        1,
-                        1
-                    ]
+                    "score": 1
                 },
                 "02110": {
                     "guess": "menas",
                     "nRemaining": 1,
-                    "score": [
-                        1,
-                        1
-                    ]
+                    "score": 1
                 },
                 "02210": {
                     "guess": "beams",
                     "nRemaining": 1,
-                    "score": [
-                        1,
-                        1
-                    ]
-                },
-                "22222": {
-                    "guess": "lease",
-                    "nRemaining": 1,
-                    "score": [
-                        1,
-                        1
-                    ]
+                    "score": 1
                 }
             }
         },
         "01011": {
             "guess": "death",
             "nRemaining": 4,
-            "score": [
-                2,
-                3
-            ],
+            "score": 1.75,
             "splits": {
                 "01210": {
                     "guess": "stage",
                     "nRemaining": 1,
-                    "score": [
-                        1,
-                        1
-                    ]
+                    "score": 1
                 },
                 "01211": {
                     "guess": "thane",
                     "nRemaining": 1,
-                    "score": [
-                        1,
-                        1
-                    ]
+                    "score": 1
                 },
                 "02222": {
                     "guess": "heath",
                     "nRemaining": 1,
-                    "score": [
-                        1,
-                        1
-                    ]
-                },
-                "22222": {
-                    "guess": "death",
-                    "nRemaining": 1,
-                    "score": [
-                        1,
-                        1
-                    ]
+                    "score": 1
                 }
             }
         },
         "01012": {
             "guess": "feast",
             "nRemaining": 1,
-            "score": [
-                1,
-                1
-            ]
+            "score": 1
         },
         "01020": {
-            "guess": "adieu",
+            "guess": "angel",
             "nRemaining": 2,
-            "score": [
-                2,
-                1
-            ],
+            "score": 1.5,
             "splits": {
                 "20020": {
-                    "guess": "angel",
-                    "nRemaining": 1,
-                    "score": [
-                        1,
-                        1
-                    ]
-                },
-                "22222": {
                     "guess": "adieu",
                     "nRemaining": 1,
-                    "score": [
-                        1,
-                        1
-                    ]
+                    "score": 1
                 }
             }
         },
         "01100": {
             "guess": "alarm",
             "nRemaining": 7,
-            "score": [
-                2,
-                6
-            ],
+            "score": 1.8571428571428568,
             "splits": {
                 "00210": {
                     "guess": "drawn",
                     "nRemaining": 1,
-                    "score": [
-                        1,
-                        1
-                    ]
+                    "score": 1
                 },
                 "00220": {
                     "guess": "guard",
                     "nRemaining": 1,
-                    "score": [
-                        1,
-                        1
-                    ]
+                    "score": 1
                 },
                 "10010": {
                     "guess": "friar",
                     "nRemaining": 1,
-                    "score": [
-                        1,
-                        1
-                    ]
+                    "score": 1
                 },
                 "10011": {
                     "guess": "roman",
                     "nRemaining": 1,
-                    "score": [
-                        1,
-                        1
-                    ]
+                    "score": 1
                 },
                 "10012": {
                     "guess": "priam",
                     "nRemaining": 1,
-                    "score": [
-                        1,
-                        1
-                    ]
+                    "score": 1
                 },
                 "10211": {
                     "guess": "drama",
                     "nRemaining": 1,
-                    "score": [
-                        1,
-                        1
-                    ]
-                },
-                "22222": {
-                    "guess": "alarm",
-                    "nRemaining": 1,
-                    "score": [
-                        1,
-                        1
-                    ]
+                    "score": 1
                 }
             }
         },
         "01101": {
             "guess": "stars",
             "nRemaining": 1,
-            "score": [
-                1,
-                1
-            ]
+            "score": 1
         },
         "01102": {
             "guess": "groat",
             "nRemaining": 1,
-            "score": [
-                1,
-                1
-            ]
+            "score": 1
         },
         "01110": {
             "guess": "dream",
             "nRemaining": 5,
-            "score": [
-                2,
-                4
-            ],
+            "score": 1.7999999999999998,
             "splits": {
                 "01110": {
                     "guess": "snare",
                     "nRemaining": 1,
-                    "score": [
-                        1,
-                        1
-                    ]
+                    "score": 1
                 },
                 "01120": {
                     "guess": "regan",
                     "nRemaining": 1,
-                    "score": [
-                        1,
-                        1
-                    ]
+                    "score": 1
                 },
                 "02110": {
                     "guess": "grave",
                     "nRemaining": 1,
-                    "score": [
-                        1,
-                        1
-                    ]
+                    "score": 1
                 },
                 "11120": {
                     "guess": "edgar",
                     "nRemaining": 1,
-                    "score": [
-                        1,
-                        1
-                    ]
-                },
-                "22222": {
-                    "guess": "dream",
-                    "nRemaining": 1,
-                    "score": [
-                        1,
-                        1
-                    ]
+                    "score": 1
                 }
             }
         },
         "01112": {
             "guess": "great",
             "nRemaining": 1,
-            "score": [
-                1,
-                1
-            ]
+            "score": 1
         },
         "01120": {
             "guess": "arden",
             "nRemaining": 2,
-            "score": [
-                2,
-                1
-            ],
+            "score": 1.5,
             "splits": {
                 "22020": {
                     "guess": "ariel",
                     "nRemaining": 1,
-                    "score": [
-                        1,
-                        1
-                    ]
-                },
-                "22222": {
-                    "guess": "arden",
-                    "nRemaining": 1,
-                    "score": [
-                        1,
-                        1
-                    ]
+                    "score": 1
                 }
             }
         },
         "01200": {
             "guess": "arras",
             "nRemaining": 1,
-            "score": [
-                1,
-                1
-            ]
+            "score": 1
         },
         "02000": {
             "guess": "padua",
             "nRemaining": 1,
-            "score": [
-                1,
-                1
-            ]
+            "score": 1
         },
         "02001": {
             "guess": "fatal",
             "nRemaining": 1,
-            "score": [
-                1,
-                1
-            ]
+            "score": 1
         },
         "02002": {
             "guess": "fault",
             "nRemaining": 1,
-            "score": [
-                1,
-                1
-            ]
+            "score": 1
         },
         "02011": {
             "guess": "waste",
             "nRemaining": 1,
-            "score": [
-                1,
-                1
-            ]
+            "score": 1
         },
         "02020": {
-            "guess": "james",
+            "guess": "lafeu",
             "nRemaining": 2,
-            "score": [
-                2,
-                1
-            ],
+            "score": 1.5,
             "splits": {
                 "02020": {
-                    "guess": "lafeu",
-                    "nRemaining": 1,
-                    "score": [
-                        1,
-                        1
-                    ]
-                },
-                "22222": {
                     "guess": "james",
                     "nRemaining": 1,
-                    "score": [
-                        1,
-                        1
-                    ]
+                    "score": 1
                 }
             }
         },
         "02021": {
             "guess": "fates",
             "nRemaining": 1,
-            "score": [
-                1,
-                1
-            ]
+            "score": 1
         },
         "02100": {
             "guess": "fairy",
             "nRemaining": 1,
-            "score": [
-                1,
-                1
-            ]
+            "score": 1
         },
         "02200": {
             "guess": "maria",
             "nRemaining": 5,
-            "score": [
-                2,
-                4
-            ],
+            "score": 1.7999999999999998,
             "splits": {
                 "02200": {
                     "guess": "varro",
                     "nRemaining": 1,
-                    "score": [
-                        1,
-                        1
-                    ]
+                    "score": 1
                 },
                 "02201": {
                     "guess": "aaron",
                     "nRemaining": 1,
-                    "score": [
-                        1,
-                        1
-                    ]
+                    "score": 1
                 },
                 "02220": {
                     "guess": "paris",
                     "nRemaining": 1,
-                    "score": [
-                        1,
-                        1
-                    ]
+                    "score": 1
                 },
                 "22200": {
                     "guess": "marry",
                     "nRemaining": 1,
-                    "score": [
-                        1,
-                        1
-                    ]
-                },
-                "22222": {
-                    "guess": "maria",
-                    "nRemaining": 1,
-                    "score": [
-                        1,
-                        1
-                    ]
+                    "score": 1
                 }
             }
         },
         "02201": {
             "guess": "parts",
             "nRemaining": 1,
-            "score": [
-                1,
-                1
-            ]
+            "score": 1
         },
         "02210": {
             "guess": "barge",
             "nRemaining": 1,
-            "score": [
-                1,
-                1
-            ]
+            "score": 1
         },
         "10000": {
             "guess": "knock",
             "nRemaining": 3,
-            "score": [
-                2,
-                2
-            ],
+            "score": 1.6666666666666665,
             "splits": {
                 "00010": {
                     "guess": "music",
                     "nRemaining": 1,
-                    "score": [
-                        1,
-                        1
-                    ]
+                    "score": 1
                 },
                 "00110": {
                     "guess": "lucio",
                     "nRemaining": 1,
-                    "score": [
-                        1,
-                        1
-                    ]
-                },
-                "22222": {
-                    "guess": "knock",
-                    "nRemaining": 1,
-                    "score": [
-                        1,
-                        1
-                    ]
+                    "score": 1
                 }
             }
         },
         "10001": {
             "guess": "witch",
             "nRemaining": 1,
-            "score": [
-                1,
-                1
-            ]
+            "score": 1
         },
         "10002": {
             "guess": "scout",
             "nRemaining": 1,
-            "score": [
-                1,
-                1
-            ]
+            "score": 1
         },
         "10010": {
             "guess": "scene",
             "nRemaining": 2,
-            "score": [
-                2,
-                1
-            ],
+            "score": 1.5,
             "splits": {
                 "01012": {
                     "guess": "uncle",
                     "nRemaining": 1,
-                    "score": [
-                        1,
-                        1
-                    ]
-                },
-                "22222": {
-                    "guess": "scene",
-                    "nRemaining": 1,
-                    "score": [
-                        1,
-                        1
-                    ]
+                    "score": 1
                 }
             }
         },
         "10100": {
             "guess": "prick",
             "nRemaining": 1,
-            "score": [
-                1,
-                1
-            ]
+            "score": 1
         },
         "10200": {
             "guess": "osric",
             "nRemaining": 1,
-            "score": [
-                1,
-                1
-            ]
+            "score": 1
         },
         "10210": {
-            "guess": "mercy",
+            "guess": "percy",
             "nRemaining": 2,
-            "score": [
-                2,
-                1
-            ],
+            "score": 1.5,
             "splits": {
                 "02222": {
-                    "guess": "percy",
-                    "nRemaining": 1,
-                    "score": [
-                        1,
-                        1
-                    ]
-                },
-                "22222": {
                     "guess": "mercy",
                     "nRemaining": 1,
-                    "score": [
-                        1,
-                        1
-                    ]
+                    "score": 1
                 }
             }
         },
         "11000": {
             "guess": "alack",
             "nRemaining": 1,
-            "score": [
-                1,
-                1
-            ]
+            "score": 1
         },
         "11002": {
             "guess": "ducat",
             "nRemaining": 1,
-            "score": [
-                1,
-                1
-            ]
+            "score": 1
         },
         "11010": {
-            "guess": "alice",
+            "guess": "peace",
             "nRemaining": 2,
-            "score": [
-                2,
-                1
-            ],
+            "score": 1.5,
             "splits": {
-                "10022": {
-                    "guess": "peace",
-                    "nRemaining": 1,
-                    "score": [
-                        1,
-                        1
-                    ]
-                },
-                "22222": {
+                "00122": {
                     "guess": "alice",
                     "nRemaining": 1,
-                    "score": [
-                        1,
-                        1
-                    ]
+                    "score": 1
                 }
             }
         },
         "11100": {
             "guess": "scars",
             "nRemaining": 1,
-            "score": [
-                1,
-                1
-            ]
+            "score": 1
         },
         "11101": {
             "guess": "actor",
             "nRemaining": 1,
-            "score": [
-                1,
-                1
-            ]
+            "score": 1
         },
         "12000": {
             "guess": "magic",
             "nRemaining": 1,
-            "score": [
-                1,
-                1
-            ]
+            "score": 1
         },
         "12010": {
             "guess": "lance",
             "nRemaining": 1,
-            "score": [
-                1,
-                1
-            ]
+            "score": 1
         },
         "12200": {
             "guess": "march",
             "nRemaining": 1,
-            "score": [
-                1,
-                1
-            ]
+            "score": 1
         },
         "20000": {
             "guess": "civil",
             "nRemaining": 3,
-            "score": [
-                2,
-                2
-            ],
+            "score": 1.6666666666666665,
             "splits": {
                 "20001": {
                     "guess": "clown",
                     "nRemaining": 1,
-                    "score": [
-                        1,
-                        1
-                    ]
+                    "score": 1
                 },
                 "20020": {
                     "guess": "cupid",
                     "nRemaining": 1,
-                    "score": [
-                        1,
-                        1
-                    ]
-                },
-                "22222": {
-                    "guess": "civil",
-                    "nRemaining": 1,
-                    "score": [
-                        1,
-                        1
-                    ]
+                    "score": 1
                 }
             }
         },
         "20010": {
             "guess": "cleon",
             "nRemaining": 1,
-            "score": [
-                1,
-                1
-            ]
+            "score": 1
         },
         "20020": {
             "guess": "cheek",
             "nRemaining": 1,
-            "score": [
-                1,
-                1
-            ]
+            "score": 1
         },
         "20100": {
             "guess": "crown",
             "nRemaining": 1,
-            "score": [
-                1,
-                1
-            ]
+            "score": 1
         },
         "20102": {
             "guess": "court",
             "nRemaining": 1,
-            "score": [
-                1,
-                1
-            ]
+            "score": 1
         },
         "20110": {
             "guess": "clerk",
             "nRemaining": 1,
-            "score": [
-                1,
-                1
-            ]
+            "score": 1
         },
         "20120": {
-            "guess": "cheer",
+            "guess": "crier",
             "nRemaining": 2,
-            "score": [
-                2,
-                1
-            ],
+            "score": 1.5,
             "splits": {
                 "20022": {
-                    "guess": "crier",
-                    "nRemaining": 1,
-                    "score": [
-                        1,
-                        1
-                    ]
-                },
-                "22222": {
                     "guess": "cheer",
                     "nRemaining": 1,
-                    "score": [
-                        1,
-                        1
-                    ]
+                    "score": 1
                 }
             }
         },
         "20200": {
-            "guess": "corin",
+            "guess": "curio",
             "nRemaining": 2,
-            "score": [
-                2,
-                1
-            ],
+            "score": 1.5,
             "splits": {
-                "21220": {
-                    "guess": "curio",
-                    "nRemaining": 1,
-                    "score": [
-                        1,
-                        1
-                    ]
-                },
-                "22222": {
+                "20221": {
                     "guess": "corin",
                     "nRemaining": 1,
-                    "score": [
-                        1,
-                        1
-                    ]
+                    "score": 1
                 }
             }
         },
         "20210": {
             "guess": "curse",
             "nRemaining": 1,
-            "score": [
-                1,
-                1
-            ]
+            "score": 1
         },
         "20220": {
             "guess": "ceres",
             "nRemaining": 1,
-            "score": [
-                1,
-                1
-            ]
+            "score": 1
         },
         "21000": {
             "guess": "cinna",
             "nRemaining": 1,
-            "score": [
-                1,
-                1
-            ]
+            "score": 1
         },
         "21010": {
             "guess": "celia",
             "nRemaining": 1,
-            "score": [
-                1,
-                1
-            ]
+            "score": 1
         },
         "21100": {
             "guess": "charm",
             "nRemaining": 1,
-            "score": [
-                1,
-                1
-            ]
+            "score": 1
         },
         "21200": {
             "guess": "curan",
             "nRemaining": 1,
-            "score": [
-                1,
-                1
-            ]
+            "score": 1
         },
         "22000": {
             "guess": "caius",
             "nRemaining": 3,
-            "score": [
-                2,
-                2
-            ],
+            "score": 1.6666666666666665,
             "splits": {
                 "22000": {
                     "guess": "capon",
                     "nRemaining": 1,
-                    "score": [
-                        1,
-                        1
-                    ]
+                    "score": 1
                 },
                 "22001": {
                     "guess": "casca",
                     "nRemaining": 1,
-                    "score": [
-                        1,
-                        1
-                    ]
-                },
-                "22222": {
-                    "guess": "caius",
-                    "nRemaining": 1,
-                    "score": [
-                        1,
-                        1
-                    ]
+                    "score": 1
                 }
             }
         }

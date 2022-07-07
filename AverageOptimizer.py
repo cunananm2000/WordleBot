@@ -98,15 +98,15 @@ class AverageOptimizer(BaseOptimizer):
 
 
 if __name__ == "__main__":
-    games = ['mininerdle','bardle','mathler']
+    games = ['primel']
     for game in games:
         s = AverageOptimizer(
             hardMode = False,
-            MAX_BREADTH = 1,
+            MAX_BREADTH = 5,
             game = game,
             DEBUG_LEVEL = 1
         )
 
-    s.writeJson()
-    s.writeWordList()
-    s.showStats()
+        s.writeJson()
+        s.writeWordList()
+        s.showStats()
