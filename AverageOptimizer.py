@@ -98,11 +98,11 @@ class AverageOptimizer(BaseOptimizer):
 
 
 if __name__ == "__main__":
-    games = ['primel']
+    games = ['nerdle']
     for game in games:
         s = AverageOptimizer(
             hardMode = False,
-            MAX_BREADTH = 5,
+            MAX_BREADTH = 1,
             game = game,
             DEBUG_LEVEL = 1
         )
