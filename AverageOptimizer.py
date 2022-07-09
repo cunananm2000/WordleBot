@@ -11,6 +11,7 @@ class AverageOptimizer(BaseOptimizer):
         **kwargs,
     ):
         super(AverageOptimizer, self).__init__(*args, **kwargs)
+        self.fname = f"{self.game}_{self.MAX_BREADTH}{'_hard' if self.hardMode else ''}"
 
     def explore(self, possibleGuesses, possibleAnswers, depth = 1):
         self.CALLS += 1
@@ -98,12 +99,12 @@ class AverageOptimizer(BaseOptimizer):
 
 
 if __name__ == "__main__":
-    games = ['nerdle']
-    for game in games:
+    breadths = [1,5,10,20]
+    for b in breadths:
         s = AverageOptimizer(
             hardMode = False,
-            MAX_BREADTH = 1,
-            game = game,
+            MAX_BREADTH = b,
+            game = 'oldWordle',
             DEBUG_LEVEL = 1
         )
 

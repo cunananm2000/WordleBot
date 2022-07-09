@@ -37,8 +37,6 @@ class BaseOptimizer(object):
         self.bestGuess = {}
         self.bestScore = {}
 
-        self.fname = f"{self.game}_{self.MAX_BREADTH}{'_hard' if self.hardMode else ''}"
-
         self.tree = None
 
     def encode(self, subset, superset):
@@ -92,20 +90,20 @@ class BaseOptimizer(object):
         return self.tree
 
     def writeJson(self):
-        print("Writing JSON...")
+        print(f"Writing JSON to {self.fname}.txt")
         tree = self.getTree()
         with open(f"optimizedTrees/{self.fname}.json", "w") as f:
             json.dump(tree, f, sort_keys=True, indent=4)
-        print("Wrote JSON!")
+        print(f"Wrote JSON at {self.fname}.json")
         
     def writeWordList(self):
-        print("Writing word list...")
+        print(f"Writing word list to {self.fname}.txt")
         saveAsWordList(
             tree = self.getTree(),
             fname = f"optimizedTrees/{self.fname}.txt",
             answers = self.S
         )
-        print("Wrote word list!")
+        print(f"Wrote word list at {self.fname}.txt")
 
     def showStats(self):
         print("----- GAME:",self.game.capitalize(),"-----")

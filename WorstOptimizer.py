@@ -9,6 +9,7 @@ class WorstOptimizer(BaseOptimizer):
         **kwargs,
     ):
         super(WorstOptimizer, self).__init__(*args, **kwargs)
+        self.fname = f"{self.game}_worst_{self.MAX_BREADTH}{'_hard' if self.hardMode else ''}"
 
     def explore(self, possibleGuesses, possibleAnswers, depth = 1):
         self.CALLS += 1
@@ -90,13 +91,15 @@ class WorstOptimizer(BaseOptimizer):
         return self.bestScore[code]
 
 if __name__ == "__main__":
-    s = WorstOptimizer(
-        hardMode = False,
-        MAX_BREADTH = 30,
-        game = 'oldWordle',
-        DEBUG_LEVEL = 2
-    )
+    breadths = [1,5,10,20]
+    for b in breadths:
+        s = WorstOptimizer(
+            hardMode = False,
+            MAX_BREADTH = b,
+            game = 'oldWordle',
+            DEBUG_LEVEL = 1
+        )
 
-    s.writeJson()
-    s.writeWordList()
-    s.showStats()
+        s.writeJson()
+        s.writeWordList()
+        s.showStats()
