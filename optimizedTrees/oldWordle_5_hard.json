@@ -1,7 +1,7 @@
 {
     "guess": "salet",
     "nRemaining": 2315,
-    "score": 3.5066954643628496,
+    "score": 3.507991360691143,
     "splits": {
         "00000": {
             "guess": "drony",
@@ -883,36 +883,33 @@
                     "score": 1
                 },
                 "02210": {
-                    "guess": "bronc",
+                    "guess": "brown",
                     "nRemaining": 5,
-                    "score": 2.4,
+                    "score": 2.4000000000000004,
                     "splits": {
-                        "02210": {
-                            "guess": "frown",
+                        "02202": {
+                            "guess": "groin",
+                            "nRemaining": 1,
+                            "score": 1
+                        },
+                        "02222": {
+                            "guess": "crown",
                             "nRemaining": 3,
-                            "score": 1.6666666666666665,
+                            "score": 2.0,
                             "splits": {
-                                "02202": {
-                                    "guess": "groin",
-                                    "nRemaining": 1,
-                                    "score": 1
-                                },
                                 "02222": {
-                                    "guess": "grown",
-                                    "nRemaining": 1,
-                                    "score": 1
+                                    "guess": "frown",
+                                    "nRemaining": 2,
+                                    "score": 1.5,
+                                    "splits": {
+                                        "02222": {
+                                            "guess": "grown",
+                                            "nRemaining": 1,
+                                            "score": 1
+                                        }
+                                    }
                                 }
                             }
-                        },
-                        "02211": {
-                            "guess": "crown",
-                            "nRemaining": 1,
-                            "score": 1
-                        },
-                        "22210": {
-                            "guess": "brown",
-                            "nRemaining": 1,
-                            "score": 1
                         }
                     }
                 },
@@ -1754,14 +1751,19 @@
             }
         },
         "00002": {
-            "guess": "count",
+            "guess": "orbit",
             "nRemaining": 37,
-            "score": 2.513513513513514,
+            "score": 2.5405405405405417,
             "splits": {
                 "00002": {
-                    "guess": "drift",
-                    "nRemaining": 8,
-                    "score": 2.25,
+                    "guess": "uncut",
+                    "nRemaining": 1,
+                    "score": 1
+                },
+                "00012": {
+                    "guess": "snift",
+                    "nRemaining": 7,
+                    "score": 2.428571428571428,
                     "splits": {
                         "00102": {
                             "guess": "tewit",
@@ -1796,132 +1798,110 @@
                             "score": 1
                         },
                         "01102": {
-                            "guess": "right",
+                            "guess": "night",
                             "nRemaining": 1,
                             "score": 1
                         },
-                        "20102": {
-                            "guess": "digit",
+                        "02102": {
+                            "guess": "input",
                             "nRemaining": 1,
                             "score": 1
                         }
                     }
                 },
-                "00012": {
-                    "guess": "night",
-                    "nRemaining": 1,
-                    "score": 1
-                },
                 "00022": {
-                    "guess": "print",
-                    "nRemaining": 1,
-                    "score": 1
-                },
-                "00112": {
-                    "guess": "input",
+                    "guess": "digit",
                     "nRemaining": 2,
                     "score": 1.5,
                     "splits": {
-                        "12012": {
+                        "00022": {
                             "guess": "unfit",
                             "nRemaining": 1,
                             "score": 1
                         }
                     }
                 },
-                "00122": {
+                "01012": {
+                    "guess": "right",
+                    "nRemaining": 1,
+                    "score": 1
+                },
+                "01102": {
                     "guess": "burnt",
                     "nRemaining": 1,
                     "score": 1
                 },
-                "00202": {
-                    "guess": "fruit",
-                    "nRemaining": 1,
-                    "score": 1
-                },
-                "00222": {
-                    "guess": "brunt",
+                "02002": {
+                    "guess": "crypt",
                     "nRemaining": 2,
                     "score": 1.5,
                     "splits": {
-                        "02222": {
+                        "02002": {
                             "guess": "grunt",
                             "nRemaining": 1,
                             "score": 1
                         }
                     }
                 },
-                "01002": {
-                    "guess": "bigot",
-                    "nRemaining": 5,
-                    "score": 1.7999999999999998,
-                    "splits": {
-                        "01012": {
-                            "guess": "droit",
-                            "nRemaining": 1,
-                            "score": 1
-                        },
-                        "01022": {
-                            "guess": "idiot",
-                            "nRemaining": 1,
-                            "score": 1
-                        },
-                        "02022": {
-                            "guess": "pivot",
-                            "nRemaining": 1,
-                            "score": 1
-                        },
-                        "11012": {
-                            "guess": "orbit",
-                            "nRemaining": 1,
-                            "score": 1
-                        }
-                    }
-                },
-                "01012": {
-                    "guess": "ingot",
-                    "nRemaining": 1,
-                    "score": 1
-                },
-                "01022": {
-                    "guess": "front",
-                    "nRemaining": 1,
-                    "score": 1
-                },
-                "01102": {
-                    "guess": "grout",
-                    "nRemaining": 3,
-                    "score": 1.6666666666666665,
-                    "splits": {
-                        "02222": {
-                            "guess": "trout",
-                            "nRemaining": 1,
-                            "score": 1
-                        },
-                        "10112": {
-                            "guess": "ought",
-                            "nRemaining": 1,
-                            "score": 1
-                        }
-                    }
-                },
-                "02002": {
-                    "guess": "robot",
+                "02012": {
+                    "guess": "drift",
                     "nRemaining": 2,
                     "score": 1.5,
                     "splits": {
-                        "02002": {
-                            "guess": "vomit",
+                        "02202": {
+                            "guess": "print",
                             "nRemaining": 1,
                             "score": 1
                         }
                     }
                 },
                 "02022": {
-                    "guess": "joint",
-                    "nRemaining": 2,
-                    "score": 1.5,
+                    "guess": "fruit",
+                    "nRemaining": 1,
+                    "score": 1
+                },
+                "02102": {
+                    "guess": "brunt",
+                    "nRemaining": 1,
+                    "score": 1
+                },
+                "10002": {
+                    "guess": "count",
+                    "nRemaining": 3,
+                    "score": 1.6666666666666665,
                     "splits": {
+                        "02112": {
+                            "guess": "donut",
+                            "nRemaining": 1,
+                            "score": 1
+                        },
+                        "02222": {
+                            "guess": "mount",
+                            "nRemaining": 1,
+                            "score": 1
+                        }
+                    }
+                },
+                "10012": {
+                    "guess": "joint",
+                    "nRemaining": 5,
+                    "score": 1.7999999999999998,
+                    "splits": {
+                        "01102": {
+                            "guess": "pivot",
+                            "nRemaining": 1,
+                            "score": 1
+                        },
+                        "01112": {
+                            "guess": "ingot",
+                            "nRemaining": 1,
+                            "score": 1
+                        },
+                        "01202": {
+                            "guess": "idiot",
+                            "nRemaining": 1,
+                            "score": 1
+                        },
                         "02222": {
                             "guess": "point",
                             "nRemaining": 1,
@@ -1929,33 +1909,55 @@
                         }
                     }
                 },
-                "02112": {
-                    "guess": "donut",
+                "10022": {
+                    "guess": "vomit",
                     "nRemaining": 1,
                     "score": 1
                 },
-                "02202": {
+                "10102": {
                     "guess": "doubt",
                     "nRemaining": 1,
                     "score": 1
                 },
-                "02222": {
-                    "guess": "mount",
+                "10112": {
+                    "guess": "bigot",
                     "nRemaining": 1,
                     "score": 1
                 },
-                "10112": {
-                    "guess": "uncut",
+                "11002": {
+                    "guess": "court",
+                    "nRemaining": 1,
+                    "score": 1
+                },
+                "11202": {
+                    "guess": "robot",
+                    "nRemaining": 1,
+                    "score": 1
+                },
+                "12002": {
+                    "guess": "grout",
+                    "nRemaining": 3,
+                    "score": 1.6666666666666665,
+                    "splits": {
+                        "02202": {
+                            "guess": "front",
+                            "nRemaining": 1,
+                            "score": 1
+                        },
+                        "02222": {
+                            "guess": "trout",
+                            "nRemaining": 1,
+                            "score": 1
+                        }
+                    }
+                },
+                "12022": {
+                    "guess": "droit",
                     "nRemaining": 1,
                     "score": 1
                 },
                 "20002": {
-                    "guess": "crypt",
-                    "nRemaining": 1,
-                    "score": 1
-                },
-                "22202": {
-                    "guess": "court",
+                    "guess": "ought",
                     "nRemaining": 1,
                     "score": 1
                 }
@@ -5409,55 +5411,36 @@
             "score": 1
         },
         "00200": {
-            "guess": "gulfy",
+            "guess": "goldy",
             "nRemaining": 27,
-            "score": 2.7037037037037046,
+            "score": 2.7037037037037055,
             "splits": {
                 "00200": {
-                    "guess": "colon",
-                    "nRemaining": 2,
-                    "score": 1.5,
-                    "splits": {
-                        "22220": {
-                            "guess": "color",
-                            "nRemaining": 1,
-                            "score": 1
-                        }
-                    }
-                },
-                "00201": {
-                    "guess": "nylon",
-                    "nRemaining": 2,
-                    "score": 1.5,
-                    "splits": {
-                        "01210": {
-                            "guess": "polyp",
-                            "nRemaining": 1,
-                            "score": 1
-                        }
-                    }
+                    "guess": "mulch",
+                    "nRemaining": 1,
+                    "score": 1
                 },
                 "00202": {
-                    "guess": "hilly",
-                    "nRemaining": 9,
-                    "score": 2.333333333333333,
+                    "guess": "filly",
+                    "nRemaining": 10,
+                    "score": 2.3000000000000003,
                     "splits": {
                         "00202": {
-                            "guess": "moldy",
-                            "nRemaining": 1,
-                            "score": 1
-                        },
-                        "00222": {
-                            "guess": "dolly",
+                            "guess": "bulky",
                             "nRemaining": 2,
                             "score": 1.5,
                             "splits": {
-                                "02222": {
-                                    "guess": "jolly",
+                                "02202": {
+                                    "guess": "pulpy",
                                     "nRemaining": 1,
                                     "score": 1
                                 }
                             }
+                        },
+                        "00222": {
+                            "guess": "bully",
+                            "nRemaining": 1,
+                            "score": 1
                         },
                         "02202": {
                             "guess": "milky",
@@ -5470,7 +5453,7 @@
                             "score": 2.0,
                             "splits": {
                                 "02222": {
-                                    "guess": "dilly",
+                                    "guess": "hilly",
                                     "nRemaining": 2,
                                     "score": 1.5,
                                     "splits": {
@@ -5484,24 +5467,7 @@
                             }
                         },
                         "20222": {
-                            "guess": "holly",
-                            "nRemaining": 1,
-                            "score": 1
-                        }
-                    }
-                },
-                "00210": {
-                    "guess": "folio",
-                    "nRemaining": 1,
-                    "score": 1
-                },
-                "00212": {
-                    "guess": "filly",
-                    "nRemaining": 3,
-                    "score": 1.6666666666666665,
-                    "splits": {
-                        "20222": {
-                            "guess": "folly",
+                            "guess": "fully",
                             "nRemaining": 1,
                             "score": 1
                         },
@@ -5512,55 +5478,91 @@
                         }
                     }
                 },
-                "02200": {
-                    "guess": "mulch",
-                    "nRemaining": 1,
-                    "score": 1
-                },
-                "02202": {
-                    "guess": "bully",
-                    "nRemaining": 4,
-                    "score": 1.75,
+                "00212": {
+                    "guess": "dilly",
+                    "nRemaining": 2,
+                    "score": 1.5,
                     "splits": {
-                        "02202": {
-                            "guess": "pulpy",
-                            "nRemaining": 1,
-                            "score": 1
-                        },
-                        "02222": {
+                        "20222": {
                             "guess": "dully",
-                            "nRemaining": 1,
-                            "score": 1
-                        },
-                        "22202": {
-                            "guess": "bulky",
                             "nRemaining": 1,
                             "score": 1
                         }
                     }
                 },
-                "02212": {
-                    "guess": "fully",
+                "01201": {
+                    "guess": "nylon",
                     "nRemaining": 1,
                     "score": 1
                 },
-                "10200": {
+                "02200": {
+                    "guess": "colon",
+                    "nRemaining": 3,
+                    "score": 1.6666666666666665,
+                    "splits": {
+                        "02210": {
+                            "guess": "folio",
+                            "nRemaining": 1,
+                            "score": 1
+                        },
+                        "22220": {
+                            "guess": "color",
+                            "nRemaining": 1,
+                            "score": 1
+                        }
+                    }
+                },
+                "02201": {
+                    "guess": "polyp",
+                    "nRemaining": 1,
+                    "score": 1
+                },
+                "02202": {
+                    "guess": "folly",
+                    "nRemaining": 3,
+                    "score": 2.0,
+                    "splits": {
+                        "02222": {
+                            "guess": "holly",
+                            "nRemaining": 2,
+                            "score": 1.5,
+                            "splits": {
+                                "02222": {
+                                    "guess": "jolly",
+                                    "nRemaining": 1,
+                                    "score": 1
+                                }
+                            }
+                        }
+                    }
+                },
+                "02212": {
+                    "guess": "dolly",
+                    "nRemaining": 1,
+                    "score": 1
+                },
+                "02222": {
+                    "guess": "moldy",
+                    "nRemaining": 1,
+                    "score": 1
+                },
+                "11200": {
                     "guess": "igloo",
                     "nRemaining": 1,
                     "score": 1
                 },
-                "20202": {
-                    "guess": "golly",
-                    "nRemaining": 1,
-                    "score": 1
-                },
-                "22200": {
+                "20200": {
                     "guess": "gulch",
                     "nRemaining": 1,
                     "score": 1
                 },
-                "22202": {
+                "20202": {
                     "guess": "gully",
+                    "nRemaining": 1,
+                    "score": 1
+                },
+                "22202": {
+                    "guess": "golly",
                     "nRemaining": 1,
                     "score": 1
                 }
@@ -8686,68 +8688,39 @@
             }
         },
         "02001": {
-            "guess": "banty",
+            "guess": "canty",
             "nRemaining": 29,
-            "score": 2.862068965517241,
+            "score": 2.8965517241379297,
             "splits": {
                 "02010": {
-                    "guess": "capot",
-                    "nRemaining": 9,
-                    "score": 2.3333333333333335,
+                    "guess": "patio",
+                    "nRemaining": 5,
+                    "score": 1.7999999999999998,
                     "splits": {
-                        "02001": {
+                        "02102": {
+                            "guess": "taboo",
+                            "nRemaining": 1,
+                            "score": 1
+                        },
+                        "02200": {
                             "guess": "datum",
                             "nRemaining": 1,
                             "score": 1
                         },
-                        "02011": {
+                        "02222": {
                             "guess": "ratio",
                             "nRemaining": 1,
                             "score": 1
                         },
-                        "02111": {
-                            "guess": "patio",
-                            "nRemaining": 1,
-                            "score": 1
-                        },
-                        "02201": {
+                        "12120": {
                             "guess": "tapir",
-                            "nRemaining": 1,
-                            "score": 1
-                        },
-                        "12001": {
-                            "guess": "hatch",
-                            "nRemaining": 3,
-                            "score": 2.0,
-                            "splits": {
-                                "02222": {
-                                    "guess": "match",
-                                    "nRemaining": 2,
-                                    "score": 1.5,
-                                    "splits": {
-                                        "02222": {
-                                            "guess": "watch",
-                                            "nRemaining": 1,
-                                            "score": 1
-                                        }
-                                    }
-                                }
-                            }
-                        },
-                        "12101": {
-                            "guess": "patch",
-                            "nRemaining": 1,
-                            "score": 1
-                        },
-                        "22001": {
-                            "guess": "catch",
                             "nRemaining": 1,
                             "score": 1
                         }
                     }
                 },
                 "02012": {
-                    "guess": "tacky",
+                    "guess": "tabby",
                     "nRemaining": 3,
                     "score": 2.0,
                     "splits": {
@@ -8766,16 +8739,9 @@
                     }
                 },
                 "02020": {
-                    "guess": "cacti",
-                    "nRemaining": 2,
-                    "score": 1.5,
-                    "splits": {
-                        "02021": {
-                            "guess": "faith",
-                            "nRemaining": 1,
-                            "score": 1
-                        }
-                    }
+                    "guess": "faith",
+                    "nRemaining": 1,
+                    "score": 1
                 },
                 "02022": {
                     "guess": "party",
@@ -8783,7 +8749,7 @@
                     "score": 2.2857142857142856,
                     "splits": {
                         "02022": {
-                            "guess": "catty",
+                            "guess": "batty",
                             "nRemaining": 3,
                             "score": 2.0,
                             "splits": {
@@ -8818,6 +8784,11 @@
                         }
                     }
                 },
+                "02110": {
+                    "guess": "baton",
+                    "nRemaining": 1,
+                    "score": 1
+                },
                 "02112": {
                     "guess": "tawny",
                     "nRemaining": 1,
@@ -8834,84 +8805,126 @@
                     "score": 1
                 },
                 "12010": {
-                    "guess": "taboo",
-                    "nRemaining": 1,
-                    "score": 1
+                    "guess": "batch",
+                    "nRemaining": 5,
+                    "score": 3.0,
+                    "splits": {
+                        "02222": {
+                            "guess": "hatch",
+                            "nRemaining": 4,
+                            "score": 2.5,
+                            "splits": {
+                                "02222": {
+                                    "guess": "match",
+                                    "nRemaining": 3,
+                                    "score": 2.0,
+                                    "splits": {
+                                        "02222": {
+                                            "guess": "patch",
+                                            "nRemaining": 2,
+                                            "score": 1.5,
+                                            "splits": {
+                                                "02222": {
+                                                    "guess": "watch",
+                                                    "nRemaining": 1,
+                                                    "score": 1
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
                 },
                 "12012": {
-                    "guess": "tabby",
+                    "guess": "tacky",
                     "nRemaining": 1,
                     "score": 1
                 },
                 "22010": {
-                    "guess": "batch",
+                    "guess": "catch",
+                    "nRemaining": 1,
+                    "score": 1
+                },
+                "22020": {
+                    "guess": "cacti",
                     "nRemaining": 1,
                     "score": 1
                 },
                 "22022": {
-                    "guess": "batty",
-                    "nRemaining": 1,
-                    "score": 1
-                },
-                "22110": {
-                    "guess": "baton",
+                    "guess": "catty",
                     "nRemaining": 1,
                     "score": 1
                 }
             }
         },
         "02002": {
-            "guess": "tacit",
+            "guess": "taint",
             "nRemaining": 16,
-            "score": 2.75,
+            "score": 2.8125,
             "splits": {
                 "02002": {
-                    "guess": "gavot",
-                    "nRemaining": 6,
-                    "score": 2.6666666666666665,
+                    "guess": "caput",
+                    "nRemaining": 4,
+                    "score": 1.75,
                     "splits": {
-                        "02002": {
-                            "guess": "hadst",
-                            "nRemaining": 3,
-                            "score": 1.9999999999999998,
-                            "splits": {
-                                "02002": {
-                                    "guess": "jaunt",
-                                    "nRemaining": 1,
-                                    "score": 1
-                                },
-                                "02102": {
-                                    "guess": "daunt",
-                                    "nRemaining": 1,
-                                    "score": 1
-                                },
-                                "22002": {
-                                    "guess": "haunt",
-                                    "nRemaining": 1,
-                                    "score": 1
-                                }
-                            }
+                        "02022": {
+                            "guess": "gamut",
+                            "nRemaining": 1,
+                            "score": 1
                         },
-                        "02102": {
-                            "guess": "vaunt",
+                        "12002": {
+                            "guess": "yacht",
                             "nRemaining": 1,
                             "score": 1
                         },
                         "22002": {
-                            "guess": "gamut",
-                            "nRemaining": 2,
-                            "score": 1.5,
+                            "guess": "carat",
+                            "nRemaining": 1,
+                            "score": 1
+                        }
+                    }
+                },
+                "02022": {
+                    "guess": "daunt",
+                    "nRemaining": 5,
+                    "score": 3.0,
+                    "splits": {
+                        "02222": {
+                            "guess": "gaunt",
+                            "nRemaining": 4,
+                            "score": 2.5,
                             "splits": {
-                                "22012": {
-                                    "guess": "gaunt",
-                                    "nRemaining": 1,
-                                    "score": 1
+                                "02222": {
+                                    "guess": "haunt",
+                                    "nRemaining": 3,
+                                    "score": 2.0,
+                                    "splits": {
+                                        "02222": {
+                                            "guess": "jaunt",
+                                            "nRemaining": 2,
+                                            "score": 1.5,
+                                            "splits": {
+                                                "02222": {
+                                                    "guess": "vaunt",
+                                                    "nRemaining": 1,
+                                                    "score": 1
+                                                }
+                                            }
+                                        }
+                                    }
                                 }
                             }
                         }
                     }
                 },
-                "02012": {
+                "02102": {
+                    "guess": "habit",
+                    "nRemaining": 1,
+                    "score": 1
+                },
+                "02222": {
                     "guess": "faint",
                     "nRemaining": 2,
                     "score": 1.5,
@@ -8923,42 +8936,18 @@
                         }
                     }
                 },
-                "02022": {
-                    "guess": "habit",
-                    "nRemaining": 1,
-                    "score": 1
-                },
-                "02102": {
-                    "guess": "caput",
-                    "nRemaining": 2,
-                    "score": 1.5,
-                    "splits": {
-                        "22002": {
-                            "guess": "carat",
-                            "nRemaining": 1,
-                            "score": 1
-                        }
-                    }
-                },
-                "02202": {
-                    "guess": "yacht",
-                    "nRemaining": 1,
-                    "score": 1
-                },
                 "22002": {
                     "guess": "tarot",
-                    "nRemaining": 2,
-                    "score": 1.5,
-                    "splits": {
-                        "22002": {
-                            "guess": "taunt",
-                            "nRemaining": 1,
-                            "score": 1
-                        }
-                    }
+                    "nRemaining": 1,
+                    "score": 1
                 },
-                "22012": {
-                    "guess": "taint",
+                "22022": {
+                    "guess": "taunt",
+                    "nRemaining": 1,
+                    "score": 1
+                },
+                "22102": {
+                    "guess": "tacit",
                     "nRemaining": 1,
                     "score": 1
                 }
@@ -13016,22 +13005,17 @@
             }
         },
         "21111": {
-            "guess": "stela",
+            "guess": "slate",
             "nRemaining": 3,
-            "score": 1.9999999999999998,
+            "score": 1.6666666666666665,
             "splits": {
                 "21111": {
-                    "guess": "slate",
-                    "nRemaining": 1,
-                    "score": 1
-                },
-                "22121": {
-                    "guess": "stale",
-                    "nRemaining": 1,
-                    "score": 1
-                },
-                "22211": {
                     "guess": "steal",
+                    "nRemaining": 1,
+                    "score": 1
+                },
+                "21212": {
+                    "guess": "stale",
                     "nRemaining": 1,
                     "score": 1
                 }
@@ -13048,46 +13032,48 @@
             "score": 1
         },
         "22000": {
-            "guess": "sauna",
+            "guess": "savoy",
             "nRemaining": 8,
-            "score": 2.5,
+            "score": 2.625,
             "splits": {
                 "22000": {
-                    "guess": "savor",
-                    "nRemaining": 5,
-                    "score": 2.0,
-                    "splits": {
-                        "22000": {
-                            "guess": "sappy",
-                            "nRemaining": 2,
-                            "score": 1.5,
-                            "splits": {
-                                "22002": {
-                                    "guess": "sassy",
-                                    "nRemaining": 1,
-                                    "score": 1
-                                }
-                            }
-                        },
-                        "22200": {
-                            "guess": "savvy",
-                            "nRemaining": 1,
-                            "score": 1
-                        },
-                        "22220": {
-                            "guess": "savoy",
-                            "nRemaining": 1,
-                            "score": 1
-                        }
-                    }
-                },
-                "22010": {
-                    "guess": "sandy",
+                    "guess": "sauna",
                     "nRemaining": 1,
                     "score": 1
                 },
-                "22200": {
-                    "guess": "saucy",
+                "22002": {
+                    "guess": "sandy",
+                    "nRemaining": 4,
+                    "score": 2.5,
+                    "splits": {
+                        "22002": {
+                            "guess": "sappy",
+                            "nRemaining": 3,
+                            "score": 2.0,
+                            "splits": {
+                                "22002": {
+                                    "guess": "sassy",
+                                    "nRemaining": 2,
+                                    "score": 1.5,
+                                    "splits": {
+                                        "22002": {
+                                            "guess": "saucy",
+                                            "nRemaining": 1,
+                                            "score": 1
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "22202": {
+                    "guess": "savvy",
+                    "nRemaining": 1,
+                    "score": 1
+                },
+                "22220": {
+                    "guess": "savor",
                     "nRemaining": 1,
                     "score": 1
                 }

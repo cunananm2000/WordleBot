@@ -91,7 +91,7 @@ class WorstOptimizer(BaseOptimizer):
         return self.bestScore[code]
 
 if __name__ == "__main__":
-    breadths = [1,5,10,20]
+    breadths = [10,20]
     for b in breadths:
         s = WorstOptimizer(
             hardMode = False,

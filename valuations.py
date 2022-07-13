@@ -4,7 +4,7 @@ from utils import getSplits
 
 
 # aback
-def firstValid(g, C):
+def inSet(g, C):
     return 0 if g in C else 1
 
 
@@ -60,8 +60,7 @@ def probsGreen(g, C):
 
 def minRange(g, C):
     splits = getSplits(g, C)
-    if len(splits) == 1:
-        return np.inf
+    if len(splits) == 1: return np.inf
     return max(splits.values()) - min(splits.values())
 
 
@@ -74,5 +73,6 @@ def charFreqs(g, C):
     t = 0
     for i in range(len(g)):
         for c in C:
-            t += g[i] == c[i]
+            if g[i] == c[i]: t += 2
+            elif g[i] in c: t += 1
     return -t

@@ -1,0 +1,53 @@
+Recap
+- G, S, C
+- Using OldWordle word set, but can transition current work to new word set
+- Reason: All previous work from last term was also done using this
+
+Current
+- Combining valuations
+    - Most papers tested a single valuation at a time
+    - Determining what to go next
+    - In terms of tie breaks, Knuth suggested taking firstValid, then alphabetical
+    - Kooi suggested same thing
+    - We'll try to use multiple valuations, assigning an array of scores, and sorting lexicographically
+    - Show that there was an effect
+- New valuations
+    - Unlike Mastermind, Wordle characters to do not have same frequency
+    - Show plots of that
+    - Two new ones:
+        - CharFreq
+        - ProbsGreen
+        - EvenSplit (like HigherLower)
+- Specifics of Hard Mode
+    - Example game with Hard Mode
+    - We have to use all 'positive' information, we can ignore 'negative' information. i.e. we have to use all green/yellow information, but greys can be ignored
+    - Set of allowed guesses also changes
+    - Show results that were optimized for average
+- Depth search
+    - Goal is to minimize average
+    - Show same formula that K&L used
+    - Show new framework
+    - Explain MAX_BREADTH parameter
+    - Show run times
+- Optimzing worst
+    - For now we've only been trying to minimize for Average case 
+    - Other one in consideration in literature (and mentioned at the end of the Thesis A presentaiton) is the Worst score
+    - How do you compare Worst scores?
+    - Show three plots with (6,1) (5,30) (5, 26)
+    - Explain how we care about Worst, minimize max score and minimize the number with that max score
+    - New formula
+    - Show results on Wordle
+- Other games
+    - Going back to framework
+    - The goal is to make techniques that work in general settings
+    - Testing it on other games
+    - Show table of scores + runtimes
+    
+
+Future
+    - Using character frequency not just for valuation, but also using it to make shortcuts
+    - Games like Dordle where C is not subset of G
+    - Static Wordle
+        - Finding best two starting words
+        - "Best" by what metric?
+        - Just testing every pair of words can be done but takes too long, need some shortcuts

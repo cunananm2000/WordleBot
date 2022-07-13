@@ -102,7 +102,7 @@ if __name__ == "__main__":
     breadths = [1,5,10,20]
     for b in breadths:
         s = AverageOptimizer(
-            hardMode = False,
+            hardMode = True,
             MAX_BREADTH = b,
             game = 'oldWordle',
             DEBUG_LEVEL = 1

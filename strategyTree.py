@@ -13,7 +13,7 @@ S = sorted(answers)
 
 
 class TreeGenerator(object):
-    def __init__(self, vs=[firstValid], aggFn=max):
+    def __init__(self, vs=[inSet], aggFn=max):
         self.vs = vs
         self.aggFn = aggFn
 
@@ -167,5 +167,5 @@ if __name__ == "__main__":
     # print(len(fns))
     # assert(False)
     for f in fns:
-        treeGen = TreeGenerator(vs=[f, firstValid], aggFn=None)
+        treeGen = TreeGenerator(vs=[f, inSet], aggFn=None)
         treeGen.writeStrategyTree(1)

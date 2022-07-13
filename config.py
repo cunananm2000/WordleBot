@@ -36,6 +36,11 @@ class Config(object):
                 'guessFile': 'wordLists/nerdleWords.txt',
                 'answerFile': 'wordLists/nerdleWords.txt',
                 'rStar': '22222222'
+            },
+            'ffxivrdle': {
+                'guessFile': 'wordLists/ffxivrdleGuesses.txt',
+                'answerFile': 'wordLists/ffxivrdleAnswers.txt',
+                'rStar': '22222'
             }
         }
 

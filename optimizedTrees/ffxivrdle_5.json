@@ -1,0 +1,914 @@
+{
+    "guess": "raise",
+    "nRemaining": 168,
+    "score": 2.571428571428569,
+    "splits": {
+        "00000": {
+            "guess": "huton",
+            "nRemaining": 7,
+            "score": 1.8571428571428568,
+            "splits": {
+                "00010": {
+                    "guess": "block",
+                    "nRemaining": 1,
+                    "score": 1
+                },
+                "00011": {
+                    "guess": "gnoll",
+                    "nRemaining": 1,
+                    "score": 1
+                },
+                "00222": {
+                    "guess": "doton",
+                    "nRemaining": 1,
+                    "score": 1
+                },
+                "02000": {
+                    "guess": "dummy",
+                    "nRemaining": 1,
+                    "score": 1
+                },
+                "02001": {
+                    "guess": "bunny",
+                    "nRemaining": 1,
+                    "score": 1
+                },
+                "02010": {
+                    "guess": "bukyo",
+                    "nRemaining": 1,
+                    "score": 1
+                }
+            }
+        },
+        "00001": {
+            "guess": "feoul",
+            "nRemaining": 4,
+            "score": 1.75,
+            "splits": {
+                "01000": {
+                    "guess": "cymet",
+                    "nRemaining": 1,
+                    "score": 1
+                },
+                "02010": {
+                    "guess": "genbu",
+                    "nRemaining": 1,
+                    "score": 1
+                },
+                "02100": {
+                    "guess": "gekko",
+                    "nRemaining": 1,
+                    "score": 1
+                }
+            }
+        },
+        "00002": {
+            "guess": "globe",
+            "nRemaining": 5,
+            "score": 1.7999999999999998,
+            "splits": {
+                "00102": {
+                    "guess": "voyce",
+                    "nRemaining": 1,
+                    "score": 1
+                },
+                "01002": {
+                    "guess": "melee",
+                    "nRemaining": 1,
+                    "score": 1
+                },
+                "01102": {
+                    "guess": "khloe",
+                    "nRemaining": 1,
+                    "score": 1
+                },
+                "10002": {
+                    "guess": "wedge",
+                    "nRemaining": 1,
+                    "score": 1
+                }
+            }
+        },
+        "00010": {
+            "guess": "books",
+            "nRemaining": 4,
+            "score": 1.75,
+            "splits": {
+                "00001": {
+                    "guess": "sylph",
+                    "nRemaining": 1,
+                    "score": 1
+                },
+                "02002": {
+                    "guess": "lochs",
+                    "nRemaining": 1,
+                    "score": 1
+                },
+                "02102": {
+                    "guess": "holos",
+                    "nRemaining": 1,
+                    "score": 1
+                }
+            }
+        },
+        "00011": {
+            "guess": "cones",
+            "nRemaining": 3,
+            "score": 1.6666666666666665,
+            "splits": {
+                "00021": {
+                    "guess": "sleep",
+                    "nRemaining": 1,
+                    "score": 1
+                },
+                "00022": {
+                    "guess": "eques",
+                    "nRemaining": 1,
+                    "score": 1
+                }
+            }
+        },
+        "00012": {
+            "guess": "stone",
+            "nRemaining": 1,
+            "score": 1
+        },
+        "00022": {
+            "guess": "house",
+            "nRemaining": 1,
+            "score": 1
+        },
+        "00100": {
+            "guess": "lupin",
+            "nRemaining": 9,
+            "score": 1.8888888888888893,
+            "splits": {
+                "00010": {
+                    "guess": "giott",
+                    "nRemaining": 1,
+                    "score": 1
+                },
+                "00020": {
+                    "guess": "ffxiv",
+                    "nRemaining": 1,
+                    "score": 1
+                },
+                "00022": {
+                    "guess": "kojin",
+                    "nRemaining": 1,
+                    "score": 1
+                },
+                "00110": {
+                    "guess": "pitch",
+                    "nRemaining": 1,
+                    "score": 1
+                },
+                "00120": {
+                    "guess": "optio",
+                    "nRemaining": 1,
+                    "score": 1
+                },
+                "01111": {
+                    "guess": "jinpu",
+                    "nRemaining": 1,
+                    "score": 1
+                },
+                "10020": {
+                    "guess": "vigil",
+                    "nRemaining": 1,
+                    "score": 1
+                },
+                "21010": {
+                    "guess": "louhi",
+                    "nRemaining": 1,
+                    "score": 1
+                }
+            }
+        },
+        "00101": {
+            "guess": "uimet",
+            "nRemaining": 2,
+            "score": 1.5,
+            "splits": {
+                "01010": {
+                    "guess": "eldid",
+                    "nRemaining": 1,
+                    "score": 1
+                }
+            }
+        },
+        "00102": {
+            "guess": "title",
+            "nRemaining": 2,
+            "score": 1.5,
+            "splits": {
+                "01012": {
+                    "guess": "ellie",
+                    "nRemaining": 1,
+                    "score": 1
+                }
+            }
+        },
+        "00110": {
+            "guess": "dosis",
+            "nRemaining": 2,
+            "score": 1.5,
+            "splits": {
+                "00012": {
+                    "guess": "biggs",
+                    "nRemaining": 1,
+                    "score": 1
+                }
+            }
+        },
+        "00111": {
+            "guess": "elpis",
+            "nRemaining": 1,
+            "score": 1
+        },
+        "00200": {
+            "guess": "iliud",
+            "nRemaining": 3,
+            "score": 1.6666666666666665,
+            "splits": {
+                "00200": {
+                    "guess": "think",
+                    "nRemaining": 1,
+                    "score": 1
+                },
+                "20200": {
+                    "guess": "ixion",
+                    "nRemaining": 1,
+                    "score": 1
+                }
+            }
+        },
+        "00201": {
+            "guess": "feint",
+            "nRemaining": 1,
+            "score": 1
+        },
+        "00202": {
+            "guess": "twine",
+            "nRemaining": 2,
+            "score": 1.5,
+            "splits": {
+                "11202": {
+                    "guess": "white",
+                    "nRemaining": 1,
+                    "score": 1
+                }
+            }
+        },
+        "00210": {
+            "guess": "shifu",
+            "nRemaining": 3,
+            "score": 1.6666666666666665,
+            "splits": {
+                "10200": {
+                    "guess": "coils",
+                    "nRemaining": 1,
+                    "score": 1
+                },
+                "20220": {
+                    "guess": "swift",
+                    "nRemaining": 1,
+                    "score": 1
+                }
+            }
+        },
+        "00212": {
+            "guess": "seize",
+            "nRemaining": 2,
+            "score": 1.5,
+            "splits": {
+                "20202": {
+                    "guess": "slice",
+                    "nRemaining": 1,
+                    "score": 1
+                }
+            }
+        },
+        "01000": {
+            "guess": "huaca",
+            "nRemaining": 9,
+            "score": 1.8888888888888893,
+            "splits": {
+                "00002": {
+                    "guess": "bozja",
+                    "nRemaining": 1,
+                    "score": 1
+                },
+                "00012": {
+                    "guess": "cylva",
+                    "nRemaining": 1,
+                    "score": 1
+                },
+                "02202": {
+                    "guess": "quaga",
+                    "nRemaining": 1,
+                    "score": 1
+                },
+                "10102": {
+                    "guess": "alpha",
+                    "nRemaining": 1,
+                    "score": 1
+                },
+                "10200": {
+                    "guess": "gnath",
+                    "nRemaining": 1,
+                    "score": 1
+                },
+                "10220": {
+                    "guess": "mhach",
+                    "nRemaining": 1,
+                    "score": 1
+                },
+                "11100": {
+                    "guess": "uldah",
+                    "nRemaining": 1,
+                    "score": 1
+                },
+                "12200": {
+                    "guess": "fuath",
+                    "nRemaining": 1,
+                    "score": 1
+                }
+            }
+        },
+        "01001": {
+            "guess": "almet",
+            "nRemaining": 6,
+            "score": 1.8333333333333337,
+            "splits": {
+                "10010": {
+                    "guess": "kefka",
+                    "nRemaining": 1,
+                    "score": 1
+                },
+                "10012": {
+                    "guess": "venat",
+                    "nRemaining": 1,
+                    "score": 1
+                },
+                "10020": {
+                    "guess": "ennea",
+                    "nRemaining": 1,
+                    "score": 1
+                },
+                "10110": {
+                    "guess": "omega",
+                    "nRemaining": 1,
+                    "score": 1
+                },
+                "11010": {
+                    "guess": "zepla",
+                    "nRemaining": 1,
+                    "score": 1
+                }
+            }
+        },
+        "01002": {
+            "guess": "blaze",
+            "nRemaining": 4,
+            "score": 1.75,
+            "splits": {
+                "01102": {
+                    "guess": "addle",
+                    "nRemaining": 1,
+                    "score": 1
+                },
+                "01202": {
+                    "guess": "whale",
+                    "nRemaining": 1,
+                    "score": 1
+                },
+                "02202": {
+                    "guess": "clave",
+                    "nRemaining": 1,
+                    "score": 1
+                }
+            }
+        },
+        "01010": {
+            "guess": "chaos",
+            "nRemaining": 3,
+            "score": 1.6666666666666665,
+            "splits": {
+                "02111": {
+                    "guess": "shoha",
+                    "nRemaining": 1,
+                    "score": 1
+                },
+                "10201": {
+                    "guess": "stack",
+                    "nRemaining": 1,
+                    "score": 1
+                }
+            }
+        },
+        "01011": {
+            "guess": "esuna",
+            "nRemaining": 2,
+            "score": 1.5,
+            "splits": {
+                "11001": {
+                    "guess": "peaks",
+                    "nRemaining": 1,
+                    "score": 1
+                }
+            }
+        },
+        "01012": {
+            "guess": "scape",
+            "nRemaining": 1,
+            "score": 1
+        },
+        "01020": {
+            "guess": "flash",
+            "nRemaining": 1,
+            "score": 1
+        },
+        "01100": {
+            "guess": "chain",
+            "nRemaining": 10,
+            "score": 2.0000000000000004,
+            "splits": {
+                "00110": {
+                    "guess": "ixtab",
+                    "nRemaining": 1,
+                    "score": 1
+                },
+                "00111": {
+                    "guess": "ninja",
+                    "nRemaining": 2,
+                    "score": 1.5,
+                    "splits": {
+                        "02201": {
+                            "guess": "final",
+                            "nRemaining": 1,
+                            "score": 1
+                        }
+                    }
+                },
+                "00112": {
+                    "guess": "titan",
+                    "nRemaining": 1,
+                    "score": 1
+                },
+                "00121": {
+                    "guess": "anvil",
+                    "nRemaining": 1,
+                    "score": 1
+                },
+                "00210": {
+                    "guess": "ixali",
+                    "nRemaining": 1,
+                    "score": 1
+                },
+                "00220": {
+                    "guess": "avail",
+                    "nRemaining": 1,
+                    "score": 1
+                },
+                "00222": {
+                    "guess": "owain",
+                    "nRemaining": 1,
+                    "score": 1
+                },
+                "01110": {
+                    "guess": "hilda",
+                    "nRemaining": 1,
+                    "score": 1
+                }
+            }
+        },
+        "01102": {
+            "guess": "allie",
+            "nRemaining": 1,
+            "score": 1
+        },
+        "01110": {
+            "guess": "aldis",
+            "nRemaining": 3,
+            "score": 1.6666666666666665,
+            "splits": {
+                "10212": {
+                    "guess": "midas",
+                    "nRemaining": 1,
+                    "score": 1
+                },
+                "11021": {
+                    "guess": "snail",
+                    "nRemaining": 1,
+                    "score": 1
+                }
+            }
+        },
+        "01200": {
+            "guess": "anima",
+            "nRemaining": 1,
+            "score": 1
+        },
+        "01210": {
+            "guess": "shiva",
+            "nRemaining": 1,
+            "score": 1
+        },
+        "02000": {
+            "guess": "katon",
+            "nRemaining": 7,
+            "score": 1.8571428571428568,
+            "splits": {
+                "02002": {
+                    "guess": "valan",
+                    "nRemaining": 1,
+                    "score": 1
+                },
+                "02011": {
+                    "guess": "hanzo",
+                    "nRemaining": 1,
+                    "score": 1
+                },
+                "02021": {
+                    "guess": "fanow",
+                    "nRemaining": 1,
+                    "score": 1
+                },
+                "02022": {
+                    "guess": "dawon",
+                    "nRemaining": 1,
+                    "score": 1
+                },
+                "02100": {
+                    "guess": "vault",
+                    "nRemaining": 1,
+                    "score": 1
+                },
+                "02102": {
+                    "guess": "talan",
+                    "nRemaining": 1,
+                    "score": 1
+                }
+            }
+        },
+        "02002": {
+            "guess": "gauge",
+            "nRemaining": 2,
+            "score": 1.5,
+            "splits": {
+                "02002": {
+                    "guess": "xande",
+                    "nRemaining": 1,
+                    "score": 1
+                }
+            }
+        },
+        "02010": {
+            "guess": "kasha",
+            "nRemaining": 4,
+            "score": 1.75,
+            "splits": {
+                "02100": {
+                    "guess": "lawns",
+                    "nRemaining": 1,
+                    "score": 1
+                },
+                "02101": {
+                    "guess": "safat",
+                    "nRemaining": 1,
+                    "score": 1
+                },
+                "02220": {
+                    "guess": "nashu",
+                    "nRemaining": 1,
+                    "score": 1
+                }
+            }
+        },
+        "02011": {
+            "guess": "hades",
+            "nRemaining": 2,
+            "score": 1.5,
+            "splits": {
+                "02022": {
+                    "guess": "canes",
+                    "nRemaining": 1,
+                    "score": 1
+                }
+            }
+        },
+        "02100": {
+            "guess": "magic",
+            "nRemaining": 3,
+            "score": 1.6666666666666665,
+            "splits": {
+                "02010": {
+                    "guess": "nandi",
+                    "nRemaining": 1,
+                    "score": 1
+                },
+                "12010": {
+                    "guess": "namai",
+                    "nRemaining": 1,
+                    "score": 1
+                }
+            }
+        },
+        "02110": {
+            "guess": "sabik",
+            "nRemaining": 1,
+            "score": 1
+        },
+        "02200": {
+            "guess": "haima",
+            "nRemaining": 1,
+            "score": 1
+        },
+        "02220": {
+            "guess": "waist",
+            "nRemaining": 1,
+            "score": 1
+        },
+        "10000": {
+            "guess": "furor",
+            "nRemaining": 3,
+            "score": 1.6666666666666665,
+            "splits": {
+                "00110": {
+                    "guess": "troll",
+                    "nRemaining": 1,
+                    "score": 1
+                },
+                "01110": {
+                    "guess": "mourn",
+                    "nRemaining": 1,
+                    "score": 1
+                }
+            }
+        },
+        "10001": {
+            "guess": "cover",
+            "nRemaining": 3,
+            "score": 1.6666666666666665,
+            "splits": {
+                "00022": {
+                    "guess": "tyger",
+                    "nRemaining": 1,
+                    "score": 1
+                },
+                "01012": {
+                    "guess": "ephor",
+                    "nRemaining": 1,
+                    "score": 1
+                }
+            }
+        },
+        "10002": {
+            "guess": "brume",
+            "nRemaining": 1,
+            "score": 1
+        },
+        "10010": {
+            "guess": "snort",
+            "nRemaining": 1,
+            "score": 1
+        },
+        "10020": {
+            "guess": "trust",
+            "nRemaining": 1,
+            "score": 1
+        },
+        "10100": {
+            "guess": "ifrit",
+            "nRemaining": 2,
+            "score": 1.5,
+            "splits": {
+                "00120": {
+                    "guess": "broil",
+                    "nRemaining": 1,
+                    "score": 1
+                }
+            }
+        },
+        "10110": {
+            "guess": "visor",
+            "nRemaining": 2,
+            "score": 1.5,
+            "splits": {
+                "01101": {
+                    "guess": "strix",
+                    "nRemaining": 1,
+                    "score": 1
+                }
+            }
+        },
+        "10111": {
+            "guess": "siren",
+            "nRemaining": 1,
+            "score": 1
+        },
+        "10120": {
+            "guess": "first",
+            "nRemaining": 1,
+            "score": 1
+        },
+        "10200": {
+            "guess": "drill",
+            "nRemaining": 2,
+            "score": 1.5,
+            "splits": {
+                "01200": {
+                    "guess": "chirp",
+                    "nRemaining": 1,
+                    "score": 1
+                }
+            }
+        },
+        "10202": {
+            "guess": "tribe",
+            "nRemaining": 2,
+            "score": 1.5,
+            "splits": {
+                "02202": {
+                    "guess": "krile",
+                    "nRemaining": 1,
+                    "score": 1
+                }
+            }
+        },
+        "10210": {
+            "guess": "shirk",
+            "nRemaining": 1,
+            "score": 1
+        },
+        "11000": {
+            "guess": "amaro",
+            "nRemaining": 7,
+            "score": 1.8571428571428568,
+            "splits": {
+                "00220": {
+                    "guess": "dwarf",
+                    "nRemaining": 1,
+                    "score": 1
+                },
+                "10010": {
+                    "guess": "lunar",
+                    "nRemaining": 1,
+                    "score": 1
+                },
+                "10020": {
+                    "guess": "vrtra",
+                    "nRemaining": 1,
+                    "score": 1
+                },
+                "11021": {
+                    "guess": "komra",
+                    "nRemaining": 1,
+                    "score": 1
+                },
+                "20022": {
+                    "guess": "aggro",
+                    "nRemaining": 1,
+                    "score": 1
+                },
+                "21010": {
+                    "guess": "aurum",
+                    "nRemaining": 1,
+                    "score": 1
+                }
+            }
+        },
+        "11001": {
+            "guess": "arena",
+            "nRemaining": 2,
+            "score": 1.5,
+            "splits": {
+                "21110": {
+                    "guess": "aenor",
+                    "nRemaining": 1,
+                    "score": 1
+                }
+            }
+        },
+        "11002": {
+            "guess": "flare",
+            "nRemaining": 3,
+            "score": 1.6666666666666665,
+            "splits": {
+                "00212": {
+                    "guess": "trade",
+                    "nRemaining": 1,
+                    "score": 1
+                },
+                "02222": {
+                    "guess": "glare",
+                    "nRemaining": 1,
+                    "score": 1
+                }
+            }
+        },
+        "11010": {
+            "guess": "argos",
+            "nRemaining": 1,
+            "score": 1
+        },
+        "11020": {
+            "guess": "crash",
+            "nRemaining": 1,
+            "score": 1
+        },
+        "11100": {
+            "guess": "drain",
+            "nRemaining": 1,
+            "score": 1
+        },
+        "11101": {
+            "guess": "viera",
+            "nRemaining": 1,
+            "score": 1
+        },
+        "11110": {
+            "guess": "isari",
+            "nRemaining": 1,
+            "score": 1
+        },
+        "11200": {
+            "guess": "triad",
+            "nRemaining": 1,
+            "score": 1
+        },
+        "12000": {
+            "guess": "parry",
+            "nRemaining": 2,
+            "score": 1.5,
+            "splits": {
+                "02020": {
+                    "guess": "macro",
+                    "nRemaining": 1,
+                    "score": 1
+                }
+            }
+        },
+        "12001": {
+            "guess": "earth",
+            "nRemaining": 1,
+            "score": 1
+        },
+        "12002": {
+            "guess": "harpe",
+            "nRemaining": 1,
+            "score": 1
+        },
+        "12110": {
+            "guess": "varis",
+            "nRemaining": 1,
+            "score": 1
+        },
+        "12200": {
+            "guess": "fairy",
+            "nRemaining": 1,
+            "score": 1
+        },
+        "20001": {
+            "guess": "regen",
+            "nRemaining": 1,
+            "score": 1
+        },
+        "20002": {
+            "guess": "rogue",
+            "nRemaining": 1,
+            "score": 1
+        },
+        "20020": {
+            "guess": "roost",
+            "nRemaining": 1,
+            "score": 1
+        },
+        "20101": {
+            "guess": "river",
+            "nRemaining": 1,
+            "score": 1
+        },
+        "21000": {
+            "guess": "runar",
+            "nRemaining": 1,
+            "score": 1
+        },
+        "21001": {
+            "guess": "realm",
+            "nRemaining": 1,
+            "score": 1
+        },
+        "22000": {
+            "guess": "ramuh",
+            "nRemaining": 1,
+            "score": 1
+        },
+        "22010": {
+            "guess": "rasho",
+            "nRemaining": 1,
+            "score": 1
+        }
+    }
+}
