@@ -1,17 +1,19 @@
 import pandas as pd
 from tqdm.auto import tqdm
-
+from Config import Config
 from utils import check, pprint
-from wordLists import answers, guesses
 
 
 class WordleGame(object):
     def __init__(
-        self, debug=False, forcedGuesses=[], validGuesses=None, validAnswers=None
+        self, debug=False, forcedGuesses=[], game = 'oldWordle', nLetters = 5
     ) -> None:
-        self.nLetters = 5
-        self.validGuesses = guesses if validGuesses is None else validGuesses
-        self.validAnswers = answers if validAnswers is None else validAnswers
+        self.nLetters = nLetters
+        # self.validGuesses = guesses if validGuesses is None else validGuesses
+        # self.validAnswers = answers if validAnswers is None else validAnswers
+        c = Config(game)
+        self.validGuesses = c.guesses
+        self.validAnswers = c.answers
         self.debug = debug
 
         self.previousGuesses = []
@@ -47,7 +49,7 @@ class WordleGame(object):
                 res = self.manualCheck()
                 pprint(res)
             else:
-                res = check(guess, answer, debug=self.debug, nLetters=self.nLetters)
+                res = check(guess, answer, debug=self.debug)
 
             self.previousGuesses.append(guess)
             self.previousResults.append(res)
