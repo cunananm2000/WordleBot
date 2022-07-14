@@ -40,7 +40,7 @@ class Config(object):
             'ffxivrdle': {
                 'guessFile': 'wordLists/ffxivrdleGuesses.txt',
                 'answerFile': 'wordLists/ffxivrdleAnswers.txt',
-                'rStar': '22222'
+                'rStar': '22222' 
             }
         }
 
