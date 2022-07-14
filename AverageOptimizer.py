@@ -39,19 +39,19 @@ class AverageOptimizer(BaseOptimizer):
             
 
             # Shortcut since this always the best choice
-            # if (depth == 1): 
-            #     options = ['salet']
-            # else:
+            if (depth == 1): 
+                options = ['salet']
+            else:
 
             # print('here again',len(possibleAnswers))
 
-            options = sortWords(
-                C = possibleGuesses,
-                S = possibleAnswers,
-                vals = self.vals,
-                n = self.MAX_BREADTH,
-                showProg = (depth <= self.DEBUG_LEVEL),
-            )
+                options = sortWords(
+                    C = possibleGuesses,
+                    S = possibleAnswers,
+                    vals = self.vals,
+                    n = self.MAX_BREADTH,
+                    showProg = (depth <= self.DEBUG_LEVEL),
+                )
 
             # print(options)
 
@@ -99,15 +99,13 @@ class AverageOptimizer(BaseOptimizer):
 
 
 if __name__ == "__main__":
-    breadths = [20]
-    for b in breadths:
-        s = AverageOptimizer(
-            hardMode = True,
-            MAX_BREADTH = b,
-            game = 'oldWordle',
-            DEBUG_LEVEL = 1
-        )
+    s = AverageOptimizer(
+        hardMode = True,
+        MAX_BREADTH = 30,
+        game = 'oldWordle',
+        DEBUG_LEVEL = 1
+    )
 
-        s.writeJson()
-        s.writeWordList()
-        s.showStats()
+    s.writeJson()
+    s.showStats()
+    s.writeWordList()
