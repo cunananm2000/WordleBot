@@ -99,7 +99,7 @@ class AverageOptimizer(BaseOptimizer):
 
 
 if __name__ == "__main__":
-    breadths = [1,5,10,20]
+    breadths = [20]
     for b in breadths:
         s = AverageOptimizer(
             hardMode = True,

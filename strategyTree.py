@@ -6,10 +6,12 @@ from tqdm.auto import tqdm
 
 from utils import getSplits
 from valuations import *
-from wordLists import answers, guesses
+from Config import Config
 
-G = sorted(guesses + answers)
-S = sorted(answers)
+
+c = Config('oldWordle')
+G = c.guesses
+S = c.answers
 
 
 class TreeGenerator(object):
@@ -160,6 +162,7 @@ if __name__ == "__main__":
         # harmonicMean,
         # minStdDev,
         charFreqs,
+        minStdDev,
     ]
 
     # for f in fns:

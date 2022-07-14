@@ -70,6 +70,8 @@ def minStdDev(g, C):
     return np.std(list(splits.values()))
 
 def charFreqs(g, C):
+    splits = getSplits(g, C)
+    if len(splits) == 1: return np.inf
     t = 0
     for i in range(len(g)):
         for c in C:
