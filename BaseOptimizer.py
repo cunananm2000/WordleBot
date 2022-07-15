@@ -14,6 +14,7 @@ class BaseOptimizer(object):
         hardMode = False,
         game = 'temp',
         DEBUG_LEVEL = 2,
+        fname = None
     ):
         c = Config(game)
 
@@ -36,6 +37,8 @@ class BaseOptimizer(object):
         
         self.bestGuess = {}
         self.bestScore = {}
+
+        self.fname = fname
 
         self.tree = None
 
@@ -90,7 +93,7 @@ class BaseOptimizer(object):
         return self.tree
 
     def writeJson(self):
-        print(f"Writing JSON to {self.fname}.txt")
+        print(f"Writing JSON to {self.fname}.json")
         tree = self.getTree()
         with open(f"optimizedTrees/{self.fname}.json", "w") as f:
             json.dump(tree, f, sort_keys=True, indent=4)

@@ -406,47 +406,44 @@
                     }
                 },
                 "00110": {
-                    "guess": "choon",
+                    "guess": "inbox",
                     "nRemaining": 8,
                     "score": 2.0,
                     "splits": {
-                        "00021": {
-                            "guess": "inbox",
+                        "01010": {
+                            "guess": "conch",
                             "nRemaining": 1,
                             "score": 1
                         },
-                        "00022": {
-                            "guess": "union",
-                            "nRemaining": 1,
-                            "score": 1
-                        },
-                        "00101": {
-                            "guess": "bingo",
-                            "nRemaining": 1,
-                            "score": 1
-                        },
-                        "00111": {
+                        "01110": {
                             "guess": "bongo",
                             "nRemaining": 1,
                             "score": 1
                         },
-                        "00122": {
-                            "guess": "onion",
-                            "nRemaining": 1,
-                            "score": 1
-                        },
-                        "10101": {
-                            "guess": "ionic",
-                            "nRemaining": 1,
-                            "score": 1
-                        },
-                        "20101": {
+                        "11010": {
                             "guess": "conic",
                             "nRemaining": 1,
                             "score": 1
                         },
-                        "21101": {
-                            "guess": "conch",
+                        "11110": {
+                            "guess": "bingo",
+                            "nRemaining": 1,
+                            "score": 1
+                        },
+                        "12020": {
+                            "guess": "onion",
+                            "nRemaining": 2,
+                            "score": 1.5,
+                            "splits": {
+                                "02222": {
+                                    "guess": "union",
+                                    "nRemaining": 1,
+                                    "score": 1
+                                }
+                            }
+                        },
+                        "21010": {
+                            "guess": "ionic",
                             "nRemaining": 1,
                             "score": 1
                         }
@@ -1130,24 +1127,21 @@
                     "score": 1
                 },
                 "12200": {
-                    "guess": "droop",
+                    "guess": "brood",
                     "nRemaining": 3,
-                    "score": 1.9999999999999998,
+                    "score": 2.0,
                     "splits": {
-                        "12200": {
+                        "02202": {
                             "guess": "crowd",
-                            "nRemaining": 1,
-                            "score": 1
-                        },
-                        "12201": {
-                            "guess": "proud",
-                            "nRemaining": 1,
-                            "score": 1
-                        },
-                        "12220": {
-                            "guess": "brood",
-                            "nRemaining": 1,
-                            "score": 1
+                            "nRemaining": 2,
+                            "score": 1.5,
+                            "splits": {
+                                "02202": {
+                                    "guess": "proud",
+                                    "nRemaining": 1,
+                                    "score": 1
+                                }
+                            }
                         }
                     }
                 },
@@ -1761,49 +1755,46 @@
                     "score": 1
                 },
                 "00012": {
-                    "guess": "snift",
+                    "guess": "fient",
                     "nRemaining": 7,
-                    "score": 2.428571428571428,
+                    "score": 2.4285714285714284,
                     "splits": {
-                        "00102": {
-                            "guess": "tewit",
-                            "nRemaining": 3,
-                            "score": 1.9999999999999998,
-                            "splits": {
-                                "00012": {
-                                    "guess": "might",
-                                    "nRemaining": 1,
-                                    "score": 1
-                                },
-                                "00112": {
-                                    "guess": "wight",
-                                    "nRemaining": 1,
-                                    "score": 1
-                                },
-                                "20012": {
-                                    "guess": "tight",
-                                    "nRemaining": 1,
-                                    "score": 1
-                                }
-                            }
-                        },
-                        "00112": {
-                            "guess": "fight",
-                            "nRemaining": 1,
-                            "score": 1
-                        },
-                        "00202": {
+                        "01002": {
                             "guess": "twixt",
                             "nRemaining": 1,
                             "score": 1
                         },
-                        "01102": {
+                        "01012": {
+                            "guess": "input",
+                            "nRemaining": 1,
+                            "score": 1
+                        },
+                        "02002": {
+                            "guess": "might",
+                            "nRemaining": 3,
+                            "score": 2.0,
+                            "splits": {
+                                "02222": {
+                                    "guess": "tight",
+                                    "nRemaining": 2,
+                                    "score": 1.5,
+                                    "splits": {
+                                        "02222": {
+                                            "guess": "wight",
+                                            "nRemaining": 1,
+                                            "score": 1
+                                        }
+                                    }
+                                }
+                            }
+                        },
+                        "02012": {
                             "guess": "night",
                             "nRemaining": 1,
                             "score": 1
                         },
-                        "02102": {
-                            "guess": "input",
+                        "22002": {
+                            "guess": "fight",
                             "nRemaining": 1,
                             "score": 1
                         }
@@ -2272,27 +2263,24 @@
                     }
                 },
                 "00202": {
-                    "guess": "cooee",
+                    "guess": "biome",
                     "nRemaining": 4,
                     "score": 2.0,
                     "splits": {
                         "00202": {
-                            "guess": "biome",
-                            "nRemaining": 1,
-                            "score": 1
-                        },
-                        "00212": {
-                            "guess": "evoke",
-                            "nRemaining": 1,
-                            "score": 1
-                        },
-                        "02202": {
-                            "guess": "booze",
-                            "nRemaining": 1,
-                            "score": 1
+                            "guess": "choke",
+                            "nRemaining": 2,
+                            "score": 1.5,
+                            "splits": {
+                                "00222": {
+                                    "guess": "evoke",
+                                    "nRemaining": 1,
+                                    "score": 1
+                                }
+                            }
                         },
                         "20202": {
-                            "guess": "choke",
+                            "guess": "booze",
                             "nRemaining": 1,
                             "score": 1
                         }
@@ -2389,57 +2377,54 @@
                     }
                 },
                 "01002": {
-                    "guess": "reive",
+                    "guess": "merge",
                     "nRemaining": 10,
-                    "score": 2.000000000000001,
+                    "score": 2.0000000000000004,
                     "splits": {
-                        "10002": {
-                            "guess": "purge",
-                            "nRemaining": 1,
-                            "score": 1
-                        },
-                        "10022": {
-                            "guess": "curve",
-                            "nRemaining": 1,
-                            "score": 1
-                        },
-                        "10102": {
+                        "00102": {
                             "guess": "fibre",
                             "nRemaining": 1,
                             "score": 1
                         },
-                        "11002": {
+                        "00202": {
+                            "guess": "curve",
+                            "nRemaining": 1,
+                            "score": 1
+                        },
+                        "00222": {
+                            "guess": "purge",
+                            "nRemaining": 1,
+                            "score": 1
+                        },
+                        "01102": {
                             "guess": "where",
                             "nRemaining": 1,
                             "score": 1
                         },
-                        "12002": {
-                            "guess": "merge",
+                        "02102": {
+                            "guess": "revue",
                             "nRemaining": 1,
                             "score": 1
                         },
-                        "12012": {
+                        "02202": {
+                            "guess": "eerie",
+                            "nRemaining": 2,
+                            "score": 1.5,
+                            "splits": {
+                                "02202": {
+                                    "guess": "verve",
+                                    "nRemaining": 1,
+                                    "score": 1
+                                }
+                            }
+                        },
+                        "02222": {
                             "guess": "verge",
                             "nRemaining": 1,
                             "score": 1
                         },
-                        "12022": {
-                            "guess": "verve",
-                            "nRemaining": 1,
-                            "score": 1
-                        },
-                        "12102": {
-                            "guess": "eerie",
-                            "nRemaining": 1,
-                            "score": 1
-                        },
-                        "20002": {
+                        "10102": {
                             "guess": "rhyme",
-                            "nRemaining": 1,
-                            "score": 1
-                        },
-                        "22012": {
-                            "guess": "revue",
                             "nRemaining": 1,
                             "score": 1
                         }
@@ -3582,24 +3567,21 @@
                     }
                 },
                 "00220": {
-                    "guess": "maneb",
+                    "guess": "boney",
                     "nRemaining": 3,
-                    "score": 1.9999999999999998,
+                    "score": 2.0,
                     "splits": {
-                        "00220": {
+                        "02222": {
                             "guess": "honey",
-                            "nRemaining": 1,
-                            "score": 1
-                        },
-                        "00221": {
-                            "guess": "boney",
-                            "nRemaining": 1,
-                            "score": 1
-                        },
-                        "20220": {
-                            "guess": "money",
-                            "nRemaining": 1,
-                            "score": 1
+                            "nRemaining": 2,
+                            "score": 1.5,
+                            "splits": {
+                                "02222": {
+                                    "guess": "money",
+                                    "nRemaining": 1,
+                                    "score": 1
+                                }
+                            }
                         }
                     }
                 },
@@ -4050,41 +4032,38 @@
             }
         },
         "00022": {
-            "guess": "beret",
+            "guess": "greet",
             "nRemaining": 13,
-            "score": 2.3846153846153855,
+            "score": 2.384615384615385,
             "splits": {
                 "00022": {
-                    "guess": "civet",
+                    "guess": "comet",
                     "nRemaining": 6,
-                    "score": 2.0000000000000004,
+                    "score": 2.0,
                     "splits": {
                         "00022": {
+                            "guess": "duvet",
+                            "nRemaining": 2,
+                            "score": 1.5,
+                            "splits": {
+                                "02022": {
+                                    "guess": "quiet",
+                                    "nRemaining": 1,
+                                    "score": 1
+                                }
+                            }
+                        },
+                        "00222": {
                             "guess": "unmet",
                             "nRemaining": 1,
                             "score": 1
                         },
-                        "00222": {
-                            "guess": "duvet",
-                            "nRemaining": 1,
-                            "score": 1
-                        },
-                        "01022": {
-                            "guess": "quiet",
-                            "nRemaining": 1,
-                            "score": 1
-                        },
-                        "10022": {
+                        "11022": {
                             "guess": "octet",
                             "nRemaining": 1,
                             "score": 1
                         },
-                        "20022": {
-                            "guess": "comet",
-                            "nRemaining": 1,
-                            "score": 1
-                        },
-                        "20222": {
+                        "22022": {
                             "guess": "covet",
                             "nRemaining": 1,
                             "score": 1
@@ -4092,32 +4071,32 @@
                     }
                 },
                 "00122": {
-                    "guess": "rivet",
-                    "nRemaining": 1,
-                    "score": 1
-                },
-                "01022": {
-                    "guess": "tweet",
-                    "nRemaining": 1,
-                    "score": 1
-                },
-                "01122": {
-                    "guess": "greet",
-                    "nRemaining": 1,
-                    "score": 1
-                },
-                "01222": {
-                    "guess": "egret",
-                    "nRemaining": 1,
-                    "score": 1
-                },
-                "02022": {
                     "guess": "tenet",
                     "nRemaining": 1,
                     "score": 1
                 },
-                "22022": {
+                "00222": {
+                    "guess": "tweet",
+                    "nRemaining": 1,
+                    "score": 1
+                },
+                "01022": {
+                    "guess": "rivet",
+                    "nRemaining": 1,
+                    "score": 1
+                },
+                "01122": {
+                    "guess": "beret",
+                    "nRemaining": 1,
+                    "score": 1
+                },
+                "10122": {
                     "guess": "beget",
+                    "nRemaining": 1,
+                    "score": 1
+                },
+                "11122": {
+                    "guess": "egret",
                     "nRemaining": 1,
                     "score": 1
                 }
@@ -4451,7 +4430,7 @@
                     }
                 },
                 "02010": {
-                    "guess": "looby",
+                    "guess": "lobby",
                     "nRemaining": 4,
                     "score": 2.0,
                     "splits": {
@@ -4461,19 +4440,16 @@
                             "score": 1
                         },
                         "22002": {
-                            "guess": "lorry",
-                            "nRemaining": 1,
-                            "score": 1
-                        },
-                        "22022": {
-                            "guess": "lobby",
-                            "nRemaining": 1,
-                            "score": 1
-                        },
-                        "22202": {
                             "guess": "loopy",
-                            "nRemaining": 1,
-                            "score": 1
+                            "nRemaining": 2,
+                            "score": 1.5,
+                            "splits": {
+                                "22002": {
+                                    "guess": "lorry",
+                                    "nRemaining": 1,
+                                    "score": 1
+                                }
+                            }
                         }
                     }
                 },
@@ -4637,24 +4613,21 @@
                     "score": 1
                 },
                 "20210": {
-                    "guess": "clunk",
+                    "guess": "cluck",
                     "nRemaining": 3,
-                    "score": 1.9999999999999998,
+                    "score": 2.0,
                     "splits": {
                         "22200": {
                             "guess": "clump",
-                            "nRemaining": 1,
-                            "score": 1
-                        },
-                        "22202": {
-                            "guess": "cluck",
-                            "nRemaining": 1,
-                            "score": 1
-                        },
-                        "22220": {
-                            "guess": "clung",
-                            "nRemaining": 1,
-                            "score": 1
+                            "nRemaining": 2,
+                            "score": 1.5,
+                            "splits": {
+                                "22200": {
+                                    "guess": "clung",
+                                    "nRemaining": 1,
+                                    "score": 1
+                                }
+                            }
                         }
                     }
                 },
@@ -5111,31 +5084,28 @@
             }
         },
         "00112": {
-            "guess": "elint",
+            "guess": "cleft",
             "nRemaining": 5,
-            "score": 1.9999999999999998,
+            "score": 2.0,
             "splits": {
-                "11002": {
-                    "guess": "dwelt",
-                    "nRemaining": 1,
-                    "score": 1
-                },
-                "11012": {
-                    "guess": "knelt",
-                    "nRemaining": 1,
-                    "score": 1
-                },
-                "12002": {
-                    "guess": "cleft",
-                    "nRemaining": 1,
-                    "score": 1
-                },
-                "21002": {
+                "01102": {
                     "guess": "exult",
                     "nRemaining": 1,
                     "score": 1
                 },
-                "22002": {
+                "01202": {
+                    "guess": "dwelt",
+                    "nRemaining": 2,
+                    "score": 1.5,
+                    "splits": {
+                        "00222": {
+                            "guess": "knelt",
+                            "nRemaining": 1,
+                            "score": 1
+                        }
+                    }
+                },
+                "12202": {
                     "guess": "elect",
                     "nRemaining": 1,
                     "score": 1
@@ -5593,44 +5563,32 @@
             }
         },
         "00210": {
-            "guess": "ollie",
+            "guess": "hello",
             "nRemaining": 16,
             "score": 2.4375,
             "splits": {
-                "00201": {
-                    "guess": "belch",
+                "01200": {
+                    "guess": "bilge",
                     "nRemaining": 2,
                     "score": 1.5,
                     "splits": {
-                        "02222": {
-                            "guess": "welch",
+                        "20222": {
+                            "guess": "bulge",
                             "nRemaining": 1,
                             "score": 1
                         }
                     }
                 },
-                "00202": {
-                    "guess": "bulge",
-                    "nRemaining": 2,
-                    "score": 1.5,
+                "02200": {
+                    "guess": "belie",
+                    "nRemaining": 3,
+                    "score": 1.6666666666666665,
                     "splits": {
-                        "00202": {
+                        "02202": {
                             "guess": "delve",
                             "nRemaining": 1,
                             "score": 1
-                        }
-                    }
-                },
-                "00212": {
-                    "guess": "bilge",
-                    "nRemaining": 1,
-                    "score": 1
-                },
-                "00221": {
-                    "guess": "helix",
-                    "nRemaining": 2,
-                    "score": 1.5,
-                    "splits": {
+                        },
                         "02220": {
                             "guess": "relic",
                             "nRemaining": 1,
@@ -5638,29 +5596,7 @@
                         }
                     }
                 },
-                "00222": {
-                    "guess": "belie",
-                    "nRemaining": 1,
-                    "score": 1
-                },
-                "01201": {
-                    "guess": "belly",
-                    "nRemaining": 2,
-                    "score": 1.5,
-                    "splits": {
-                        "02222": {
-                            "guess": "jelly",
-                            "nRemaining": 1,
-                            "score": 1
-                        }
-                    }
-                },
-                "01202": {
-                    "guess": "belle",
-                    "nRemaining": 1,
-                    "score": 1
-                },
-                "10201": {
+                "02201": {
                     "guess": "felon",
                     "nRemaining": 3,
                     "score": 1.6666666666666665,
@@ -5677,17 +5613,44 @@
                         }
                     }
                 },
-                "11201": {
-                    "guess": "cello",
-                    "nRemaining": 2,
-                    "score": 1.5,
+                "02220": {
+                    "guess": "belle",
+                    "nRemaining": 3,
+                    "score": 1.6666666666666665,
                     "splits": {
-                        "02222": {
-                            "guess": "hello",
+                        "02220": {
+                            "guess": "jelly",
+                            "nRemaining": 1,
+                            "score": 1
+                        },
+                        "22220": {
+                            "guess": "belly",
                             "nRemaining": 1,
                             "score": 1
                         }
                     }
+                },
+                "02222": {
+                    "guess": "cello",
+                    "nRemaining": 1,
+                    "score": 1
+                },
+                "12200": {
+                    "guess": "belch",
+                    "nRemaining": 2,
+                    "score": 1.5,
+                    "splits": {
+                        "02222": {
+                            "guess": "welch",
+                            "nRemaining": 1,
+                            "score": 1
+                        }
+                    }
+                },
+                "22200": {
+                    "guess": "helix",
+                    "nRemaining": 1,
+                    "score": 1
                 }
             }
         },
@@ -5704,10 +5667,22 @@
             }
         },
         "00220": {
-            "guess": "miler",
+            "guess": "filer",
             "nRemaining": 5,
-            "score": 1.9999999999999998,
+            "score": 2.0,
             "splits": {
+                "00220": {
+                    "guess": "golem",
+                    "nRemaining": 2,
+                    "score": 1.5,
+                    "splits": {
+                        "00221": {
+                            "guess": "melee",
+                            "nRemaining": 1,
+                            "score": 1
+                        }
+                    }
+                },
                 "00222": {
                     "guess": "ruler",
                     "nRemaining": 1,
@@ -5715,21 +5690,6 @@
                 },
                 "01222": {
                     "guess": "idler",
-                    "nRemaining": 1,
-                    "score": 1
-                },
-                "02222": {
-                    "guess": "filer",
-                    "nRemaining": 1,
-                    "score": 1
-                },
-                "10220": {
-                    "guess": "golem",
-                    "nRemaining": 1,
-                    "score": 1
-                },
-                "20220": {
-                    "guess": "melee",
                     "nRemaining": 1,
                     "score": 1
                 }
@@ -5895,24 +5855,21 @@
                     }
                 },
                 "10011": {
-                    "guess": "franc",
+                    "guess": "crank",
                     "nRemaining": 3,
-                    "score": 1.9999999999999998,
+                    "score": 2.0,
                     "splits": {
-                        "02220": {
-                            "guess": "prank",
-                            "nRemaining": 1,
-                            "score": 1
-                        },
-                        "02221": {
-                            "guess": "crank",
-                            "nRemaining": 1,
-                            "score": 1
-                        },
-                        "22220": {
+                        "02222": {
                             "guess": "frank",
-                            "nRemaining": 1,
-                            "score": 1
+                            "nRemaining": 2,
+                            "score": 1.5,
+                            "splits": {
+                                "02222": {
+                                    "guess": "prank",
+                                    "nRemaining": 1,
+                                    "score": 1
+                                }
+                            }
                         }
                     }
                 },
@@ -6098,27 +6055,24 @@
                     }
                 },
                 "11020": {
-                    "guess": "caird",
+                    "guess": "chard",
                     "nRemaining": 4,
                     "score": 2.0,
                     "splits": {
-                        "01021": {
-                            "guess": "dwarf",
-                            "nRemaining": 1,
-                            "score": 1
-                        },
-                        "01022": {
-                            "guess": "guard",
-                            "nRemaining": 1,
-                            "score": 1
-                        },
-                        "01121": {
+                        "00221": {
                             "guess": "diary",
-                            "nRemaining": 1,
-                            "score": 1
+                            "nRemaining": 2,
+                            "score": 1.5,
+                            "splits": {
+                                "20220": {
+                                    "guess": "dwarf",
+                                    "nRemaining": 1,
+                                    "score": 1
+                                }
+                            }
                         },
-                        "21022": {
-                            "guess": "chard",
+                        "00222": {
+                            "guess": "guard",
                             "nRemaining": 1,
                             "score": 1
                         }
@@ -7324,24 +7278,21 @@
                     }
                 },
                 "00012": {
-                    "guess": "cabal",
+                    "guess": "brawl",
                     "nRemaining": 3,
-                    "score": 1.9999999999999998,
+                    "score": 2.0,
                     "splits": {
-                        "01002": {
-                            "guess": "drawl",
-                            "nRemaining": 1,
-                            "score": 1
-                        },
-                        "01102": {
-                            "guess": "brawl",
-                            "nRemaining": 1,
-                            "score": 1
-                        },
-                        "21002": {
+                        "02222": {
                             "guess": "crawl",
-                            "nRemaining": 1,
-                            "score": 1
+                            "nRemaining": 2,
+                            "score": 1.5,
+                            "splits": {
+                                "02222": {
+                                    "guess": "drawl",
+                                    "nRemaining": 1,
+                                    "score": 1
+                                }
+                            }
                         }
                     }
                 },
@@ -7617,81 +7568,76 @@
             }
         },
         "01101": {
-            "guess": "rotal",
+            "guess": "trial",
             "nRemaining": 14,
             "score": 2.142857142857143,
             "splits": {
-                "00122": {
-                    "guess": "tidal",
+                "10011": {
+                    "guess": "aptly",
                     "nRemaining": 2,
                     "score": 1.5,
+                    "splits": {
+                        "10110": {
+                            "guess": "loath",
+                            "nRemaining": 1,
+                            "score": 1
+                        }
+                    }
+                },
+                "10012": {
+                    "guess": "atoll",
+                    "nRemaining": 1,
+                    "score": 1
+                },
+                "10022": {
+                    "guess": "octal",
+                    "nRemaining": 1,
+                    "score": 1
+                },
+                "10122": {
+                    "guess": "vital",
+                    "nRemaining": 1,
+                    "score": 1
+                },
+                "11011": {
+                    "guess": "ultra",
+                    "nRemaining": 1,
+                    "score": 1
+                },
+                "11021": {
+                    "guess": "altar",
+                    "nRemaining": 1,
+                    "score": 1
+                },
+                "20022": {
+                    "guess": "tonal",
+                    "nRemaining": 3,
+                    "score": 1.6666666666666665,
                     "splits": {
                         "20022": {
                             "guess": "tubal",
                             "nRemaining": 1,
                             "score": 1
-                        }
-                    }
-                },
-                "00211": {
-                    "guess": "aptly",
-                    "nRemaining": 1,
-                    "score": 1
-                },
-                "00222": {
-                    "guess": "vital",
-                    "nRemaining": 1,
-                    "score": 1
-                },
-                "01112": {
-                    "guess": "atoll",
-                    "nRemaining": 1,
-                    "score": 1
-                },
-                "01222": {
-                    "guess": "octal",
-                    "nRemaining": 1,
-                    "score": 1
-                },
-                "02111": {
-                    "guess": "loath",
-                    "nRemaining": 1,
-                    "score": 1
-                },
-                "02122": {
-                    "guess": "tonal",
-                    "nRemaining": 1,
-                    "score": 1
-                },
-                "02222": {
-                    "guess": "total",
-                    "nRemaining": 1,
-                    "score": 1
-                },
-                "10112": {
-                    "guess": "trail",
-                    "nRemaining": 2,
-                    "score": 1.5,
-                    "splits": {
-                        "22202": {
-                            "guess": "trawl",
+                        },
+                        "22022": {
+                            "guess": "total",
                             "nRemaining": 1,
                             "score": 1
                         }
                     }
                 },
-                "10122": {
-                    "guess": "trial",
+                "20122": {
+                    "guess": "tidal",
                     "nRemaining": 1,
                     "score": 1
                 },
-                "10211": {
-                    "guess": "ultra",
+                "22012": {
+                    "guess": "trawl",
                     "nRemaining": 1,
                     "score": 1
                 },
-                "10221": {
-                    "guess": "altar",
+                "22112": {
+                    "guess": "trail",
                     "nRemaining": 1,
                     "score": 1
                 }
@@ -8473,24 +8419,21 @@
                     "score": 1
                 },
                 "02102": {
-                    "guess": "hardy",
+                    "guess": "dairy",
                     "nRemaining": 3,
-                    "score": 1.9999999999999998,
+                    "score": 2.0,
                     "splits": {
-                        "02102": {
+                        "02222": {
                             "guess": "fairy",
-                            "nRemaining": 1,
-                            "score": 1
-                        },
-                        "02112": {
-                            "guess": "dairy",
-                            "nRemaining": 1,
-                            "score": 1
-                        },
-                        "22102": {
-                            "guess": "hairy",
-                            "nRemaining": 1,
-                            "score": 1
+                            "nRemaining": 2,
+                            "score": 1.5,
+                            "splits": {
+                                "02222": {
+                                    "guess": "hairy",
+                                    "nRemaining": 1,
+                                    "score": 1
+                                }
+                            }
                         }
                     }
                 },
@@ -9077,7 +9020,7 @@
             "score": 2.6666666666666665,
             "splits": {
                 "02020": {
-                    "guess": "kaneh",
+                    "guess": "haven",
                     "nRemaining": 4,
                     "score": 2.0,
                     "splits": {
@@ -9086,20 +9029,17 @@
                             "nRemaining": 1,
                             "score": 1
                         },
-                        "02120": {
-                            "guess": "waxen",
-                            "nRemaining": 1,
-                            "score": 1
-                        },
-                        "02121": {
-                            "guess": "haven",
-                            "nRemaining": 1,
-                            "score": 1
-                        },
-                        "12120": {
+                        "02022": {
                             "guess": "oaken",
-                            "nRemaining": 1,
-                            "score": 1
+                            "nRemaining": 2,
+                            "score": 1.5,
+                            "splits": {
+                                "02022": {
+                                    "guess": "waxen",
+                                    "nRemaining": 1,
+                                    "score": 1
+                                }
+                            }
                         }
                     }
                 },
@@ -9428,24 +9368,21 @@
                     "score": 1
                 },
                 "02022": {
-                    "guess": "padle",
+                    "guess": "eagle",
                     "nRemaining": 3,
-                    "score": 1.9999999999999998,
+                    "score": 2.0,
                     "splits": {
                         "02022": {
-                            "guess": "eagle",
-                            "nRemaining": 1,
-                            "score": 1
-                        },
-                        "02222": {
                             "guess": "ladle",
-                            "nRemaining": 1,
-                            "score": 1
-                        },
-                        "12022": {
-                            "guess": "maple",
-                            "nRemaining": 1,
-                            "score": 1
+                            "nRemaining": 2,
+                            "score": 1.5,
+                            "splits": {
+                                "02022": {
+                                    "guess": "maple",
+                                    "nRemaining": 1,
+                                    "score": 1
+                                }
+                            }
                         }
                     }
                 },
@@ -10246,56 +10183,53 @@
             }
         },
         "10011": {
-            "guess": "teens",
+            "guess": "testy",
             "nRemaining": 9,
             "score": 2.111111111111111,
             "splits": {
-                "11002": {
+                "02220": {
+                    "guess": "pesto",
+                    "nRemaining": 1,
+                    "score": 1
+                },
+                "02222": {
+                    "guess": "zesty",
+                    "nRemaining": 1,
+                    "score": 1
+                },
+                "11100": {
                     "guess": "ethos",
                     "nRemaining": 1,
                     "score": 1
                 },
-                "12001": {
-                    "guess": "pesto",
+                "12100": {
+                    "guess": "fetus",
+                    "nRemaining": 1,
+                    "score": 1
+                },
+                "21100": {
+                    "guess": "these",
                     "nRemaining": 2,
                     "score": 1.5,
                     "splits": {
-                        "02220": {
-                            "guess": "zesty",
+                        "22022": {
+                            "guess": "those",
                             "nRemaining": 1,
                             "score": 1
                         }
                     }
                 },
-                "12002": {
-                    "guess": "fetus",
-                    "nRemaining": 1,
-                    "score": 1
-                },
-                "21001": {
-                    "guess": "those",
-                    "nRemaining": 1,
-                    "score": 1
-                },
-                "21201": {
-                    "guess": "these",
-                    "nRemaining": 1,
-                    "score": 1
-                },
-                "22001": {
-                    "guess": "testy",
-                    "nRemaining": 1,
-                    "score": 1
-                },
-                "22101": {
-                    "guess": "terse",
-                    "nRemaining": 1,
-                    "score": 1
-                },
-                "22111": {
+                "22100": {
                     "guess": "tense",
-                    "nRemaining": 1,
-                    "score": 1
+                    "nRemaining": 2,
+                    "score": 1.5,
+                    "splits": {
+                        "22022": {
+                            "guess": "terse",
+                            "nRemaining": 1,
+                            "score": 1
+                        }
+                    }
                 }
             }
         },
@@ -10419,52 +10353,49 @@
             }
         },
         "10100": {
-            "guess": "flips",
+            "guess": "floss",
             "nRemaining": 9,
-            "score": 2.0000000000000004,
+            "score": 2.0,
             "splits": {
-                "01001": {
-                    "guess": "lousy",
-                    "nRemaining": 1,
-                    "score": 1
-                },
                 "01002": {
-                    "guess": "locus",
-                    "nRemaining": 1,
-                    "score": 1
-                },
-                "01012": {
                     "guess": "lupus",
                     "nRemaining": 1,
                     "score": 1
                 },
-                "02001": {
+                "01102": {
+                    "guess": "locus",
+                    "nRemaining": 1,
+                    "score": 1
+                },
+                "01120": {
+                    "guess": "lousy",
+                    "nRemaining": 1,
+                    "score": 1
+                },
+                "02020": {
                     "guess": "blush",
-                    "nRemaining": 1,
-                    "score": 1
+                    "nRemaining": 2,
+                    "score": 1.5,
+                    "splits": {
+                        "02222": {
+                            "guess": "plush",
+                            "nRemaining": 1,
+                            "score": 1
+                        }
+                    }
                 },
-                "02002": {
-                    "guess": "gloss",
-                    "nRemaining": 1,
-                    "score": 1
-                },
-                "02011": {
-                    "guess": "plush",
-                    "nRemaining": 1,
-                    "score": 1
-                },
-                "02202": {
+                "02022": {
                     "guess": "bliss",
                     "nRemaining": 1,
                     "score": 1
                 },
-                "22001": {
-                    "guess": "flush",
+                "02222": {
+                    "guess": "gloss",
                     "nRemaining": 1,
                     "score": 1
                 },
-                "22002": {
-                    "guess": "floss",
+                "22020": {
+                    "guess": "flush",
                     "nRemaining": 1,
                     "score": 1
                 }
@@ -11859,24 +11790,21 @@
                     "score": 1
                 },
                 "21002": {
-                    "guess": "stupe",
+                    "guess": "smite",
                     "nRemaining": 3,
-                    "score": 1.9999999999999998,
+                    "score": 2.0,
                     "splits": {
-                        "21002": {
-                            "guess": "smite",
-                            "nRemaining": 1,
-                            "score": 1
-                        },
-                        "21012": {
+                        "20222": {
                             "guess": "spite",
-                            "nRemaining": 1,
-                            "score": 1
-                        },
-                        "21102": {
-                            "guess": "suite",
-                            "nRemaining": 1,
-                            "score": 1
+                            "nRemaining": 2,
+                            "score": 1.5,
+                            "splits": {
+                                "20222": {
+                                    "guess": "suite",
+                                    "nRemaining": 1,
+                                    "score": 1
+                                }
+                            }
                         }
                     }
                 },
@@ -12067,24 +11995,21 @@
             }
         },
         "20021": {
-            "guess": "strep",
+            "guess": "steed",
             "nRemaining": 3,
-            "score": 1.9999999999999998,
+            "score": 2.0,
             "splits": {
-                "22020": {
-                    "guess": "steed",
-                    "nRemaining": 1,
-                    "score": 1
-                },
-                "22022": {
+                "22220": {
                     "guess": "steep",
-                    "nRemaining": 1,
-                    "score": 1
-                },
-                "22120": {
-                    "guess": "steer",
-                    "nRemaining": 1,
-                    "score": 1
+                    "nRemaining": 2,
+                    "score": 1.5,
+                    "splits": {
+                        "22220": {
+                            "guess": "steer",
+                            "nRemaining": 1,
+                            "score": 1
+                        }
+                    }
                 }
             }
         },
@@ -12589,7 +12514,7 @@
         "21001": {
             "guess": "stank",
             "nRemaining": 14,
-            "score": 2.7142857142857144,
+            "score": 2.714285714285715,
             "splits": {
                 "21200": {
                     "guess": "swath",
@@ -12618,27 +12543,24 @@
                 "22200": {
                     "guess": "staid",
                     "nRemaining": 5,
-                    "score": 2.4,
+                    "score": 2.4000000000000004,
                     "splits": {
                         "22200": {
-                            "guess": "staph",
+                            "guess": "staff",
                             "nRemaining": 3,
-                            "score": 1.9999999999999998,
+                            "score": 2.0,
                             "splits": {
                                 "22200": {
-                                    "guess": "staff",
-                                    "nRemaining": 1,
-                                    "score": 1
-                                },
-                                "22202": {
-                                    "guess": "stash",
-                                    "nRemaining": 1,
-                                    "score": 1
-                                },
-                                "22210": {
                                     "guess": "stamp",
-                                    "nRemaining": 1,
-                                    "score": 1
+                                    "nRemaining": 2,
+                                    "score": 1.5,
+                                    "splits": {
+                                        "22200": {
+                                            "guess": "stash",
+                                            "nRemaining": 1,
+                                            "score": 1
+                                        }
+                                    }
                                 }
                             }
                         },
@@ -12888,7 +12810,7 @@
         "21100": {
             "guess": "shall",
             "nRemaining": 13,
-            "score": 2.3846153846153846,
+            "score": 2.384615384615385,
             "splits": {
                 "20202": {
                     "guess": "snail",
@@ -12920,24 +12842,21 @@
                     }
                 },
                 "20220": {
-                    "guess": "spald",
+                    "guess": "scald",
                     "nRemaining": 3,
-                    "score": 1.9999999999999998,
+                    "score": 2.0,
                     "splits": {
-                        "20220": {
-                            "guess": "scaly",
-                            "nRemaining": 1,
-                            "score": 1
-                        },
-                        "20222": {
-                            "guess": "scald",
-                            "nRemaining": 1,
-                            "score": 1
-                        },
-                        "21220": {
+                        "22220": {
                             "guess": "scalp",
-                            "nRemaining": 1,
-                            "score": 1
+                            "nRemaining": 2,
+                            "score": 1.5,
+                            "splits": {
+                                "22220": {
+                                    "guess": "scaly",
+                                    "nRemaining": 1,
+                                    "score": 1
+                                }
+                            }
                         }
                     }
                 },

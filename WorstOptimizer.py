@@ -44,7 +44,7 @@ class WorstOptimizer(BaseOptimizer):
                 # print('here again',len(possibleAnswers))
 
             options = sortWords(
-                C = possibleGuesses,
+                G = possibleGuesses,
                 S = possibleAnswers,
                 vals = self.vals,
                 n = self.MAX_BREADTH,
@@ -91,7 +91,7 @@ class WorstOptimizer(BaseOptimizer):
         return self.bestScore[code]
 
 if __name__ == "__main__":
-    breadths = [10,20]
+    breadths = [40]
     for b in breadths:
         s = WorstOptimizer(
             hardMode = False,

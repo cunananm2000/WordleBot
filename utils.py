@@ -1,5 +1,6 @@
 import math
 from tqdm.auto import tqdm
+# from valuations import inSet
 
 from wordfreq import zipf_frequency
 
@@ -100,14 +101,13 @@ def saveAsWordList(tree, fname, answers):
             g.write(','.join(ans) + '\n')
 
     
-def sortWords(C, S, vals, n, showProg = False):
+def sortWords(G, S, vals, n, showProg = False):
     # C.sort(key=lambda c: tuple((v(c, S) for v in vals)))
     # print('sorting words')
-    if n >= len(C): return C
-    scores = [(tuple((v(c, S) for v in vals)) , c) for c in tqdm(C, disable = not(showProg), colour='red')]
+    if n >= len(G): return G 
+    scores = [(tuple((v(g, S) for v in vals)), g) for g in tqdm(G, disable = not(showProg), colour='red')]
     scores.sort()
-    # print('finished sorting')
-    return [c for _,c in scores[:n]]
+    return [g for _,g in scores[:n]]
 
 def softMatch(guess, res, cand):
     used = [False]*len(guess)

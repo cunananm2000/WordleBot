@@ -1,0 +1,212 @@
+{
+    "guess": "purse",
+    "nRemaining": 38,
+    "score": 2.473684210526315,
+    "splits": {
+        "00021": {
+            "guess": "chess",
+            "nRemaining": 1,
+            "score": 1
+        },
+        "00022": {
+            "guess": "goose",
+            "nRemaining": 9,
+            "score": 2.111111111111111,
+            "splits": {
+                "00022": {
+                    "guess": "dense",
+                    "nRemaining": 1,
+                    "score": 1
+                },
+                "00222": {
+                    "guess": "chose",
+                    "nRemaining": 2,
+                    "score": 1.5,
+                    "splits": {
+                        "02222": {
+                            "guess": "whose",
+                            "nRemaining": 1,
+                            "score": 1
+                        }
+                    }
+                },
+                "01022": {
+                    "guess": "obese",
+                    "nRemaining": 1,
+                    "score": 1
+                },
+                "02022": {
+                    "guess": "noise",
+                    "nRemaining": 1,
+                    "score": 1
+                },
+                "02222": {
+                    "guess": "moose",
+                    "nRemaining": 2,
+                    "score": 1.5,
+                    "splits": {
+                        "02222": {
+                            "guess": "noose",
+                            "nRemaining": 1,
+                            "score": 1
+                        }
+                    }
+                },
+                "20022": {
+                    "guess": "geese",
+                    "nRemaining": 1,
+                    "score": 1
+                }
+            }
+        },
+        "00111": {
+            "guess": "resin",
+            "nRemaining": 1,
+            "score": 1
+        },
+        "00121": {
+            "guess": "cress",
+            "nRemaining": 3,
+            "score": 1.6666666666666665,
+            "splits": {
+                "02220": {
+                    "guess": "fresh",
+                    "nRemaining": 1,
+                    "score": 1
+                },
+                "02222": {
+                    "guess": "dress",
+                    "nRemaining": 1,
+                    "score": 1
+                }
+            }
+        },
+        "00122": {
+            "guess": "rinse",
+            "nRemaining": 1,
+            "score": 1
+        },
+        "00221": {
+            "guess": "verso",
+            "nRemaining": 1,
+            "score": 1
+        },
+        "00222": {
+            "guess": "horse",
+            "nRemaining": 3,
+            "score": 1.6666666666666665,
+            "splits": {
+                "00222": {
+                    "guess": "verse",
+                    "nRemaining": 1,
+                    "score": 1
+                },
+                "02222": {
+                    "guess": "worse",
+                    "nRemaining": 1,
+                    "score": 1
+                }
+            }
+        },
+        "01012": {
+            "guess": "ensue",
+            "nRemaining": 2,
+            "score": 1.5,
+            "splits": {
+                "00222": {
+                    "guess": "issue",
+                    "nRemaining": 1,
+                    "score": 1
+                }
+            }
+        },
+        "01022": {
+            "guess": "house",
+            "nRemaining": 2,
+            "score": 1.5,
+            "splits": {
+                "02222": {
+                    "guess": "mouse",
+                    "nRemaining": 1,
+                    "score": 1
+                }
+            }
+        },
+        "01111": {
+            "guess": "rebus",
+            "nRemaining": 1,
+            "score": 1
+        },
+        "01122": {
+            "guess": "reuse",
+            "nRemaining": 2,
+            "score": 1.5,
+            "splits": {
+                "20222": {
+                    "guess": "rouse",
+                    "nRemaining": 1,
+                    "score": 1
+                }
+            }
+        },
+        "02021": {
+            "guess": "guess",
+            "nRemaining": 1,
+            "score": 1
+        },
+        "02022": {
+            "guess": "guise",
+            "nRemaining": 1,
+            "score": 1
+        },
+        "02222": {
+            "guess": "curse",
+            "nRemaining": 2,
+            "score": 1.5,
+            "splits": {
+                "02222": {
+                    "guess": "nurse",
+                    "nRemaining": 1,
+                    "score": 1
+                }
+            }
+        },
+        "10022": {
+            "guess": "copse",
+            "nRemaining": 1,
+            "score": 1
+        },
+        "20011": {
+            "guess": "pesky",
+            "nRemaining": 1,
+            "score": 1
+        },
+        "20021": {
+            "guess": "poesy",
+            "nRemaining": 1,
+            "score": 1
+        },
+        "20022": {
+            "guess": "poise",
+            "nRemaining": 2,
+            "score": 1.5,
+            "splits": {
+                "22022": {
+                    "guess": "posse",
+                    "nRemaining": 1,
+                    "score": 1
+                }
+            }
+        },
+        "20121": {
+            "guess": "press",
+            "nRemaining": 1,
+            "score": 1
+        },
+        "20122": {
+            "guess": "prose",
+            "nRemaining": 1,
+            "score": 1
+        }
+    }
+}

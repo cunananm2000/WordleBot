@@ -1,6 +1,7 @@
 from BaseOptimizer import BaseOptimizer
-from utils import getSplits, sortWords
+from utils import filterPossible, getSplits, softFilterPossible, sortWords
 from tqdm.auto import tqdm
+from valuations import inSet
 
 
 
@@ -11,10 +12,12 @@ class AverageOptimizer(BaseOptimizer):
         **kwargs,
     ):
         super(AverageOptimizer, self).__init__(*args, **kwargs)
-        self.fname = f"{self.game}_{self.MAX_BREADTH}{'_hard' if self.hardMode else ''}"
+        if self.fname is None:
+            self.fname = f"{self.game}_{self.MAX_BREADTH}{'_hard' if self.hardMode else ''}"
 
     def explore(self, possibleGuesses, possibleAnswers, depth = 1):
         self.CALLS += 1
+        # print(len(possibleGuesses), len(possibleAnswers))
         code = (
             self.encode(possibleAnswers, self.S), 
             self.encode(possibleGuesses, self.G)
@@ -46,7 +49,7 @@ class AverageOptimizer(BaseOptimizer):
             # print('here again',len(possibleAnswers))
 
                 options = sortWords(
-                    C = possibleGuesses,
+                    G = possibleGuesses,
                     S = possibleAnswers,
                     vals = self.vals,
                     n = self.MAX_BREADTH,
@@ -54,6 +57,7 @@ class AverageOptimizer(BaseOptimizer):
                 )
 
             # print(options)
+            # options.sort(key=lambda g: inSet(g, possibleAnswers))
 
             # print('also here', len(possibleAnswers))
 
@@ -63,7 +67,7 @@ class AverageOptimizer(BaseOptimizer):
                 if len(splits) == 1: continue 
                 # if (depth == 1): print(splits)
                 t = 1
-                for res, split in tqdm(splits.items(), disable = not(depth <= self.DEBUG_LEVEL), colour='yellow'):
+                for res, split in tqdm(splits.items(), disable = not(depth <= self.DEBUG_LEVEL), colour='yellow', desc=g):
                     if res == self.rStar: continue 
                     # if (depth <= 2):
                     #     print('    '*(depth-1),g,'-->',res)
@@ -73,22 +77,19 @@ class AverageOptimizer(BaseOptimizer):
                         depth = depth + 1,
                     )
 
-                # if (depth <= 3):
+                # if (depth <= 1):
                 #     print('    '*(depth-1),g,'-->',t)
                 
                 if self.bestScore.get(code, 9999999) > t:
                     self.bestScore[code] = t
                     self.bestGuess[code] = g
 
-                n = len(possibleAnswers)
-                if g in possibleAnswers:
-                    if abs(t - (1 + 2*(n-1))/n) < 0.001:
-                        # print("Exit early! Reason 1")
-                        break
-                else:
-                    if abs(t - 2) < 0.001:
-                        # print("Exit early! Reason 2")
-                        break
+                # This only works because after choosing the top N, we make sure the InSet ones take priority
+                # n = len(possibleAnswers)
+                # if g in possibleAnswers and abs(t - (1 + 2*(n-1))/n) < 0.00001:
+                #     break
+                # elif abs(t - 2) < 0.00001:
+                #     break
 
         
         # if code not in self.bestScore:
@@ -101,10 +102,14 @@ class AverageOptimizer(BaseOptimizer):
 if __name__ == "__main__":
     s = AverageOptimizer(
         hardMode = True,
-        MAX_BREADTH = 30,
+        MAX_BREADTH = 20,
         game = 'oldWordle',
-        DEBUG_LEVEL = 1
+        DEBUG_LEVEL = 1,
+        # fname = 'temp1'
     )
+
+    # s.G = softFilterPossible('salet', '10010', s.G)
+    # s.S = filterPossible('salet','10010',s.S)
 
     s.writeJson()
     s.showStats()
