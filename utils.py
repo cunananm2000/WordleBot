@@ -36,6 +36,18 @@ def getSplits(g, C, useWords=False):
 
     return splits
 
+def getSplitsMultiple(G, C, useWords=False):
+    splits = {}
+    for c in C:
+        key = tuple(check(g,c) for g in G)
+        if useWords:
+            if key not in splits:
+                splits[key] = []
+            splits[key].append(c)
+        else:
+            splits[key] = splits.get(key, 0) + 1
+    return splits
+
 
 def pprint(res):
     for x in res:

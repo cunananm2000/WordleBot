@@ -105,7 +105,7 @@ if __name__ == "__main__":
         MAX_BREADTH = 20,
         game = 'nerdle',
         DEBUG_LEVEL = 1,
-        fname = 'nerdle_20.json'
+        fname = 'nerdle_20'
     )
 
     # s.G = softFilterPossible('salet', '10010', s.G)
