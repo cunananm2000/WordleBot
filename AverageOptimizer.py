@@ -102,10 +102,10 @@ class AverageOptimizer(BaseOptimizer):
 if __name__ == "__main__":
     s = AverageOptimizer(
         hardMode = False,
-        MAX_BREADTH = 10,
+        MAX_BREADTH = 20,
         game = 'nerdle',
         DEBUG_LEVEL = 1,
-        # fname = 'temp1'
+        fname = 'nerdle_20.json'
     )
 
     # s.G = softFilterPossible('salet', '10010', s.G)
