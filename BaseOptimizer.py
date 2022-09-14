@@ -23,7 +23,7 @@ class BaseOptimizer(object):
         self.rStar = c.rStar
 
         self.MAX_DEPTH = MAX_DEPTH
-        self.vals = [mostParts, inSet, maxSizeSplit]
+        self.vals = [multiVal] #[mostParts, inSet, maxSizeSplit]
         self.MAX_BREADTH = MAX_BREADTH
         self.hardMode = hardMode
         self.game = game

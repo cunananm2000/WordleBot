@@ -78,3 +78,8 @@ def charFreqs(g, C):
             if g[i] == c[i]: t += 2
             elif g[i] in c: t += 1
     return -t
+
+# [mostParts, inSet, maxSizeSplit]
+def multiVal(g, C):
+    splits = getSplits(g, C)
+    return (-len(splits) + len(C)),(1 - (g in C)), (max(splits.values()) - 1)

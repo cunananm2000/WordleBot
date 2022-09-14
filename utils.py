@@ -4,6 +4,8 @@ from tqdm.auto import tqdm
 
 from wordfreq import zipf_frequency
 
+check_cache = {}
+
 
 def getWordFreqDict():
     wordFreqs = {}
@@ -61,18 +63,13 @@ def pprint(res):
 
 
 def check(guess, answer, debug=False):
-    # print(guess, answer)
-    # key = guess + answer
-    # if key not in self.checkCache: key = answer + guess
-    # if key not in self.checkCache:
+    code = guess+answer
+    if code in check_cache: return check_cache[code]
+
     nLetters = len(guess)
     # print(guess, answer)
     res = ["0"] * nLetters
     hit = [False] * nLetters
-
-    # if len(guess) != len(answer):
-    #     print(len(guess), len(answer), guess, answer)
-    #     assert(False)
 
     for i in range(nLetters):
         if guess[i] == answer[i]:
@@ -88,7 +85,9 @@ def check(guess, answer, debug=False):
     if debug:
         pprint(res)
 
-    return "".join(res)
+    check_cache[code] = "".join(res)
+    
+    return check_cache[code]
 
 
 def filterPossible(guess, res, candidates):

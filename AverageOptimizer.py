@@ -62,7 +62,7 @@ class AverageOptimizer(BaseOptimizer):
             # print('also here', len(possibleAnswers))
 
 
-            for g in tqdm(options, disable = not(depth <= self.DEBUG_LEVEL), colour = ['green','blue'][depth%2]):
+            for g in tqdm(options, disable = not(depth <= self.DEBUG_LEVEL), colour = ['green','blue'][depth%2], desc=f"Depth {depth}"):
                 splits = getSplits(g, possibleAnswers, useWords=True)
                 if len(splits) == 1: continue 
                 # if (depth == 1): print(splits)
@@ -102,14 +102,12 @@ class AverageOptimizer(BaseOptimizer):
 if __name__ == "__main__":
     s = AverageOptimizer(
         hardMode = False,
-        MAX_BREADTH = 20,
-        game = 'nerdle',
+        MAX_BREADTH = 100,
+        game = 'oldWordle',
         DEBUG_LEVEL = 1,
-        fname = 'nerdle_20'
+        fname = None, #'oldWordle_50',
+        MAX_DEPTH = 7
     )
-
-    # s.G = softFilterPossible('salet', '10010', s.G)
-    # s.S = filterPossible('salet','10010',s.S)
 
     s.writeJson()
     s.showStats()
