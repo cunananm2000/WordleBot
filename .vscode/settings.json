@@ -2,11 +2,12 @@
     "jupyter.jupyterServerType": "local",
     "python.linting.flake8Enabled": false,
     "python.linting.enabled": true,
-    "python.linting.pylintEnabled": true,
+    "python.linting.pylintEnabled": false,
     "files.associations": {
         "*.pl": "prolog",
         "*.m": "matlab",
         "vector": "cpp",
         "ostream": "cpp"
-    }
+    },
+    "python.linting.mypyEnabled": true
 }

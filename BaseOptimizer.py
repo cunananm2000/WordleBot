@@ -1,6 +1,5 @@
 import json
 from utils import filterPossible, getSplits, saveAsWordList, sortWords, filterMultiple, softFilterPossible, softFilterMultiple, noFilterPossible
-# from mathlerLists import guesses, answers, rStar
 from tqdm.auto import tqdm
 from valuations import *
 from Config import Config
