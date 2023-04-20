@@ -31,24 +31,24 @@ class TreeGenerator(object):
         return self.aggFn([x[0] for x in a])
 
     def sigma(self, L, C):
-        print(f"{'   ' * L} Called with {len(C)} candidates")
+        # print(f"{'   ' * L} Called with {len(C)} candidates")
         if len(C) == 1:
-            print(f"Only one candidate {C[0]}")
+            # print(f"Only one candidate {C[0]}")
             return C[0]
 
         if len(C) == 2:
-            print(f"Got two candidates, guessing {C[0]}")
+            # print(f"Got two candidates, guessing {C[0]}")
             return C[0]
 
-        sortedG = sorted([(self.v(g, C), g) for g in tqdm(G)])
-        print(sortedG[:5])
+        sortedG = sorted([(self.v(g, C), g) for g in tqdm(G, desc=f'{self.stratName}, {len(C)}')])
+        # print(sortedG[:5])
         if L == 1:
             guess = sortedG[0][-1]
-            if len(C) < 30:
-                print(C)
-                print(getSplits(guess, C))
-                print(self.v(guess, C))
-            print(f"Submitting {guess}")
+            # if len(C) < 30:
+            #     print(C)
+            #     print(getSplits(guess, C))
+            #     print(self.v(guess, C))
+            # print(f"Submitting {guess}")
             return guess
 
         assert False
@@ -132,11 +132,11 @@ class TreeGenerator(object):
         # for k, v in splits.items():
         #     tree['splits'][k] = genStrategyTree(L, v)
 
-        fname = f"standardTrees/{self.stratName}{L}.json"
+        fname = f"combinedTrees2/{self.stratName}{L}.json"
         
         
         if exists(fname): 
-            print(f"Already see {fname}")
+            # print(f"Already see {fname}")
             return
 
         tree = self.genStrategyTree(L, S)
@@ -146,29 +146,36 @@ class TreeGenerator(object):
 
 
 if __name__ == "__main__":
-    # allVals = [firstValid, maxSizeSplit, mostParts, information]
-
-    # fns = sum([
-    #     list(permutations(allVals, i)) for i in range(1,len(allVals)+1)
-    # ], [])
-
-    fns = [
-        # maxSizeSplit,
-        # mostParts,
-        # information,
-        # probsGreen,
-        # minRange,
-        # expSizeSplit,
-        # harmonicMean,
-        # minStdDev,
-        charFreqs,
-        minStdDev,
+    allVals = [
+        inSet, 
+        expSizeSplit, 
+        maxSizeSplit, 
+        mostParts, 
+        information,
     ]
 
+    fns = sum([
+        list(permutations(allVals, i)) for i in range(1,len(allVals)+1)
+    ], [])
+
+    # fns = [
+    #     # maxSizeSplit,
+    #     # mostParts,
+    #     # information,
+    #     # probsGreen,
+    #     # minRange,
+    #     # expSizeSplit,
+    #     # harmonicMean,
+    #     # minStdDev,
+    #     charFreqs,
+    #     minStdDev,
+    # ]
+
     # for f in fns:
-    #     print(f)
+    #     print(*f)
     # print(len(fns))
     # assert(False)
-    for f in fns:
-        treeGen = TreeGenerator(vs=[f, inSet], aggFn=None)
+    for f in tqdm(fns):
+        # if information in f: continue
+        treeGen = TreeGenerator(vs=list(f), aggFn=None)
         treeGen.writeStrategyTree(1)

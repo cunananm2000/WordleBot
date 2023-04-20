@@ -14,7 +14,8 @@ class BaseOptimizer(object):
         hardMode = False,
         game = 'temp',
         DEBUG_LEVEL = 2,
-        fname = None
+        fname = None,
+        vals = None
     ):
         c = Config(game)
 
@@ -23,7 +24,11 @@ class BaseOptimizer(object):
         self.rStar = c.rStar
 
         self.MAX_DEPTH = MAX_DEPTH
-        self.vals = [multiVal] #[mostParts, inSet, maxSizeSplit]
+
+        if vals is None:
+            vals = [multiVal]#[mostParts, inSet, maxSizeSplit]
+        self.vals = vals 
+
         self.MAX_BREADTH = MAX_BREADTH
         self.hardMode = hardMode
         self.game = game
@@ -95,7 +100,7 @@ class BaseOptimizer(object):
     def writeJson(self):
         print(f"Writing JSON to {self.fname}.json")
         tree = self.getTree()
-        with open(f"optimizedTrees/{self.fname}.json", "w") as f:
+        with open(f"optimizedTrees3/{self.fname}.json", "w") as f:
             json.dump(tree, f, sort_keys=True, indent=4)
         print(f"Wrote JSON at {self.fname}.json")
         
@@ -103,7 +108,7 @@ class BaseOptimizer(object):
         print(f"Writing word list to {self.fname}.txt")
         saveAsWordList(
             tree = self.getTree(),
-            fname = f"optimizedTrees/{self.fname}.txt",
+            fname = f"optimizedTrees2/{self.fname}.txt",
             answers = self.S
         )
         print(f"Wrote word list at {self.fname}.txt")
@@ -121,3 +126,16 @@ class BaseOptimizer(object):
         print("BREACHES:", self.BREACHES)
         print("CALLS: ", self.CALLS)
         print("--------------------------")
+
+    def getDepth(self, tree = None):
+        if tree is None:
+            if self.tree is None:
+                assert False 
+            tree = self.tree
+
+        if 'splits' not in tree: return 1
+        return 1 + max(self.getDepth(tt) for tt in tree['splits'].values())
+    
+    # def getTotal(self):
+    #     if self.tree is None: assert False 
+

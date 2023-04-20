@@ -1,7 +1,7 @@
 from BaseOptimizer import BaseOptimizer
-from utils import filterPossible, getSplits, softFilterPossible, sortWords
+from utils import filterPossible, getSplits, softFilterPossible, sortWords, usefulGuesses
 from tqdm.auto import tqdm
-from valuations import inSet
+from valuations import *
 
 
 
@@ -43,18 +43,20 @@ class AverageOptimizer(BaseOptimizer):
 
             # Shortcut since this always the best choice
             # if (depth == 1): 
-            #     options = ['salet']
+            #     options = ['tarse']
             # else:
 
             # print('here again',len(possibleAnswers))
 
+            options = usefulGuesses(possibleGuesses, possibleAnswers)
             options = sortWords(
-                G = possibleGuesses,
+                G = options,
                 S = possibleAnswers,
                 vals = self.vals,
                 n = self.MAX_BREADTH,
                 showProg = (depth <= self.DEBUG_LEVEL),
             )
+
 
             # print(options)
             # options.sort(key=lambda g: inSet(g, possibleAnswers))
@@ -100,15 +102,26 @@ class AverageOptimizer(BaseOptimizer):
 
 
 if __name__ == "__main__":
-    s = AverageOptimizer(
-        hardMode = False,
-        MAX_BREADTH = 100,
-        game = 'oldWordle',
-        DEBUG_LEVEL = 1,
-        fname = None, #'oldWordle_50',
-        MAX_DEPTH = 7
-    )
 
-    s.writeJson()
-    s.showStats()
-    s.writeWordList()
+    for b in [1,5,10,20]:
+    # for game_name in [
+    #     # "oldWordle",
+    #     # "mininerdle",
+    #     # "ffxivrdle",
+    #     # "bardle",
+    #     # "primel",
+    #     # "nerdle",
+    # ]:
+
+        s = AverageOptimizer(
+            hardMode = False,
+            MAX_BREADTH = b,
+            game = 'oldWordle',
+            DEBUG_LEVEL = 1,
+            fname = None, #'oldWordle_50',
+            MAX_DEPTH = 7,
+        )
+
+        s.writeJson()
+        s.showStats()
+        s.writeWordList()

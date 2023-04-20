@@ -1,0 +1,172 @@
+Proved 00221 V1 hit 1 = 1
+Proved 01021 V1 hit 1 = 1
+Proved 01201 V1 hit 1 = 1
+Proved 01202 V1 hit 1 = 1
+Proved 02011 V1 hit 1 = 1
+Proved 02102 V1 hit 1 = 1
+Proved 02122 V1 hit 1 = 1
+Proved 02222 V1 hit 1 = 1
+Proved 10112 V1 hit 1 = 1
+Proved 10202 V1 hit 1 = 1
+Proved 11112 V1 hit 1 = 1
+Proved 11200 V1 hit 1 = 1
+Proved 12110 V1 hit 1 = 1
+Proved 12201 V1 hit 1 = 1
+Proved 20011 V1 hit 1 = 1
+Proved 20201 V1 hit 1 = 1
+Proved 20202 V1 hit 1 = 1
+Proved 20210 V1 hit 1 = 1
+Proved 20220 V1 hit 1 = 1
+Proved 20222 V1 hit 1 = 1
+Proved 21020 V1 hit 1 = 1
+Proved 21022 V1 hit 1 = 1
+Proved 21120 V1 hit 1 = 1
+Proved 21201 V1 hit 1 = 1
+Proved 22001 V1 hit 1 = 1
+Proved 22002 V1 hit 1 = 1
+Proved 22010 V1 hit 1 = 1
+Proved 22012 V1 hit 1 = 1
+Proved 22100 V1 hit 1 = 1
+Proved 02012 V1 hit 3 = 3
+Proved 02110 V1 hit 3 = 3
+Proved 02111 V1 hit 3 = 3
+Proved 02220 V1 hit 3 = 3
+Proved 10121 V1 hit 3 = 3
+Proved 10210 V1 hit 3 = 3
+Proved 11120 V1 hit 3 = 3
+Proved 12020 V1 hit 3 = 3
+Proved 12100 V1 hit 3 = 3
+Proved 20020 V1 hit 3 = 3
+Proved 21102 V1 hit 3 = 3
+Proved 22200 V1 hit 3 = 3
+Proved 01122 V1 hit 5 = 5
+Proved 01210 V1 hit 5 = 5
+Proved 12200 V1 hit 5 = 5
+Proved 20022 V1 hit 5 = 5
+Proved 20120 V1 hit 5 = 5
+Proved 21001 V1 hit 5 = 5
+Proved 21101 V1 hit 5 = 5
+Proved 10220 V1 hit 6 = 6
+Proved 11102 V1 hit 6 = 6
+Proved 11210 V1 hit 6 = 6
+Proved 22101 V1 hit 6 = 6
+Proved 00122 V1 hit 7 = 7
+Proved 00212 V1 hit 7 = 7
+Proved 02201 V1 hit 7 = 7
+Proved 10102 V1 hit 7 = 7
+Proved 10111 V1 hit 7 = 7
+Proved 10201 V1 hit 7 = 7
+Proved 11110 V1 hit 7 = 7
+Proved 12002 V1 hit 7 = 7
+Proved 00121 V1 hit 8 = 8
+Proved 01111 V1 hit 8 = 8
+Proved 01112 V1 hit 8 = 8
+Proved 02202 V1 hit 8 = 8
+Proved 10120 V1 hit 8 = 8
+Proved 11021 V1 hit 8 = 8
+Proved 11020 V1 hit 9 = 9
+Proved 20200 V1 hit 9 = 9
+Proved 02022 V1 hit 10 = 10
+Proved 10021 V1 hit 10 = 10
+Proved 12001 V1 hit 10 = 10
+Proved 12101 V1 hit 10 = 10
+Proved 00021 V1 hit 12 = 12
+Proved 00211 V1 hit 12 = 12
+Proved 00222 V1 hit 12 = 12
+Proved 01120 V1 hit 12 = 12
+Proved 01011 V1 hit 13 = 13
+Proved 11011 V1 hit 13 = 13
+Proved 12012 V1 hit 13 = 13
+Proved 00112 V1 hit 14 = 14
+Proved 01022 V1 hit 14 = 14
+Proved 02020 V1 hit 14 = 14
+Proved 12010 V1 hit 14 = 14
+Proved 11012 V1 hit 15 = 15
+Proved 11002 V1 hit 15 = 15
+Proved 11101 V1 hit 15 = 15
+Proved 10020 V1 hit 17 = 17
+Proved 20102 V1 hit 17 = 17
+Proved 00210 V1 hit 18 = 18
+Proved 20002 V1 hit 18 = 18
+Proved 20101 V1 hit 18 = 18
+Proved 00120 V1 hit 19 = 19
+Proved 10012 V1 hit 19 = 19
+Proved 10200 V1 hit 19 = 19
+Proved 21100 V1 hit 20 = 20
+Proved 10110 V1 hit 21 = 21
+Proved 21000 V1 hit 22 = 22
+Proved 01200 V1 hit 26 = 26
+Proved 10002 V1 hit 26 = 26
+Proved 11100 V1 hit 26 = 26
+Proved 20001 V1 hit 27 = 27
+Proved 01110 V1 hit 27 = 27
+Proved 00110 V1 hit 28 = 28
+Proved 02200 V1 hit 28 = 28
+Progress 22000 V1 at 28 < 29 remaining 19
+Progress 22000 V2 at 28 < 29 remaining 19
+Proved 22000 V3 hit 29 = 29
+Proved 20100 V1 hit 30 = 30
+Proved 02001 V1 hit 31 = 31
+Proved 00202 V1 hit 31 = 31
+Progress 01012 V1 at 32 < 33 remaining 29
+Progress 01012 V2 at 32 < 33 remaining 29
+Proved 01012 V3 hit 33 = 33
+Proved 00201 V1 hit 35 = 35
+Proved 02010 V1 hit 39 = 39
+Proved 11010 V1 hit 41 = 41
+Proved 00111 V1 hit 42 = 42
+Proved 01020 V1 hit 42 = 42
+Proved 10100 V1 hit 45 = 45
+Proved 20000 V1 hit 46 = 46
+Proved 00022 V1 hit 47 = 47
+Progress 02101 V1 at 46 < 48 remaining 54
+Progress 02101 V2 at 47 < 48 remaining 18
+Proved 02101 V3 hit 48 = 48
+Proved 00020 V1 hit 49 = 49
+Proved 10011 V1 hit 52 = 52
+Proved 11001 V1 hit 52 = 52
+Progress 00011 V1 at 54 < 55 remaining 8
+Progress 00011 V2 at 54 < 55 remaining 8
+Proved 00011 V3 hit 55 = 55
+Progress 01102 V1 at 55 < 58 remaining 530
+Progress 01102 V2 at 55 < 58 remaining 177
+Proved 01102 V3 hit 58 = 58
+Progress 02002 V1 at 56 < 58 remaining 13
+Progress 02002 V2 at 56 < 58 remaining 13
+Proved 02002 V3 hit 58 = 58
+Proved 00200 V1 hit 61 = 61
+Progress 02100 V1 at 63 < 64 remaining 7
+Progress 02100 V2 at 63 < 64 remaining 6
+Proved 02100 V3 hit 64 = 64
+Proved 10101 V1 hit 65 = 65
+Progress 00012 V1 at 65 < 66 remaining 4
+Progress 00012 V2 at 65 < 66 remaining 4
+Proved 00012 V3 hit 66 = 66
+Progress 11000 V1 at 67 < 68 remaining 10
+Progress 11000 V2 at 67 < 68 remaining 10
+Proved 11000 V3 hit 68 = 68
+Proved 01010 V1 hit 75 = 75
+Progress 12000 V1 at 78 < 82 remaining 95
+Progress 12000 V2 at 78 < 82 remaining 55
+Proved 12000 V3 hit 82 = 82
+Progress 01101 V1 at 86 < 87 remaining 11
+Progress 01101 V2 at 86 < 87 remaining 11
+Proved 01101 V3 hit 87 = 87
+Progress 00102 V1 at 95 < 97 remaining 11
+Progress 00102 V2 at 95 < 97 remaining 11
+Proved 00102 V3 hit 97 = 97
+Proved 10001 V1 hit 102 = 102
+Progress 01002 V1 at 100 < 102 remaining 8
+Progress 01002 V2 at 100 < 102 remaining 8
+Proved 01002 V3 hit 102 = 102
+Proved 01001 V1 hit 113 = 113
+Progress 10010 V1 at 117 < 120 remaining 24
+Progress 10010 V2 at 117 < 120 remaining 23
+Proved 10010 V3 hit 120 = 120
+Progress 02000 V1 at 169 < 173 remaining 46
+Progress 02000 V2 at 170 < 173 remaining 22
+Proved 02000 V3 hit 173 = 173
+Progress 01100 V1 at 174 < 179 remaining 23
+Progress 01100 V2 at 174 < 179 remaining 14
+Proved 01100 V3 hit 179 = 179
+Progress 10000 V1 at 197 < 202 remaining 56

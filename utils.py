@@ -1,4 +1,5 @@
 import math
+from itertools import product
 from tqdm.auto import tqdm
 # from valuations import inSet
 
@@ -50,6 +51,21 @@ def getSplitsMultiple(G, C, useWords=False):
             splits[key] = splits.get(key, 0) + 1
     return splits
 
+def getSimulSplits(g, D, useWords=False):
+    game_splits = [getSplits(g, C, useWords = True) for C in D]
+    keys = list(product(*[list(splits.keys()) for splits in game_splits]))
+    out = {}
+    for key in keys:
+        wordSet = [game_split[res] for game_split,res in zip(game_splits, key)]
+        # print(g,key, wordSet)
+        count = countWithNonrepeats(wordSet)
+        if count == 0: continue
+        if useWords:
+            out[key] = wordSet
+        else:
+            out[key] = count
+    return out
+
 
 def pprint(res):
     for x in res:
@@ -61,10 +77,34 @@ def pprint(res):
             print("\u2B1B", end="")
     print("")
 
+def countWithNonrepeats(D):
+    if len(D) == 1:
+        return len(D[0])
+    
+    if len(D) == 2:
+        A, B = D
+        t = len(A) * len(B) - len(set(A).intersection(set(B)))
+        # if t == 0:
+        #     print(D)
+        #     assert False
+        return t
+    
+    t = 0
+    for tup in product(*D):
+        t += len(set(tup)) == len(tup)
+    
+    return t
 
-def check(guess, answer, debug=False):
+
+def old_check(guess, answer, debug=False):
     code = guess+answer
+
+    global check_cache
+
     if code in check_cache: return check_cache[code]
+
+    if len(check_cache) >= 100_000:
+        check_cache = {}
 
     nLetters = len(guess)
     # print(guess, answer)
@@ -89,6 +129,44 @@ def check(guess, answer, debug=False):
     
     return check_cache[code]
 
+def check(g, s, debug=False):
+    code = g+s
+
+    global check_cache
+
+
+    if code in check_cache: return check_cache[code]
+
+    if len(check_cache) >= 1_000_00:
+        # print("clearing cache")
+        check_cache = {}
+
+
+    res = ['0'] * len(g)
+
+    freq = {}
+    for l in s:
+        freq[l] = freq.get(l,0) + 1
+
+    for i,(a,b) in enumerate(zip(g,s)):
+        if a == b:
+            freq[a] -= 1
+            res[i] = '2'
+            continue
+
+
+    for i, a in enumerate(g):
+        if freq.get(a,0) == 0: continue
+        if res[i] != '0': continue
+        res[i] = '1'
+        freq[a] -= 1
+
+    out = "".join(res)
+
+    check_cache[code] = out
+
+    return out
+
 
 def filterPossible(guess, res, candidates):
     return [x for x in candidates if check(guess, x) == res]
@@ -97,6 +175,23 @@ def filterMultiple(history, candidates):
     for g,r in history:
         candidates = filterPossible(g, r, candidates)
     return candidates
+
+def filterSimul(guess, rs, D):
+    return list(filterPossible(guess, r, cands) for r,cands in zip(rs, D))
+
+def isUseful(guess, C):
+    if len(C) <= 1: return guess in C
+    res = check(guess, C[0])
+    for c in C[1:]:
+        if check(guess, c) != res: return True
+
+    return False
+
+
+
+def usefulGuesses(G, C):
+    if len(C) <= 1: return C.copy()
+    return [g for g in G if isUseful(g, C)]
 
 
 def saveAsWordList(tree, fname, answers):

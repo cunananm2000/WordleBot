@@ -79,7 +79,8 @@ class WordleGame(object):
         if answers is None:
             answers = self.validAnswers
         scores = []
-        for answer in tqdm(answers):
+        for answer in answers:
+            # print(answer)
             scores.append(self.play(answer, forcedGuesses=forcedGuesses))
         self.debug = tempDebug
         return scores

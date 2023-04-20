@@ -82,4 +82,7 @@ def charFreqs(g, C):
 # [mostParts, inSet, maxSizeSplit]
 def multiVal(g, C):
     splits = getSplits(g, C)
-    return (-len(splits) + len(C)),(1 - (g in C)), (max(splits.values()) - 1)
+    # return (-len(splits) + len(C)),(1 - (g in C)), (max(splits.values()) - 1)
+
+    return -len(splits),(1 - (g in C)), sum(t * t for t in splits.values())
+    

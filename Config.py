@@ -1,3 +1,6 @@
+from tqdm.auto import tqdm
+from utils import getSplits
+
 class Config(object):
     def __init__(self, game):
 
@@ -7,10 +10,18 @@ class Config(object):
                 'answerFile' : 'wordLists/newWordleAnswers.txt',
                 'rStar' : '22222'
             },
+            'newerWordle' : {
+                'guessFile' : 'wordLists/newerWordleGuesses.txt',
+                'answerFile' : 'wordLists/newerWordleAnswers.txt',
+                'rStar' : '22222',
+                'maxsplits': 150,
+                'upper_bound': 7883
+            },
             'oldWordle': {
                 'guessFile' : 'wordLists/oldWordleGuesses.txt',
                 'answerFile' : 'wordLists/oldWordleAnswers.txt',
-                'rStar' : '22222'
+                'rStar' : '22222',
+                'maxsplits': 150,
             },
             'primel': {
                 'guessFile' : 'wordLists/primelWords.txt',
@@ -50,6 +61,13 @@ class Config(object):
         self.guesses = self.readFromFile(config['guessFile'])
         self.answers = self.readFromFile(config['answerFile'])
         self.rStar = config['rStar']
+        if 'maxsplits' in config:
+            self.maxsplits = config['maxsplits']
+        else:
+            self.maxsplits = max(len(getSplits(g, self.answers)) for g in tqdm(self.guesses, desc="TEMPORARY MAXSPLITS"))
+            print("SAVE THIS VALUE:", self.maxsplits)
+
+        self.upper_bound = config.get('upper_bound', 99999)
 
     def readFromFile(self, fname):
         with open(fname,'r') as f:

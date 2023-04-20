@@ -56,12 +56,12 @@ class WorstOptimizer(BaseOptimizer):
             # print('also here', len(possibleAnswers))
 
 
-            for g in tqdm(options, disable = not(depth <= self.DEBUG_LEVEL), colour = ['green','blue'][depth%2]):
+            for g in tqdm(options, disable = not(depth <= self.DEBUG_LEVEL), colour = ['green','blue'][depth%2], desc=f"Depth {depth}"):
                 splits = getSplits(g, possibleAnswers, useWords=True)
                 if len(splits) == 1: continue 
                 # if (depth == 1): print(splits)
                 t = [1,1]
-                for res, split in tqdm(splits.items(), disable = not(depth <= self.DEBUG_LEVEL), colour='yellow'):
+                for res, split in tqdm(splits.items(), disable = not(depth <= self.DEBUG_LEVEL), colour='yellow', desc=g):
                     if res == self.rStar: continue 
                     # if (depth <= 2):
                     #     print('    '*(depth-1),g,'-->',res)
@@ -91,7 +91,7 @@ class WorstOptimizer(BaseOptimizer):
         return self.bestScore[code]
 
 if __name__ == "__main__":
-    breadths = [30]
+    breadths = [50, 60, 70]
     for b in breadths:
         s = WorstOptimizer(
             hardMode = False,
