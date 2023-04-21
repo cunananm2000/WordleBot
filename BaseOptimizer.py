@@ -121,6 +121,7 @@ class BaseOptimizer(object):
         print("MAX_DEPTH:",self.MAX_DEPTH)
         score = self.bestScore[(self.encode(self.S,self.S), self.encode(self.G,self.G))]
         print("BEST SCORE:", score)
+        print("BEST TOTAL", score * len(self.S))
         print("HITS:", self.HITS)
         print("BREACHES:", self.BREACHES)
         print("CALLS: ", self.CALLS)

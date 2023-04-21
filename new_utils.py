@@ -1,6 +1,8 @@
 from typing import Dict, List, Tuple
 
-from new_definitions import CACHE_LIMIT
+from tqdm import tqdm
+
+from new_definitions import CACHE_LIMIT, Valuation
 
 
 class CHECK_CACHE:
@@ -102,6 +104,10 @@ def get_splits_with_count(g: str, C: List[str]) -> Dict[str, int]:
     return splits
 
 
+def max_splits(G: List[str], C: List[str]) -> int:
+    return max(len(get_splits_with_count(g, C)) for g in G)
+
+
 def soft_match(guess: str, res: str, cand: str) -> bool:
     used = [False] * len(guess)
     for i, (g, r, c) in enumerate(zip(guess, res, cand)):
@@ -132,8 +138,7 @@ def no_filter_possible(g: str, r: str, C: List[str]) -> List[str]:
     return C
 
 
-def soft_filter_multiple(
-        history: List[Tuple[str, str]], C: List[str]) -> List[str]:
+def soft_filter_multiple(history: List[Tuple[str, str]], C: List[str]) -> List[str]:
     for g, r in history:
         C = soft_filter_possible(g, r, C)
     return C
@@ -141,7 +146,7 @@ def soft_filter_multiple(
 
 def encode(subset: List[str], superset: List[str]) -> int:
     if len(subset) == len(superset):
-        return -1
+        return 0
     t = 0
     for c in subset:
         t |= 1 << (len(superset) - superset.index(c) - 1)
@@ -179,10 +184,19 @@ def useful_guesses(G: List[str], C: List[str]) -> List[str]:
     return [g for g in G if is_useful(g, C)]
 
 
-def sort_words(G: List[str], S: List[str], vals:, n, show_progress = False):
-    if n >= len(G):
+def sort_words(
+    G: List[str],
+    S: List[str],
+    vals: List[Valuation],
+    n: int = -1,
+    show_progress: bool = False,
+) -> List[str]:
+    if n >= len(G) or n == -1:
         return G
-    scores = [(tuple((v(g, S) for v in vals)), g)
-              for g in tqdm(G, disable=not show_progress, colour='red')]
-    scores.sort()
+    scores = sorted(
+        [
+            (tuple((v(g, S) for v in vals)), g)
+            for g in tqdm(G, disable=not show_progress, colour="red", desc="Sorting")
+        ]
+    )
     return [g for _, g in scores[:n]]

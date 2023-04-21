@@ -9,5 +9,6 @@
         "vector": "cpp",
         "ostream": "cpp"
     },
-    "python.linting.mypyEnabled": true
+    "python.linting.mypyEnabled": true,
+    "cSpell.enabled": false
 }

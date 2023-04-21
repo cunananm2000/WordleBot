@@ -57,7 +57,6 @@ class AverageOptimizer(BaseOptimizer):
                 showProg = (depth <= self.DEBUG_LEVEL),
             )
 
-
             # print(options)
             # options.sort(key=lambda g: inSet(g, possibleAnswers))
 
@@ -103,25 +102,25 @@ class AverageOptimizer(BaseOptimizer):
 
 if __name__ == "__main__":
 
-    for b in [1,5,10,20]:
-    # for game_name in [
-    #     # "oldWordle",
-    #     # "mininerdle",
-    #     # "ffxivrdle",
-    #     # "bardle",
-    #     # "primel",
-    #     # "nerdle",
-    # ]:
+    for b in [1, 5, 10]:
+        for game_name in [
+            # "oldWordle",
+            # "mininerdle",
+            # "ffxivrdle",
+            "bardle",
+            # "primel",
+            # "nerdle",
+        ]:
 
-        s = AverageOptimizer(
-            hardMode = False,
-            MAX_BREADTH = b,
-            game = 'oldWordle',
-            DEBUG_LEVEL = 1,
-            fname = None, #'oldWordle_50',
-            MAX_DEPTH = 7,
-        )
+            s = AverageOptimizer(
+                hardMode = False,
+                MAX_BREADTH = b,
+                game = game_name,
+                DEBUG_LEVEL = 0,
+                fname = None, #'oldWordle_50',
+                MAX_DEPTH = 7,
+            )
 
-        s.writeJson()
-        s.showStats()
-        s.writeWordList()
+            s.writeJson()
+            s.showStats()
+            s.writeWordList()

@@ -1,14 +1,10 @@
 import json
-from typing import Dict, List, Optional, Tuple, Union
+from typing import Dict, List, Optional, Tuple
 
 from new_config import Game
-from new_utils import (
-    encode,
-    get_splits_with_words,
-    no_filter_possible,
-    save_as_word_list,
-    soft_filter_possible,
-)
+from new_definitions import Tree, Valuation
+from new_utils import (encode, get_splits_with_words, no_filter_possible,
+                       save_as_word_list, soft_filter_possible)
 from new_valuations import multiVal
 
 
@@ -73,23 +69,24 @@ class BaseOptimizer:
         guess = self.best_guess[code]
         score = self.best_score[code]
 
-        tree: Dict[str, Union[str, int, Dict]] = {
+        tree: Tree = {
             "guess": guess,
             "score": score,
             "n_remaining": len(possible_secrets),
         }
 
         if len(possible_secrets) != 1:
-            tree["splits"] = {}
+            tree_splits = {}
             splits = get_splits_with_words(guess, possible_secrets)
             for res, split in splits.items():
                 if res == self.r_star:
                     continue
-                tree["splits"][res] = self.generate_tree(
+                tree_splits[res] = self.generate_tree(
                     possible_guesses=self.guess_filter(guess, res, possible_guesses),
                     possible_secrets=split,
                     depth=depth + 1,
                 )
+            tree["splits"] = tree_splits
 
         return tree
 
@@ -117,15 +114,16 @@ class BaseOptimizer:
         )
         print(f"Wrote word list at {self.file_name}.txt")
 
-    def showStats(self):
+    def show_stats(self):
         print("----- GAME:", self.game_name.capitalize(), "-----")
         print("HARD MODE ON?:", self.hard_mode)
-        print("# POSSIBLE SECRETS:", len(self.S))
         print("# POSSIBLE GUESSES:", len(self.G))
+        print("# POSSIBLE SECRETS:", len(self.S))
         print("MAX BREADTH:", self.max_breadth)
         print("MAX_DEPTH:", self.max_depth)
-        score = self.best_score[(encode(self.S, self.S), encode(self.G, self.G))]
+        score = self.best_score[(encode(self.G, self.G), encode(self.S, self.S))]
         print("BEST SCORE:", score)
+        print("BEST EXPECTED:", score / len(self.S))
         print("HITS:", self.hits)
         print("BREACHES:", self.breaches)
         print("CALLS: ", self.calls)

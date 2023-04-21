@@ -7,7 +7,6 @@ from utils import getSplits
 def inSet(g, C):
     return 0 if g in C else 1
 
-
 # tares
 # The best case would have the maximum be 1
 def maxSizeSplit(g, C):
