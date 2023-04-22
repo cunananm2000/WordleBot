@@ -97,6 +97,10 @@ class BaseOptimizer:
                 possible_secrets=self.S,
             )
         return self.tree
+    
+    def get_best_score(self) -> int:
+        tree = self.get_tree()
+        return tree["score"]
 
     def to_json(self):
         print(f"Writing JSON to {self.file_name}.json")

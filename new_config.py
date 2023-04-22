@@ -33,6 +33,7 @@ NewerWordleConfig = GameConfig(
     guess_file="wordLists/newerWordleGuesses.txt",
     secret_file="wordLists/newerWordleAnswers.txt",
     r_star="22222",
+    max_splits=150,
     upper_bound=7883,
 )
 
@@ -117,7 +118,7 @@ class Game:
                 len(get_splits_with_count(g, game.secrets))
                 for g in tqdm(game.guesses, desc="TEMPORARY max_splits")
             )
-            print("CALCULATED MAX_SPLITS =", max_splits)
+            assert ValueError(f"Hard code this in future: {max_splits}")
 
         game.max_splits = max_splits
 
