@@ -1,6 +1,6 @@
 {
     "guess": "raise",
-    "n_remaining": 168,
+    "n_remaining": 0,
     "score": [
         4,
         1
@@ -8,7 +8,7 @@
     "splits": {
         "00000": {
             "guess": "huton",
-            "n_remaining": 7,
+            "n_remaining": 0,
             "score": [
                 2,
                 6
@@ -16,7 +16,7 @@
             "splits": {
                 "00010": {
                     "guess": "block",
-                    "n_remaining": 1,
+                    "n_remaining": 0,
                     "score": [
                         1,
                         1
@@ -24,7 +24,7 @@
                 },
                 "00011": {
                     "guess": "gnoll",
-                    "n_remaining": 1,
+                    "n_remaining": 0,
                     "score": [
                         1,
                         1
@@ -32,7 +32,7 @@
                 },
                 "00222": {
                     "guess": "doton",
-                    "n_remaining": 1,
+                    "n_remaining": 0,
                     "score": [
                         1,
                         1
@@ -40,7 +40,7 @@
                 },
                 "02000": {
                     "guess": "dummy",
-                    "n_remaining": 1,
+                    "n_remaining": 0,
                     "score": [
                         1,
                         1
@@ -48,7 +48,7 @@
                 },
                 "02001": {
                     "guess": "bunny",
-                    "n_remaining": 1,
+                    "n_remaining": 0,
                     "score": [
                         1,
                         1
@@ -56,7 +56,7 @@
                 },
                 "02010": {
                     "guess": "bukyo",
-                    "n_remaining": 1,
+                    "n_remaining": 0,
                     "score": [
                         1,
                         1
@@ -66,7 +66,7 @@
         },
         "00001": {
             "guess": "feoul",
-            "n_remaining": 4,
+            "n_remaining": 0,
             "score": [
                 2,
                 3
@@ -74,7 +74,7 @@
             "splits": {
                 "01000": {
                     "guess": "cymet",
-                    "n_remaining": 1,
+                    "n_remaining": 0,
                     "score": [
                         1,
                         1
@@ -82,7 +82,7 @@
                 },
                 "02010": {
                     "guess": "genbu",
-                    "n_remaining": 1,
+                    "n_remaining": 0,
                     "score": [
                         1,
                         1
@@ -90,7 +90,7 @@
                 },
                 "02100": {
                     "guess": "gekko",
-                    "n_remaining": 1,
+                    "n_remaining": 0,
                     "score": [
                         1,
                         1
@@ -100,7 +100,7 @@
         },
         "00002": {
             "guess": "globe",
-            "n_remaining": 5,
+            "n_remaining": 0,
             "score": [
                 2,
                 4
@@ -108,7 +108,7 @@
             "splits": {
                 "00102": {
                     "guess": "voyce",
-                    "n_remaining": 1,
+                    "n_remaining": 0,
                     "score": [
                         1,
                         1
@@ -116,7 +116,7 @@
                 },
                 "01002": {
                     "guess": "melee",
-                    "n_remaining": 1,
+                    "n_remaining": 0,
                     "score": [
                         1,
                         1
@@ -124,7 +124,7 @@
                 },
                 "01102": {
                     "guess": "khloe",
-                    "n_remaining": 1,
+                    "n_remaining": 0,
                     "score": [
                         1,
                         1
@@ -132,7 +132,7 @@
                 },
                 "10002": {
                     "guess": "wedge",
-                    "n_remaining": 1,
+                    "n_remaining": 0,
                     "score": [
                         1,
                         1
@@ -142,7 +142,7 @@
         },
         "00010": {
             "guess": "books",
-            "n_remaining": 4,
+            "n_remaining": 0,
             "score": [
                 2,
                 3
@@ -150,7 +150,7 @@
             "splits": {
                 "00001": {
                     "guess": "sylph",
-                    "n_remaining": 1,
+                    "n_remaining": 0,
                     "score": [
                         1,
                         1
@@ -158,7 +158,7 @@
                 },
                 "02002": {
                     "guess": "lochs",
-                    "n_remaining": 1,
+                    "n_remaining": 0,
                     "score": [
                         1,
                         1
@@ -166,7 +166,7 @@
                 },
                 "02102": {
                     "guess": "holos",
-                    "n_remaining": 1,
+                    "n_remaining": 0,
                     "score": [
                         1,
                         1
@@ -176,7 +176,7 @@
         },
         "00011": {
             "guess": "cones",
-            "n_remaining": 3,
+            "n_remaining": 0,
             "score": [
                 2,
                 2
@@ -184,7 +184,7 @@
             "splits": {
                 "00021": {
                     "guess": "sleep",
-                    "n_remaining": 1,
+                    "n_remaining": 0,
                     "score": [
                         1,
                         1
@@ -192,7 +192,7 @@
                 },
                 "00022": {
                     "guess": "eques",
-                    "n_remaining": 1,
+                    "n_remaining": 0,
                     "score": [
                         1,
                         1
@@ -202,7 +202,7 @@
         },
         "00012": {
             "guess": "stone",
-            "n_remaining": 1,
+            "n_remaining": 0,
             "score": [
                 1,
                 1
@@ -210,7 +210,7 @@
         },
         "00022": {
             "guess": "house",
-            "n_remaining": 1,
+            "n_remaining": 0,
             "score": [
                 1,
                 1
@@ -218,7 +218,7 @@
         },
         "00100": {
             "guess": "lupin",
-            "n_remaining": 9,
+            "n_remaining": 0,
             "score": [
                 2,
                 8
@@ -226,7 +226,7 @@
             "splits": {
                 "00010": {
                     "guess": "giott",
-                    "n_remaining": 1,
+                    "n_remaining": 0,
                     "score": [
                         1,
                         1
@@ -234,7 +234,7 @@
                 },
                 "00020": {
                     "guess": "ffxiv",
-                    "n_remaining": 1,
+                    "n_remaining": 0,
                     "score": [
                         1,
                         1
@@ -242,7 +242,7 @@
                 },
                 "00022": {
                     "guess": "kojin",
-                    "n_remaining": 1,
+                    "n_remaining": 0,
                     "score": [
                         1,
                         1
@@ -250,7 +250,7 @@
                 },
                 "00110": {
                     "guess": "pitch",
-                    "n_remaining": 1,
+                    "n_remaining": 0,
                     "score": [
                         1,
                         1
@@ -258,7 +258,7 @@
                 },
                 "00120": {
                     "guess": "optio",
-                    "n_remaining": 1,
+                    "n_remaining": 0,
                     "score": [
                         1,
                         1
@@ -266,7 +266,7 @@
                 },
                 "01111": {
                     "guess": "jinpu",
-                    "n_remaining": 1,
+                    "n_remaining": 0,
                     "score": [
                         1,
                         1
@@ -274,7 +274,7 @@
                 },
                 "10020": {
                     "guess": "vigil",
-                    "n_remaining": 1,
+                    "n_remaining": 0,
                     "score": [
                         1,
                         1
@@ -282,7 +282,7 @@
                 },
                 "21010": {
                     "guess": "louhi",
-                    "n_remaining": 1,
+                    "n_remaining": 0,
                     "score": [
                         1,
                         1
@@ -292,7 +292,7 @@
         },
         "00101": {
             "guess": "uimet",
-            "n_remaining": 2,
+            "n_remaining": 0,
             "score": [
                 2,
                 1
@@ -300,7 +300,7 @@
             "splits": {
                 "01010": {
                     "guess": "eldid",
-                    "n_remaining": 1,
+                    "n_remaining": 0,
                     "score": [
                         1,
                         1
@@ -310,7 +310,7 @@
         },
         "00102": {
             "guess": "title",
-            "n_remaining": 2,
+            "n_remaining": 0,
             "score": [
                 2,
                 1
@@ -318,7 +318,7 @@
             "splits": {
                 "01012": {
                     "guess": "ellie",
-                    "n_remaining": 1,
+                    "n_remaining": 0,
                     "score": [
                         1,
                         1
@@ -328,7 +328,7 @@
         },
         "00110": {
             "guess": "dosis",
-            "n_remaining": 2,
+            "n_remaining": 0,
             "score": [
                 2,
                 1
@@ -336,7 +336,7 @@
             "splits": {
                 "00012": {
                     "guess": "biggs",
-                    "n_remaining": 1,
+                    "n_remaining": 0,
                     "score": [
                         1,
                         1
@@ -346,7 +346,7 @@
         },
         "00111": {
             "guess": "elpis",
-            "n_remaining": 1,
+            "n_remaining": 0,
             "score": [
                 1,
                 1
@@ -354,7 +354,7 @@
         },
         "00200": {
             "guess": "iliud",
-            "n_remaining": 3,
+            "n_remaining": 0,
             "score": [
                 2,
                 2
@@ -362,7 +362,7 @@
             "splits": {
                 "00200": {
                     "guess": "think",
-                    "n_remaining": 1,
+                    "n_remaining": 0,
                     "score": [
                         1,
                         1
@@ -370,7 +370,7 @@
                 },
                 "20200": {
                     "guess": "ixion",
-                    "n_remaining": 1,
+                    "n_remaining": 0,
                     "score": [
                         1,
                         1
@@ -380,7 +380,7 @@
         },
         "00201": {
             "guess": "feint",
-            "n_remaining": 1,
+            "n_remaining": 0,
             "score": [
                 1,
                 1
@@ -388,7 +388,7 @@
         },
         "00202": {
             "guess": "twine",
-            "n_remaining": 2,
+            "n_remaining": 0,
             "score": [
                 2,
                 1
@@ -396,7 +396,7 @@
             "splits": {
                 "11202": {
                     "guess": "white",
-                    "n_remaining": 1,
+                    "n_remaining": 0,
                     "score": [
                         1,
                         1
@@ -406,7 +406,7 @@
         },
         "00210": {
             "guess": "shifu",
-            "n_remaining": 3,
+            "n_remaining": 0,
             "score": [
                 2,
                 2
@@ -414,7 +414,7 @@
             "splits": {
                 "10200": {
                     "guess": "coils",
-                    "n_remaining": 1,
+                    "n_remaining": 0,
                     "score": [
                         1,
                         1
@@ -422,7 +422,7 @@
                 },
                 "20220": {
                     "guess": "swift",
-                    "n_remaining": 1,
+                    "n_remaining": 0,
                     "score": [
                         1,
                         1
@@ -432,7 +432,7 @@
         },
         "00212": {
             "guess": "seize",
-            "n_remaining": 2,
+            "n_remaining": 0,
             "score": [
                 2,
                 1
@@ -440,7 +440,7 @@
             "splits": {
                 "20202": {
                     "guess": "slice",
-                    "n_remaining": 1,
+                    "n_remaining": 0,
                     "score": [
                         1,
                         1
@@ -450,7 +450,7 @@
         },
         "01000": {
             "guess": "huaca",
-            "n_remaining": 9,
+            "n_remaining": 0,
             "score": [
                 2,
                 8
@@ -458,7 +458,7 @@
             "splits": {
                 "00002": {
                     "guess": "bozja",
-                    "n_remaining": 1,
+                    "n_remaining": 0,
                     "score": [
                         1,
                         1
@@ -466,7 +466,7 @@
                 },
                 "00012": {
                     "guess": "cylva",
-                    "n_remaining": 1,
+                    "n_remaining": 0,
                     "score": [
                         1,
                         1
@@ -474,7 +474,7 @@
                 },
                 "02202": {
                     "guess": "quaga",
-                    "n_remaining": 1,
+                    "n_remaining": 0,
                     "score": [
                         1,
                         1
@@ -482,7 +482,7 @@
                 },
                 "10102": {
                     "guess": "alpha",
-                    "n_remaining": 1,
+                    "n_remaining": 0,
                     "score": [
                         1,
                         1
@@ -490,7 +490,7 @@
                 },
                 "10200": {
                     "guess": "gnath",
-                    "n_remaining": 1,
+                    "n_remaining": 0,
                     "score": [
                         1,
                         1
@@ -498,7 +498,7 @@
                 },
                 "10220": {
                     "guess": "mhach",
-                    "n_remaining": 1,
+                    "n_remaining": 0,
                     "score": [
                         1,
                         1
@@ -506,7 +506,7 @@
                 },
                 "11100": {
                     "guess": "uldah",
-                    "n_remaining": 1,
+                    "n_remaining": 0,
                     "score": [
                         1,
                         1
@@ -514,7 +514,7 @@
                 },
                 "12200": {
                     "guess": "fuath",
-                    "n_remaining": 1,
+                    "n_remaining": 0,
                     "score": [
                         1,
                         1
@@ -524,7 +524,7 @@
         },
         "01001": {
             "guess": "almet",
-            "n_remaining": 6,
+            "n_remaining": 0,
             "score": [
                 2,
                 5
@@ -532,7 +532,7 @@
             "splits": {
                 "10010": {
                     "guess": "kefka",
-                    "n_remaining": 1,
+                    "n_remaining": 0,
                     "score": [
                         1,
                         1
@@ -540,7 +540,7 @@
                 },
                 "10012": {
                     "guess": "venat",
-                    "n_remaining": 1,
+                    "n_remaining": 0,
                     "score": [
                         1,
                         1
@@ -548,7 +548,7 @@
                 },
                 "10020": {
                     "guess": "ennea",
-                    "n_remaining": 1,
+                    "n_remaining": 0,
                     "score": [
                         1,
                         1
@@ -556,7 +556,7 @@
                 },
                 "10110": {
                     "guess": "omega",
-                    "n_remaining": 1,
+                    "n_remaining": 0,
                     "score": [
                         1,
                         1
@@ -564,7 +564,7 @@
                 },
                 "11010": {
                     "guess": "zepla",
-                    "n_remaining": 1,
+                    "n_remaining": 0,
                     "score": [
                         1,
                         1
@@ -574,7 +574,7 @@
         },
         "01002": {
             "guess": "blaze",
-            "n_remaining": 4,
+            "n_remaining": 0,
             "score": [
                 2,
                 3
@@ -582,7 +582,7 @@
             "splits": {
                 "01102": {
                     "guess": "addle",
-                    "n_remaining": 1,
+                    "n_remaining": 0,
                     "score": [
                         1,
                         1
@@ -590,7 +590,7 @@
                 },
                 "01202": {
                     "guess": "whale",
-                    "n_remaining": 1,
+                    "n_remaining": 0,
                     "score": [
                         1,
                         1
@@ -598,7 +598,7 @@
                 },
                 "02202": {
                     "guess": "clave",
-                    "n_remaining": 1,
+                    "n_remaining": 0,
                     "score": [
                         1,
                         1
@@ -608,7 +608,7 @@
         },
         "01010": {
             "guess": "chaos",
-            "n_remaining": 3,
+            "n_remaining": 0,
             "score": [
                 2,
                 2
@@ -616,7 +616,7 @@
             "splits": {
                 "02111": {
                     "guess": "shoha",
-                    "n_remaining": 1,
+                    "n_remaining": 0,
                     "score": [
                         1,
                         1
@@ -624,7 +624,7 @@
                 },
                 "10201": {
                     "guess": "stack",
-                    "n_remaining": 1,
+                    "n_remaining": 0,
                     "score": [
                         1,
                         1
@@ -634,7 +634,7 @@
         },
         "01011": {
             "guess": "esuna",
-            "n_remaining": 2,
+            "n_remaining": 0,
             "score": [
                 2,
                 1
@@ -642,7 +642,7 @@
             "splits": {
                 "11001": {
                     "guess": "peaks",
-                    "n_remaining": 1,
+                    "n_remaining": 0,
                     "score": [
                         1,
                         1
@@ -652,7 +652,7 @@
         },
         "01012": {
             "guess": "scape",
-            "n_remaining": 1,
+            "n_remaining": 0,
             "score": [
                 1,
                 1
@@ -660,7 +660,7 @@
         },
         "01020": {
             "guess": "flash",
-            "n_remaining": 1,
+            "n_remaining": 0,
             "score": [
                 1,
                 1
@@ -668,7 +668,7 @@
         },
         "01100": {
             "guess": "chain",
-            "n_remaining": 10,
+            "n_remaining": 0,
             "score": [
                 3,
                 1
@@ -676,7 +676,7 @@
             "splits": {
                 "00110": {
                     "guess": "ixtab",
-                    "n_remaining": 1,
+                    "n_remaining": 0,
                     "score": [
                         1,
                         1
@@ -684,7 +684,7 @@
                 },
                 "00111": {
                     "guess": "ninja",
-                    "n_remaining": 2,
+                    "n_remaining": 0,
                     "score": [
                         2,
                         1
@@ -692,7 +692,7 @@
                     "splits": {
                         "02201": {
                             "guess": "final",
-                            "n_remaining": 1,
+                            "n_remaining": 0,
                             "score": [
                                 1,
                                 1
@@ -702,7 +702,7 @@
                 },
                 "00112": {
                     "guess": "titan",
-                    "n_remaining": 1,
+                    "n_remaining": 0,
                     "score": [
                         1,
                         1
@@ -710,7 +710,7 @@
                 },
                 "00121": {
                     "guess": "anvil",
-                    "n_remaining": 1,
+                    "n_remaining": 0,
                     "score": [
                         1,
                         1
@@ -718,7 +718,7 @@
                 },
                 "00210": {
                     "guess": "ixali",
-                    "n_remaining": 1,
+                    "n_remaining": 0,
                     "score": [
                         1,
                         1
@@ -726,7 +726,7 @@
                 },
                 "00220": {
                     "guess": "avail",
-                    "n_remaining": 1,
+                    "n_remaining": 0,
                     "score": [
                         1,
                         1
@@ -734,7 +734,7 @@
                 },
                 "00222": {
                     "guess": "owain",
-                    "n_remaining": 1,
+                    "n_remaining": 0,
                     "score": [
                         1,
                         1
@@ -742,7 +742,7 @@
                 },
                 "01110": {
                     "guess": "hilda",
-                    "n_remaining": 1,
+                    "n_remaining": 0,
                     "score": [
                         1,
                         1
@@ -752,7 +752,7 @@
         },
         "01102": {
             "guess": "allie",
-            "n_remaining": 1,
+            "n_remaining": 0,
             "score": [
                 1,
                 1
@@ -760,7 +760,7 @@
         },
         "01110": {
             "guess": "aldis",
-            "n_remaining": 3,
+            "n_remaining": 0,
             "score": [
                 2,
                 2
@@ -768,7 +768,7 @@
             "splits": {
                 "10212": {
                     "guess": "midas",
-                    "n_remaining": 1,
+                    "n_remaining": 0,
                     "score": [
                         1,
                         1
@@ -776,7 +776,7 @@
                 },
                 "11021": {
                     "guess": "snail",
-                    "n_remaining": 1,
+                    "n_remaining": 0,
                     "score": [
                         1,
                         1
@@ -786,7 +786,7 @@
         },
         "01200": {
             "guess": "anima",
-            "n_remaining": 1,
+            "n_remaining": 0,
             "score": [
                 1,
                 1
@@ -794,7 +794,7 @@
         },
         "01210": {
             "guess": "shiva",
-            "n_remaining": 1,
+            "n_remaining": 0,
             "score": [
                 1,
                 1
@@ -802,7 +802,7 @@
         },
         "02000": {
             "guess": "katon",
-            "n_remaining": 7,
+            "n_remaining": 0,
             "score": [
                 2,
                 6
@@ -810,7 +810,7 @@
             "splits": {
                 "02002": {
                     "guess": "valan",
-                    "n_remaining": 1,
+                    "n_remaining": 0,
                     "score": [
                         1,
                         1
@@ -818,7 +818,7 @@
                 },
                 "02011": {
                     "guess": "hanzo",
-                    "n_remaining": 1,
+                    "n_remaining": 0,
                     "score": [
                         1,
                         1
@@ -826,7 +826,7 @@
                 },
                 "02021": {
                     "guess": "fanow",
-                    "n_remaining": 1,
+                    "n_remaining": 0,
                     "score": [
                         1,
                         1
@@ -834,7 +834,7 @@
                 },
                 "02022": {
                     "guess": "dawon",
-                    "n_remaining": 1,
+                    "n_remaining": 0,
                     "score": [
                         1,
                         1
@@ -842,7 +842,7 @@
                 },
                 "02100": {
                     "guess": "vault",
-                    "n_remaining": 1,
+                    "n_remaining": 0,
                     "score": [
                         1,
                         1
@@ -850,7 +850,7 @@
                 },
                 "02102": {
                     "guess": "talan",
-                    "n_remaining": 1,
+                    "n_remaining": 0,
                     "score": [
                         1,
                         1
@@ -860,7 +860,7 @@
         },
         "02002": {
             "guess": "gauge",
-            "n_remaining": 2,
+            "n_remaining": 0,
             "score": [
                 2,
                 1
@@ -868,7 +868,7 @@
             "splits": {
                 "02002": {
                     "guess": "xande",
-                    "n_remaining": 1,
+                    "n_remaining": 0,
                     "score": [
                         1,
                         1
@@ -878,7 +878,7 @@
         },
         "02010": {
             "guess": "kasha",
-            "n_remaining": 4,
+            "n_remaining": 0,
             "score": [
                 2,
                 3
@@ -886,7 +886,7 @@
             "splits": {
                 "02100": {
                     "guess": "lawns",
-                    "n_remaining": 1,
+                    "n_remaining": 0,
                     "score": [
                         1,
                         1
@@ -894,7 +894,7 @@
                 },
                 "02101": {
                     "guess": "safat",
-                    "n_remaining": 1,
+                    "n_remaining": 0,
                     "score": [
                         1,
                         1
@@ -902,7 +902,7 @@
                 },
                 "02220": {
                     "guess": "nashu",
-                    "n_remaining": 1,
+                    "n_remaining": 0,
                     "score": [
                         1,
                         1
@@ -912,7 +912,7 @@
         },
         "02011": {
             "guess": "hades",
-            "n_remaining": 2,
+            "n_remaining": 0,
             "score": [
                 2,
                 1
@@ -920,7 +920,7 @@
             "splits": {
                 "02022": {
                     "guess": "canes",
-                    "n_remaining": 1,
+                    "n_remaining": 0,
                     "score": [
                         1,
                         1
@@ -930,7 +930,7 @@
         },
         "02100": {
             "guess": "magic",
-            "n_remaining": 3,
+            "n_remaining": 0,
             "score": [
                 2,
                 2
@@ -938,7 +938,7 @@
             "splits": {
                 "02010": {
                     "guess": "nandi",
-                    "n_remaining": 1,
+                    "n_remaining": 0,
                     "score": [
                         1,
                         1
@@ -946,7 +946,7 @@
                 },
                 "12010": {
                     "guess": "namai",
-                    "n_remaining": 1,
+                    "n_remaining": 0,
                     "score": [
                         1,
                         1
@@ -956,7 +956,7 @@
         },
         "02110": {
             "guess": "sabik",
-            "n_remaining": 1,
+            "n_remaining": 0,
             "score": [
                 1,
                 1
@@ -964,7 +964,7 @@
         },
         "02200": {
             "guess": "haima",
-            "n_remaining": 1,
+            "n_remaining": 0,
             "score": [
                 1,
                 1
@@ -972,7 +972,7 @@
         },
         "02220": {
             "guess": "waist",
-            "n_remaining": 1,
+            "n_remaining": 0,
             "score": [
                 1,
                 1
@@ -980,7 +980,7 @@
         },
         "10000": {
             "guess": "furor",
-            "n_remaining": 3,
+            "n_remaining": 0,
             "score": [
                 2,
                 2
@@ -988,7 +988,7 @@
             "splits": {
                 "00110": {
                     "guess": "troll",
-                    "n_remaining": 1,
+                    "n_remaining": 0,
                     "score": [
                         1,
                         1
@@ -996,7 +996,7 @@
                 },
                 "01110": {
                     "guess": "mourn",
-                    "n_remaining": 1,
+                    "n_remaining": 0,
                     "score": [
                         1,
                         1
@@ -1006,7 +1006,7 @@
         },
         "10001": {
             "guess": "cover",
-            "n_remaining": 3,
+            "n_remaining": 0,
             "score": [
                 2,
                 2
@@ -1014,7 +1014,7 @@
             "splits": {
                 "00022": {
                     "guess": "tyger",
-                    "n_remaining": 1,
+                    "n_remaining": 0,
                     "score": [
                         1,
                         1
@@ -1022,7 +1022,7 @@
                 },
                 "01012": {
                     "guess": "ephor",
-                    "n_remaining": 1,
+                    "n_remaining": 0,
                     "score": [
                         1,
                         1
@@ -1032,7 +1032,7 @@
         },
         "10002": {
             "guess": "brume",
-            "n_remaining": 1,
+            "n_remaining": 0,
             "score": [
                 1,
                 1
@@ -1040,7 +1040,7 @@
         },
         "10010": {
             "guess": "snort",
-            "n_remaining": 1,
+            "n_remaining": 0,
             "score": [
                 1,
                 1
@@ -1048,7 +1048,7 @@
         },
         "10020": {
             "guess": "trust",
-            "n_remaining": 1,
+            "n_remaining": 0,
             "score": [
                 1,
                 1
@@ -1056,7 +1056,7 @@
         },
         "10100": {
             "guess": "ifrit",
-            "n_remaining": 2,
+            "n_remaining": 0,
             "score": [
                 2,
                 1
@@ -1064,7 +1064,7 @@
             "splits": {
                 "00120": {
                     "guess": "broil",
-                    "n_remaining": 1,
+                    "n_remaining": 0,
                     "score": [
                         1,
                         1
@@ -1074,7 +1074,7 @@
         },
         "10110": {
             "guess": "visor",
-            "n_remaining": 2,
+            "n_remaining": 0,
             "score": [
                 2,
                 1
@@ -1082,7 +1082,7 @@
             "splits": {
                 "01101": {
                     "guess": "strix",
-                    "n_remaining": 1,
+                    "n_remaining": 0,
                     "score": [
                         1,
                         1
@@ -1092,7 +1092,7 @@
         },
         "10111": {
             "guess": "siren",
-            "n_remaining": 1,
+            "n_remaining": 0,
             "score": [
                 1,
                 1
@@ -1100,7 +1100,7 @@
         },
         "10120": {
             "guess": "first",
-            "n_remaining": 1,
+            "n_remaining": 0,
             "score": [
                 1,
                 1
@@ -1108,7 +1108,7 @@
         },
         "10200": {
             "guess": "drill",
-            "n_remaining": 2,
+            "n_remaining": 0,
             "score": [
                 2,
                 1
@@ -1116,7 +1116,7 @@
             "splits": {
                 "01200": {
                     "guess": "chirp",
-                    "n_remaining": 1,
+                    "n_remaining": 0,
                     "score": [
                         1,
                         1
@@ -1126,7 +1126,7 @@
         },
         "10202": {
             "guess": "tribe",
-            "n_remaining": 2,
+            "n_remaining": 0,
             "score": [
                 2,
                 1
@@ -1134,7 +1134,7 @@
             "splits": {
                 "02202": {
                     "guess": "krile",
-                    "n_remaining": 1,
+                    "n_remaining": 0,
                     "score": [
                         1,
                         1
@@ -1144,7 +1144,7 @@
         },
         "10210": {
             "guess": "shirk",
-            "n_remaining": 1,
+            "n_remaining": 0,
             "score": [
                 1,
                 1
@@ -1152,7 +1152,7 @@
         },
         "11000": {
             "guess": "amaro",
-            "n_remaining": 7,
+            "n_remaining": 0,
             "score": [
                 2,
                 6
@@ -1160,7 +1160,7 @@
             "splits": {
                 "00220": {
                     "guess": "dwarf",
-                    "n_remaining": 1,
+                    "n_remaining": 0,
                     "score": [
                         1,
                         1
@@ -1168,7 +1168,7 @@
                 },
                 "10010": {
                     "guess": "lunar",
-                    "n_remaining": 1,
+                    "n_remaining": 0,
                     "score": [
                         1,
                         1
@@ -1176,7 +1176,7 @@
                 },
                 "10020": {
                     "guess": "vrtra",
-                    "n_remaining": 1,
+                    "n_remaining": 0,
                     "score": [
                         1,
                         1
@@ -1184,7 +1184,7 @@
                 },
                 "11021": {
                     "guess": "komra",
-                    "n_remaining": 1,
+                    "n_remaining": 0,
                     "score": [
                         1,
                         1
@@ -1192,7 +1192,7 @@
                 },
                 "20022": {
                     "guess": "aggro",
-                    "n_remaining": 1,
+                    "n_remaining": 0,
                     "score": [
                         1,
                         1
@@ -1200,7 +1200,7 @@
                 },
                 "21010": {
                     "guess": "aurum",
-                    "n_remaining": 1,
+                    "n_remaining": 0,
                     "score": [
                         1,
                         1
@@ -1210,7 +1210,7 @@
         },
         "11001": {
             "guess": "arena",
-            "n_remaining": 2,
+            "n_remaining": 0,
             "score": [
                 2,
                 1
@@ -1218,7 +1218,7 @@
             "splits": {
                 "21110": {
                     "guess": "aenor",
-                    "n_remaining": 1,
+                    "n_remaining": 0,
                     "score": [
                         1,
                         1
@@ -1228,7 +1228,7 @@
         },
         "11002": {
             "guess": "flare",
-            "n_remaining": 3,
+            "n_remaining": 0,
             "score": [
                 2,
                 2
@@ -1236,7 +1236,7 @@
             "splits": {
                 "00212": {
                     "guess": "trade",
-                    "n_remaining": 1,
+                    "n_remaining": 0,
                     "score": [
                         1,
                         1
@@ -1244,7 +1244,7 @@
                 },
                 "02222": {
                     "guess": "glare",
-                    "n_remaining": 1,
+                    "n_remaining": 0,
                     "score": [
                         1,
                         1
@@ -1254,7 +1254,7 @@
         },
         "11010": {
             "guess": "argos",
-            "n_remaining": 1,
+            "n_remaining": 0,
             "score": [
                 1,
                 1
@@ -1262,7 +1262,7 @@
         },
         "11020": {
             "guess": "crash",
-            "n_remaining": 1,
+            "n_remaining": 0,
             "score": [
                 1,
                 1
@@ -1270,7 +1270,7 @@
         },
         "11100": {
             "guess": "drain",
-            "n_remaining": 1,
+            "n_remaining": 0,
             "score": [
                 1,
                 1
@@ -1278,7 +1278,7 @@
         },
         "11101": {
             "guess": "viera",
-            "n_remaining": 1,
+            "n_remaining": 0,
             "score": [
                 1,
                 1
@@ -1286,7 +1286,7 @@
         },
         "11110": {
             "guess": "isari",
-            "n_remaining": 1,
+            "n_remaining": 0,
             "score": [
                 1,
                 1
@@ -1294,7 +1294,7 @@
         },
         "11200": {
             "guess": "triad",
-            "n_remaining": 1,
+            "n_remaining": 0,
             "score": [
                 1,
                 1
@@ -1302,7 +1302,7 @@
         },
         "12000": {
             "guess": "parry",
-            "n_remaining": 2,
+            "n_remaining": 0,
             "score": [
                 2,
                 1
@@ -1310,7 +1310,7 @@
             "splits": {
                 "02020": {
                     "guess": "macro",
-                    "n_remaining": 1,
+                    "n_remaining": 0,
                     "score": [
                         1,
                         1
@@ -1320,7 +1320,7 @@
         },
         "12001": {
             "guess": "earth",
-            "n_remaining": 1,
+            "n_remaining": 0,
             "score": [
                 1,
                 1
@@ -1328,7 +1328,7 @@
         },
         "12002": {
             "guess": "harpe",
-            "n_remaining": 1,
+            "n_remaining": 0,
             "score": [
                 1,
                 1
@@ -1336,7 +1336,7 @@
         },
         "12110": {
             "guess": "varis",
-            "n_remaining": 1,
+            "n_remaining": 0,
             "score": [
                 1,
                 1
@@ -1344,7 +1344,7 @@
         },
         "12200": {
             "guess": "fairy",
-            "n_remaining": 1,
+            "n_remaining": 0,
             "score": [
                 1,
                 1
@@ -1352,7 +1352,7 @@
         },
         "20001": {
             "guess": "regen",
-            "n_remaining": 1,
+            "n_remaining": 0,
             "score": [
                 1,
                 1
@@ -1360,7 +1360,7 @@
         },
         "20002": {
             "guess": "rogue",
-            "n_remaining": 1,
+            "n_remaining": 0,
             "score": [
                 1,
                 1
@@ -1368,7 +1368,7 @@
         },
         "20020": {
             "guess": "roost",
-            "n_remaining": 1,
+            "n_remaining": 0,
             "score": [
                 1,
                 1
@@ -1376,7 +1376,7 @@
         },
         "20101": {
             "guess": "river",
-            "n_remaining": 1,
+            "n_remaining": 0,
             "score": [
                 1,
                 1
@@ -1384,7 +1384,7 @@
         },
         "21000": {
             "guess": "runar",
-            "n_remaining": 1,
+            "n_remaining": 0,
             "score": [
                 1,
                 1
@@ -1392,7 +1392,7 @@
         },
         "21001": {
             "guess": "realm",
-            "n_remaining": 1,
+            "n_remaining": 0,
             "score": [
                 1,
                 1
@@ -1400,7 +1400,7 @@
         },
         "22000": {
             "guess": "ramuh",
-            "n_remaining": 1,
+            "n_remaining": 0,
             "score": [
                 1,
                 1
@@ -1408,7 +1408,7 @@
         },
         "22010": {
             "guess": "rasho",
-            "n_remaining": 1,
+            "n_remaining": 0,
             "score": [
                 1,
                 1

@@ -3,7 +3,7 @@ from typing import Dict, List
 
 from tqdm import tqdm
 
-from new_definitions import INFINITY
+from new_definitions import INFINITY, Guess, Secret
 from new_utils import get_splits_with_count, read_from_file
 
 
@@ -77,8 +77,8 @@ BardleConfig = GameConfig(
 @dataclass
 class Game:
     game_name: str
-    guesses: List[str]
-    secrets: List[str]
+    guesses: List[Guess]
+    secrets: List[Secret]
     r_star: str
     max_splits: int = -1
     upper_bound: int = INFINITY

@@ -6,8 +6,7 @@ from typing import Dict, List
 from tqdm import tqdm
 
 from new_config import Game
-from new_definitions import (BORDER, BOUND_DEBUG_LEVEL, INFINITY,
-                             MAX_BOUND_DEPTH)
+from new_definitions import BORDER, BOUND_DEBUG_LEVEL, INFINITY, MAX_BOUND_DEPTH
 from new_total_optimizer import TotalOptimizer
 from new_utils import get_splits_with_words, max_splits, useful_guesses
 
@@ -235,15 +234,15 @@ if __name__ == "__main__":
         game_result_file = f"V{depth}.txt"
 
         todo_next = []
-        for g in tqdm(todo):
+        for f in tqdm(todo):
             with open(f"{game_result_folder}/{game_result_file}", "a+") as f:
-                score = V(depth, g, game.secrets, upper_bound=game.upper_bound)
-                f.write(f"{g} --> {score}\n")
+                score = V(depth, f, game.secrets, upper_bound=game.upper_bound)
+                f.write(f"{f} --> {score}\n")
                 if score <= game.upper_bound:
-                    todo_next.append(g)
+                    todo_next.append(f)
                 below += score < game.upper_bound
                 processed += 1
-                print(f"{len(todo_next)}/{processed}: {g} --> {score}")
+                print(f"{len(todo_next)}/{processed}: {f} --> {score}")
 
         with open(f"{game_result_folder}/{game_result_file}", "a+") as f:
             f.write(f"{BORDER}\n")

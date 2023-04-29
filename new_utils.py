@@ -1,8 +1,8 @@
-from typing import Dict, List, Tuple
+from typing import Dict, List, Tuple, Union
 
 from tqdm import tqdm
 
-from new_definitions import CACHE_LIMIT, Valuation
+from new_definitions import CACHE_LIMIT, Guess, Response, Secret, Tree, Valuation
 
 
 class CHECK_CACHE:
@@ -22,7 +22,7 @@ def read_from_file(fname: str) -> List[str]:
         return [s.strip() for s in f]
 
 
-def check(g: str, s: str, debug: bool = False) -> str:
+def check(g: Guess, s: Secret) -> Response:
     """Checking function comparing s to g
 
     Args:
@@ -68,7 +68,7 @@ def check(g: str, s: str, debug: bool = False) -> str:
     return out
 
 
-def get_splits_with_words(g: str, C: List[str]) -> Dict[str, List[str]]:
+def get_splits_with_words(g: Guess, C: List[Secret]) -> Dict[Response, List[Secret]]:
     """Get the splits as a dict. Key is guess, value is the split corresponding to guess.
 
     Args:
@@ -87,7 +87,7 @@ def get_splits_with_words(g: str, C: List[str]) -> Dict[str, List[str]]:
     return splits
 
 
-def get_splits_with_count(g: str, C: List[str]) -> Dict[str, int]:
+def get_splits_with_count(g: Guess, C: List[Secret]) -> Dict[Response, int]:
     """Get the splits as a dict. Key is guess, value is the size of the split.
 
     Args:
@@ -104,11 +104,11 @@ def get_splits_with_count(g: str, C: List[str]) -> Dict[str, int]:
     return splits
 
 
-def max_splits(G: List[str], C: List[str]) -> int:
+def max_splits(G: List[Guess], C: List[Secret]) -> int:
     return max(len(get_splits_with_count(g, C)) for g in G)
 
 
-def soft_match(guess: str, res: str, cand: str) -> bool:
+def soft_match(guess: Guess, res: str, cand: Union[Guess, Secret]) -> bool:
     used = [False] * len(guess)
     for i, (g, r, c) in enumerate(zip(guess, res, cand)):
         if r == "2":
@@ -130,15 +130,21 @@ def soft_match(guess: str, res: str, cand: str) -> bool:
     return True
 
 
-def soft_filter_possible(g: str, r: str, C: List[str]) -> List[str]:
+def soft_filter_possible(
+    g: Guess, r: Response, C: List[Union[Guess, Secret]]
+) -> List[Union[Guess, Secret]]:
     return [c for c in C if soft_match(g, r, c)]
 
 
-def no_filter_possible(g: str, r: str, C: List[str]) -> List[str]:
+def no_filter_possible(
+    g: Guess, r: Response, C: List[Union[Guess, Secret]]
+) -> List[Union[Guess, Secret]]:
     return C
 
 
-def soft_filter_multiple(history: List[Tuple[str, str]], C: List[str]) -> List[str]:
+def soft_filter_multiple(
+    history: List[Tuple[Guess, Response]], C: List[Union[Guess, Secret]]
+) -> List[Union[Guess, Secret]]:
     for g, r in history:
         C = soft_filter_possible(g, r, C)
     return C
@@ -153,7 +159,7 @@ def encode(subset: List[str], superset: List[str]) -> int:
     return t
 
 
-def is_useful(guess, C):
+def is_useful(guess: Guess, C: List[Secret]) -> bool:
     if len(C) <= 1:
         return guess in C
     res = check(guess, C[0])
@@ -164,29 +170,29 @@ def is_useful(guess, C):
     return False
 
 
-def save_as_word_list(tree: Dict, file_name: str, secrets: List[str]):
-    with open(file_name, "w") as g:
+def save_as_word_list(tree: Tree, file_name: str, secrets: List[str]):
+    with open(file_name, "w") as f:
         for s in secrets:
             ans = []
             curr = tree
             while True:
-                ans.append(curr["guess"])
-                if curr["guess"] == s:
+                ans.append(curr.guess)
+                if curr.guess == s:
                     break
-                res = check(curr["guess"], s)
-                curr = curr["splits"][res]
-            g.write(",".join(ans) + "\n")
+                res = check(curr.guess, s)
+                curr = curr.splits[res]
+            f.write(",".join(ans) + "\n")
 
 
-def useful_guesses(G: List[str], C: List[str]) -> List[str]:
+def useful_guesses(G: List[Guess], C: List[Secret]) -> List[Guess]:
     if len(C) <= 1:
         return C.copy()
     return [g for g in G if is_useful(g, C)]
 
 
 def sort_words(
-    G: List[str],
-    S: List[str],
+    G: List[Guess],
+    S: List[Secret],
     vals: List[Valuation],
     n: int = -1,
     show_progress: bool = False,

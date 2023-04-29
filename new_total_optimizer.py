@@ -3,14 +3,21 @@ from typing import List, Optional
 from tqdm import tqdm
 
 from new_base_optimizer import BaseOptimizer
-from new_definitions import (DEBUG_COLOURS, DEBUG_LEVEL, INFINITY,
-                             N_DEBUG_COLOURS, Valuation)
+from new_definitions import (
+    DEBUG_COLOURS,
+    DEBUG_LEVEL,
+    INFINITY,
+    N_DEBUG_COLOURS,
+    Guess,
+    Secret,
+    Valuation,
+)
 from new_utils import encode, get_splits_with_words, sort_words, useful_guesses
 
 TotalScoreType = int
 
 
-class TotalOptimizer(BaseOptimizer):
+class TotalOptimizer(BaseOptimizer[TotalScoreType]):
     def __init__(
         self,
         game_name: str,
@@ -30,7 +37,10 @@ class TotalOptimizer(BaseOptimizer):
         )
 
     def explore(
-        self, possible_guesses: List[str], possible_secrets: List[str], depth: int = 1
+        self,
+        possible_guesses: List[Guess],
+        possible_secrets: List[Secret],
+        depth: int = 1,
     ) -> TotalScoreType:
         self.calls += 1
 

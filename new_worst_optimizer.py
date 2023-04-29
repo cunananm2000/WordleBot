@@ -3,8 +3,13 @@ from typing import List, Optional, Tuple
 from tqdm import tqdm
 
 from new_base_optimizer import BaseOptimizer
-from new_definitions import (DEBUG_COLOURS, DEBUG_LEVEL, INFINITY,
-                             N_DEBUG_COLOURS, Valuation)
+from new_definitions import (
+    DEBUG_COLOURS,
+    DEBUG_LEVEL,
+    INFINITY,
+    N_DEBUG_COLOURS,
+    Valuation,
+)
 from new_utils import encode, get_splits_with_words, sort_words, useful_guesses
 
 WorstScoreType = Tuple[int, int]
