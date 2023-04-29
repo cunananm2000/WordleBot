@@ -116,15 +116,15 @@ class TotalOptimizer(BaseOptimizer[TotalScoreType]):
 
 
 def main():
-    breadths = [1, 5, 10]
+    breadths = [20]
     game_names = [
         # "old_wordle",
-        "mininerdle",
-        "ffxivrdle",
+        # "mininerdle",
+        # "ffxivrdle",
         # "bardle",
         # "primel",
         # "nerdle",
-        # "newer_wordle",
+        "newer_wordle",
     ]
 
     for breadth in breadths:

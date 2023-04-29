@@ -131,7 +131,7 @@ class BaseOptimizer(Generic[Score]):
     def to_json(self):
         print(f"Writing JSON to {self.file_name}.json")
         tree = self.to_dict()
-        with open(f"optimizedTrees4/{self.file_name}.json", "w") as f:
+        with open(f"new_optimized_trees/{self.file_name}.json", "w") as f:
             json.dump(tree, f, sort_keys=True, indent=4)
         print(f"Wrote JSON at {self.file_name}.json")
 
@@ -139,7 +139,7 @@ class BaseOptimizer(Generic[Score]):
         print(f"Writing word list to {self.file_name}.txt")
         save_as_word_list(
             tree=self.get_tree(),
-            file_name=f"optimizedTrees4/{self.file_name}.txt",
+            file_name=f"new_optimized_trees/{self.file_name}.txt",
             secrets=self.S,
         )
         print(f"Wrote word list at {self.file_name}.txt")
