@@ -1,15 +1,15 @@
 import math
-from typing import List, Dict
-import re
-
 import os
+import re
+from typing import Dict, List
+
 from tqdm import tqdm
 
 from new_config import Game
-from new_definitions import MAX_BOUND_DEPTH, BORDER, INFINITY, BOUND_DEBUG_LEVEL
-from new_utils import get_splits_with_words, max_splits, useful_guesses
-
+from new_definitions import (BORDER, BOUND_DEBUG_LEVEL, INFINITY,
+                             MAX_BOUND_DEPTH)
 from new_total_optimizer import TotalOptimizer
+from new_utils import get_splits_with_words, max_splits, useful_guesses
 
 game = Game.from_game_name("newer_wordle")
 
@@ -35,6 +35,7 @@ def LB_1(C: List[str]) -> int:
 def LB_2(C: List[str]) -> int:
     return bound(len(C), max_splits(game.guesses, C))
 
+
 def V_1(g: str, C: List[str], upper_bound: int = INFINITY) -> int:
     splits = get_splits_with_words(g, C)
     out = len(C)
@@ -52,7 +53,7 @@ def V_1(g: str, C: List[str], upper_bound: int = INFINITY) -> int:
 
 def V_2(g: str, C: List[str], upper_bound: int = INFINITY) -> int:
     splits = get_splits_with_words(g, C)
-    
+
     split_scores = [(LB_1(split), res) for res, split in splits.items()]
     split_scores.sort(reverse=True)
 
@@ -62,7 +63,7 @@ def V_2(g: str, C: List[str], upper_bound: int = INFINITY) -> int:
 
     if total > upper_bound:
         return total
-    
+
     for _ in tqdm(range(len(split_scores)), desc=f"v2 {g}", disable=disable_debug):
         score, res = split_scores.pop(0)
 
@@ -76,15 +77,16 @@ def V_2(g: str, C: List[str], upper_bound: int = INFINITY) -> int:
 
     return total
 
+
 def LB(i: int, C: List[str], req_diff: int = INFINITY) -> int:
     if i == 1:
         return LB_1(C)
 
     if i == 2:
         return LB_2(C)
-    
+
     ug = useful_guesses(game.guesses, C)
-    
+
     upper_bound = INFINITY
     if len(C) > 500:
         print("Making optimizer")
@@ -95,12 +97,11 @@ def LB(i: int, C: List[str], req_diff: int = INFINITY) -> int:
 
     if i <= 4:
         return min(V(i - 2, g, C, upper_bound) for g in ug)
-    
+
     disable_debug = not (i > BOUND_DEBUG_LEVEL)
 
     # If LB_i - LB_{i-2} > req_diff can exit early
-    guess_scores = [(min(V(i - 4, g, C) for g in ug), False, g) for g in ug]
-    guess_scores.sort()
+    guess_scores = sorted([(min(V(i - 4, g, C) for g in ug), False, g) for g in ug])
 
     old_base = guess_scores[0][0]
 
@@ -109,14 +110,14 @@ def LB(i: int, C: List[str], req_diff: int = INFINITY) -> int:
         if recomputed:
             break
 
-        updated_score = V(i-2, g, C, upper_bound)
+        updated_score = V(i - 2, g, C, upper_bound)
 
         guess_scores.append((updated_score, True, g))
         guess_scores.sort()
 
         if guess_scores[0][0] - old_base > req_diff:
             return guess_scores[0][0]
-    
+
     return guess_scores[0][0]
 
 
@@ -125,19 +126,19 @@ def V(i: int, g: str, C: List[str], upper_bound: int = INFINITY) -> int:
         return V_1(g, C, upper_bound)
 
     if i == 2:
-        return V_2(g, C, upper_bound)    
+        return V_2(g, C, upper_bound)
 
     splits = get_splits_with_words(g, C)
 
-    split_scores = [(LB(i-2, split), res) for res, split in splits.items()]
+    split_scores = [(LB(i - 2, split), res) for res, split in splits.items()]
     split_scores.sort(reverse=True)
 
     out = len(C) + sum(x[0] for x in split_scores)
     if out > upper_bound:
         return out
-    
+
     disable_debug = not (i > BOUND_DEBUG_LEVEL)
-    
+
     for _ in tqdm(range(len(split_scores)), disable=disable_debug, desc=f"V_{i} {g}"):
         score, res = split_scores.pop(0)
         updated_score = LB(i, splits[res], req_diff=upper_bound - out)
@@ -147,21 +148,23 @@ def V(i: int, g: str, C: List[str], upper_bound: int = INFINITY) -> int:
 
         if out > upper_bound:
             return out
-    
+
     return out
 
+
 def file_finished(file_name: str) -> bool:
-    with open(file_name, 'r') as f:
+    with open(file_name, "r") as f:
         lines = (l.strip() for l in f)
         for line in lines:
             if line == BORDER:
                 return True
     return False
 
+
 def extract_guess_scores(file_name: str) -> Dict[str, int]:
     out = {}
-    pattern = re.compile("(\w+) --> (\d+)")
-    with open(file_name, 'r') as f:
+    pattern = re.compile("(\\w+) --> (\\d+)")
+    with open(file_name, "r") as f:
         lines = (l.strip() for l in f)
         for line in lines:
             res = pattern.search(line)
@@ -178,10 +181,6 @@ def extract_guess_scores(file_name: str) -> Dict[str, int]:
 if __name__ == "__main__":
     game = Game.from_game_name("newer_wordle")
 
-    # x = V(i = 6, g = 'tarse', C = game.secrets, upper_bound=game.upper_bound)
-    # print(x)
-    # assert 0
-
     todo = game.guesses
 
     result_folder = "new_fast_bound_results/"
@@ -190,7 +189,7 @@ if __name__ == "__main__":
         os.mkdir(result_folder)
     else:
         print(f"Folder {result_folder} already exists")
-    
+
     game_result_folder = f"{result_folder}/{game.game_name}/"
     if not os.path.isdir(game_result_folder):
         print(f"Creating folder {game_result_folder}")
@@ -207,19 +206,23 @@ if __name__ == "__main__":
             break
 
     print("Last processed depth", last_depth)
-    
+
     start_depth = 1
     if last_depth != 0:
         if file_finished(last_path):
             start_depth = last_depth + 1
             guess_scores = extract_guess_scores(last_path)
-            todo = [g for (g, score) in guess_scores.items() if score <= game.upper_bound]
+            todo = [
+                g for (g, score) in guess_scores.items() if score <= game.upper_bound
+            ]
         elif last_depth > 1:
             start_depth = last_depth
             last_finished_path = f"{game_result_folder}/V{last_depth-1}.txt"
 
             guess_scores = extract_guess_scores(last_finished_path)
-            todo = [g for (g, score) in guess_scores.items() if score <= game.upper_bound]
+            todo = [
+                g for (g, score) in guess_scores.items() if score <= game.upper_bound
+            ]
 
             done_guess_scores = extract_guess_scores(last_path)
 
@@ -244,7 +247,9 @@ if __name__ == "__main__":
 
         with open(f"{game_result_folder}/{game_result_file}", "a+") as f:
             f.write(f"{BORDER}\n")
-            f.write(f"Below/Todo/Processed/Total: {below}/{len(todo_next)}/{processed}/{len(todo)}\n")
+            f.write(
+                f"Below/Todo/Processed/Total: {below}/{len(todo_next)}/{processed}/{len(todo)}\n"
+            )
 
         todo = todo_next
 

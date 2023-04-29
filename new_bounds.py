@@ -1,12 +1,12 @@
 import math
-from typing import List, Dict
-import re
-
 import os
+import re
+from typing import Dict, List
+
 from tqdm import tqdm
 
 from new_config import Game
-from new_definitions import MAX_BOUND_DEPTH, BORDER
+from new_definitions import BORDER, MAX_BOUND_DEPTH
 from new_utils import get_splits_with_words, max_splits, useful_guesses
 
 game = Game.from_game_name("newer_wordle")
@@ -56,17 +56,18 @@ def LB(i: int, C: List[str]) -> int:
 
 
 def file_finished(file_name: str) -> bool:
-    with open(file_name, 'r') as f:
+    with open(file_name, "r") as f:
         lines = (l.strip() for l in f)
         for line in lines:
             if line == BORDER:
                 return True
     return False
 
+
 def extract_guess_scores(file_name: str) -> Dict[str, int]:
     out = {}
-    pattern = re.compile("(\w+) --> (\d+)")
-    with open(file_name, 'r') as f:
+    pattern = re.compile("(\\w+) --> (\\d+)")
+    with open(file_name, "r") as f:
         lines = (l.strip() for l in f)
         for line in lines:
             res = pattern.search(line)
@@ -80,18 +81,18 @@ def extract_guess_scores(file_name: str) -> Dict[str, int]:
     return out
 
 
-if __name__ == "__main__":
+def main():
+    global game
     game = Game.from_game_name("newer_wordle")
     todo = game.guesses
-    
-    
+
     result_folder = "new_bound_results/"
     if not os.path.isdir(result_folder):
         print(f"Creating folder {result_folder}")
         os.mkdir(result_folder)
     else:
         print(f"Folder {result_folder} already exists")
-    
+
     game_result_folder = f"{result_folder}/{game.game_name}/"
     if not os.path.isdir(game_result_folder):
         print(f"Creating folder {game_result_folder}")
@@ -108,19 +109,23 @@ if __name__ == "__main__":
             break
 
     print("Last processed depth", last_depth)
-    
+
     start_depth = 1
     if last_depth != 0:
         if file_finished(last_path):
             start_depth = last_depth + 1
             guess_scores = extract_guess_scores(last_path)
-            todo = [g for (g, score) in guess_scores.items() if score <= game.upper_bound]
+            todo = [
+                g for (g, score) in guess_scores.items() if score <= game.upper_bound
+            ]
         elif last_depth > 1:
             start_depth = last_depth
             last_finished_path = f"{game_result_folder}/V{last_depth-1}.txt"
 
             guess_scores = extract_guess_scores(last_finished_path)
-            todo = [g for (g, score) in guess_scores.items() if score <= game.upper_bound]
+            todo = [
+                g for (g, score) in guess_scores.items() if score <= game.upper_bound
+            ]
 
             done_guess_scores = extract_guess_scores(last_path)
 
@@ -145,7 +150,9 @@ if __name__ == "__main__":
 
         with open(f"{game_result_folder}/{game_result_file}", "a+") as f:
             f.write(f"{BORDER}\n")
-            f.write(f"Below/Todo/Processed/Total: {below}/{len(todo_next)}/{processed}/{len(todo)}\n")
+            f.write(
+                f"Below/Todo/Processed/Total: {below}/{len(todo_next)}/{processed}/{len(todo)}\n"
+            )
 
         todo = todo_next
 
@@ -154,3 +161,7 @@ if __name__ == "__main__":
             with open(f"{game_result_folder}/{game_result_file}", "a+") as f:
                 f.write(f"Options: {todo}\n")
             break
+
+
+if __name__ == "__main__":
+    main()

@@ -1,14 +1,14 @@
 import json
-from typing import Dict, List, Optional, Tuple
+from typing import Dict, Generic, List, Optional, Tuple
 
 from new_config import Game
-from new_definitions import Tree, Valuation
+from new_definitions import ScoreType, Tree, Valuation
 from new_utils import (encode, get_splits_with_words, no_filter_possible,
                        save_as_word_list, soft_filter_possible)
-from new_valuations import multiVal
+from new_valuations import multi_val
 
 
-class BaseOptimizer:
+class BaseOptimizer(Generic[ScoreType]):
     def __init__(
         self,
         game_name: str,
@@ -30,7 +30,7 @@ class BaseOptimizer:
         self.hard_mode = hard_mode
 
         if vals is None:
-            vals = [multiVal]
+            vals = [multi_val]
         self.vals = vals
 
         self.guess_filter = soft_filter_possible if hard_mode else no_filter_possible
@@ -40,7 +40,7 @@ class BaseOptimizer:
         self.calls = 0
 
         self.best_guess: Dict[Tuple[int, int], str] = {}
-        self.best_score: Dict[Tuple[int, int], int] = {}
+        self.best_score: Dict[Tuple[int, int], ScoreType] = {}
 
         self.file_name = file_name
 
@@ -48,7 +48,7 @@ class BaseOptimizer:
 
     def explore(
         self, possible_guesses: List[str], possible_secrets: List[str], depth: int = 1
-    ) -> float:
+    ) -> ScoreType:
         raise NotImplementedError("Look ahead function")
 
     def generate_tree(
@@ -97,8 +97,8 @@ class BaseOptimizer:
                 possible_secrets=self.S,
             )
         return self.tree
-    
-    def get_best_score(self) -> int:
+
+    def get_best_score(self) -> ScoreType:
         tree = self.get_tree()
         return tree["score"]
 
@@ -127,7 +127,6 @@ class BaseOptimizer:
         print("MAX_DEPTH:", self.max_depth)
         score = self.best_score[(encode(self.G, self.G), encode(self.S, self.S))]
         print("BEST SCORE:", score)
-        print("BEST EXPECTED:", score / len(self.S))
         print("HITS:", self.hits)
         print("BREACHES:", self.breaches)
         print("CALLS: ", self.calls)
