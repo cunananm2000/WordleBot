@@ -6,7 +6,8 @@ from typing import Dict, List
 from tqdm import tqdm
 
 from new_config import Game
-from new_definitions import BORDER, BOUND_DEBUG_LEVEL, INFINITY, MAX_BOUND_DEPTH
+from new_definitions import (BORDER, BOUND_DEBUG_LEVEL, INFINITY,
+                             MAX_BOUND_DEPTH)
 from new_total_optimizer import TotalOptimizer
 from new_utils import get_splits_with_words, max_splits, useful_guesses
 

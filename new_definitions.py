@@ -3,7 +3,7 @@ from typing import Callable, Dict, Generic, List, Tuple, TypeVar, Union
 
 INFINITY = 99999999
 CACHE_LIMIT = 10_000
-DEBUG_LEVEL = 2
+DEBUG_LEVEL = 1
 BOUND_DEBUG_LEVEL = 2
 MAX_BOUND_DEPTH = 7
 

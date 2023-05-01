@@ -2,7 +2,8 @@ from typing import Dict, List, Tuple, Union
 
 from tqdm import tqdm
 
-from new_definitions import CACHE_LIMIT, Guess, Response, Secret, Tree, Valuation
+from new_definitions import (CACHE_LIMIT, Guess, Response, Secret, Tree,
+                             Valuation)
 
 
 class CHECK_CACHE:

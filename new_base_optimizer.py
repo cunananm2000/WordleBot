@@ -3,13 +3,8 @@ from typing import Any, Dict, Generic, List, Optional
 
 from new_config import Game
 from new_definitions import Encoding, Guess, Score, Secret, Tree, Valuation
-from new_utils import (
-    encode,
-    get_splits_with_words,
-    no_filter_possible,
-    save_as_word_list,
-    soft_filter_possible,
-)
+from new_utils import (encode, get_splits_with_words, no_filter_possible,
+                       save_as_word_list, soft_filter_possible)
 from new_valuations import multi_val
 
 
@@ -17,6 +12,7 @@ class BaseOptimizer(Generic[Score]):
     def __init__(
         self,
         game_name: str,
+        folder_name: str,
         file_name: str,
         max_depth: int = 10,
         max_breadth: int = 20,
@@ -47,6 +43,7 @@ class BaseOptimizer(Generic[Score]):
         self.best_guess: Dict[Encoding, Guess] = {}
         self.best_score: Dict[Encoding, Score] = {}
 
+        self.folder_name = folder_name
         self.file_name = file_name
 
         self.tree: Optional[Tree] = None
@@ -57,7 +54,7 @@ class BaseOptimizer(Generic[Score]):
         possible_secrets: List[Secret],
         depth: int = 1,
     ) -> Score:
-        raise NotImplementedError("Look ahead function")
+        raise NotImplementedError("Exploration function not implemented")
 
     def generate_tree(
         self,
@@ -139,7 +136,7 @@ class BaseOptimizer(Generic[Score]):
         print(f"Writing word list to {self.file_name}.txt")
         save_as_word_list(
             tree=self.get_tree(),
-            file_name=f"new_optimized_trees/{self.file_name}.txt",
+            file_name=f"{self.folder_name}/{self.file_name}.txt",
             secrets=self.S,
         )
         print(f"Wrote word list at {self.file_name}.txt")

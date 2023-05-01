@@ -3,15 +3,8 @@ from typing import List, Optional
 from tqdm import tqdm
 
 from new_base_optimizer import BaseOptimizer
-from new_definitions import (
-    DEBUG_COLOURS,
-    DEBUG_LEVEL,
-    INFINITY,
-    N_DEBUG_COLOURS,
-    Guess,
-    Secret,
-    Valuation,
-)
+from new_definitions import (DEBUG_COLOURS, DEBUG_LEVEL, INFINITY,
+                             N_DEBUG_COLOURS, Guess, Secret, Valuation)
 from new_utils import encode, get_splits_with_words, sort_words, useful_guesses
 
 TotalScoreType = int
@@ -21,6 +14,7 @@ class TotalOptimizer(BaseOptimizer[TotalScoreType]):
     def __init__(
         self,
         game_name: str,
+        folder_name="new_optimized_trees",
         max_depth: int = 10,
         max_breadth: int = 20,
         hard_mode: bool = False,
@@ -28,6 +22,7 @@ class TotalOptimizer(BaseOptimizer[TotalScoreType]):
     ):
         file_name = f"{game_name}_{max_breadth}{'_hard' if hard_mode else ''}"
         super(TotalOptimizer, self).__init__(
+            folder_name=folder_name,
             file_name=file_name,
             game_name=game_name,
             max_depth=max_depth,
@@ -116,7 +111,7 @@ class TotalOptimizer(BaseOptimizer[TotalScoreType]):
 
 
 def main():
-    breadths = [20]
+    breadths = [30]
     game_names = [
         # "old_wordle",
         # "mininerdle",
